@@ -39,7 +39,10 @@ TOOL = {
             "min_order_kg": {"type": ["number", "null"], "description": (
                 "Минимальный заказ в килограммах, если в min_order указан вес (1 т = 1000). "
                 "Иначе null. Не считай по ценам и не угадывай.")},
-            "price_info": _nullable("Цены или примерный ценовой диапазон, если опубликованы"),
+            "price_info": _nullable(
+                "Опубликованные цены: 2–3 конкретные позиции с ценой из прайса или таблицы (название, цена за единицу) "
+                "и пометка, если на сайте есть полный прайс (например PDF). Цитата — дословная строка прайса с ценой. "
+                "Оговорки вроде «цены по запросу» не подходят, если в тексте есть таблица с ценами"),
             "certificates": {"type": "array", "items": FACT, "description": "Сертификаты, декларации, ГОСТ/ТУ, Меркурий, Халяль и т.п."},
             "delivery": _nullable("Условия доставки"),
             "wholesale": _nullable("Работа с юрлицами или оптом"),
@@ -62,18 +65,28 @@ SYSTEM = (
 )
 
 
-def build_prompt(pages: dict[str, str], budget: int = 30_000) -> str:
-    parts, used = [], 0
-    for url, text in pages.items():
-        chunk = f"[PAGE {url}]\n{text}\n"
-        if used + len(chunk) > budget:
-            chunk = chunk[: max(0, budget - used)]
-        if chunk:
-            parts.append(chunk)
-            used += len(chunk)
-        if used >= budget:
-            break
-    return "\n".join(parts)
+def allocate(lengths: list[int], budget: int) -> list[int]:
+    """Справедливый раздел бюджета: короткие страницы входят целиком, остаток делят длинные.
+    Так длинная главная не вытесняет страницы «Контакты» и «Доставка»."""
+    caps = [0] * len(lengths)
+    remaining = budget
+    order = sorted(range(len(lengths)), key=lambda i: lengths[i])
+    for k, i in enumerate(order):
+        caps[i] = min(lengths[i], remaining // (len(order) - k))
+        remaining -= caps[i]
+    return caps
+
+
+def build_prompt(pages: dict[str, str], html_budget: int = 24_000, pdf_budget: int = 14_000) -> str:
+    """Тексты страниц для модели. У PDF-прайсов отдельный бюджет: длинные HTML-страницы их не вытесняют."""
+    def pack(items: list[tuple[str, str]], budget: int) -> list[str]:
+        caps = allocate([len(t) for _, t in items], budget)
+        return [f"[PAGE {url}]\n{text[:cap]}\n" for (url, text), cap in zip(items, caps) if cap > 0]
+
+    is_pdf = lambda u: u.split("?")[0].lower().endswith(".pdf")   # noqa: E731
+    html = [(u, t) for u, t in pages.items() if not is_pdf(u)]
+    pdfs = [(u, t) for u, t in pages.items() if is_pdf(u)]
+    return "\n".join(pack(html, html_budget) + pack(pdfs, pdf_budget))
 
 
 def content_hash(pages: dict[str, str]) -> str:

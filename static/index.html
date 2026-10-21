@@ -2,132 +2,113 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#222222">
 <title>Снабженец-ассистент</title>
-<style>
-:root{
-  --bg:#f6f4ef; --card:#fff; --ink:#1f2a27; --muted:#69736f; --line:#e3dfd5;
-  --accent:#2f5d50; --accent-ink:#fff; --good:#2f7d4f; --warn:#b4650f; --bad:#a63a3a; --soft:#eef3f0;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#161a19; --card:#1f2523; --ink:#e8ece9; --muted:#92a099; --line:#323b38;
-        --accent:#6fb59d; --accent-ink:#10201a; --good:#6fc58f; --warn:#e0a35a; --bad:#e08a8a; --soft:#26302d;}
-}
-*{box-sizing:border-box}
-[hidden]{display:none!important}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,"Segoe UI",Roboto,sans-serif}
-a{color:var(--accent)}
-.wrap{max-width:1120px;margin:0 auto;padding:0 16px 64px}
-header{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;padding:20px 0 8px}
-header h1{font-size:20px;margin:0}
-header .sub{color:var(--muted);font-size:13px;flex-basis:100%;margin-top:-8px}
-nav{display:flex;gap:4px;margin-left:auto}
-nav button{background:none;border:0;padding:8px 14px;border-radius:8px;font:inherit;color:var(--muted);cursor:pointer}
-nav button.on{background:var(--soft);color:var(--ink);font-weight:600}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
-form.search{display:grid;grid-template-columns:2fr 1.4fr auto;gap:10px;align-items:end}
-label{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
-input[type=text],input[type=number],select,textarea{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;
-  background:var(--bg);color:var(--ink);font:inherit}
-textarea{resize:vertical}
-button.primary{background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:10px 20px;font:inherit;font-weight:600;cursor:pointer}
-button.primary:disabled{opacity:.5;cursor:wait}
-button.ghost{background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 11px;font:inherit;font-size:13px;cursor:pointer}
-button.ghost:hover{background:var(--soft)}
-button.ghost.on{background:var(--soft);border-color:var(--accent);color:var(--accent)}
-.filters{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;margin-top:12px;font-size:14px}
-.filters input[type=number]{width:90px;display:inline-block}
-.modebar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px;font-size:13px;color:var(--muted)}
-.chip{border:1px solid var(--line);border-radius:999px;padding:3px 11px;background:var(--bg);cursor:pointer;font:inherit;font-size:13px;color:var(--ink)}
-.chip:hover{border-color:var(--accent)}
-.status{margin:18px 0 8px;color:var(--muted)}
-.status.err{color:var(--bad)}
-.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:16px 0 10px}
-.toolbar .grow{flex:1}
-.cards{display:grid;gap:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
-.card.dim,tr.dim{opacity:.65}
-.card-head{display:flex;gap:14px;align-items:flex-start}
-.score{flex:none;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:18px;color:#fff}
-.score.hi{background:var(--good)} .score.mid{background:var(--warn)} .score.lo{background:var(--bad)}
-.card h3{margin:0;font-size:17px}
-.dom{color:var(--muted);font-size:13px}
-.why{margin:8px 0 0;font-size:14px}
-.why .p{color:var(--good)} .why .c{color:var(--bad)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px 18px;margin:14px 0}
-.f dt{font-size:12px;color:var(--muted)}
-.f dd{margin:0;font-size:14px;word-break:break-word}
-.miss{color:var(--muted);font-style:italic}
-.src{font-size:12px;text-decoration:none;margin-left:4px}
-.quote{display:none;font-size:12px;color:var(--muted);border-left:2px solid var(--line);padding-left:8px;margin-top:2px}
-.show-quotes .quote{display:block}
-.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-top:1px solid var(--line);padding-top:12px}
-.fail{background:var(--soft);padding:6px 10px;border-radius:8px;font-size:13px;color:var(--warn);margin-top:8px}
-table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14px}
-th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
-th{background:var(--soft);font-size:12px;color:var(--muted);font-weight:600}
-.tablewrap{overflow-x:auto}
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;place-items:center;padding:16px;z-index:10}
-.modal.open{display:grid}
-.modal .box{background:var(--card);border-radius:12px;padding:20px;width:min(640px,100%);max-height:92vh;overflow:auto}
-.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
-.empty{text-align:center;color:var(--muted);padding:40px 0}
-footer{color:var(--muted);font-size:12px;margin-top:32px}
-@media(max-width:720px){form.search{grid-template-columns:1fr} nav{margin-left:0}}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css?v=6">
 </head>
 <body>
-<div class="wrap">
+<div class="hero"><div class="wrap">
 <header>
-  <h1>Снабженец-ассистент</h1>
+  <div class="logo"><span class="mark"></span>Снабженец-ассистент</div>
   <nav>
     <button id="tab-search" class="on">Поиск</button>
+    <button id="tab-offers">КП <span id="offers-n"></span></button>
     <button id="tab-short">Шорт-лист <span id="short-n"></span></button>
   </nav>
-  <div class="sub">Находит поставщиков, собирает данные с их сайтов и показывает, откуда взято каждое поле. Чего нет на сайте — помечено «уточнить».</div>
 </header>
 
-<section id="view-search">
-  <div class="panel">
-    <form class="search" id="form">
-      <div><label for="category">Что ищем</label><input type="text" id="category" placeholder="например: сыр моцарелла" required></div>
-      <div><label for="region">Город или регион</label><input type="text" id="region" placeholder="например: Санкт-Петербург"></div>
-      <button class="primary" id="go" type="submit">Найти</button>
-    </form>
+<div id="search-panel">
+  <p class="kicker">Поиск и сравнение поставщиков для HoReCa</p>
+  <h1>Найдите поставщика<br>и решите, с кем связаться</h1>
+  <p class="lead">Собираем данные с сайтов поставщиков и показываем, откуда взято каждое поле. Чего нет на сайте, помечено «уточнить».</p>
+  <form class="search" id="form">
+    <div><label for="category">Что ищем</label><input type="text" id="category" placeholder="например: сыр моцарелла" required></div>
+    <div><label for="region">Город или регион</label><input type="text" id="region" placeholder="например: Санкт-Петербург"></div>
+    <button id="go" type="submit">Найти</button>
+  </form>
+  <div class="topics-row"><span class="topics-label">Примеры:</span> <span id="topics"></span></div>
+  <div class="topics-row" id="recent-row" hidden><span class="topics-label">Недавние:</span> <span id="recent"></span></div>
+  <details class="more" id="more" open>
+    <summary>Фильтры и режим поиска</summary>
     <div class="filters">
-      <label style="margin:0"><input type="checkbox" id="f-certs"> Только с документами/сертификатами</label>
-      <label style="margin:0">Минималка не больше <input type="number" id="f-min" min="0" placeholder="кг"> кг</label>
-      <label style="margin:0"><input type="checkbox" id="f-deliv"> Только с доставкой в мой регион</label>
+      <label style="margin:0"><input type="checkbox" id="f-certs">Только с документами и сертификатами</label>
+      <label style="margin:0">Минималка не больше <input type="number" id="f-min" min="0" inputmode="decimal" placeholder="кг"> кг</label>
+      <label style="margin:0"><input type="checkbox" id="f-deliv">Только с доставкой в мой регион</label>
     </div>
     <div class="modebar">
-      <label style="margin:0"><input type="checkbox" id="demo" checked> Демо-режим (готовые результаты)</label>
+      <label style="margin:0"><input type="checkbox" id="demo" checked>Демо-режим (готовые результаты)</label>
       <span id="mode-note"></span>
-      <span id="topics"></span>
     </div>
-  </div>
+  </details>
+</div>
+
+<div id="offers-hero" hidden>
+  <p class="kicker">Коммерческие предложения</p>
+  <h1>Загрузите КП или ответ поставщика,<br>остальное сделает сервис</h1>
+  <p class="lead">Сервис распознаёт предложение, определяет поставщика, прикрепляет к его истории и показывает, что подорожало и что подешевело по сравнению с прошлым КП.</p>
+</div>
+</div></div>
+
+<div class="wrap main">
+<section id="view-search">
   <div id="status" class="status"></div>
+  <div id="progress" class="progress" hidden><div id="progress-bar"></div></div>
   <div id="toolbar" class="toolbar" hidden>
     <button class="ghost on" id="v-cards">Карточки</button>
     <button class="ghost" id="v-table">Сравнение</button>
     <button class="ghost" id="quotes">Показать, откуда взято</button>
+    <button class="ghost" id="weights-toggle">Что для вас важнее</button>
     <button class="ghost" id="hidden-toggle" hidden></button>
     <span class="grow"></span>
+    <label class="inline-field">Сортировка
+      <select id="sort"><option value="score">по оценке</option><option value="min">по мин. заказу</option><option value="name">по названию</option></select>
+    </label>
+    <input type="search" id="find" class="find" placeholder="Найти среди результатов">
+    <button class="ghost" id="copy-link" title="Скопировать ссылку на эти результаты">Ссылка</button>
     <a class="ghost" id="x-xlsx" style="text-decoration:none">Excel</a>
     <a class="ghost" id="x-csv" style="text-decoration:none">CSV</a>
   </div>
+  <div id="weights-panel" class="weights" hidden></div>
+  <div id="compare-bar" class="compare-bar" hidden></div>
   <div id="results"></div>
+</section>
+
+<section id="view-offers" hidden>
+  <div id="offer-drop" class="drop" tabindex="0">
+    <input type="file" id="offer-file" hidden accept=".pdf,.docx,.xlsx,.eml,.txt,.csv,.html,.htm,.png,.jpg,.jpeg,.webp">
+    <div class="drop-main">
+      <b>Перетащите КП сюда</b> или <button type="button" class="linkish" id="pick-file">выберите файл</button>
+      <div class="dom">PDF, Word, Excel, письмо (.eml), текст, фото или скан. До 8 МБ.</div>
+    </div>
+    <div class="drop-or">или вставьте текст письма:</div>
+    <textarea id="offer-text" rows="4" placeholder="Скопируйте сюда текст ответа поставщика с ценами"></textarea>
+    <div class="row">
+      <button class="primary" id="offer-send">Распознать текст</button>
+      <button class="ghost" id="offer-demo">Попробовать на примере</button>
+      <span class="dom" id="offer-note"></span>
+    </div>
+  </div>
+  <div id="offer-status" class="status"></div>
+  <div id="offer-result"></div>
+  <div id="offer-unassigned"></div>
+  <div id="offer-overview"></div>
+  <div id="offer-detail"></div>
 </section>
 
 <section id="view-short" hidden>
   <div class="toolbar">
     <h2 style="margin:0;font-size:18px">Шорт-лист</h2><span class="grow"></span>
+    <button class="ghost" id="bulk-open">Написать всем</button>
     <a class="ghost" href="/api/export?shortlist=true&format=xlsx" style="text-decoration:none">Excel</a>
     <a class="ghost" href="/api/export?shortlist=true&format=csv" style="text-decoration:none">CSV</a>
   </div>
   <div id="short-list"></div>
 </section>
 
-<footer>Данные берутся с открытых сайтов поставщиков и могут устареть. Перед заказом проверяйте условия напрямую.</footer>
+<footer>Данные берутся с открытых сайтов поставщиков и из загруженных вами документов, и могут устареть. Перед заказом проверяйте условия напрямую.</footer>
 </div>
 
 <div class="modal" id="modal"><div class="box">
@@ -144,240 +125,21 @@ footer{color:var(--muted);font-size:12px;margin-top:32px}
   </div>
 </div></div>
 
-<script>
-const $ = s => document.querySelector(s);
-const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const STATUS = {new:"Новый", contacted:"Написал", quote:"Получил КП", agreed:"Договорились", rejected:"Отказ"};
-const state = {health:null, searchId:null, results:[], view:"cards", quotes:false, showHidden:false, ctx:{category:"", region:""}, letterDomain:null, poll:null};
+<div class="modal" id="bulk-modal"><div class="box">
+  <h3 style="margin-top:0">Запрос КП всем из шорт-листа</h3>
+  <div id="bulk-recipients" class="dom"></div>
+  <label style="margin-top:10px">Тема</label><input type="text" id="b-subj">
+  <label style="margin-top:10px">Текст</label><textarea id="b-body" rows="12"></textarea>
+  <label class="check"><input type="checkbox" id="b-mark" checked> Отметить всех со статусом «новый» как «написал»</label>
+  <div class="row">
+    <button class="primary" id="b-copy-mails">Скопировать адреса</button>
+    <button class="ghost" id="b-copy-text">Скопировать письмо</button>
+    <a class="ghost" id="b-mail" style="text-decoration:none;padding:9px 11px">Открыть в почте</a>
+    <span class="grow"></span>
+    <button class="ghost" id="b-close">Закрыть</button>
+  </div>
+</div></div>
 
-async function api(path, opts){
-  const r = await fetch(path, opts);
-  if(!r.ok){ let m = r.statusText; try{ m = (await r.json()).detail || m; }catch{} throw new Error(m); }
-  return r;
-}
-const jpost = (p, b, method="POST") => api(p, {method, headers:{"Content-Type":"application/json"}, body:JSON.stringify(b)}).then(r => r.json());
-
-/* ---------- отрисовка фактов ---------- */
-function fact(f){
-  if(!f) return `<span class="miss">не указано — уточнить</span>`;
-  return `<span>${esc(f.value)}</span><a class="src" href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.quote)}">источник ↗</a><div class="quote">«${esc(f.quote)}»</div>`;
-}
-function facts(list){
-  if(!list || !list.length) return `<span class="miss">не указано — уточнить</span>`;
-  return list.map(f => `<div>${fact(f)}</div>`).join("");
-}
-function regionsHtml(d){
-  const items = [...(d.regions||[])];
-  if(d.nationwide) items.push({...d.nationwide, value: "По всей России"});
-  return facts(items);
-}
-function missingOf(d){
-  const m = [];
-  if(!d.regions?.length && !d.nationwide && !d.address) m.push("работаете ли вы с нашим регионом");
-  if(!d.min_order) m.push("минимальный объём заказа");
-  if(!d.certificates?.length) m.push("сертификаты/декларации на продукцию");
-  if(!d.delivery) m.push("условия и стоимость доставки");
-  if(!d.price_info) m.push("прайс-лист / цены");
-  return m;
-}
-const field = (label, html) => `<div class="f"><dt>${label}</dt><dd>${html}</dd></div>`;
-
-function cardHtml(it){
-  const d = it.data, sc = it.score;
-  const cls = sc.score >= 70 ? "hi" : sc.score >= 45 ? "mid" : "lo";
-  const name = d.name ? esc(d.name.value) : esc(d.domain);
-  const why = [...sc.pros.map(x=>`<span class="p">+ ${esc(x)}</span>`), ...sc.cons.map(x=>`<span class="c">− ${esc(x)}</span>`)].join("; ");
-  const inShort = it.shortlisted;
-  return `<article class="card ${sc.passes?"":"dim"}" data-domain="${esc(d.domain)}">
-    <div class="card-head">
-      <div class="score ${cls}" title="Оценка по правилам, 0–100">${sc.score}</div>
-      <div style="flex:1;min-width:0">
-        <h3>${name}</h3>
-        <div class="dom"><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.domain)}</a>${d.also_domains?.length ? " · также: "+esc(d.also_domains.join(", ")) : ""}</div>
-        <p class="why">${why}</p>
-        ${sc.passes ? "" : `<div class="fail">Не подходит по фильтрам: ${esc(sc.fail_reasons.join("; "))}</div>`}
-      </div>
-    </div>
-    <dl class="grid">
-      ${field("Что поставляют", fact(d.offering))}
-      ${field("Телефон", facts(d.phones))}
-      ${field("Email", facts(d.emails))}
-      ${field("Адрес", fact(d.address))}
-      ${field("Регион работы", regionsHtml(d))}
-      ${field("Минимальный заказ", fact(d.min_order))}
-      ${field("Цены", fact(d.price_info))}
-      ${field("Документы", facts(d.certificates))}
-      ${field("Доставка", fact(d.delivery))}
-      ${field("Опт / юрлица", fact(d.wholesale))}
-      ${d.inn ? field("ИНН", fact(d.inn)) : ""}
-    </dl>
-    <div class="actions">
-      <button class="ghost ${inShort?"on":""}" data-act="short">${inShort ? "★ В шорт-листе" : "☆ В шорт-лист"}</button>
-      <button class="ghost" data-act="letter">Письмо с запросом КП</button>
-      <span class="dom">${d.rejected_facts ? `Отброшено непроверенных данных: ${d.rejected_facts}` : ""}</span>
-    </div>
-  </article>`;
-}
-
-function tableHtml(items){
-  const cut = s => s.length > 90 ? esc(s.slice(0, 88)) + "…" : esc(s);
-  const short = f => f ? `<span title="${esc(f.value)}">${cut(f.value)}</span>` : `<span class="miss">уточнить</span>`;
-  const rows = items.map(it => {
-    const d = it.data, sc = it.score;
-    const regs = [...(d.regions||[]).map(r=>r.value), ...(d.nationwide?["вся Россия"]:[])].join(", ") || (d.address ? d.address.value : "");
-    return `<tr class="${sc.passes?"":"dim"}">
-      <td><b>${esc(d.name ? d.name.value : d.domain)}</b><div class="dom"><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.domain)}</a></div></td>
-      <td><b>${sc.score}</b></td>
-      <td>${regs ? `<span title="${esc(regs)}">${cut(regs)}</span>` : '<span class="miss">уточнить</span>'}</td>
-      <td>${short(d.min_order)}</td><td>${short(d.price_info)}</td>
-      <td>${(d.certificates||[]).length ? esc(d.certificates.map(c=>c.value).join(", ")) : '<span class="miss">уточнить</span>'}</td>
-      <td>${short(d.delivery)}</td>
-      <td>${[...(d.phones||[]).map(p=>esc(p.value)), ...(d.emails||[]).map(e=>esc(e.value))].join("<br>") || '<span class="miss">уточнить</span>'}</td>
-    </tr>`;
-  }).join("");
-  return `<div class="tablewrap"><table><thead><tr><th>Поставщик</th><th>Оценка</th><th>Регион</th><th>Мин. заказ</th><th>Цены</th><th>Документы</th><th>Доставка</th><th>Контакты</th></tr></thead><tbody>${rows}</tbody></table></div>`;
-}
-
-function render(){
-  const all = state.results;
-  const shown = all.filter(r => r.score.passes || state.showHidden);
-  const hiddenN = all.filter(r => !r.score.passes).length;
-  const tb = $("#hidden-toggle");
-  tb.hidden = !hiddenN;
-  tb.textContent = state.showHidden ? "Скрыть не прошедших фильтры" : `Не прошли фильтры: ${hiddenN} — показать`;
-  const box = $("#results");
-  box.className = state.quotes ? "show-quotes" : "";
-  if(!shown.length){ box.innerHTML = `<div class="empty">Нет подходящих поставщиков. Ослабьте фильтры или измените запрос.</div>`; return; }
-  box.innerHTML = state.view === "cards" ? `<div class="cards">${shown.map(cardHtml).join("")}</div>` : tableHtml(shown);
-}
-
-/* ---------- поиск ---------- */
-function setStatus(text, err=false){ const s = $("#status"); s.textContent = text; s.className = "status" + (err ? " err" : ""); }
-
-async function startSearch(e){
-  e.preventDefault();
-  clearInterval(state.poll);
-  const body = {
-    category: $("#category").value.trim(), region: $("#region").value.trim(), demo: $("#demo").checked,
-    filters: {need_certs: $("#f-certs").checked, max_min_order_kg: $("#f-min").value ? Number($("#f-min").value) : null, delivery_to_region: $("#f-deliv").checked},
-  };
-  state.ctx = {category: body.category, region: body.region};
-  $("#go").disabled = true; $("#toolbar").hidden = true; $("#results").innerHTML = "";
-  setStatus("Запускаю поиск…");
-  try{
-    const {search_id} = await jpost("/api/search", body);
-    state.searchId = search_id;
-    state.poll = setInterval(poll, 1500); poll();
-  }catch(err){ setStatus(err.message, true); $("#go").disabled = false; }
-}
-
-async function poll(){
-  try{
-    const r = await api(`/api/search/${state.searchId}`).then(r => r.json());
-    const s = r.search;
-    if(s.status === "running"){ setStatus(s.progress || "Идёт поиск…"); return; }
-    clearInterval(state.poll); $("#go").disabled = false;
-    if(s.status === "error"){ setStatus(s.error, true); return; }
-    state.results = r.results; setStatus(s.progress);
-    $("#toolbar").hidden = false;
-    $("#x-xlsx").href = `/api/export?search_id=${state.searchId}&format=xlsx`;
-    $("#x-csv").href = `/api/export?search_id=${state.searchId}&format=csv`;
-    render();
-  }catch(err){ clearInterval(state.poll); setStatus(err.message, true); $("#go").disabled = false; }
-}
-
-/* ---------- шорт-лист ---------- */
-async function toggleShort(domain){
-  const it = state.results.find(r => r.data.domain === domain);
-  const on = !it.shortlisted;
-  await jpost(`/api/supplier/${encodeURIComponent(domain)}`, {shortlisted:on}, "PATCH");
-  it.shortlisted = on; render(); refreshShortCount();
-}
-async function refreshShortCount(){
-  const {items} = await api("/api/shortlist").then(r => r.json());
-  $("#short-n").textContent = items.length ? `(${items.length})` : "";
-  return items;
-}
-async function renderShort(){
-  const items = await refreshShortCount();
-  const box = $("#short-list");
-  if(!items.length){ box.innerHTML = `<div class="empty">Пока пусто. Добавляйте поставщиков звёздочкой в результатах поиска.</div>`; return; }
-  box.innerHTML = `<div class="cards">${items.map(it => {
-    const d = it.data;
-    const contacts = [...(d.phones||[]).map(p=>esc(p.value)), ...(d.emails||[]).map(e=>esc(e.value))].join(" · ") || "контакты не найдены";
-    return `<article class="card" data-domain="${esc(d.domain)}">
-      <h3>${esc(d.name ? d.name.value : d.domain)} <span class="dom"><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.domain)}</a></span></h3>
-      <div class="dom">${contacts}</div>
-      <div class="row">
-        <select data-act="status">${Object.entries(STATUS).map(([k,v])=>`<option value="${k}" ${it.status===k?"selected":""}>${v}</option>`).join("")}</select>
-        <button class="ghost" data-act="letter">Письмо</button>
-        <button class="ghost" data-act="unshort">Убрать</button>
-      </div>
-      <label style="margin-top:10px">Заметки</label>
-      <textarea rows="2" data-act="note" placeholder="Кому писали, что ответили, цена…">${esc(it.note)}</textarea>
-    </article>`;}).join("")}</div>`;
-}
-
-/* ---------- письмо ---------- */
-async function openLetter(domain, ai=false){
-  state.letterDomain = domain;
-  const known = state.results.find(r => r.data.domain === domain);
-  const row = known || (await api("/api/shortlist").then(r=>r.json())).items.find(r => r.data.domain === domain);
-  const body = {domain, category: state.ctx.category, region: state.ctx.region, missing: missingOf(row.data), ai};
-  const l = await jpost("/api/letter", body);
-  $("#l-to").value = l.to; $("#l-subj").value = l.subject; $("#l-body").value = l.body;
-  $("#modal").classList.add("open");
-  updateMailto();
-}
-function updateMailto(){
-  $("#l-mail").href = `mailto:${encodeURIComponent($("#l-to").value)}?subject=${encodeURIComponent($("#l-subj").value)}&body=${encodeURIComponent($("#l-body").value)}`;
-}
-
-/* ---------- события ---------- */
-$("#form").addEventListener("submit", startSearch);
-$("#v-cards").onclick = () => { state.view="cards"; $("#v-cards").classList.add("on"); $("#v-table").classList.remove("on"); render(); };
-$("#v-table").onclick = () => { state.view="table"; $("#v-table").classList.add("on"); $("#v-cards").classList.remove("on"); render(); };
-$("#quotes").onclick = e => { state.quotes = !state.quotes; e.target.classList.toggle("on", state.quotes); render(); };
-$("#hidden-toggle").onclick = () => { state.showHidden = !state.showHidden; render(); };
-$("#results").addEventListener("click", e => {
-  const b = e.target.closest("button[data-act]"); if(!b) return;
-  const domain = b.closest("[data-domain]").dataset.domain;
-  if(b.dataset.act === "short") toggleShort(domain);
-  if(b.dataset.act === "letter") openLetter(domain).catch(err => alert(err.message));
-});
-$("#short-list").addEventListener("click", async e => {
-  const b = e.target.closest("button[data-act]"); if(!b) return;
-  const domain = b.closest("[data-domain]").dataset.domain;
-  if(b.dataset.act === "letter") openLetter(domain).catch(err => alert(err.message));
-  if(b.dataset.act === "unshort"){ await jpost(`/api/supplier/${encodeURIComponent(domain)}`, {shortlisted:false}, "PATCH"); const it = state.results.find(r=>r.data.domain===domain); if(it) it.shortlisted=false; renderShort(); }
-});
-$("#short-list").addEventListener("change", e => {
-  const el = e.target; const domain = el.closest("[data-domain]")?.dataset.domain; if(!domain) return;
-  if(el.dataset.act === "status") jpost(`/api/supplier/${encodeURIComponent(domain)}`, {status: el.value}, "PATCH");
-  if(el.dataset.act === "note") jpost(`/api/supplier/${encodeURIComponent(domain)}`, {note: el.value}, "PATCH");
-});
-["l-to","l-subj","l-body"].forEach(id => $("#"+id).addEventListener("input", updateMailto));
-$("#l-copy").onclick = async () => { await navigator.clipboard.writeText($("#l-subj").value + "\n\n" + $("#l-body").value); $("#l-copy").textContent = "Скопировано"; setTimeout(()=>$("#l-copy").textContent="Скопировать", 1500); };
-$("#l-close").onclick = () => $("#modal").classList.remove("open");
-$("#modal").addEventListener("click", e => { if(e.target.id === "modal") $("#modal").classList.remove("open"); });
-$("#l-ai").onclick = () => openLetter(state.letterDomain, true).catch(err => alert(err.message));
-function tab(name){
-  $("#view-search").hidden = name !== "search"; $("#view-short").hidden = name !== "short";
-  $("#tab-search").classList.toggle("on", name === "search"); $("#tab-short").classList.toggle("on", name === "short");
-  if(name === "short") renderShort();
-}
-$("#tab-search").onclick = () => tab("search"); $("#tab-short").onclick = () => tab("short");
-
-/* ---------- старт ---------- */
-(async function init(){
-  const h = state.health = await api("/api/health").then(r => r.json());
-  const demo = $("#demo");
-  if(!h.live_available){ demo.checked = true; demo.disabled = true; $("#mode-note").textContent = "Живой поиск отключён: на сервере не заданы ключи API."; }
-  else { $("#mode-note").textContent = `Живых поисков сегодня осталось: ${h.live_left_today}`; $("#l-ai").hidden = false; }
-  $("#topics").innerHTML = h.demo_topics.map(t => `<button type="button" class="chip" data-topic="${esc(t.topic)}" data-region="${esc(t.region)}">${esc(t.topic)}</button>`).join(" ");
-  $("#topics").onclick = e => { const c = e.target.closest(".chip"); if(!c) return; $("#category").value = c.dataset.topic; $("#region").value = c.dataset.region; };
-  refreshShortCount();
-})();
-</script>
+<script src="/static/app.js?v=6"></script>
 </body>
 </html>

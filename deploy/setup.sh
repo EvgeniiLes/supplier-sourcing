@@ -106,6 +106,14 @@ EOF
   fi
 fi
 
+# загрузка КП: по умолчанию nginx режет тела запросов больше 1 МБ (413), а сервис принимает до 8 МБ
+if ! grep -q client_max_body_size "$SITE"; then
+  sed -i "/server_name .*$DOMAIN/a\    client_max_body_size 9m;" "$SITE"
+  nginx -t >/dev/null 2>&1 || { nginx -t; echo "nginx не принял client_max_body_size, проверьте $SITE"; exit 1; }
+  systemctl reload nginx
+  echo "лимит загрузки 9 МБ добавлен"
+fi
+
 echo "== 6. HTTPS (certbot)"
 if certbot certificates 2>/dev/null | grep -q "Domains:.*$DOMAIN"; then
   echo "сертификат для $DOMAIN уже есть"

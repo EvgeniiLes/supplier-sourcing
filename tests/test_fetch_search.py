@@ -29,6 +29,9 @@ def test_domain_and_blacklist():
     assert domain_of("https://www.shop.example.ru/a") == "example.ru"
     assert domain_of("https://eastfood.spb.ru/product/x") == "eastfood.spb.ru"
     assert domain_of("https://www.msk.ru") == "msk.ru"
+    assert domain_of("https://romashka.tilda.ws/opt") == "romashka.tilda.ws"       # разные компании на одном конструкторе
+    assert domain_of("https://vasilek.tilda.ws") != domain_of("https://romashka.tilda.ws")
+    assert domain_of("https://shop.company.ru") == "company.ru"                    # поддомен обычной компании сводится к корню
     assert is_blacklisted("https://www.avito.ru/x") and is_blacklisted("https://sub.ozon.ru/y")
     assert not is_blacklisted("https://moloko-opt.ru")
 

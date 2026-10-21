@@ -20,6 +20,7 @@ class Settings:
     db_path: Path
     max_suppliers: int
     live_daily_limit: int
+    offer_daily_limit: int
     page_ttl_days: int
 
     @property
@@ -36,5 +37,6 @@ def get_settings() -> Settings:
         db_path=Path(os.getenv("DB_PATH", str(ROOT / "data" / "app.db"))),
         max_suppliers=int(os.getenv("MAX_SUPPLIERS", "12")),
         live_daily_limit=int(os.getenv("LIVE_DAILY_LIMIT", "20")),
+        offer_daily_limit=int(os.getenv("OFFER_DAILY_LIMIT", "10")),
         page_ttl_days=int(os.getenv("PAGE_TTL_DAYS", "7")),
     )

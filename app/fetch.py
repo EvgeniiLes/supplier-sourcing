@@ -1,18 +1,26 @@
 """Загрузка страниц сайта поставщика и очистка до текста."""
 import asyncio
 import re
-from urllib.parse import urljoin, urlparse
+from urllib.parse import unquote, urljoin, urlparse
 
 import httpx
 from bs4 import BeautifulSoup
 
 from . import db
 from .config import get_settings
+from .docs import MAX_BYTES as MAX_PDF_BYTES, pdf_text_layer
 
 UA = "Mozilla/5.0 (compatible; SupplierFinderBot/0.1; +prototype)"
 MAX_BYTES = 2_000_000
 MAX_CHARS_PER_PAGE = 12_000
+MAX_CHARS_PER_PDF = 15_000
 MAX_SUBPAGES = 4
+MAX_PDFS = 2
+
+# PDF берём, только если по ссылке или адресу видно, что это прайс или каталог (в т.ч. транслитом)
+PDF_HINT = re.compile(r"прайс|price|prajs|prais|каталог|catalog|katalog|ассортимент|assortiment|тариф|tarif|цен[аы]?\b", re.I)
+# и не берём юридические документы
+PDF_SKIP = re.compile(r"правил|политик|оферт|соглашен|договор|privacy|policy|agreement|offer|terms|licen|лиценз", re.I)
 
 # что ищем в ссылках: контакты, доставка, опт, документы
 SUBPAGE_HINTS = ("контакт", "доставк", "опт", "о-компании", "о компании", "о нас", "сертифик",
@@ -45,6 +53,7 @@ def find_subpages(html: str | bytes, base_url: str) -> list[str]:
     soup = BeautifulSoup(html, "lxml")
     base_host = urlparse(base_url).hostname
     scored: list[tuple[int, str]] = []
+    pdfs: list[str] = []
     for a in soup.find_all("a", href=True):
         href = a["href"].strip()
         if href.startswith(("#", "mailto:", "tel:", "javascript:")):
@@ -53,7 +62,12 @@ def find_subpages(html: str | bytes, base_url: str) -> list[str]:
         p = urlparse(url)
         if p.scheme not in ("http", "https") or p.hostname != base_host:
             continue
-        if re.search(r"\.(jpg|jpeg|png|gif|pdf|zip|docx?|xlsx?)$", p.path, re.I):
+        if p.path.lower().endswith(".pdf"):
+            label = a.get_text(" ", strip=True) + " " + unquote(p.path)
+            if PDF_HINT.search(label) and not PDF_SKIP.search(label) and url not in pdfs:
+                pdfs.append(url)
+            continue
+        if re.search(r"\.(jpg|jpeg|png|gif|zip|docx?|xlsx?)$", p.path, re.I):
             continue
         hay = (a.get_text(" ", strip=True) + " " + p.path).lower()
         for i, hint in enumerate(SUBPAGE_HINTS):
@@ -65,7 +79,26 @@ def find_subpages(html: str | bytes, base_url: str) -> list[str]:
     for _, url in scored:
         if url.rstrip("/") != base_url.rstrip("/") and url not in out:
             out.append(url)
-    return out[:MAX_SUBPAGES]
+    return out[:MAX_SUBPAGES] + pdfs[:MAX_PDFS]       # PDF в конце: у них свой бюджет в запросе к модели
+
+
+def is_pdf_url(url: str) -> bool:
+    return urlparse(url).path.lower().endswith(".pdf")
+
+
+async def fetch_pdf_text(url: str, client: httpx.AsyncClient) -> str:
+    """Текст PDF-прайса. Пусто, если файл большой, не PDF или это скан без текстового слоя."""
+    try:
+        r = await client.get(url, headers={"User-Agent": UA})
+        if r.status_code >= 400:
+            return ""
+        declared = int(r.headers.get("content-length") or 0)
+        if declared > MAX_PDF_BYTES or len(r.content) > MAX_PDF_BYTES or not r.content.startswith(b"%PDF"):
+            return ""
+        text = pdf_text_layer(r.content)
+        return text[:MAX_CHARS_PER_PDF] if len(text) > 80 else ""
+    except (httpx.HTTPError, ValueError):
+        return ""
 
 
 async def fetch_html(url: str, client: httpx.AsyncClient) -> str | bytes | None:
@@ -98,6 +131,10 @@ async def load_page(u: str, client: httpx.AsyncClient, ttl: int) -> tuple[str, l
     if cached is not None:
         text, _, links = cached.partition(LINKS_MARK)
         return text, [x for x in links.split("\n") if x]
+    if is_pdf_url(u):
+        text = await fetch_pdf_text(u, client)
+        db.put_cached_page(u, text + LINKS_MARK)        # пустой результат тоже кэшируем: не качать скан снова
+        return text, []
     html = await fetch_html(u, client)
     if html is None:
         return None
@@ -107,9 +144,10 @@ async def load_page(u: str, client: httpx.AsyncClient, ttl: int) -> tuple[str, l
     return text, links
 
 
-async def fetch_site(url: str, client: httpx.AsyncClient | None = None) -> dict[str, str]:
-    """Главная + подходящие внутренние страницы. Возвращает {url: текст}."""
-    ttl = get_settings().page_ttl_days
+async def fetch_site(url: str, client: httpx.AsyncClient | None = None, ttl: int | None = None) -> dict[str, str]:
+    """Главная + подходящие внутренние страницы. Возвращает {url: текст}.
+    ttl=0 игнорирует кэш страниц (перепроверка поставщика)."""
+    ttl = get_settings().page_ttl_days if ttl is None else ttl
     own = client is None
     client = client or httpx.AsyncClient(timeout=15, follow_redirects=True, verify=False)
     pages: dict[str, str] = {}
@@ -123,7 +161,9 @@ async def fetch_site(url: str, client: httpx.AsyncClient | None = None) -> dict[
             if got:
                 pages[u] = got[0]
                 subs += got[1]
-        subs = [u for u in dict.fromkeys(subs) if u not in pages][:MAX_SUBPAGES]
+        subs = [u for u in dict.fromkeys(subs) if u not in pages]
+        html_subs = [u for u in subs if not is_pdf_url(u)][:MAX_SUBPAGES]
+        subs = html_subs + [u for u in subs if is_pdf_url(u)][:MAX_PDFS]
         for u, got in zip(subs, await asyncio.gather(*(load_page(u, client, ttl) for u in subs))):
             if got and got[0]:
                 pages[u] = got[0]

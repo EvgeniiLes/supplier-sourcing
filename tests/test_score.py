@@ -15,6 +15,13 @@ def full():
     )
 
 
+def test_long_values_are_shortened_in_reasons():
+    s = full()
+    s.address = F("Санкт-Петербург, " + "очень длинный адрес " * 10)
+    pro = next(p for p in score_supplier(s, "Санкт-Петербург", Filters()).pros if "регионе" in p)
+    assert len(pro) < 100 and "…" in pro
+
+
 def test_region_matching_handles_aliases_and_forms():
     assert region_matches("СПб", "г. Санкт-Петербург")
     assert region_matches("Москва", "Московская область")

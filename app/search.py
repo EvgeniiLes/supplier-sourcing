@@ -27,7 +27,11 @@ BLACKLIST = {
 
 # региональные и общие зоны, под которыми живут независимые компании: eastfood.spb.ru != spb.ru
 SHARED_SUFFIXES = {"spb.ru", "msk.ru", "nnov.ru", "nov.ru", "com.ru", "org.ru", "net.ru", "pp.ru",
-                   "ru.com", "com.ua", "co.uk", "com.tr", "com.cn"}
+                   "ru.com", "com.ua", "co.uk", "com.tr", "com.cn",
+                   # конструкторы сайтов и хостинги: у каждой компании свой поддомен, корень общий
+                   "tilda.ws", "ucoz.ru", "ucoz.com", "ucoz.net", "narod.ru", "wixsite.com", "github.io", "blogspot.com",
+                   "business.site", "weebly.com", "jimdofree.com", "nethouse.ru", "shop-pro.ru", "bitrix24.ru",
+                   "bitrix24.site", "taplink.ws", "mystrikingly.com", "sitey.me", "site123.me", "wordpress.com"}
 
 
 def domain_of(url: str) -> str:

@@ -52,3 +52,4 @@ class ScoreResult(BaseModel):
     missing: list[str]
     passes: bool = True
     fail_reasons: list[str] = Field(default_factory=list)
+    breakdown: list[dict] = Field(default_factory=list)

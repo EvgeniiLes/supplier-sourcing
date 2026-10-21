@@ -86,6 +86,7 @@ sudo systemctl status suppliers
 server {
     listen 80;
     server_name suppliersourcing.online www.suppliersourcing.online;
+    client_max_body_size 9m;   # загрузка КП до 8 МБ (по умолчанию nginx режет всё больше 1 МБ)
     location / {
         proxy_pass http://127.0.0.1:8010;
         proxy_set_header Host $host;
