@@ -1,0 +1,734 @@
+{
+ "topic": "сыр моцарелла",
+ "region": "Санкт-Петербург",
+ "keywords": [
+  "моцарелла",
+  "сыр"
+ ],
+ "collected_at": "2026-10-21",
+ "suppliers": [
+  {
+   "domain": "ekorfish.com",
+   "url": "https://ekorfish.com/catalog/maslo-i-molochnaya-produktsiya/syr-motsarella",
+   "also_domains": [],
+   "name": {
+    "value": "Экор (ООО «ПТК ЭКОР», производство — ООО «ПТК ЭКОР-ФИШ»)",
+    "quote": "Экор — оптовый поставщик продуктов питания для ресторанов, кафе, столовых, розничных сетей и производств",
+    "url": "https://ekorfish.com/"
+   },
+   "offering": {
+    "value": "Оптовые продукты питания: рыба и морепродукты, мясо и птица, овощи и фрукты, бакалея, молочные продукты, замороженные полуфабрикаты; собственное производство рыбы и морепродуктов",
+    "quote": "В ассортименте — более 3500 наименований продуктов питания оптом",
+    "url": "https://ekorfish.com/"
+   },
+   "address": {
+    "value": "Москва (Открытое шоссе, 13, стр. 1; ул. 2-я Кабельная, 2с5), Санкт-Петербург (проспект Непокорённых, 63К42; ул. Аккуратова, 13), Краснодар (ул. Тополиная, 20; 1-й проезд Филатова, 4); производство — Балашиха",
+    "quote": "Офисы и оптовые базы работают в Москве, Санкт-Петербурге и Краснодаре, собственное производство — в Балашихе, Московская область.",
+    "url": "https://ekorfish.com/contacts/"
+   },
+   "regions": [
+    {
+     "value": "Москва и область",
+     "quote": "Осуществляем доставку продуктов питания по Москве, Санкт-Петербургу, Краснодару и областям",
+     "url": "https://ekorfish.com/"
+    },
+    {
+     "value": "Санкт-Петербург и область",
+     "quote": "Осуществляем доставку продуктов питания по Москве, Санкт-Петербургу, Краснодару и областям",
+     "url": "https://ekorfish.com/"
+    },
+    {
+     "value": "Краснодар и область",
+     "quote": "Осуществляем доставку продуктов питания по Москве, Санкт-Петербургу, Краснодару и областям",
+     "url": "https://ekorfish.com/"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка в другие регионы транспортными компаниями от 1 паллетоместа",
+    "quote": "В другие регионы отправляем транспортными компаниями в объёме от 1 паллетоместа.",
+    "url": "https://ekorfish.com/"
+   },
+   "phones": [
+    {
+     "value": "+7 (800) 505-01-82",
+     "quote": "Позвоните по единому номеру 8 (800) 505-01-82 или в московский офис +7 (495) 637-82-28",
+     "url": "https://ekorfish.com/contacts/"
+    },
+    {
+     "value": "+7 (495) 637-82-28",
+     "quote": "или в московский офис +7 (495) 637-82-28",
+     "url": "https://ekorfish.com/contacts/"
+    },
+    {
+     "value": "+7 (812) 509-52-67",
+     "quote": "Продуктовая оптовая база г. Санкт-Петербург +7 (812) 509-52-67",
+     "url": "https://ekorfish.com/"
+    },
+    {
+     "value": "+7 (861) 212-10-73",
+     "quote": "Оптовый склад продуктов г. Краснодар г. Краснодар, ул. Тополиная, 20 +7 (861) 212-10-73",
+     "url": "https://ekorfish.com/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@ekorfish.ru",
+     "quote": "напишите на info@ekorfish.ru",
+     "url": "https://ekorfish.com/contacts/"
+    }
+   ],
+   "inn": {
+    "value": "7718741865",
+    "quote": "ИНН\n7718741865",
+    "url": "https://ekorfish.com/contacts/"
+   },
+   "min_order": {
+    "value": "Самовывоз от 3 000 ₽, доставка от 5 000 ₽",
+    "quote": "Самовывоз — от 3 000 ₽. Доставка — от 5 000 ₽, бесплатно, по городу и области.",
+    "url": "https://ekorfish.com/"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Цены на сайте с НДС; например, сыр моцарелла 2,5 кг — от 816,38 ₽/кг при вложении от 3 000 ₽ (примеры цен на странице товара)",
+    "quote": "816,38 ₽/кг",
+    "url": "https://ekorfish.com/catalog/maslo-i-molochnaya-produktsiya/syr-motsarella"
+   },
+   "certificates": [
+    {
+     "value": "Меркурий, Честный знак, электронные ТТН и УПД",
+     "quote": "На всю продукцию Экор предоставляет полный пакет документов: «Меркурий», «Честный знак», электронные ТТН и УПД.",
+     "url": "https://ekorfish.com/"
+    }
+   ],
+   "delivery": {
+    "value": "Собственная доставка по Москве, Санкт-Петербургу, Краснодару и областям: в день заказа при заказе до 11:00, иначе на следующий день; бесплатно от 5 000 ₽",
+    "quote": "Экор доставляет свою продукцию по Москве, Санкт-Петербургу, Краснодару и их областям собственной службой доставки.",
+    "url": "https://ekorfish.com/"
+   },
+   "wholesale": {
+    "value": "Оптовые поставки для ресторанов, кафе, столовых, розничных сетей и производств",
+    "quote": "Экор — оптовый поставщик продуктов питания для ресторанов, кафе, столовых, розничных сетей и производств",
+    "url": "https://ekorfish.com/"
+   },
+   "sources": [
+    "https://ekorfish.com/",
+    "https://ekorfish.com/catalog/maslo-i-molochnaya-produktsiya/syr-motsarella",
+    "https://ekorfish.com/contacts/",
+    "https://ekorfish.com/delivery/",
+    "https://ekorfish.com/catalog/svezhemorozhenaya-ryba/",
+    "https://ekorfish.com/catalog/okhlazhdennaya-ryba/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "ews.ru",
+   "url": "https://www.ews.ru/catalog/T0102-Moczarella-dlya-piczcy",
+   "also_domains": [],
+   "name": {
+    "value": "Восток-Запад",
+    "quote": "Восток-Запад – оптовый поставщик продуктов питания",
+    "url": "https://www.ews.ru/"
+   },
+   "offering": {
+    "value": "Продукты питания для HoReCa: тысячи товаров профессиональных производителей, 5000+ продуктов",
+    "quote": "Мы предлагаем тысячи товаров профессиональных производителей",
+    "url": "https://www.ews.ru/"
+   },
+   "address": {
+    "value": "Москва (головной офис); офисы также в Краснодаре, Санкт-Петербурге, Новосибирске, Екатеринбурге",
+    "quote": "Офисы и складские комплексы Москва Краснодар Санкт-Петербург Новосибирск Екатеринбург",
+    "url": "https://www.ews.ru/contacts"
+   },
+   "regions": [
+    {
+     "value": "В любой город РФ (уточняйте условия); регулярная доставка в 600+ городов",
+     "quote": "В любой город* РФ",
+     "url": "https://www.ews.ru/"
+    },
+    {
+     "value": "Регулярная доставка в 600+ городов",
+     "quote": "600 + городов регулярной доставки",
+     "url": "https://www.ews.ru/"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка по всей России",
+    "quote": "Доставляем продукты питания по всей России со строгим соблюдением температурных режимов",
+    "url": "https://www.ews.ru/usloviya-dostavki"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 223-04-31",
+     "quote": "Москва +7 (495) 223 04 31",
+     "url": "https://www.ews.ru/contacts"
+    },
+    {
+     "value": "+7 (812) 244-01-11",
+     "quote": "Санкт-Петербург +7 (812) 244 01 11",
+     "url": "https://www.ews.ru/contacts"
+    },
+    {
+     "value": "+7 (343) 312-90-01",
+     "quote": "Екатеринбург +7 (343) 312 90 01",
+     "url": "https://www.ews.ru/contacts"
+    },
+    {
+     "value": "+7 (861) 201-12-12",
+     "quote": "Краснодар +7 (861) 201 12 12",
+     "url": "https://www.ews.ru/contacts"
+    },
+    {
+     "value": "+7 (383) 230-30-90",
+     "quote": "Новосибирск +7 (383) 230 30 90",
+     "url": "https://www.ews.ru/contacts"
+    },
+    {
+     "value": "+7 (800) 700-35-80",
+     "quote": "Колл-центр +7 800 700 35 80",
+     "url": "https://www.ews.ru/contacts"
+    }
+   ],
+   "emails": [
+    {
+     "value": "liniyadoveriya@ews.ru",
+     "quote": "liniyadoveriya@ews.ru",
+     "url": "https://www.ews.ru/contacts"
+    }
+   ],
+   "inn": null,
+   "min_order": {
+    "value": "От 10000 в зависимости от зоны доставки",
+    "quote": "От 10000 в зависимости от зоны доставки",
+    "url": "https://www.ews.ru/usloviya-dostavki"
+   },
+   "min_order_kg": null,
+   "price_info": null,
+   "certificates": [
+    {
+     "value": "Меркурий, ЕГАИС, Честный ЗНАК, ЭДО, ФГИС Зерно",
+     "quote": "Автоматическая отчетность ✓ Меркурий ✓ ЕГАИС ✓ Честный ЗНАК ✓ ЭДО ✓ ФГИС Зерно",
+     "url": "https://www.ews.ru/"
+    },
+    {
+     "value": "Международная сертификация FSSC 22000",
+     "quote": "международная сертификация FSSC 22000",
+     "url": "https://www.ews.ru/logistics"
+    },
+    {
+     "value": "Стандарт International Food Standard (IFS) по пищевой безопасности",
+     "quote": "соответствующие международному стандарту International Food Standard (IFS)",
+     "url": "https://www.ews.ru/guarantee"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка по всей России собственным автотранспортом с температурным режимом; по графику, выбор даты при оформлении заказа",
+    "quote": "Доставляем продукты питания по всей России со строгим соблюдением температурных режимов",
+    "url": "https://www.ews.ru/usloviya-dostavki"
+   },
+   "wholesale": {
+    "value": "Оптовые поставки для ресторанов и HoReCa, работа с юрлицами (Закупка через «одни руки»)",
+    "quote": "Закупка через «одни руки»",
+    "url": "https://www.ews.ru/logistics"
+   },
+   "sources": [
+    "https://www.ews.ru/",
+    "https://www.ews.ru/catalog/T0102-Moczarella-dlya-piczcy",
+    "https://www.ews.ru/contacts",
+    "https://www.ews.ru/logistics",
+    "https://www.ews.ru/guarantee",
+    "https://www.ews.ru/usloviya-dostavki"
+   ],
+   "rejected_facts": 1
+  },
+  {
+   "domain": "interfoodgroup.ru",
+   "url": "https://interfoodgroup.ru/catalog-cheese",
+   "also_domains": [],
+   "name": {
+    "value": "ООО «ИнтерФудГруп» (InterFoodGroup)",
+    "quote": "ООО «ИнтерФудГруп» — надежный поставщик продуктов питания для B2B и HoReCa.",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "offering": {
+    "value": "Продукты питания оптом: мясные и рыбные изделия, полуфабрикаты, сыры, молочная продукция, напитки, консервы и др.",
+    "quote": "Мы предлагаем широкий ассортимент товаров, включая мясные и рыбные изделия, полуфабрикаты, кондитерские изделия, молоко и многое другое.",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "address": {
+    "value": "Москва, 5-й Донской пр-д, 19",
+    "quote": "Москва, 5-й Донской пр-д, 19",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "regions": [
+    {
+     "value": "Москва, Ростов-на-Дону, Краснодар (филиалы)",
+     "quote": "IFG Ростов-на-Дону",
+     "url": "https://interfoodgroup.ru/"
+    }
+   ],
+   "nationwide": {
+    "value": "Поставки по всей России, от Калининграда до Владивостока",
+    "quote": "Поставляем от Калинграда до Владивостока",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 141-07-77",
+     "quote": "8 (495) 141-07-77",
+     "url": "https://interfoodgroup.ru/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "sales@interfoodgroup.ru",
+     "quote": "sales@interfoodgroup.ru",
+     "url": "https://interfoodgroup.ru/"
+    }
+   ],
+   "inn": {
+    "value": "7728395861",
+    "quote": "ИНН 7728395861",
+    "url": "https://interfoodgroup.ru/contact"
+   },
+   "min_order": {
+    "value": "от 10 коробок или от 50.000 рублей",
+    "quote": "Минимальный заказ продукции от 10 коробок или от 50.000 рублей!",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Гибкие цены и специальные акции для партнеров; оптовые цены",
+    "quote": "Оптовые цены: выгодные условия покупки товаров позволяют сэкономить бюджет при заказе больших объемов.",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "certificates": [
+    {
+     "value": "Продукция сертифицирована (заявлено на странице каталога сыров)",
+     "quote": "Мы поставляем только сертифицированную продукцию, изготовленную из натурального молока.",
+     "url": "https://interfoodgroup.ru/catalog-cheese"
+    }
+   ],
+   "delivery": {
+    "value": "Оперативная логистика, доставка по России",
+    "quote": "Доставка: оперативная логистика позволяет получить товары в кратчайшие сроки.",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "wholesale": {
+    "value": "Оптовые поставки для B2B и HoReCa",
+    "quote": "Продукты питания оптом для бизнеса, ресторанов, кафе, доставка по России, HoReCa, B2B",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "sources": [
+    "https://interfoodgroup.ru/",
+    "https://interfoodgroup.ru/catalog-cheese",
+    "https://interfoodgroup.ru/contact",
+    "https://interfoodgroup.ru/about",
+    "https://interfoodgroup.ru/suppliers"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "oaommz.ru",
+   "url": "https://oaommz.ru/products/mozzarella",
+   "also_domains": [],
+   "name": {
+    "value": "Мытищинский молочный завод",
+    "quote": "Мытищинский молочный завод",
+    "url": "https://oaommz.ru/"
+   },
+   "offering": {
+    "value": "Сливочное масло, спреды, топленая смесь, маргарин, плавленый сыр, сырный продукт, моцарелла и продукты для пиццы, соусы",
+    "quote": "Сыр, который делает пиццу вкуснее!",
+    "url": "https://oaommz.ru/"
+   },
+   "address": {
+    "value": "Московская обл., г. Мытищи, ул. Бояринова, д. 26",
+    "quote": "141009 Московская обл.,",
+    "url": "https://oaommz.ru/"
+   },
+   "regions": [
+    {
+     "value": "Москва и Московская область (доставка собственным автопарком)",
+     "quote": "Мытищинский молочный завод располагает собственным автопарком, что дает нам полный контроль над процессом перевозки по Москве и Московской области.",
+     "url": "https://oaommz.ru/dostavka/"
+    },
+    {
+     "value": "Другие регионы России (оценивается индивидуально)",
+     "quote": "Доставка в другие регионы оценивается индивидуально с учетом тарифов транспортных компаний.",
+     "url": "https://oaommz.ru/dostavka/"
+    }
+   ],
+   "nationwide": {
+    "value": "Продукция представлена во всех регионах России",
+    "quote": "Наша продукция представлена во всех регионах России, а так же в странах ближнего зарубежья",
+    "url": "https://oaommz.ru/about-us/"
+   },
+   "phones": [
+    {
+     "value": "+7 (800) 505-90-90",
+     "quote": "8 (800) 505-90-90",
+     "url": "https://oaommz.ru/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@oaommz.ru",
+     "quote": "info@oaommz.ru",
+     "url": "https://oaommz.ru/"
+    }
+   ],
+   "inn": null,
+   "min_order": {
+    "value": "Закажите от одной коробки",
+    "quote": "Закажите от одной коробки — это удобно для пробных закупок и небольших заведений.",
+    "url": "https://oaommz.ru/dostavka/"
+   },
+   "min_order_kg": null,
+   "price_info": null,
+   "certificates": [
+    {
+     "value": "СТО 11766923-011-2019 (на продукции моцареллы)",
+     "quote": "СТО 11766923-011-2019",
+     "url": "https://oaommz.ru/products/mozzarella"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка по Москве и Московской области бесплатно при заказе от 300 кг; по Москве — 1 день, в регионы — от 3 до 10 дней; другие регионы оцениваются индивидуально",
+    "quote": "Доставка по Москве и Московской области бесплатно при заказе от 300 кг.",
+    "url": "https://oaommz.ru/dostavka/"
+   },
+   "wholesale": {
+    "value": "Работа с юрлицами и оптом: поставки для HoReCa, предприятий общепита, хлебокомбинатов и др.",
+    "quote": "Мы обслуживаем крупный и мелкий опт, гарантируя неизменно высокий уровень сервиса и оперативную поддержку на каждом этапе.",
+    "url": "https://oaommz.ru/dostavka/"
+   },
+   "sources": [
+    "https://oaommz.ru/",
+    "https://oaommz.ru/products/mozzarella",
+    "https://oaommz.ru/contacts/",
+    "https://oaommz.ru/dostavka/",
+    "https://oaommz.ru/about-us/",
+    "https://oaommz.ru/about-us/nagrady/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "efspb.ru",
+   "url": "https://efspb.ru/catalog/molochnye-produkty/syry",
+   "also_domains": [],
+   "name": {
+    "value": "EuroFoods (ЕвроФудс)",
+    "quote": "Поставщик продуктов для ресторанов и кафе в Санкт-Петербурге - EuroFoods",
+    "url": "https://efspb.ru/"
+   },
+   "offering": {
+    "value": "Комплексный поставщик продуктов питания для HoReCa: крупы, мясо, рыба, молочные продукты, кондитерские товары, специи и другие категории; кроме алкоголя и свежих овощей и фруктов",
+    "quote": "Мы поставим всё для вашего заведения, кроме свежих овощей, фруктов и алкоголя.",
+    "url": "https://efspb.ru/"
+   },
+   "address": {
+    "value": "г. Санкт-Петербург, Рябовское шоссе, д.120, лит. Б",
+    "quote": "195043, г. Санкт-Петербург, Рябовское шоссе, д.120, лит. Б",
+    "url": "https://efspb.ru/contacts/"
+   },
+   "regions": [
+    {
+     "value": "Санкт-Петербург и Северо-Запад",
+     "quote": "EuroFoods — комплексный поставщик продуктов питания для HoReCa в Санкт-Петербурге и на Северо-Западе.",
+     "url": "https://efspb.ru/"
+    },
+    {
+     "value": "Пskov, Великий Новгород, Петрозаводск, Выборг, Кириши (продукты готовят в заведениях)",
+     "quote": "Из наших продуктов готовят в заведениях Санкт-Петербурга, Пскова и Великого Новгорода, Петрозаводска, Выборга, Киришей.",
+     "url": "https://efspb.ru/"
+    }
+   ],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (812) 321-61-31",
+     "quote": "+7(812) 321-61-31",
+     "url": "https://efspb.ru/contacts/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "zakaz@efspb.ru",
+     "quote": "Департамент продаж\n+7(812) 321-61-31\nzakaz@efspb.ru",
+     "url": "https://efspb.ru/contacts/"
+    },
+    {
+     "value": "zakupka@efspb.ru",
+     "quote": "Департамент закупок\n+7(812) 321-61-31\nzakupka@efspb.ru",
+     "url": "https://efspb.ru/contacts/"
+    },
+    {
+     "value": "service@efspb.ru",
+     "quote": "Департамент сервиса\n+7(812) 321-61-31\nservice@efspb.ru",
+     "url": "https://efspb.ru/contacts/"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Фиксированная цена на все продукты на 1 месяц",
+    "quote": "Чтобы обеспечить вам стабильную калькуляцию блюд, мы фиксируем цену всех продуктов на 1 месяц.",
+    "url": "https://efspb.ru/"
+   },
+   "certificates": [],
+   "delivery": {
+    "value": "Доставка в день заказа (заявки до 12.30 во второй половине дня); доставка на следующий день; бесплатная доставка по Санкт-Петербургу в пределах КАД при заказе от 10000 рублей",
+    "quote": "Мы осуществляем бесплатную доставку по Санкт-Петербургу в пределах КАД — при заказе от 10000 рублей.",
+    "url": "https://efspb.ru/service/"
+   },
+   "wholesale": {
+    "value": "Работа с ресторанами, кафе, отелями и другими заведениями HoReCa; поставки юрлицам и через счёт",
+    "quote": "Оплата заказа возможна безналичным путем по счету или наличными в момент получения заказа",
+    "url": "https://efspb.ru/service/"
+   },
+   "sources": [
+    "https://efspb.ru/",
+    "https://efspb.ru/contacts/",
+    "https://efspb.ru/service/",
+    "https://efspb.ru/vendors/",
+    "https://efspb.ru/about/news/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "gurman-llc.ru",
+   "url": "https://gurman-llc.ru/catalog/syry/filter/cheese_type-is-mocarella/apply",
+   "also_domains": [],
+   "name": {
+    "value": "ТД «Гурман» (ООО ТД \"ГУРМАН\")",
+    "quote": "Торговый дом «Гурман» поставляет продукты для Хорека по всей России.",
+    "url": "https://gurman-llc.ru/"
+   },
+   "offering": {
+    "value": "Продукты для ресторанов, кафе и других объектов HoReCa: заморозка, консервация, масла, молочные продукты, сыры, майонез и соусы, мясная продукция, шоколад и какао, бакалея; более 1500 наименований",
+    "quote": "Универсальный ассортимент — более 1500 наименований.",
+    "url": "https://gurman-llc.ru/"
+   },
+   "address": {
+    "value": "Московская область, Люберецкий район, пос. Томилино, 23 км Новорязанского шоссе, строение 27/2",
+    "quote": "140172, Московская область, Люберецкий район, пос. Томилино 23 км. Новорязанского шоссе, строение 27/2 (инв.№ 2562), лит.2Е",
+    "url": "https://gurman-llc.ru/contacts/"
+   },
+   "regions": [
+    {
+     "value": "Москва и Московская область (пос. Томилино)",
+     "quote": "Доставка продуктов в рестораны и кафе в Москве ТД Гурман",
+     "url": "https://gurman-llc.ru/payment/"
+    },
+    {
+     "value": "Работа с клиентами из других городов и регионов",
+     "quote": "работает с клиентами из других городов и регионов.",
+     "url": "https://gurman-llc.ru/o_kompanii/about/"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка по всей России для HoReCa",
+    "quote": "Торговый дом «Гурман» поставляет продукты для Хорека по всей России.",
+    "url": "https://gurman-llc.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 133-00-60",
+     "quote": "+7 (495) 133-00-60",
+     "url": "https://gurman-llc.ru/contacts/"
+    },
+    {
+     "value": "+7 (495) 640-24-94",
+     "quote": "+7 (495) 640-24-94",
+     "url": "https://gurman-llc.ru/contacts/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "office@gurman-llc.ru",
+     "quote": "Email: office@gurman-llc.ru",
+     "url": "https://gurman-llc.ru/contacts/"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Оптовые цены по прайс-листу, например: Молоко Эконива Professional Line 3.2% (1 л) — 106,00 ₽/шт; Спагетти № 5 «Барилла» (450 гр) — 80,00 ₽/шт",
+    "quote": "Молоко Эконива Professional Line 3.2% (1 л)",
+    "url": "https://gurman-llc.ru/"
+   },
+   "certificates": [],
+   "delivery": {
+    "value": "По Москве в пределах МКАД бесплатно от 20 000 рублей; за МКАД (до 15 км) бесплатно от 30 000 рублей; доставка на следующий рабочий день. Самовывоз бесплатно",
+    "quote": "Бесплатно , если сумма заказа от 20 000 рублей",
+    "url": "https://gurman-llc.ru/payment/"
+   },
+   "wholesale": {
+    "value": "Работа с юрлицами и оптом; заказ оптом в личном кабинете на сайте или по телефону",
+    "quote": "Заказать продукты оптом можно в личном кабинете на сайте или по телефону",
+    "url": "https://gurman-llc.ru/"
+   },
+   "sources": [
+    "https://gurman-llc.ru/",
+    "https://gurman-llc.ru/contacts/",
+    "https://gurman-llc.ru/payment/",
+    "https://gurman-llc.ru/o_kompanii/about/",
+    "https://gurman-llc.ru/partners/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "mozaretti.ru",
+   "url": "https://mozaretti.ru",
+   "also_domains": [],
+   "name": {
+    "value": "Mozaretti (Моцаретти)",
+    "quote": "Mozaretti ® (Моцаретти) - российский бренд полутвердых и мягких сыров по итальянским технологиям.",
+    "url": "https://mozaretti.ru/"
+   },
+   "offering": {
+    "value": "Сыры Моцарелла для пиццы (полутвердые сыры категории «Mozzarella for pizza») для HoReCa: натуральный, молокосодержащий и белково-жировой продукт, брусок 3 кг, туба 0,5 кг, 1 кг, 2 кг",
+    "quote": "Упаковка: брусок 3 кг; туба 0,5 кг, 1 кг, 2 кг",
+    "url": "https://mozaretti.ru/"
+   },
+   "address": {
+    "value": "Калужская область, Бабынинский район, пос. Бабынино, ул. Моторная д.10",
+    "quote": "Адрес: Калужская область, Бабынинский район, пос. Бабынино, ул. Моторная д.10",
+    "url": "https://mozaretti.ru/kontakty/"
+   },
+   "regions": [],
+   "nationwide": {
+    "value": "Доставка во все регионы",
+    "quote": "Доставка во все регионы",
+    "url": "https://mozaretti.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (800) 511-01-77",
+     "quote": "Телефон:\n+7 (800) 511-01-77",
+     "url": "https://mozaretti.ru/kontakty/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "office@mozaretti.ru",
+     "quote": "E-mail:\noffice@mozaretti.ru",
+     "url": "https://mozaretti.ru/kontakty/"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": null,
+   "certificates": [
+    {
+     "value": "Соответствие международным стандартам (экологическим и производственным)",
+     "quote": "соответствует международным стандартам",
+     "url": "https://mozaretti.ru/"
+    }
+   ],
+   "delivery": null,
+   "wholesale": {
+    "value": "Работа с юрлицами/HoReCa: оставьте заявку, менеджеры свяжутся",
+    "quote": "Хотите сотрудничать с нами? Оставьте заявку, и наши менеджеры свяжутся с Вами!",
+    "url": "https://mozaretti.ru/kontakty/"
+   },
+   "sources": [
+    "https://mozaretti.ru/",
+    "https://mozaretti.ru/kontakty/",
+    "https://mozaretti.ru/o-kompanii/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "biomilk.ru",
+   "url": "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella",
+   "also_domains": [],
+   "name": {
+    "value": "ТК Качество (biomilk.ru)",
+    "quote": "Дистрибьютор продуктов питания – более 1700 товаров с доставкой по Москве",
+    "url": "https://biomilk.ru/"
+   },
+   "offering": {
+    "value": "Молочная продукция, сыры, мясная гастрономия, вода и напитки, консервация, бакалея, кондитерские изделия, соусы; более 1700 товаров",
+    "quote": "Вы можете легко заказать более 1700 товаров",
+    "url": "https://biomilk.ru/"
+   },
+   "address": {
+    "value": "Московская область, г. о. Щёлково, с. Трубино, д. 77А, корп. 2",
+    "quote": "Московская область, г. о. Щёлково, с. Трубино, д. 77А, корп. 2",
+    "url": "https://biomilk.ru/kontakty/"
+   },
+   "regions": [
+    {
+     "value": "Москва и Московская область",
+     "quote": "Бесплатная доставка По Москве и области",
+     "url": "https://biomilk.ru/"
+    },
+    {
+     "value": "Балашиха, Подольск, Мытищи, Химки, Королёв, Люберцы, Красногорск, Одинцово, Домодедово и другие города Московской области",
+     "quote": "Доставка выполняется в Балашиху, Подольск, Мытищи, Химки, Королёв, Люберцы, Красногорск, Одинцово, Домодедово и другие города региона.",
+     "url": "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella"
+    }
+   ],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (495) 660-39-80",
+     "quote": "+7 (495) 660-39-80",
+     "url": "https://biomilk.ru/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "zakaz@biomilk.ru",
+     "quote": "zakaz@biomilk.ru",
+     "url": "https://biomilk.ru/"
+    },
+    {
+     "value": "info@biomilk.ru",
+     "quote": "info@biomilk.ru",
+     "url": "https://biomilk.ru/"
+    }
+   ],
+   "inn": {
+    "value": "505200078085",
+    "quote": "ИНН 505200078085",
+    "url": "https://biomilk.ru/politika-ispolzovanie-fajlov-cookie/"
+   },
+   "min_order": {
+    "value": "Минимальная сумма заказа 5000 руб.",
+    "quote": "Минимум — 5 000 ₽",
+    "url": "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Цены от 176,26 ₽ (пример: моцарелла «Eletto» палочки 160 г)",
+    "quote": "Цены от 176,26 ₽",
+    "url": "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella"
+   },
+   "certificates": [],
+   "delivery": {
+    "value": "Бесплатная доставка по Москве и области; срок доставки 1 день; доставка по вторникам, четвергам и субботам с 09:00 до 18:00",
+    "quote": "Бесплатная доставка",
+    "url": "https://biomilk.ru/"
+   },
+   "wholesale": {
+    "value": "Работа с юрлицами и оптом: оптовые поставки продуктов в Москве",
+    "quote": "Мы обеспечиваем поставки широкого ассортимента продуктов питания оптом в Москве.",
+    "url": "https://biomilk.ru/"
+   },
+   "sources": [
+    "https://biomilk.ru/",
+    "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella",
+    "https://biomilk.ru/kontakty/",
+    "https://biomilk.ru/dostavka-i-oplata/",
+    "https://biomilk.ru/about/",
+    "https://biomilk.ru/politika-ispolzovanie-fajlov-cookie/"
+   ],
+   "rejected_facts": 0
+  }
+ ]
+}

@@ -1,0 +1,813 @@
+{
+ "topic": "мука пшеничная",
+ "region": "Екатеринбург",
+ "keywords": [
+  "мука"
+ ],
+ "collected_at": "2026-10-21",
+ "suppliers": [
+  {
+   "domain": "torgmuka.ru",
+   "url": "https://torgmuka.ru",
+   "also_domains": [],
+   "name": {
+    "value": "ТоргМука (ООО \"ТоргМука\")",
+    "quote": "© 2025 ООО \"ТоргМука\". Все права защищены.",
+    "url": "https://torgmuka.ru/"
+   },
+   "offering": {
+    "value": "Пшеничная и ржаная мука оптом для хлебокомбинатов, пекарен и кондитерских; мука в мешках 5–50 кг, на паллетах или навалом",
+    "quote": "Пшеничная мука всех сортов и ржаная мука — от премиальных до экономичных вариантов.",
+    "url": "https://torgmuka.ru/"
+   },
+   "address": {
+    "value": "Собственный склад в Екатеринбурге; большой склад в Березовском",
+    "quote": "Большой склад в Березовском с правильными условиями хранения",
+    "url": "https://torgmuka.ru/"
+   },
+   "regions": [
+    {
+     "value": "Екатеринбург и область",
+     "quote": "Быстрая доставка по городу и области",
+     "url": "https://torgmuka.ru/"
+    }
+   ],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (912) 049-24-25",
+     "quote": "+7 912 049-24-25",
+     "url": "https://torgmuka.ru/vizitka/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "sales@torgmuka.ru",
+     "quote": "sales@torgmuka.ru",
+     "url": "https://torgmuka.ru/vizitka/"
+    }
+   ],
+   "inn": null,
+   "min_order": {
+    "value": "Прямые поставки от производителей партиями от 20 тонн",
+    "quote": "Для крупных заказов — прямые поставки от производителей партиями от 20 тонн.",
+    "url": "https://torgmuka.ru/"
+   },
+   "min_order_kg": 20000.0,
+   "price_info": {
+    "value": "Цены за 50 кг, например: пшеничная высший сорт ТМ Птица-мельница 28.80, первый сорт 28.10; цены без учета доставки",
+    "quote": "**Цены указаны без учета доставки.",
+    "url": "https://torgmuka.ru/prajs/"
+   },
+   "certificates": [
+    {
+     "value": "Продукция сертифицирована и соответствует ГОСТам",
+     "quote": "Вся продукция сертифицирована и соответствует ГОСТам.",
+     "url": "https://torgmuka.ru/"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка 6 дней в неделю, включая услуги грузчиков; по городу и области",
+    "quote": "Доставка 6 дней в неделю, включая услуги грузчиков.",
+    "url": "https://torgmuka.ru/"
+   },
+   "wholesale": {
+    "value": "Работа с юрлицами и оптом; отсрочка платежа постоянным клиентам, цены с НДС",
+    "quote": "Работаем с НДС. Постоянным клиентам предоставляем отсрочку платежа.",
+    "url": "https://torgmuka.ru/"
+   },
+   "sources": [
+    "https://torgmuka.ru/",
+    "https://torgmuka.ru/vizitka/",
+    "https://torgmuka.ru/prajs/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "zernoopt.com",
+   "url": "https://www.zernoopt.com/flour",
+   "also_domains": [],
+   "name": {
+    "value": "ООО «Зерноопт» (ЗЕРНООПТ)",
+    "quote": "ООО ЗЕРНООПТ",
+    "url": "https://www.zernoopt.com/"
+   },
+   "offering": {
+    "value": "Оптовая продажа и экспорт зерновых, бобовых и масличных культур: пшеница, ячмень, овёс, гречиха, лён, чечевица, нут, рыжик, горчица, сафлор, горох, просо, рапс, вика, свекольный жом, жмых подсолнечный, комбикорма, мука",
+    "quote": "Оптовая продажа зерновых, бобовых и масличных культур",
+    "url": "https://www.zernoopt.com/"
+   },
+   "address": {
+    "value": "г. Екатеринбург, проезд Решетникова, 22а, офис 41",
+    "quote": "620146, г. Екатеринбург, проезд Решетникова, 22а, офис 41",
+    "url": "https://www.zernoopt.com/contacts"
+   },
+   "regions": [
+    {
+     "value": "Поставки в Европу (Польша, Чехия, Германия), страны СНГ, Иран, ОАЭ, Индия, Китай",
+     "quote": "Компания осуществляет поставки продукции в Европу (Польша, Чехия, Германия), страны СНГ и Иран, ОАЭ, Индия, Китай.",
+     "url": "https://www.zernoopt.com/about"
+    },
+    {
+     "value": "Закупка у производителей Сибири, Уральского, Центрального, Приволжского федеральных округов",
+     "quote": "Закупаем зерновую продукцию производителей Сибири, Уральского, Центрального, Приволжского федеральных округов",
+     "url": "https://www.zernoopt.com/for-suppliers"
+    }
+   ],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (932) 613-41-76",
+     "quote": "Тел.: +7 932 613 4176 (WhatsApp)",
+     "url": "https://www.zernoopt.com/contacts"
+    },
+    {
+     "value": "+7 (922) 031-59-23",
+     "quote": "Тел.: +7-922-03-159-23",
+     "url": "https://www.zernoopt.com/flour"
+    }
+   ],
+   "emails": [
+    {
+     "value": "regiongrain2@yandex.ru",
+     "quote": "Email: regiongrain2@yandex.ru",
+     "url": "https://www.zernoopt.com/contacts"
+    },
+    {
+     "value": "regiongrain3@yandex.ru",
+     "quote": "Email: regiongrain3@yandex.ru",
+     "url": "https://www.zernoopt.com/flour"
+    }
+   ],
+   "inn": {
+    "value": "6673115101",
+    "quote": "ИНН 6673115101",
+    "url": "https://www.zernoopt.com/"
+   },
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Цена рассчитывается на индивидуальных условиях в зависимости от культуры, объема, качества, оплаты, тары и транспортировки; на сайте указано «по согласованию»",
+    "quote": "Цена рассчитывается на индивидуальных условиях в зависимости от культуры, объема, качества, оплаты, тары и транспортировки",
+    "url": "https://www.zernoopt.com/price"
+   },
+   "certificates": [
+    {
+     "value": "Сертификация по ТР ТС 015/2011 «О безопасности зерна» и Регламентам ЕС (Постановление № 1881/2006)",
+     "quote": "Продукция компании соответствует применяемым в РФ нормам и сертифицирована в соответствии с требованиями ТР ТС 015/2011 «О безопасности зерна»",
+     "url": "https://www.zernoopt.com/about"
+    },
+    {
+     "value": "Декларации соответствия и фитосанитарные сертификаты, ветеринарные и таможенные документы",
+     "quote": "Оформление деклараций соответствия и фитосанитарных сертификатов",
+     "url": "https://www.zernoopt.com/about"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка морскими контейнерами, автотранспортом, ЖД вагонами, зерновозами и хопперами; базис поставки FCA, FOB, DAP, CIF, CFR",
+    "quote": "Доставка до потребителя морскими контейнерами, автотранспортом, ЖД вагонами, зерновозами и хопперами",
+    "url": "https://www.zernoopt.com/about"
+   },
+   "wholesale": {
+    "value": "Работа оптом; компания мы ПРОДАЁМ оптом и мы Покупаем оптом",
+    "quote": "мы ПРОДАЁМ оптом",
+    "url": "https://www.zernoopt.com/about"
+   },
+   "sources": [
+    "https://www.zernoopt.com/",
+    "https://www.zernoopt.com/flour",
+    "https://www.zernoopt.com/contacts",
+    "https://www.zernoopt.com/price",
+    "https://www.zernoopt.com/for-suppliers",
+    "https://www.zernoopt.com/about"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "partnermk.ru",
+   "url": "https://partnermk.ru/type-muka",
+   "also_domains": [],
+   "name": {
+    "value": "Акционерное общество \"Партнер-М\"",
+    "quote": "Владелец сайта: Акционерное общество \"Партнер-М\" (ОГРН: 1054001004870)",
+    "url": "https://partnermk.ru/"
+   },
+   "offering": {
+    "value": "Пищевые и кормовые ингредиенты: маринады, мука, крахмалы, улучшители муки и теста, растительные концентраты и др.",
+    "quote": "Пищевые и кормовые ингредиенты по направлениям",
+    "url": "https://partnermk.ru/"
+   },
+   "address": {
+    "value": "Калужская область, г. Малоярославец, пер. Калинина, д. 11",
+    "quote": "Адрес: 249096, РФ, Калужская область, г. Малоярославец, пер. Калинина 11",
+    "url": "https://partnermk.ru/"
+   },
+   "regions": [
+    {
+     "value": "Доставка по России и СНГ",
+     "quote": "Доставка по России и СНГ",
+     "url": "https://partnermk.ru/"
+    }
+   ],
+   "nationwide": {
+    "value": "Работа по всей территории России",
+    "quote": "Мы работаем по всей территории России и успешно ведем экспортную деятельностью более 10 лет.",
+    "url": "https://partnermk.ru/kontakty/"
+   },
+   "phones": [
+    {
+     "value": "+7 (499) 270-01-65",
+     "quote": "+7 (499) 270-01-65",
+     "url": "https://partnermk.ru/"
+    },
+    {
+     "value": "+7 (484) 313-13-82",
+     "quote": "+7 (48431) 3-13-82",
+     "url": "https://partnermk.ru/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "mal.office@partnermk.ru",
+     "quote": "mal.office@partnermk.ru",
+     "url": "https://partnermk.ru/"
+    },
+    {
+     "value": "moscow.office@partnermk.ru",
+     "quote": "moscow.office@partnermk.ru",
+     "url": "https://partnermk.ru/"
+    }
+   ],
+   "inn": null,
+   "min_order": {
+    "value": "Партия от 300 кг (Протелон 22 — от 300 кг по карточке товара в каталоге муки; ниже в таблице указаны разные партии по позициям)",
+    "quote": "Партия от 300 кг",
+    "url": "https://partnermk.ru/type-muka"
+   },
+   "min_order_kg": 300.0,
+   "price_info": {
+    "value": "Цена по запросу",
+    "quote": "Товар в наличии, цена по запросу",
+    "url": "https://partnermk.ru/type-muka"
+   },
+   "certificates": [
+    {
+     "value": "ISO — сертификат соответствия менеджмента пищевой безопасности",
+     "quote": "Сертификат соответствия менеджмента пищевой безопасности",
+     "url": "https://partnermk.ru/"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка по России и СНГ, развитая сеть дистрибьюции",
+    "quote": "Развитая сеть дистрибьюции, позволяет доставлять продукцию в кратчайшие сроки",
+    "url": "https://partnermk.ru/"
+   },
+   "wholesale": {
+    "value": "Оптовые поставки муки и ингредиентов",
+    "quote": "Закажите муку оптом с доставкой по России и СНГ от производителя Партнер-М",
+    "url": "https://partnermk.ru/type-muka"
+   },
+   "sources": [
+    "https://partnermk.ru/",
+    "https://partnermk.ru/type-muka",
+    "https://partnermk.ru/kontakty/",
+    "https://partnermk.ru/usloviya-sotrudnichestva/",
+    "https://partnermk.ru/about/",
+    "https://partnermk.ru/2026/09/10/snova-v-prodazhe-govyazhij-kollagenovyj-belok-novapro/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "ramkhp.ru",
+   "url": "https://ramkhp.ru/shop/flour",
+   "also_domains": [],
+   "name": {
+    "value": "Раменский комбинат хлебопродуктов",
+    "quote": "Раменский комбинат хлебопродуктов",
+    "url": "https://ramkhp.ru/"
+   },
+   "offering": {
+    "value": "Мука пшеничная хлебопекарная (разных сортов, в мешках от 1 до 50 кг) и комбикорма для сельскохозяйственных животных, птицы, рыбы",
+    "quote": "Производим натуральную пшеничную муку и комбикорм для сельскохозяйственных животных с 1968 года",
+    "url": "https://ramkhp.ru/"
+   },
+   "address": {
+    "value": "Московская область, г. Раменское, посёлок Дружба",
+    "quote": "140152, Московская область, г. Раменское, посёлок Дружба",
+    "url": "https://ramkhp.ru/kontakty/"
+   },
+   "regions": [
+    {
+     "value": "Москва, Санкт-Петербург, Самара, Казань, Калуга, Нижний Новгород, Рязань, Тверь, Тула, Уфа, Ярославль (услуга быстрой доставки муки)",
+     "quote": "Услуга быстрой доставки муки доступна в городах: Москва, Санкт-Петербург, Самара, Казань, Калуга, Нижний Новгород, Рязань, Тверь, Тула, Уфа, Ярославль.",
+     "url": "https://ramkhp.ru/shop/flour"
+    },
+    {
+     "value": "Москва, Московская область и соседние регионы (доставка от 1 дня)",
+     "quote": "Доставка от 1 дня по Москве, МO и соседним регионам",
+     "url": "https://ramkhp.ru/"
+    },
+    {
+     "value": "Страны СНГ",
+     "quote": "Доставка по России и СНГ.",
+     "url": "https://ramkhp.ru/stat-distributorom/"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка по всей России",
+    "quote": "Доставка по всей России",
+    "url": "https://ramkhp.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 223-18-14",
+     "quote": "+7 495 223 18 14",
+     "url": "https://ramkhp.ru/"
+    },
+    {
+     "value": "+7 (495) 775-18-14",
+     "quote": "+7 495 775 18 14",
+     "url": "https://ramkhp.ru/kontakty/"
+    },
+    {
+     "value": "+7 (495) 133-94-24",
+     "quote": "+7 (495) 133-94-24",
+     "url": "https://ramkhp.ru/stat-distributorom/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "post@ramkhp.ru",
+     "quote": "post@ramkhp.ru",
+     "url": "https://ramkhp.ru/"
+    },
+    {
+     "value": "muka@ramkhp.ru",
+     "quote": "Email: muka@ramkhp.ru",
+     "url": "https://ramkhp.ru/kontakty/"
+    },
+    {
+     "value": "korm@ramkhp.ru",
+     "quote": "Email: korm@ramkhp.ru",
+     "url": "https://ramkhp.ru/kontakty/"
+    },
+    {
+     "value": "magazin@ramkhp.ru",
+     "quote": "Email: magazin@ramkhp.ru",
+     "url": "https://ramkhp.ru/kontakty/"
+    },
+    {
+     "value": "snab@ramkhp.ru",
+     "quote": "Email: snab@ramkhp.ru",
+     "url": "https://ramkhp.ru/kontakty/"
+    },
+    {
+     "value": "hr@ramkhp.ru",
+     "quote": "Email: hr@ramkhp.ru",
+     "url": "https://ramkhp.ru/kontakty/"
+    }
+   ],
+   "inn": null,
+   "min_order": {
+    "value": "Минимальный заказ с доставкой — от 100 кг (доставка из магазина комбината весом не менее 100 кг в пределах 150 км)",
+    "quote": "Мы осуществляем доставку заказов из магазина комбината весом не менее 100 кг в пределах 150 км от магазина",
+    "url": "https://ramkhp.ru/"
+   },
+   "min_order_kg": 100.0,
+   "price_info": {
+    "value": "Примеры розничных цен: мука пшеничная 2 кг — от 80 ₽; мука 50 кг — от 1230 ₽; комбикорм ПК-5 СТАРТ 25 кг — 1319 ₽",
+    "quote": "Мука пшеничная хлебопекарная высший сорт т/м «Раменская» – 2 кг 80,00 ₽",
+    "url": "https://ramkhp.ru/"
+   },
+   "certificates": [
+    {
+     "value": "Сертифицированное производство по системе ХАССП (HACCP)",
+     "quote": "Сертифицировали производство по системе менеджмента безопасности и качества продукции ХАССП (HACCP)",
+     "url": "https://ramkhp.ru/"
+    },
+    {
+     "value": "Производство в соответствии с ГОСТ, без ГМО, антибиотиков и искусственных добавок",
+     "quote": "Производим из природного сырья без ГМО, антибиотиков, примесей и искусственных добавок в соответствии с ГОСТ",
+     "url": "https://ramkhp.ru/"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка по России и в страны СНГ автомобильным и железнодорожным транспортом; стоимость рассчитывается из тарифа за 1 км; оптовым покупателям — кормовозами/муковозами; разгрузка не входит в стоимость",
+    "quote": "Осуществляем поставки автомобильным и железнодорожным транспортом по всей России и в страны СНГ",
+    "url": "https://ramkhp.ru/"
+   },
+   "wholesale": {
+    "value": "Оптовые поставки комбикорма для животноводческих предприятий; оптовые поставки для продавцов муки и комбикорма; работа с оптовыми компаниями и дистрибьюторами",
+    "quote": "Оптовые поставки комбикорма для животноводческих предприятий",
+    "url": "https://ramkhp.ru/"
+   },
+   "sources": [
+    "https://ramkhp.ru/",
+    "https://ramkhp.ru/shop/flour",
+    "https://ramkhp.ru/kontakty/",
+    "https://ramkhp.ru/services/dostavka/",
+    "https://ramkhp.ru/stat-distributorom/",
+    "https://ramkhp.ru/press-center/otkorm-svinej-myasnoj-i-bekonnyj-vidy-normy-kormleniya/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "mukomoloff.ru",
+   "url": "https://mukomoloff.ru",
+   "also_domains": [],
+   "name": {
+    "value": "Мукомолофф",
+    "quote": "Компания \"Мукомолофф\" предлагает широкий ассортимент товаров оптом от производителя, соответствующих ГОСТу.",
+    "url": "https://mukomoloff.ru/"
+   },
+   "offering": {
+    "value": "Мука, семена подсолнечника, сахар, соль, крахмал, соевый белок, какао-продукты, шоколад, кондитерская глазурь, масло какао, кокосовая продукция",
+    "quote": "мука\n,\nсемена подсолнечника\n,\nсахар\n,\nсоль\n,\nкрахмал\n,\nсоевый белок",
+    "url": "https://mukomoloff.ru/"
+   },
+   "address": {
+    "value": "Москва, 7-я Парковая ул., д. 24а, офис 7",
+    "quote": "Москва, 7-я Парковая ул., д. 24а, офис 7",
+    "url": "https://mukomoloff.ru/"
+   },
+   "regions": [
+    {
+     "value": "Калуга",
+     "quote": "Калуга",
+     "url": "https://mukomoloff.ru/contact/"
+    },
+    {
+     "value": "Санкт-Петербург",
+     "quote": "Санкт-Петербург",
+     "url": "https://mukomoloff.ru/contact/"
+    },
+    {
+     "value": "Нижний Новгород",
+     "quote": "Нижний Новгород",
+     "url": "https://mukomoloff.ru/contact/"
+    },
+    {
+     "value": "Краснодар",
+     "quote": "Краснодар",
+     "url": "https://mukomoloff.ru/contact/"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка в любой город России через транспортную компанию",
+    "quote": "Доставляем по Москве и области. Отправляем в любой город России через транспортную компанию",
+    "url": "https://mukomoloff.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 178-05-58",
+     "quote": "Телефон: +74951780558",
+     "url": "https://mukomoloff.ru/"
+    },
+    {
+     "value": "+7 (926) 533-21-77",
+     "quote": "Телефон: +79265332177",
+     "url": "https://mukomoloff.ru/"
+    },
+    {
+     "value": "+7 (812) 209-01-31",
+     "quote": "Телефон: +78122090131",
+     "url": "https://mukomoloff.ru/contact/"
+    },
+    {
+     "value": "+7 (861) 204-02-70",
+     "quote": "Телефон: +78612040270",
+     "url": "https://mukomoloff.ru/contact/"
+    },
+    {
+     "value": "+7 (831) 235-01-60",
+     "quote": "Телефон: +78312350160",
+     "url": "https://mukomoloff.ru/contact/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "zakaz@mukomoloff.ru",
+     "quote": "zakaz@mukomoloff.ru",
+     "url": "https://mukomoloff.ru/"
+    },
+    {
+     "value": "spb@mukomoloff.ru",
+     "quote": "spb@mukomoloff.ru",
+     "url": "https://mukomoloff.ru/contact/"
+    },
+    {
+     "value": "krd@mukomoloff.ru",
+     "quote": "krd@mukomoloff.ru",
+     "url": "https://mukomoloff.ru/contact/"
+    },
+    {
+     "value": "nn@mukomoloff.ru",
+     "quote": "nn@mukomoloff.ru",
+     "url": "https://mukomoloff.ru/contact/"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Мука пшеничная высший сорт от 21 руб/кг; сахар песок от 65 руб/кг; семечка подсолнечника очищенная от 52 руб/кг",
+    "quote": "от 21* руб. /кг",
+    "url": "https://mukomoloff.ru/"
+   },
+   "certificates": [
+    {
+     "value": "Товар соответствует нормам Ростеста",
+     "quote": "Товар соответствует нормам Ростеста",
+     "url": "https://mukomoloff.ru/"
+    },
+    {
+     "value": "Пшеничная мука высший сорт — ГОСТ 52189-2003",
+     "quote": "ГОСТ 52189-2003.",
+     "url": "https://mukomoloff.ru/catalog/detail/muka-pshenichnaya-vysshiy-sort-v-meshkakh-50-kg-optom/"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка по Москве и области рассчитывается в зависимости от расстояния; в регионы — через транспортные компании",
+    "quote": "Стоимость доставки в Москве и области рассчитывается в зависимости от расстояния.",
+    "url": "https://mukomoloff.ru/catalog/detail/muka-pshenichnaya-vysshiy-sort-v-meshkakh-50-kg-optom/"
+   },
+   "wholesale": {
+    "value": "Продажа оптом, работа как с НДС, так и без НДС",
+    "quote": "Работаем как с НДС, так и без НДС.",
+    "url": "https://mukomoloff.ru/"
+   },
+   "sources": [
+    "https://mukomoloff.ru/",
+    "https://mukomoloff.ru/contact/",
+    "https://mukomoloff.ru/catalog/detail/muka-pshenichnaya-vysshiy-sort-v-meshkakh-50-kg-optom/",
+    "https://mukomoloff.ru/catalog/detail/sakhar-pesok-v-meshkakh-50-kg/",
+    "https://mukomoloff.ru/catalog/detail/semechki-ochishchennye-25-kg/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "marr.ru",
+   "url": "https://marr.ru/catalog/bakaleya-napitki/muka",
+   "also_domains": [],
+   "name": {
+    "value": "МАРР РУССИЯ",
+    "quote": "«МАРР РУССИЯ» — федеральный дистрибьютор продуктов питания для HoReCa.",
+    "url": "https://marr.ru/about"
+   },
+   "offering": {
+    "value": "Дистрибуция продуктов питания для HoReCa, в каталоге в т.ч. мука и бакалея; собственные мясные полуфабрикаты (котлеты)",
+    "quote": "«МАРР РУССИЯ» — федеральный дистрибьютор продуктов питания для HoReCa.",
+    "url": "https://marr.ru/about"
+   },
+   "address": {
+    "value": "Одинцово (распределительный комплекс), Москва — офис по контактам",
+    "quote": "В 2020 году в подмосковном городе Одинцово запущен новый распределительный комплекс компании на площади 4,2 га",
+    "url": "https://marr.ru/about"
+   },
+   "regions": [
+    {
+     "value": "Москва",
+     "quote": "Москва:\n+7 (495) 663-83-21",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    },
+    {
+     "value": "Воронеж",
+     "quote": "Воронеж",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    },
+    {
+     "value": "Санкт-Петербург",
+     "quote": "Санкт-Петербург",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    },
+    {
+     "value": "Ростов-на-Дону",
+     "quote": "Ростов-на-Дону",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    },
+    {
+     "value": "Сочи",
+     "quote": "Сочи",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    },
+    {
+     "value": "Новосибирск",
+     "quote": "Новосибирск",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    },
+    {
+     "value": "Самара",
+     "quote": "Самара",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    },
+    {
+     "value": "Екатеринбург",
+     "quote": "Екатеринбург",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    },
+    {
+     "value": "Красноярск",
+     "quote": "Красноярск",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    },
+    {
+     "value": "Алматы",
+     "quote": "Алматы",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    }
+   ],
+   "nationwide": {
+    "value": "Федеральный дистрибьютор",
+    "quote": "«МАРР РУССИЯ» — федеральный дистрибьютор продуктов питания для HoReCa.",
+    "url": "https://marr.ru/about"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 663-83-21",
+     "quote": "Телефон: +74956638321",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    },
+    {
+     "value": "+7 (495) 785-39-44",
+     "quote": "+7 (495) 785-39-44",
+     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
+    }
+   ],
+   "emails": [
+    {
+     "value": "____@marr.ru",
+     "quote": "____@marr.ru",
+     "url": "https://marr.ru/suppliers"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": null,
+   "certificates": [
+    {
+     "value": "ISO 14001, FSSC 22000, GMP",
+     "quote": "ООО «МАРР РУССИЯ» сертифицирована по международным стандартам и схемам: ISO 14001, FSSC 22000, GMP.",
+     "url": "https://marr.ru/about"
+    }
+   ],
+   "delivery": {
+    "value": "Автопарк с мультитемпературными рефрижераторами, мониторингом температуры и GPS; логистика полного цикла",
+    "quote": "Автопарк более 120 единиц техники с мультитемпературными рефрижераторами, мониторингом температуры и GPS.",
+    "url": "https://marr.ru/about"
+   },
+   "wholesale": null,
+   "sources": [
+    "https://marr.ru/catalog/bakaleya-napitki/muka",
+    "https://marr.ru/about",
+    "https://marr.ru/suppliers",
+    "https://marr.ru/about/faq"
+   ],
+   "rejected_facts": 1
+  },
+  {
+   "domain": "lavakon.com",
+   "url": "https://lavakon.com/catalog/muka",
+   "also_domains": [],
+   "name": {
+    "value": "LAVAKON (Лавакон)",
+    "quote": "Cырьё и ингредиенты для хлебопекарного и кондитерского производства от компании LAVAKON",
+    "url": "https://lavakon.com/"
+   },
+   "offering": {
+    "value": "Мука, смеси для выпечки, хлопья, семена и злаки, наполнители, улучшители, закваска, глютен, клетчатка, крахмал, экстракты, патока и сиропы, кондитерские гели, покрытия, глазури, посыпки, маковая начинка, концентраты для морса, стабилизаторы творожных начинок",
+    "quote": "Мука, хлебопекарные премиксы, экстракты, начинки, сиропы - у нас есть все, что может понадобиться для создания нового продукта и улучшения существующего",
+    "url": "https://lavakon.com/"
+   },
+   "address": {
+    "value": "Московская область, г. Фрязино, ул. Ленина 22",
+    "quote": "Московская область, г. Фрязино, ул. Ленина 22",
+    "url": "https://lavakon.com/contacts/"
+   },
+   "regions": [],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (926) 545-15-48",
+     "quote": "+7 (926) 545-15-48",
+     "url": "https://lavakon.com/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@lavakon.com",
+     "quote": "info@lavakon.com",
+     "url": "https://lavakon.com/"
+    }
+   ],
+   "inn": null,
+   "min_order": {
+    "value": "Минимальная партия заказа – от одной упаковки",
+    "quote": "Минимальная партия заказа – от одной упаковки",
+    "url": "https://lavakon.com/delivery/"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Цена на муку оптом уточняется по запросу, индивидуально",
+    "quote": "Цена на муку оптом всегда уточняется по запросу – она зависит от объёма закупки, условий доставки и специфики вашего производства.",
+    "url": "https://lavakon.com/catalog/muka"
+   },
+   "certificates": [
+    {
+     "value": "Все партии муки сертифицированы",
+     "quote": "Все партии сертифицированы и проходят контроль качества.",
+     "url": "https://lavakon.com/catalog/muka"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка любой удобной транспортной компанией; самовывоз из Лобни",
+    "quote": "Доставка - любой удобной для вас транспортной компанией.",
+    "url": "https://lavakon.com/delivery/"
+   },
+   "wholesale": {
+    "value": "Работа с юрлицами и оптом: поставки муки оптом в мешках от 25 до 50 кг пекарням, кондитерским цехам и производствам",
+    "quote": "Компания «Лавакон» поставляет муку оптом в мешках от 25 до 50 кг. Мы работаем с пекарнями, кондитерскими цехами, производственными предприятиями и сегментом HoReCa.",
+    "url": "https://lavakon.com/catalog/muka"
+   },
+   "sources": [
+    "https://lavakon.com/",
+    "https://lavakon.com/catalog/muka",
+    "https://lavakon.com/contacts/",
+    "https://lavakon.com/delivery/",
+    "https://lavakon.com/about/",
+    "https://lavakon.com/about/news/uzhe-v-kataloge/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "super-muka.ru",
+   "url": "https://super-muka.ru",
+   "also_domains": [],
+   "name": {
+    "value": "СуперМука",
+    "quote": "Профессиональная мука для пекарен, ресторанов оптом по доступным ценам – купить в СуперМука",
+    "url": "https://super-muka.ru/"
+   },
+   "offering": {
+    "value": "Профессиональная мука и мучные смеси для пекарен, ресторанов и пиццерий (классическая, неаполитанская, римская пицца, слоёные изделия, багеты, сдобные изделия, бургерные булочки и др.)",
+    "quote": "Производим и реализуем высококачественную профессиональную муку и мучные смеси",
+    "url": "https://super-muka.ru/"
+   },
+   "address": null,
+   "regions": [],
+   "nationwide": {
+    "value": "Продукция представлена практически в каждом регионе России и в странах ближнего зарубежья",
+    "quote": "На текущий момент наша продукция представлена практически в каждом регионе России, а также в странах",
+    "url": "https://super-muka.ru/contacts/"
+   },
+   "phones": [
+    {
+     "value": "+7 (800) 234-76-46",
+     "quote": "8 800 234 76 46",
+     "url": "https://super-muka.ru/contacts/"
+    },
+    {
+     "value": "+7 (910) 700-30-30",
+     "quote": "+7 910 700 30 30 (доступен What’sApp)",
+     "url": "https://super-muka.ru/about/mission/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@super-muka.ru",
+     "quote": "info@super-muka.ru",
+     "url": "https://super-muka.ru/about/mission/"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Цены указаны как доступные",
+    "quote": "оптом по доступным ценам",
+    "url": "https://super-muka.ru/"
+   },
+   "certificates": [
+    {
+     "value": "Производство из зерна, выращенного на территории РФ; без ГМО",
+     "quote": "Производство продукции только из зерна, выращенного на территории РФ",
+     "url": "https://super-muka.ru/about/mission/"
+    }
+   ],
+   "delivery": null,
+   "wholesale": {
+    "value": "Оптовые продажи для пекарен и ресторанов",
+    "quote": "Профессиональная мука для пекарен, ресторанов оптом по доступным ценам – купить в СуперМука",
+    "url": "https://super-muka.ru/"
+   },
+   "sources": [
+    "https://super-muka.ru/",
+    "https://super-muka.ru/about/",
+    "https://super-muka.ru/contacts/",
+    "https://super-muka.ru/about/mission/",
+    "https://super-muka.ru/about/lab/"
+   ],
+   "rejected_facts": 0
+  }
+ ]
+}

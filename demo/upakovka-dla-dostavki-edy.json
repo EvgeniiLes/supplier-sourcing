@@ -1,0 +1,1003 @@
+{
+ "topic": "упаковка для доставки еды",
+ "region": "Москва",
+ "keywords": [
+  "упаковка",
+  "контейнер",
+  "контейнеры",
+  "пакет"
+ ],
+ "collected_at": "2026-10-21",
+ "suppliers": [
+  {
+   "domain": "lider-gk24.ru",
+   "url": "https://lider-gk24.ru/category/odnorazovyie-konteynery",
+   "also_domains": [],
+   "name": {
+    "value": "ООО \"Лидер\"",
+    "quote": "Компания ООО \"Лидер\" – профессиональный поставщик товаров для сферы HoReCa",
+    "url": "https://lider-gk24.ru/"
+   },
+   "offering": {
+    "value": "Одноразовая посуда, контейнеры, бытовая химия, дезинфицирующие средства, инвентарь для уборки, диспенсеры, пакеты, перчатки, упаковка и другие товары для HoReCa",
+    "quote": "Мы обеспечиваем рестораны, кафе, отели, государственные учреждения и другие предприятия продукцией высокого качества: одноразовой посудой, упаковочными материалами, хозтоварами",
+    "url": "https://lider-gk24.ru/"
+   },
+   "address": {
+    "value": "г. Москва, ул. Угрешская, д. 2, строение 53",
+    "quote": "г. Москва. ул. Угрешская, д. 2, строение 53",
+    "url": "https://lider-gk24.ru/contacts"
+   },
+   "regions": [
+    {
+     "value": "Москва и Московская область",
+     "quote": "Заказы по Москве и области доставляются за 1-2 дня.",
+     "url": "https://lider-gk24.ru/"
+    },
+    {
+     "value": "Любые регионы РФ через транспортные компании",
+     "quote": "Отправка товаров в любые регионы РФ через транспортные компании.",
+     "url": "https://lider-gk24.ru/"
+    }
+   ],
+   "nationwide": {
+    "value": "Отправка товаров в любые регионы РФ через транспортные компании",
+    "quote": "Отправка товаров в любые регионы РФ через транспортные компании.",
+    "url": "https://lider-gk24.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 190-75-90",
+     "quote": "+7 (495) 190-75-90",
+     "url": "https://lider-gk24.ru/contacts"
+    },
+    {
+     "value": "+7 (495) 308-00-69",
+     "quote": "+7 (495) 308-00-69",
+     "url": "https://lider-gk24.ru/contacts"
+    },
+    {
+     "value": "+7 (800) 222-32-36",
+     "quote": "Телефон: +78002223236",
+     "url": "https://lider-gk24.ru/contacts"
+    }
+   ],
+   "emails": [
+    {
+     "value": "zakaz@lider-gk24.ru",
+     "quote": "zakaz@lider-gk24.ru",
+     "url": "https://lider-gk24.ru/contacts"
+    },
+    {
+     "value": "zakupka@lider-gk24.ru",
+     "quote": "zakupka@lider-gk24.ru",
+     "url": "https://lider-gk24.ru/contacts"
+    },
+    {
+     "value": "info@lider-gk24.ru",
+     "quote": "info@lider-gk24.ru",
+     "url": "https://lider-gk24.ru/contacts"
+    }
+   ],
+   "inn": {
+    "value": "7724421380",
+    "quote": "ИНН: 7724421380",
+    "url": "https://lider-gk24.ru/about"
+   },
+   "min_order": {
+    "value": "Минимальная сумма заказа – 7000 ₽ (доставка по Москве; за МКАД — от 7000 руб. до 45000 руб. в зависимости от удаления)",
+    "quote": "Минимальная сумма заказа – 7000 ₽",
+    "url": "https://lider-gk24.ru/delivery"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Конкурентные цены, скидки для постоянных клиентов; примеры цен на витрине, напр. тарелка бумажная 2.18 ₽",
+    "quote": "Предоставляем гибкие условия сотрудничества и скидки для постоянных клиентов.",
+    "url": "https://lider-gk24.ru/"
+   },
+   "certificates": [
+    {
+     "value": "Вся продукция сертифицирована",
+     "quote": "Вся продукция сертифицирована, а мы работаем только с надёжными производителями",
+     "url": "https://lider-gk24.ru/"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка 6 дней в неделю; дневная с 9:00 до 18:00, ночная с 21:00 до 06:00; от 7 000 ₽ — бесплатно; по Москве и МО 1-2 дня; в регионы — транспортными компаниями",
+    "quote": "Заказы по Москве и области доставляются за 1-2 дня. Отправка товаров в любые регионы РФ через транспортные компании.",
+    "url": "https://lider-gk24.ru/"
+   },
+   "wholesale": {
+    "value": "Оптовые поставки для ресторанов, кафе и отелей; персональный менеджер",
+    "quote": "Оптовые поставки товаров для ресторанов, кафе и отелей в Москве",
+    "url": "https://lider-gk24.ru/"
+   },
+   "sources": [
+    "https://lider-gk24.ru/",
+    "https://lider-gk24.ru/category/odnorazovyie-konteynery",
+    "https://lider-gk24.ru/contacts",
+    "https://lider-gk24.ru/delivery",
+    "https://lider-gk24.ru/business/biz-dostavka-edy",
+    "https://lider-gk24.ru/about"
+   ],
+   "rejected_facts": 2
+  },
+  {
+   "domain": "trial-market.ru",
+   "url": "https://www.trial-market.ru/distributoram",
+   "also_domains": [],
+   "name": {
+    "value": "Триал Маркет",
+    "quote": "Триал Маркет – каталог товаров для бизнеса в Москве.",
+    "url": "https://www.trial-market.ru/"
+   },
+   "offering": {
+    "value": "Одноразовая посуда, пищевая упаковка, гигиеническая продукция, упаковочные материалы, хозтовары, бытовая химия и профессиональная химия для HoReCa, клининга и других видов бизнеса",
+    "quote": "Широкий ассортимент расходных материалов: одноразовой посуды, пищевой упаковки, гигиенической продукции, упаковочных материалов, хозтоваров для уборки, бытовой химии",
+    "url": "https://www.trial-market.ru/"
+   },
+   "address": {
+    "value": "Москва, наб. Академика Туполева, д. 15, к. 22 (офис); склад в МО, г. Дзержинский",
+    "quote": "105005, г. Москва, наб. Академика Туполева, д. 15, к. 22, помещ. 2Н/2, 3-й этаж, БЦ Туполев Плаза 2",
+    "url": "https://www.trial-market.ru/contform/"
+   },
+   "regions": [
+    {
+     "value": "Москва и Московская область (Балашиха, Химки, Подольск, Люберцы, Мытищи — в заголовке страницы)",
+     "quote": "Одноразовая посуда оптом в Москве и МО - Балашиха, Химки, Подольск, Люберцы, Мытищи",
+     "url": "https://www.trial-market.ru/distributoram"
+    },
+    {
+     "value": "Доставка в регионы по графику",
+     "quote": "Доставка в регионы по графику",
+     "url": "https://www.trial-market.ru/distributoram"
+    }
+   ],
+   "nationwide": {
+    "value": "Бесплатная доставка по России — телефон 8 800 (бесплатно по России); работа с клиентами РФ",
+    "quote": "Работа с клиентами РФ, экспорт",
+    "url": "https://www.trial-market.ru/distributoram"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 308-90-10",
+     "quote": "8 (495) 308-90-10",
+     "url": "https://www.trial-market.ru/contform/"
+    },
+    {
+     "value": "+7 (800) 777-23-07",
+     "quote": "8 800 777 23 07",
+     "url": "https://www.trial-market.ru/contform/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "zakaz@trial-market.ru",
+     "quote": "zakaz@trial-market.ru",
+     "url": "https://www.trial-market.ru/contform/"
+    },
+    {
+     "value": "supply@trial-market.ru",
+     "quote": "supply@trial-market.ru",
+     "url": "https://www.trial-market.ru/contform/"
+    },
+    {
+     "value": "logo@trial-market.ru",
+     "quote": "logo@trial-market.ru",
+     "url": "https://www.trial-market.ru/contform/"
+    }
+   ],
+   "inn": null,
+   "min_order": {
+    "value": "От 40 000 руб. (минимальный заказ для опта)",
+    "quote": "Минимальный заказ от 40 000 руб.",
+    "url": "https://www.trial-market.ru/distributoram"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Примеры цен: стакан бумажный от 5,49 ₽/шт, стойка деревянная 6 129,88 ₽/шт (цены ориентировочные, на каталоге)",
+    "quote": "Стакан 250 мл бумажный Complement d=80 мм гофрированный Крафт D",
+    "url": "https://www.trial-market.ru/"
+   },
+   "certificates": [
+    {
+     "value": "Сертифицированная продукция",
+     "quote": "сертифицированная продукция",
+     "url": "https://www.trial-market.ru/distributoram"
+    }
+   ],
+   "delivery": {
+    "value": "Бесплатно по Москве и МО, до транспортной компании или самовывоз; доставка в регионы по графику; отгрузка только кратно коробу",
+    "quote": "Доставка бесплатно по Москве и МО, до транспортной компании или самовывоз",
+    "url": "https://www.trial-market.ru/distributoram"
+   },
+   "wholesale": {
+    "value": "Оптовые поставки для бизнеса; работа с юрлицами и оптовыми клиентами",
+    "quote": "Минимальный заказ от 40 000 руб.",
+    "url": "https://www.trial-market.ru/distributoram"
+   },
+   "sources": [
+    "https://www.trial-market.ru/",
+    "https://www.trial-market.ru/distributoram",
+    "https://www.trial-market.ru/contform/",
+    "https://www.trial-market.ru/dostavka-i-oplata/",
+    "https://www.trial-market.ru/dostavka-edy/",
+    "https://www.trial-market.ru/distributoram/"
+   ],
+   "rejected_facts": 2
+  },
+  {
+   "domain": "zvpol.ru",
+   "url": "https://zvpol.ru/catalog/kartonnaya-upakovka/upakovka-dlya-edy-na-vynos",
+   "also_domains": [],
+   "name": {
+    "value": "ООО «Звездная полиграфия»",
+    "quote": "ООО «Звездная полиграфия»",
+    "url": "https://zvpol.ru/contact/"
+   },
+   "offering": {
+    "value": "Изготовление картонных коробок и подарочной упаковки на заказ с печатью и отделкой, в том числе упаковка для еды",
+    "quote": "Изготовление коробок на заказ в Москве",
+    "url": "https://zvpol.ru/"
+   },
+   "address": {
+    "value": "Москва, ул. Азовская, дом 24, корпус 2, помещение 6; Московская обл., с. Белый Раст, стр. 150",
+    "quote": "Москва ул. Азовская, дом 24, корпус 2, помещение 6",
+    "url": "https://zvpol.ru/"
+   },
+   "regions": [
+    {
+     "value": "Доставка в любой регион России",
+     "quote": "Мы можем доставить Ваш заказ в любой регион России силами транспортных компаний",
+     "url": "https://zvpol.ru/clients/price-delivery/"
+    },
+    {
+     "value": "Доставка по РФ и СНГ (упаковка для еды)",
+     "quote": "Сроки: от 7 рабочих дней, доставка по РФ и СНГ",
+     "url": "https://zvpol.ru/catalog/kartonnaya-upakovka/upakovka-dlya-edy-na-vynos"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка по всей России",
+    "quote": "Мы можем доставить Ваш заказ в любой регион России силами транспортных компаний",
+    "url": "https://zvpol.ru/clients/price-delivery/"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 658-98-43",
+     "quote": "+7 (495) 658-98-43",
+     "url": "https://zvpol.ru/"
+    },
+    {
+     "value": "+7 (962) 918-53-52",
+     "quote": "+7 (962) 918-53-52",
+     "url": "https://zvpol.ru/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "bta@zvpol.ru",
+     "quote": "bta@zvpol.ru",
+     "url": "https://zvpol.ru/"
+    },
+    {
+     "value": "bda@zvpol.ru",
+     "quote": "bda@zvpol.ru",
+     "url": "https://zvpol.ru/"
+    }
+   ],
+   "inn": {
+    "value": "5038062816",
+    "quote": "ИНН 5038062816",
+    "url": "https://zvpol.ru/"
+   },
+   "min_order": {
+    "value": "Минимальный тираж от 1000 шт.",
+    "quote": "Минимальный заказ от 1000 шт.",
+    "url": "https://zvpol.ru/catalog/kartonnaya-upakovka/upakovka-dlya-edy-na-vynos"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Доставка по Москве в пределах МКАД груза до 1 м3 — 2000 рублей; доплата 100 рублей за каждый дополнительный кубометр; крупные заказы от 80 м3 — бесплатно",
+    "quote": "Доставка груза объемом до 1 м3 в пределах МКАД обойдется в 2000 рублей.",
+    "url": "https://zvpol.ru/clients/price-delivery/"
+   },
+   "certificates": [
+    {
+     "value": "Материалы с пищевым допуском; соответствие ГОСТ, ISO и FSC (упаковка для еды)",
+     "quote": "Используются материалы с пищевым допуском, соответствующие стандартам ГОСТ, ISO и FSC.",
+     "url": "https://zvpol.ru/catalog/kartonnaya-upakovka/upakovka-dlya-edy-na-vynos"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка по Москве; за пределы МКАД 25 рублей за километр в одну сторону; доставка по России транспортными компаниями; доставка ежедневно, кроме воскресенья и праздников, с 9:00 до 18:00",
+    "quote": "Доставка за пределы МКАД — 25 рублей за километр в одну сторону + стоимость доставки по Москве.",
+    "url": "https://zvpol.ru/clients/price-delivery/"
+   },
+   "wholesale": {
+    "value": "Работа с юрлицами и крупным бизнесом; тираж от 1000 шт.",
+    "quote": "Более 5000 успешных проектов для крупного бизнеса",
+    "url": "https://zvpol.ru/"
+   },
+   "sources": [
+    "https://zvpol.ru/",
+    "https://zvpol.ru/catalog/kartonnaya-upakovka/upakovka-dlya-edy-na-vynos",
+    "https://zvpol.ru/contact/",
+    "https://zvpol.ru/clients/price-delivery/",
+    "https://zvpol.ru/about/",
+    "https://zvpol.ru/about/otzivi/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "allbox.ru",
+   "url": "https://allbox.ru/pischevaya-upakovka",
+   "also_domains": [],
+   "name": {
+    "value": "ALLBOX",
+    "quote": "Упаковка и картонные коробки — производство и опт | ALLBOX",
+    "url": "https://allbox.ru/"
+   },
+   "offering": {
+    "value": "Упаковка и картонные коробки: индивидуальные, готовые стандартные, крафт-коробки, подарочные, коробки с логотипом, пищевая упаковка",
+    "quote": "Мы разрабатываем и выпускаем упаковочные решения для товаров, брендов и e-commerce",
+    "url": "https://allbox.ru/"
+   },
+   "address": {
+    "value": "Москва, Киевское шоссе, 22-й километр, 4, стр. 5, БЦ Румянцево, корп. Е (шоу-рум)",
+    "quote": "Москва, Киевское шоссе, 22-й километр, 4, стр. 5, БЦ Румянцево, корп. Е",
+    "url": "https://allbox.ru/kontakty/"
+   },
+   "regions": [
+    {
+     "value": "Санкт-Петербург, Воронеж, Екатеринбург, Краснодар, Севастополь, Казань, Уфа, Якутск, Иркутск, Сургут, Красноярск, Владивосток, Хабаровск и др.",
+     "quote": "Стоимость доставки заказов в Санкт-Петербург, Воронеж, Екатеринбург, Краснодар, Севастополь, Казань, Уфу, Екатеринбург, Якутск, Иркутск, Сургут, Красноярск, Владивосток, Хабаровск и др. города",
+     "url": "https://allbox.ru/kontakty/"
+    },
+    {
+     "value": "Казахстан и Беларусь",
+     "quote": "Мы доставляем заказы в любой регион России, а также в Казахстан и Беларусь.",
+     "url": "https://allbox.ru/oplata-i-dostavka/"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка заказов и образцов во все регионы России",
+    "quote": "Осуществляем доставку заказов и образцов продукции во все регионы России.",
+    "url": "https://allbox.ru/kontakty/"
+   },
+   "phones": [
+    {
+     "value": "+7 (800) 775-14-87",
+     "quote": "Телефон: 8(800) 775-14-87, +7 499 110-71-72",
+     "url": "https://allbox.ru/kontakty/"
+    },
+    {
+     "value": "+7 (499) 110-71-72",
+     "quote": "+7 (499) 110-71-72",
+     "url": "https://allbox.ru/pischevaya-upakovka"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@allbox.ru",
+     "quote": "Почта: info@allbox.ru",
+     "url": "https://allbox.ru/kontakty/"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "При оптовых покупках предоставляется система скидок и бонусов",
+    "quote": "При оптовых покупках предоставляем систему скидок, бонусы.",
+    "url": "https://allbox.ru/pischevaya-upakovka"
+   },
+   "certificates": [
+    {
+     "value": "Сертифицированные материалы, допущенные к контакту с пищевой продукцией; изделия сертифицированы",
+     "quote": "Все изделия сертифицированы и соответствуют требованиям к пищевой безопасности.",
+     "url": "https://allbox.ru/pischevaya-upakovka"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка курьером только в пределах МКАД; по России — ТК ПЭК и СДЭК, стоимость рассчитывается по весу и пункту назначения; самовывоз со склада в Москве",
+    "quote": "Доставка курьером (только в пределах МКАД)",
+    "url": "https://allbox.ru/oplata-i-dostavka/"
+   },
+   "wholesale": {
+    "value": "Работа с оптовыми поставками и бизнесом",
+    "quote": "заказать упаковку и картонные коробки для бизнеса напрямую от производителя",
+    "url": "https://allbox.ru/"
+   },
+   "sources": [
+    "https://allbox.ru/",
+    "https://allbox.ru/pischevaya-upakovka",
+    "https://allbox.ru/kontakty/",
+    "https://allbox.ru/oplata-i-dostavka/",
+    "https://allbox.ru/kak-kupit-upakovru/upakovka-dlya-tovarov/novogodnyaya-upakovka/",
+    "https://allbox.ru/categories-catalog/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "soemz.com",
+   "url": "https://soemz.com/catalog/odnorazovaya-posuda",
+   "also_domains": [],
+   "name": {
+    "value": "АО «СОЭМЗ» (завод «СОЭМЗ»)",
+    "quote": "«СОЭМЗ» — упаковочная компания, специализирующаяся на производстве упаковочных материалов из пульперкартона для бизнеса в Москве и области.",
+    "url": "https://soemz.com/"
+   },
+   "offering": {
+    "value": "Упаковка из пульперкартона: пищевая упаковка (лотки для овощей и фруктов, ягод, яиц, альвеолы), одноразовая посуда и подносы, держатели для стаканов, горшки для рассады, ложементы, индустриальная и универсальная упаковка",
+    "quote": "В ассортименте — формованная коробка и ложементы под конкретный размер изделия: для пищевой и непищевой продукции",
+    "url": "https://soemz.com/"
+   },
+   "address": {
+    "value": "Производство: Московская обл., г. Солнечногорск, ул. Бутырский тупик, д.1; офис: г. Москва, ул. Дмитровское шоссе, 9Ас1",
+    "quote": "141503, Московская обл., г. Солнечногорск, ул. Бутырский тупик, д.1",
+    "url": "https://soemz.com/contact/"
+   },
+   "regions": [],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (495) 799-67-07",
+     "quote": "+7 (495) 799-67-07",
+     "url": "https://soemz.com/"
+    },
+    {
+     "value": "+7 (968) 917-98-23",
+     "quote": "+7 (968) 917-98-23",
+     "url": "https://soemz.com/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@soemz.com",
+     "quote": "info@soemz.com",
+     "url": "https://soemz.com/"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Лоток 104, 240x130x25 — от 3,75 ₽ (в каталоге указана цена «от»)",
+    "quote": "Лоток 104, 240x130x25 4,12 ₽ от 3,75 ₽",
+    "url": "https://soemz.com/catalog/odnorazovaya-posuda"
+   },
+   "certificates": [
+    {
+     "value": "Сертификаты/стандарты, перечисленные на сайте: MSDS, REACH, RoHS, Technical Regulations of the Customs Union, SVHC",
+     "quote": "Material Safety Data Sheet (MSDS)",
+     "url": "https://soemz.com/"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка по России не осуществляется; возможна доставка большими партиями (обычно от одной до нескольких фур) транспортной компанией, самовывоз небольших партий со склада",
+    "quote": "Доставка по России не осуществляется, но мы подскажем, как организовать логистику на разовой или постоянной основе.",
+    "url": "https://soemz.com/"
+   },
+   "wholesale": {
+    "value": "Продажа упаковки оптом напрямую со склада производителя; формат работы B2B",
+    "quote": "Для клиентов доступна продажа упаковки оптом напрямую со склада производителя.",
+    "url": "https://soemz.com/"
+   },
+   "sources": [
+    "https://soemz.com/",
+    "https://soemz.com/catalog/odnorazovaya-posuda",
+    "https://soemz.com/contact/",
+    "https://soemz.com/dostavka/",
+    "https://soemz.com/ustojchivoe-razvitie/",
+    "https://soemz.com/certificate/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "mystockmart.ru",
+   "url": "https://mystockmart.ru/shop/kontejnery-dlya-khraneniya",
+   "also_domains": [],
+   "name": {
+    "value": "MyStockMart",
+    "quote": "Присоединяйтесь к нам",
+    "url": "https://mystockmart.ru/"
+   },
+   "offering": {
+    "value": "Посуда и товары для дома оптом: кухонная посуда, контейнеры для хранения, посуда для сервировки, чайная и кофейная посуда, бар, уборка, стирка и др.",
+    "quote": "Посуда оптом со склада в Москве",
+    "url": "https://mystockmart.ru/"
+   },
+   "address": {
+    "value": "Москва, Булатниковская улица, дом 20",
+    "quote": "Москва, Булатниковская улица, дом 20",
+    "url": "https://mystockmart.ru/kontakty/"
+   },
+   "regions": [
+    {
+     "value": "Доставка по всей России",
+     "quote": "Работаем по всей РФ",
+     "url": "https://mystockmart.ru/kontakty/"
+    }
+   ],
+   "nationwide": {
+    "value": "Поставки по всей России",
+    "quote": "Поставки по всей России · Заказ от 30 000 ₽",
+    "url": "https://mystockmart.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 774-17-76",
+     "quote": "+7 (495) 774-17-76",
+     "url": "https://mystockmart.ru/kontakty/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@mystockmart.ru",
+     "quote": "info@mystockmart.ru",
+     "url": "https://mystockmart.ru/kontakty/"
+    }
+   ],
+   "inn": null,
+   "min_order": {
+    "value": "Минимальный заказ от 30 000 ₽",
+    "quote": "Минимальный заказ от 30 000 ₽",
+    "url": "https://mystockmart.ru/"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Оптовые цены first price; часть товаров со скидкой",
+    "quote": "Более 5 000 товаров · Оптовые цены first price ·",
+    "url": "https://mystockmart.ru/"
+   },
+   "certificates": [],
+   "delivery": {
+    "value": "Самовывоз со склада в Москве или доставка по России",
+    "quote": "Посуда оптом со склада в Москве | Купить посуду самовывозом или с доставкой по России",
+    "url": "https://mystockmart.ru/"
+   },
+   "wholesale": {
+    "value": "Оптовые продажи; работа с юрлицами и оптом",
+    "quote": "Только оптовые закупки",
+    "url": "https://mystockmart.ru/kontakty/"
+   },
+   "sources": [
+    "https://mystockmart.ru/",
+    "https://mystockmart.ru/shop/kontejnery-dlya-khraneniya",
+    "https://mystockmart.ru/kontakty/",
+    "https://mystockmart.ru/oplata/",
+    "https://mystockmart.ru/about-us/",
+    "https://mystockmart.ru/privacy/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "mytimecup.ru",
+   "url": "https://mytimecup.ru/collection/urakovka",
+   "also_domains": [],
+   "name": {
+    "value": "Майтайм груп (MYTIME)",
+    "quote": "Наша компания является официальным дистрибьютором английского бренда EcoffeeCup в России.",
+    "url": "https://mytimecup.ru/"
+   },
+   "offering": {
+    "value": "Бумажные и пластиковые стаканы с логотипом и авторским дизайном, крышки, бутылки для воды и соков, основы под лимонады и чаи, сиропы и сахар, всё для Bubble Tea, упаковка для доставки еды, одноразовые тарелки",
+    "quote": "Пластиковая и\nбумажная посуда оптом, крышки для стаканчиков, наборы с логотипом — всё это можно купить у нас уже сегодня!",
+    "url": "https://mytimecup.ru/"
+   },
+   "address": {
+    "value": "Остаповский проезд д.12, Москва, 109316, Россия",
+    "quote": "Остаповский проезд д.12, Москва,\n109316, Россия",
+    "url": "https://mytimecup.ru/page/kontakty"
+   },
+   "regions": [
+    {
+     "value": "Доставка по территории России транспортными компаниями",
+     "quote": "Доставка товаров в регионы осуществляется с помощью транспортных компаний.",
+     "url": "https://mytimecup.ru/page/dostavka"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка по территории России транспортными компаниями",
+    "quote": "Доставка по территории России. Доставка товаров в регионы осуществляется с помощью транспортных компаний.",
+    "url": "https://mytimecup.ru/page/dostavka"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 230-27-99",
+     "quote": "+7-495-230-27-99",
+     "url": "https://mytimecup.ru/page/kontakty"
+    },
+    {
+     "value": "+7 (926) 356-96-37",
+     "quote": "+7-926-356-96-37",
+     "url": "https://mytimecup.ru/page/kontakty"
+    },
+    {
+     "value": "+7 (926) 356-99-82",
+     "quote": "+7-926-356‑99‑82",
+     "url": "https://mytimecup.ru/page/kontakty"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@mytimecup.ru",
+     "quote": "Email: info@mytimecup.ru",
+     "url": "https://mytimecup.ru/page/kontakty"
+    }
+   ],
+   "inn": null,
+   "min_order": {
+    "value": "Минимальная партия одна упаковка; для готовых бумажных стаканчиков — от 1 коробки",
+    "quote": "Готовые бумажные стаканчики\nот 1 коробки (в том числе сезонные и с авторскими иллюстрациями);",
+    "url": "https://mytimecup.ru/"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Примеры цен: тарелка 230 мм крафт — 230 руб. за упаковку (50 шт); держатель для 2-х стаканов — 450 руб. за упаковку (150 шт)",
+    "quote": "Тарелка 230 мм круглая рифленая крафт\nМинимальная партия — одна упаковка (50 шт)\nЦена за упаковку — 230.0 руб",
+    "url": "https://mytimecup.ru/collection/tarelki"
+   },
+   "certificates": [],
+   "delivery": {
+    "value": "Самовывоз со склада в Москве; доставка автотранспортом в пределах МКАД (1500 руб. при заказе до 6000 руб., 1000 руб. при заказе от 6000 до 10000 руб., бесплатно свыше 10000 руб.); доставка в регионы транспортными компаниями за счёт клиента",
+    "quote": "Доставка автотранспортом в пределах МКАД. Стоимость данной услуги при заказе до 6000 рублей составляет 1500 руб., от 6000 до 10000 руб составляет 1000 руб .",
+    "url": "https://mytimecup.ru/page/dostavka"
+   },
+   "wholesale": {
+    "value": "Оптовые продажи, оптовый поставщик бумажных стаканчиков",
+    "quote": "Наша компания зарекомендовала себя как надежный производитель и оптовый поставщик бумажных стаканчиков с оригинальным дизайном.",
+    "url": "https://mytimecup.ru/"
+   },
+   "sources": [
+    "https://mytimecup.ru/",
+    "https://mytimecup.ru/collection/urakovka",
+    "https://mytimecup.ru/page/kontakty",
+    "https://mytimecup.ru/page/dostavka",
+    "https://mytimecup.ru/page/o-kompanii",
+    "https://mytimecup.ru/collection/tarelki"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "antech.ru",
+   "url": "https://www.antech.ru/wiki/upakovka-dlya-edy-obedov-i-fastfuda",
+   "also_domains": [],
+   "name": {
+    "value": "Антэк",
+    "quote": "Компания «Антэк» – один из крупнейших поставщиков упаковки и тары из гофрокартона.",
+    "url": "https://www.antech.ru/about/contacts/"
+   },
+   "offering": {
+    "value": "Тара и упаковка из гофрокартона: готовые коробки в наличии, упаковка на заказ, разработка конструкции и дизайна, гофротара, упаковочные материалы",
+    "quote": "Тара и упаковка из гофрированного картона на заказ в Москве",
+    "url": "https://www.antech.ru/"
+   },
+   "address": {
+    "value": "Московская область, г. Красногорск, д. Гольево, ул. Центральная, влд. 6 \"Б\" (склад и шоурум; производство в г.о. Истра / п. Нахабино, д. Лешково)",
+    "quote": "143405, Московская область, г. Красногорск, д. Гольево, ул. Центральная, влд. 6 \"Б\"",
+    "url": "https://www.antech.ru/about/contacts/"
+   },
+   "regions": [],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (495) 287-45-70",
+     "quote": "Телефоны +7 (495) 287-45-70 8 (800) 555-55-70",
+     "url": "https://www.antech.ru/about/contacts/"
+    },
+    {
+     "value": "+7 (800) 555-55-70",
+     "quote": "Телефоны +7 (495) 287-45-70 8 (800) 555-55-70",
+     "url": "https://www.antech.ru/about/contacts/"
+    },
+    {
+     "value": "+7 (495) 929-70-42",
+     "quote": "Контроль качества +7 (495) 929-70-42 control@antech.ru",
+     "url": "https://www.antech.ru/about/contacts/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "zakaz@antech.ru",
+     "quote": "Почта zakaz @antech.ru",
+     "url": "https://www.antech.ru/about/contacts/"
+    }
+   ],
+   "inn": {
+    "value": "5024099326",
+    "quote": "ИНН: 5024099326",
+    "url": "https://www.antech.ru/wiki/upakovka-dlya-edy-obedov-i-fastfuda"
+   },
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Цены на коробки от 63.01 ₽ (при заказе от 1000 шт.) до 337.25 ₽ за единицу; натяжители и инструменты — от 7151.28 ₽",
+    "quote": "Коробка ОЗОН M Т−24B бурый 133.76 ₽ от 50 121.72 ₽ от 300 111.02 ₽",
+    "url": "https://www.antech.ru/"
+   },
+   "certificates": [],
+   "delivery": {
+    "value": "Оперативная доставка; срочная доставка небольшой партии в сжатые сроки",
+    "quote": "Гарантия качества, срочная доставка небольшой партии в сжатые сроки.",
+    "url": "https://www.antech.ru/"
+   },
+   "wholesale": {
+    "value": "Производитель гофротары; работа с юрлицами по заказам",
+    "quote": "Компания «Антэк» – один из крупнейших поставщиков упаковки и тары из гофрокартона.",
+    "url": "https://www.antech.ru/about/contacts/"
+   },
+   "sources": [
+    "https://www.antech.ru/",
+    "https://www.antech.ru/wiki/upakovka-dlya-edy-obedov-i-fastfuda",
+    "https://www.antech.ru/about/contacts/",
+    "https://www.antech.ru/about/activity/bystraya-dostavka-dlya-vashego-biznesa/",
+    "https://www.antech.ru/help/delivery/",
+    "https://www.antech.ru/about/"
+   ],
+   "rejected_facts": 1
+  },
+  {
+   "domain": "edaprof.ru",
+   "url": "https://edaprof.ru/upakovka",
+   "also_domains": [],
+   "name": {
+    "value": "ЕдаПроф (EdaProf.ru)",
+    "quote": "Интернет-магазин «ЕдаПроф» предлагает купить упаковку для доставки и производства продуктов оптом.",
+    "url": "https://edaprof.ru/upakovka"
+   },
+   "offering": {
+    "value": "Пищевые добавки и ингредиенты, бакалея, спецодежда, упаковка, муляжи, оборудование для пищевых производств",
+    "quote": "Компания «Едапроф» предлагает купить пищевые добавки, пищевые ингредиенты, бакалею, спецодежду, упаковку, муляжи, оборудование для пищевых производств, магазинов, заведений общественного питания.",
+    "url": "https://edaprof.ru/"
+   },
+   "address": {
+    "value": "Москва, Бибиревская ул., д. 11",
+    "quote": "Бибиревская ул., д. 11",
+    "url": "https://edaprof.ru/"
+   },
+   "regions": [
+    {
+     "value": "Представительства и офисы в городах России, включая Москву и Санкт-Петербург",
+     "quote": "Наши представительства в России",
+     "url": "https://edaprof.ru/"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка во все города России",
+    "quote": "Доставляем во все города России.",
+    "url": "https://edaprof.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 123-30-01",
+     "quote": "+7 (495) 123-30-01",
+     "url": "https://edaprof.ru/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@edaprof.ru",
+     "quote": "info@edaprof.ru",
+     "url": "https://edaprof.ru/"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Цена по запросу, актуальную цену уточняйте у менеджера",
+    "quote": "Цена по запросу. Информация ознакомительная. Актуальную цену уточняйте у менеджера по телефону или на email",
+    "url": "https://edaprof.ru/upakovka"
+   },
+   "certificates": [],
+   "delivery": {
+    "value": "Доставка во все города России",
+    "quote": "Доставляем во все города России.",
+    "url": "https://edaprof.ru/"
+   },
+   "wholesale": {
+    "value": "Продажа оптом",
+    "quote": "Мы предлагаем бакалею, спецодежду, упаковку, муляжи, оборудование, пищевое сырье и ингредиенты оптом на выгодных условиях.",
+    "url": "https://edaprof.ru/"
+   },
+   "sources": [
+    "https://edaprof.ru/",
+    "https://edaprof.ru/upakovka",
+    "https://edaprof.ru/kontakty/",
+    "https://edaprof.ru/upakovka/termosumka-dlya-dostavki-edy/",
+    "https://edaprof.ru/dostavka/",
+    "https://edaprof.ru/dostavka"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "posudateola.ru",
+   "url": "https://posudateola.ru/odnorazovye-kontejnery-pishchevye",
+   "also_domains": [],
+   "name": {
+    "value": "Теола (posudateola.ru)",
+    "quote": "Одноразовая посуда в Москве купить оптом и в розницу по доступной цене",
+    "url": "https://posudateola.ru/"
+   },
+   "offering": {
+    "value": "Одноразовая посуда (пластиковая, бумажная, ВПС, контейнеры, банки под пресервы), пакеты, пленка, фольга, салфетки, бытовая химия и др.",
+    "quote": "Одноразовая посуда оптом от производителя с ценами",
+    "url": "https://posudateola.ru/"
+   },
+   "address": {
+    "value": "Москва, ул. Талдомская 2Б",
+    "quote": "Москва, ул. Талдомская 2Б",
+    "url": "https://posudateola.ru/"
+   },
+   "regions": [
+    {
+     "value": "Доставка в любой регион России",
+     "quote": "Доставка в любой регион России",
+     "url": "https://posudateola.ru/"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка в любой регион России",
+    "quote": "Доставка в любой регион России",
+    "url": "https://posudateola.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (966) 123-76-26",
+     "quote": "8(966)123-76-26",
+     "url": "https://posudateola.ru/"
+    },
+    {
+     "value": "+7 (495) 504-21-88",
+     "quote": "8(495)504-21-88 Анна E-mail: 5042188@bk.ru",
+     "url": "https://posudateola.ru/"
+    },
+    {
+     "value": "+7 (925) 506-71-26",
+     "quote": "8(925)506-71-26 Виталий E-mail:5067126@mail.ru",
+     "url": "https://posudateola.ru/"
+    },
+    {
+     "value": "+7 (499) 504-36-42",
+     "quote": "8(499)504-36-42 Наталия E-mail:teola.n@mail.ru",
+     "url": "https://posudateola.ru/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@posudateola.ru",
+     "quote": "info@posudateola.ru",
+     "url": "https://posudateola.ru/"
+    },
+    {
+     "value": "5042188@bk.ru",
+     "quote": "8(495)504-21-88 Анна E-mail: 5042188@bk.ru",
+     "url": "https://posudateola.ru/"
+    },
+    {
+     "value": "5067126@mail.ru",
+     "quote": "8(925)506-71-26 Виталий E-mail:5067126@mail.ru",
+     "url": "https://posudateola.ru/"
+    },
+    {
+     "value": "teola.n@mail.ru",
+     "quote": "8(499)504-36-42 Наталия E-mail:teola.n@mail.ru",
+     "url": "https://posudateola.ru/"
+    }
+   ],
+   "inn": {
+    "value": "7701081963",
+    "quote": "ИНН 7701081963",
+    "url": "https://posudateola.ru/kak-dobratsya"
+   },
+   "min_order": {
+    "value": "Минимальная партия зависит от товара, например 50 шт. для тарелки или 80 шт. для соусника",
+    "quote": "Минимальная партия: 50 шт.",
+    "url": "https://posudateola.ru/"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Цены за штуку, например стакан ПП 330мл — 1.88 руб.",
+    "quote": "Стакан пластиковый одноразовый ПП 330мл прозрачный СПГ 100 шт/уп, 3000 шт/кор 1.88 руб.",
+    "url": "https://posudateola.ru/"
+   },
+   "certificates": [],
+   "delivery": null,
+   "wholesale": {
+    "value": "Продажа оптом и в розницу",
+    "quote": "Одноразовая посуда в Москве купить оптом и в розницу по доступной цене",
+    "url": "https://posudateola.ru/"
+   },
+   "sources": [
+    "https://posudateola.ru/",
+    "https://posudateola.ru/odnorazovye-kontejnery-pishchevye",
+    "https://posudateola.ru/kak-dobratsya",
+    "https://posudateola.ru/dostavka",
+    "https://posudateola.ru/about-us",
+    "https://posudateola.ru/price-lists"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "tprint.ru",
+   "url": "https://tprint.ru/kartonnaya-upakovka-dlya-edy-na-vynos",
+   "also_domains": [],
+   "name": {
+    "value": "Tprint (цифровая типография)",
+    "quote": "Цифровая типография в Москве: срочная полиграфия от TPRINT.",
+    "url": "https://tprint.ru/"
+   },
+   "offering": {
+    "value": "Полиграфия (визитки, буклеты, листовки, наклейки, плакаты, баннеры), картонная упаковка на заказ, проектная документация",
+    "quote": "Мы печатаем визитки, листовки, буклеты, каталоги, наклейки, плакаты, баннеры и проектную документацию",
+    "url": "https://tprint.ru/"
+   },
+   "address": {
+    "value": "Москва, ул. Зорге, 15, корп. 1",
+    "quote": "Москва, ул. Зорге, 15, корп. 1",
+    "url": "https://tprint.ru/contact-us/"
+   },
+   "regions": [
+    {
+     "value": "Москва и вся РФ (доставка)",
+     "quote": "Москва и вся РФ",
+     "url": "https://tprint.ru/contact-us/"
+    },
+    {
+     "value": "Отправка по России через транспортные компании",
+     "quote": "Отправка по России через транспортные компании",
+     "url": "https://tprint.ru/dostavka/"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка по Москве и России",
+    "quote": "Доставка по Москве и России.",
+    "url": "https://tprint.ru/kartonnaya-upakovka-dlya-edy-na-vynos"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 744-34-88",
+     "quote": "+7 (495) 744-34-88",
+     "url": "https://tprint.ru/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "sale@tprint.ru",
+     "quote": "sale@tprint.ru",
+     "url": "https://tprint.ru/"
+    }
+   ],
+   "inn": null,
+   "min_order": {
+    "value": "Без печати — от 500 штук; с флексопечатью — от 1000 штук (тираж упаковки для еды навынос)",
+    "quote": "Без печати — от 500 штук. С флексопечатью — от 1000 штук.",
+    "url": "https://tprint.ru/kartonnaya-upakovka-dlya-edy-na-vynos"
+   },
+   "min_order_kg": null,
+   "price_info": null,
+   "certificates": [],
+   "delivery": {
+    "value": "Курьер по Москве, автомобильная и грузовая доставка, отправка по России через ТК, самовывоз (0₽)",
+    "quote": "Курьерская и автомобильная доставка (включая грузовую), отправка по России через транспортные компании, а также самовывоз.",
+    "url": "https://tprint.ru/dostavka/"
+   },
+   "wholesale": {
+    "value": "Работа с B2B-клиентами, договор и закрывающие документы для юрлиц",
+    "quote": "Для юрлиц — договор и полный пакет закрывающих документов по сделке.",
+    "url": "https://tprint.ru/kartonnaya-upakovka-dlya-edy-na-vynos"
+   },
+   "sources": [
+    "https://tprint.ru/",
+    "https://tprint.ru/kartonnaya-upakovka-dlya-edy-na-vynos",
+    "https://tprint.ru/contact-us/",
+    "https://tprint.ru/dostavka/",
+    "https://tprint.ru/o-kompanii/",
+    "https://tprint.ru/pechat-sertifikatov/"
+   ],
+   "rejected_facts": 0
+  }
+ ]
+}
