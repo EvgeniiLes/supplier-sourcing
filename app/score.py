@@ -36,7 +36,7 @@ CRITERIA = (
     ("min_order", "Минимальный заказ", 3),
     ("docs", "Документы и сертификаты", 3),
     ("delivery", "Условия доставки", 2),
-    ("price", "Цены", 2),
+    ("price", "Цены на искомый товар", 2),
 )
 DEFAULT_WEIGHTS = {key: w for key, _, w in CRITERIA}
 
@@ -53,7 +53,10 @@ def normalize_weights(weights: dict | None) -> dict[str, float]:
     return w if sum(w.values()) > 0 else dict(DEFAULT_WEIGHTS)
 
 
-def score_supplier(s: Supplier, region: str, f: Filters, weights: dict | None = None) -> ScoreResult:
+def score_supplier(s: Supplier, region: str, f: Filters, weights: dict | None = None,
+                   has_query_prices: bool | None = None) -> ScoreResult:
+    """has_query_prices: есть ли на сайте цены именно на искомый товар. None — извлечение не знало запроса
+    (старые данные), тогда годятся любые опубликованные цены."""
     pros: list[str] = []
     cons: list[str] = []
     missing: list[str] = []
@@ -136,12 +139,20 @@ def score_supplier(s: Supplier, region: str, f: Filters, weights: dict | None = 
         cons.append("условия доставки не указаны"); missing.append("условия и стоимость доставки")
 
     # цены
-    if s.price_info:
+    if has_query_prices:
+        frac["price"], note["price"] = 1.0, "есть на искомый товар"
+        pros.append("опубликованы цены на искомый товар")
+    elif has_query_prices is None and s.price_info:        # старые данные: запрос не учитывался
         frac["price"], note["price"] = 1.0, "опубликованы"
         pros.append("опубликованы цены")
+    elif has_query_prices is False and s.price_info:       # искали: цены где-то есть, но не на этот товар
+        frac["price"], note["price"] = 0.3, "есть, но не на искомый товар"
+        cons.append("цен на искомый товар на сайте нет (есть прайс или цены на другое)")
+        missing.append("прайс-лист / цены")
     else:
         frac["price"], note["price"] = 0.0, "не опубликованы"
-        cons.append("цен на сайте нет"); missing.append("прайс-лист / цены")
+        cons.append("цен на искомый товар на сайте нет" if has_query_prices is False else "цен на сайте нет")
+        missing.append("прайс-лист / цены")
 
     w = normalize_weights(weights)
     total_w = sum(w.values())

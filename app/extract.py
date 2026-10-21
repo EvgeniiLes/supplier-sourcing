@@ -3,7 +3,7 @@ import hashlib
 
 from .config import get_settings
 from .models import Fact, Supplier
-from .verify import regex_contacts, verify_supplier
+from .verify import query_stems, regex_contacts, verify_price_items, verify_supplier
 
 FACT = {
     "type": "object",
@@ -40,9 +40,25 @@ TOOL = {
                 "Минимальный заказ в килограммах, если в min_order указан вес (1 т = 1000). "
                 "Иначе null. Не считай по ценам и не угадывай.")},
             "price_info": _nullable(
-                "Опубликованные цены: 2–3 конкретные позиции с ценой из прайса или таблицы (название, цена за единицу) "
-                "и пометка, если на сайте есть полный прайс (например PDF). Цитата — дословная строка прайса с ценой. "
-                "Оговорки вроде «цены по запросу» не подходят, если в тексте есть таблица с ценами"),
+                "ОБЩИЕ условия по ценам, без конкретных товаров: опубликован ли открытый прайс (в т.ч. PDF), "
+                "цены только по запросу или после регистрации, скидки и оптовые уровни"),
+            "query_prices": {"type": "array", "description": (
+                "Цены на ТОВАР, КОТОРЫЙ ИЩЕТ ПОЛЬЗОВАТЕЛЬ (указан в начале сообщения), и его разновидности/фасовки. "
+                "Другие товары не включай, даже если цены на них есть. Нет цен на искомый товар: пустой список."),
+                "items": {"type": "object", "properties": {
+                    "name": {"type": "string", "description": "Название позиции как на сайте, с фасовкой"},
+                    "matches_query": {"type": "boolean", "description": (
+                        "true, только если позиция и есть искомый товар или его разновидность/фасовка "
+                        "(для «упаковка»: контейнеры, пакеты, лотки; для «сливки»: сливки). Иначе false")},
+                    "unit": {"type": ["string", "null"], "description": (
+                        "Единица ТОЛЬКО если она написана рядом с ценой: «₽/кг», «за шт», «руб/л». "
+                        "Вес товара из названия единицей цены НЕ является: если цена просто «от 138 ₽» за позицию "
+                        "весом 100 г, unit = null")},
+                    "price": {"type": "number", "description": "Цена числом, как написано, без пересчётов"},
+                    "pack": {"type": ["string", "null"], "description": "Фасовка как написана: «25 кг», «1 л», «12 шт в упаковке»"},
+                    "quote": {"type": "string", "description": "ДОСЛОВНАЯ строка страницы с позицией и ценой"},
+                    "url": {"type": "string", "description": "Адрес страницы из заголовка [PAGE ...]"},
+                }, "required": ["name", "matches_query", "price", "quote", "url"]}},
             "certificates": {"type": "array", "items": FACT, "description": "Сертификаты, декларации, ГОСТ/ТУ, Меркурий, Халяль и т.п."},
             "delivery": _nullable("Условия доставки"),
             "wholesale": _nullable("Работа с юрлицами или оптом"),
@@ -60,7 +76,12 @@ SYSTEM = (
     "(города, цифры, названия). "
     "Минимальный заказ — только если сайт называет сумму или объём именно минимальным заказом/партией. "
     "Порог бесплатной доставки, 'доставка от N руб.' и примеры цен минимальным заказом не являются: "
-    "их записывай в delivery или price_info. Если точной цифры нет — min_order это null. "
+    "их записывай в delivery. Если точной цифры нет — min_order это null. "
+    "Цены: конкретные цены клади только в query_prices и только на товар из запроса пользователя "
+    "(для «сыр моцарелла» это моцарелла любой фасовки, но не другие сыры и не напитки; для общей категории вроде "
+    "«упаковка для доставки еды» это контейнеры, пакеты, лотки и т.п.). Для каждой позиции честно ставь matches_query. "
+    "Единицу цены указывай только если она написана рядом с ценой, а не выводи из веса товара. "
+    "price_info — лишь общие условия по ценам, без примеров товаров. "
     "Вызови инструмент save_supplier."
 )
 
@@ -89,10 +110,17 @@ def build_prompt(pages: dict[str, str], html_budget: int = 24_000, pdf_budget: i
     return "\n".join(pack(html, html_budget) + pack(pdfs, pdf_budget))
 
 
-def content_hash(pages: dict[str, str]) -> str:
+# Версия правил извлечения. Поднимайте при смене схемы, промпта или проверок: иначе кэш отдаст результат старых правил.
+EXTRACT_VERSION = 4
+
+
+def content_hash(pages: dict[str, str], query: str = "") -> str:
+    """Ключ кэша поставщика: страницы, запрос (цены зависят от него) и версия правил извлечения."""
     h = hashlib.sha256()
     for u in sorted(pages):
         h.update(u.encode()); h.update(pages[u].encode())
+    h.update(b"\x00q:" + " ".join(sorted(query_stems(query))).encode())
+    h.update(f"\x00v{EXTRACT_VERSION}".encode())
     return h.hexdigest()[:16]
 
 
@@ -123,29 +151,36 @@ def parse_tool_input(domain: str, url: str, data: dict) -> Supplier | None:
     )
 
 
-async def extract_supplier(domain: str, url: str, pages: dict[str, str], client=None) -> Supplier | None:
-    """Страницы -> Supplier с проверенными фактами. None, если сайт не поставщик."""
+async def extract_supplier(domain: str, url: str, pages: dict[str, str], client=None, query: str = "") -> Supplier | None:
+    """Страницы -> Supplier с проверенными фактами. None, если сайт не поставщик.
+    query — что ищет пользователь: по нему извлекаются цены на нужный товар."""
     if not pages:
         return None
     s = get_settings()
     if client is None:
         from anthropic import AsyncAnthropic
         client = AsyncAnthropic(api_key=s.anthropic_api_key)
+    head = f"Пользователь ищет: «{query.strip()}».\n\n" if query.strip() else ""
     msg = await client.messages.create(
         model=s.model_extract,
-        max_tokens=3000,
+        max_tokens=4000,
         system=SYSTEM,
         tools=[TOOL],
         tool_choice={"type": "tool", "name": "save_supplier"},
-        messages=[{"role": "user", "content": build_prompt(pages)}],
+        messages=[{"role": "user", "content": head + build_prompt(pages)}],
     )
     block = next((b for b in msg.content if b.type == "tool_use"), None)
     if block is None:
         return None
-    supplier = parse_tool_input(domain, url, dict(block.input))
+    data = dict(block.input)
+    supplier = parse_tool_input(domain, url, data)
     if supplier is None:
         return None
     supplier = verify_supplier(supplier, pages)
+    if query.strip():                       # цены на искомый товар: каждая проверена по тексту и относится к запросу
+        supplier.query_prices, dropped = verify_price_items(data.get("query_prices"), pages, query)
+        supplier.query_for = query.strip()
+        supplier.rejected_facts += dropped
     if not supplier.phones or not supplier.emails:
         phones, emails = regex_contacts(pages)
         supplier.phones = supplier.phones or phones

@@ -25,7 +25,13 @@ def scored_results(search_id: int, weights: dict | None = None) -> list[dict]:
     rows = db.get_results(search_id)
     counts = db.offer_counts()
     for r in rows:
-        r["score"] = score_supplier(Supplier(**r["data"]), search["region"], filters, weights).model_dump()
+        extra = r.pop("extra", {}) or {}
+        # None: поиск без цен на запрос (старые данные), список (в т.ч. пустой): цены на искомый товар этого поиска
+        qp = extra.get("query_prices")
+        r["query_prices"] = qp
+        r["query_prices_for"] = extra.get("query", "")
+        r["score"] = score_supplier(Supplier(**r["data"]), search["region"], filters, weights,
+                                    has_query_prices=None if qp is None else bool(qp)).model_dump()
         r["offers_count"] = counts.get(r["domain"], 0)
     rows.sort(key=lambda x: (not x["score"]["passes"], -x["score"]["score"]))
     return rows

@@ -166,6 +166,11 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
 .compare-bar .ghost{background:transparent;color:#fff;border-color:#666}
 .compare-bar .dom{color:#a4a4a4}
 button.ghost.changed{border-color:var(--ink);font-weight:500}
+.price-badge{display:inline-block;margin-top:6px;padding:2px 10px;border-radius:999px;background:var(--dark);color:var(--cyan);font-size:14px;font-weight:500}
+.price-badge.none{background:var(--soft);color:var(--muted);font-weight:400}
+.qp{margin-bottom:6px}
+.qp b{white-space:nowrap}
+.price-line{margin:6px 0;font-size:14px}
 label.pick{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);cursor:pointer;margin:0;flex:none}
 details.how{margin:6px 0 14px;font-size:14px}
 .how summary{cursor:pointer;color:var(--link)}

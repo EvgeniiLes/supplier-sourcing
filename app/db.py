@@ -53,6 +53,7 @@ CREATE TABLE IF NOT EXISTS offers(
 MIGRATIONS = [
     ("searches", "total", "INTEGER NOT NULL DEFAULT 0"),
     ("searches", "done", "INTEGER NOT NULL DEFAULT 0"),
+    ("search_results", "extra", "TEXT NOT NULL DEFAULT '{}'"),     # цены на искомый товар этого поиска
 ]
 
 STATUSES = ["new", "contacted", "quote", "agreed", "rejected"]
@@ -177,11 +178,18 @@ def update_supplier_meta(domain: str, status: str | None, note: str | None,
         return cur.rowcount > 0
 
 
-def save_result(search_id: int, domain: str) -> None:
-    """Поставщик входит в выдачу поиска. Оценка не хранится: считается при чтении (учёт весов и фильтров)."""
+def save_result(search_id: int, domain: str, extra: dict | None = None) -> None:
+    """Поставщик входит в выдачу поиска. Оценка не хранится: считается при чтении (учёт весов и фильтров).
+    extra — данные именно этого поиска: цены на искомый товар (у другого запроса они другие)."""
     with conn() as c:
-        c.execute("INSERT OR REPLACE INTO search_results(search_id, domain, score) VALUES (?,?,'{}')",
-                  (search_id, domain))
+        c.execute("INSERT OR REPLACE INTO search_results(search_id, domain, score, extra) VALUES (?,?,'{}',?)",
+                  (search_id, domain, json.dumps(extra or {}, ensure_ascii=False)))
+
+
+def update_result_extra(search_id: int, domain: str, extra: dict) -> None:
+    with conn() as c:
+        c.execute("UPDATE search_results SET extra=? WHERE search_id=? AND domain=?",
+                  (json.dumps(extra, ensure_ascii=False), search_id, domain))
 
 
 def delete_result(search_id: int, domain: str) -> None:
@@ -192,11 +200,16 @@ def delete_result(search_id: int, domain: str) -> None:
 def get_results(search_id: int) -> list[dict]:
     with conn() as c:
         rows = c.execute(
-            """SELECT s.* FROM search_results r
+            """SELECT s.*, r.extra AS extra_json FROM search_results r
                JOIN suppliers s ON s.domain = r.domain WHERE r.search_id=?""",
             (search_id,),
         ).fetchall()
-    return [_supplier_dict(r) for r in rows]
+    out = []
+    for row in rows:
+        d = _supplier_dict(row)
+        d["extra"] = json.loads(d.pop("extra_json") or "{}")
+        out.append(d)
+    return out
 
 
 def get_shortlist() -> list[dict]:

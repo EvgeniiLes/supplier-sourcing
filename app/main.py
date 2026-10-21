@@ -102,7 +102,8 @@ def get_search(search_id: int, w: str | None = None):
 
 
 @app.post("/api/supplier/{domain}/refresh")
-async def refresh_supplier(domain: str):
+async def refresh_supplier(domain: str, search_id: int | None = None):
+    """search_id: цены на искомый товар этого поиска тоже обновятся."""
     row = db.get_supplier_row(domain)
     if not row:
         raise HTTPException(404, "Поставщик не найден")
@@ -111,7 +112,7 @@ async def refresh_supplier(domain: str):
     _check_live_budget()
     sid = db.create_search(domain, "", {}, "refresh")
     try:
-        await pipeline.refresh_supplier(domain)
+        await pipeline.refresh_supplier(domain, search_id)
     except RuntimeError as e:
         db.update_search(sid, status="error", error=str(e))
         raise HTTPException(502, str(e))

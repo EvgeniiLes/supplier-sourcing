@@ -8,7 +8,7 @@ from .docs import Document
 from .models import Fact, Supplier
 from .pricing import norm_name, similarity
 from .search import domain_of
-from .verify import INN_RE, PHONE_RE, norm, normalize_phone, quote_in_text, valid_email
+from .verify import INN_RE, PHONE_RE, has_number, norm, normalize_phone, numbers_in, quote_in_text, valid_email
 
 FREE_MAIL = {"gmail.com", "mail.ru", "yandex.ru", "ya.ru", "bk.ru", "list.ru", "inbox.ru", "outlook.com",
              "hotmail.com", "icloud.com", "rambler.ru", "yahoo.com", "proton.me", "protonmail.com", "me.com"}
@@ -63,25 +63,7 @@ SYSTEM = (
 
 # --- проверка по тексту ------------------------------------------------------
 
-def numbers_in(text: str) -> list[float]:
-    """Все числа из текста: и с разделителем тысяч ('1 850,50'), и по отдельности."""
-    out: list[float] = []
-    for m in re.finditer(r"\d+(?:[  ]\d{3})+(?:[.,]\d+)?|\d+(?:[.,]\d+)?", text):
-        raw = re.sub(r"[  ]", "", m.group(0)).replace(",", ".")
-        try:
-            out.append(float(raw))
-        except ValueError:
-            continue
-    for m in re.finditer(r"\d+(?:[.,]\d+)?", text):          # группы отдельно: '25 1850' не склеиваем
-        try:
-            out.append(float(m.group(0).replace(",", ".")))
-        except ValueError:
-            continue
-    return out
-
-
-def _has_number(price: float, numbers: list[float]) -> bool:
-    return any(abs(price - n) < 0.006 for n in numbers)
+_has_number = has_number      # прежнее имя внутри модуля
 
 
 def item_supported(item: dict, text_norm: str, text_numbers: list[float]) -> bool:

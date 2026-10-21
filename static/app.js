@@ -61,13 +61,68 @@ function regionsHtml(d) {
   if (d.nationwide) items.push({...d.nationwide, value: "По всей России"});
   return facts(items);
 }
-function missingOf(d) {
+/* ---------- цены на искомый товар ---------- */
+const num = n => Number(n).toLocaleString("ru-RU", {maximumFractionDigits: 2});
+/* цена как написана на сайте: единица только если стояла рядом с ценой, иначе показываем фасовку */
+/* единицу чистим от «₽», «руб», «/», «за»: в старых данных она могла быть записана как «₽/кг» */
+const cleanUnit = u => String(u || "").replace(/₽|руб\w*\.?|за\b|\//gi, "").trim();
+const priceParts = p => cleanUnit(p.unit)
+  ? {main: `${num(p.price)} ₽/${cleanUnit(p.unit)}`, note: ""}
+  : {main: `${num(p.price)} ₽`, note: `${p.pack ? `фасовка ${p.pack} · ` : ""}ед. цены не указана`};
+const priceText = p => { const {main, note} = priceParts(p); return note ? `${main} · ${note}` : main; };
+/* цена за кг или литр для сравнения: написана на сайте или рассчитана из фасовки (тогда помечено) */
+const basePriceText = p => `${num(p.base_price)} ₽/${p.base_unit}${p.derived ? " (расчёт)" : ""}`;
+
+/* цены у поставщика: из выдачи поиска, у шорт-листа — последние извлечённые */
+function queryPricesOf(it) { return it.query_prices ?? it.data?.query_prices ?? null; }
+function queryNameOf(it) { return it.query_prices_for || it.data?.query_for || state.ctx.category || "искомый товар"; }
+
+/* сравнивать можно цены за кг с ценами за кг; за литр с литром. Берём единицу, которой больше всего среди результатов */
+function dominantUnit() {
+  const count = {};
+  for (const r of state.results) for (const p of (queryPricesOf(r) || [])) if (p.base_unit) count[p.base_unit] = (count[p.base_unit] || 0) + 1;
+  return Object.entries(count).sort((a, b) => b[1] - a[1])[0]?.[0] ?? "";
+}
+function bestPrice(it, unit) {      // самая низкая цена за кг/л у поставщика
+  const items = (queryPricesOf(it) || []).filter(p => p.base_price != null && p.base_unit === unit);
+  return items.length ? items.reduce((a, b) => (b.base_price < a.base_price ? b : a)) : null;
+}
+/* подпись лучшей цены: «от 310 ₽/л» для сравнимых, иначе цена как на сайте */
+function bestLabel(it) {
+  const qp = queryPricesOf(it) || [];
+  const best = bestPrice(it, dominantUnit());
+  if (best) return `от ${basePriceText(best)}`;
+  const cheapest = qp.reduce((a, b) => (b.price < a.price ? b : a));
+  return `от ${priceText(cheapest)}`;
+}
+function queryPricesHtml(it) {
+  const qp = queryPricesOf(it);
+  if (qp === null) return fact(it.data.price_info);          // старые данные: запрос не учитывался
+  if (!qp.length) return `<span class="miss">цен на сайте нет: запросить КП</span>`;
+  const rows = qp.slice(0, 4).map(p => `<div class="qp"><span>${esc(p.name)}</span> <b>${esc(priceParts(p).main)}</b>
+    ${priceParts(p).note ? `<span class="dom">${esc(priceParts(p).note)}</span>` : ""}
+    ${p.base_price != null && p.derived ? `<span class="dom" title="Рассчитано из цены и фасовки, не указано на сайте">≈ ${esc(basePriceText(p))}</span>` : ""}
+    <a class="src" href="${esc(p.url)}" target="_blank" rel="noopener" title="${esc(p.quote)}">источник ↗</a>
+    <div class="quote">«${esc(p.quote)}»</div></div>`).join("");
+  return rows + (qp.length > 4 ? `<div class="dom">и ещё ${qp.length - 4}</div>` : "");
+}
+
+function priceBadge(it) {
+  const qp = queryPricesOf(it);
+  if (qp === null) return "";
+  if (!qp.length) return `<div class="price-badge none">цен на сайте нет: запросите КП</div>`;
+  return `<div class="price-badge">${esc(bestLabel(it))}${qp.length > 1 ? ` · позиций: ${qp.length}` : ""}</div>`;
+}
+
+function missingOf(it) {
+  const d = it.data ?? it;
+  const qp = it.data ? queryPricesOf(it) : null;
   const m = [];
   if (!d.regions?.length && !d.nationwide && !d.address) m.push("работаете ли вы с нашим регионом");
   if (!d.min_order) m.push("минимальный объём заказа");
   if (!d.certificates?.length) m.push("сертификаты/декларации на продукцию");
   if (!d.delivery) m.push("условия и стоимость доставки");
-  if (!d.price_info) m.push("прайс-лист / цены");
+  if (qp === null ? !d.price_info : !qp.length) m.push("прайс-лист / цены");
   return m;
 }
 const field = (label, html) => `<div class="f"><dt>${label}</dt><dd>${html}</dd></div>`;
@@ -136,6 +191,7 @@ function cardHtml(it) {
       <div style="flex:1;min-width:0">
         <h3>${name}</h3>
         <div class="dom">${link}${d.also_domains?.length ? " · также: " + esc(d.also_domains.join(", ")) : ""}</div>
+        ${priceBadge(it)}
         <div class="why">${why}</div>
         ${sc.passes ? "" : `<div class="fail">Не подходит по фильтрам: ${esc(sc.fail_reasons.join("; "))}</div>`}
       </div>
@@ -148,7 +204,8 @@ function cardHtml(it) {
       ${field("Адрес", fact(d.address))}
       ${field("Регион работы", regionsHtml(d))}
       ${field("Минимальный заказ", fact(d.min_order))}
-      ${field("Цены", fact(d.price_info))}
+      ${field(`Цены на «${esc(queryNameOf(it))}»`, queryPricesHtml(it))}
+      ${queryPricesOf(it) !== null && d.price_info ? field("Общие условия по ценам", fact(d.price_info)) : ""}
       ${field("Документы", facts(d.certificates))}
       ${field("Доставка", fact(d.delivery))}
       ${field("Опт / юрлица", fact(d.wholesale))}
@@ -176,13 +233,19 @@ function tableHtml(items) {
       <td><b>${esc(d.name ? d.name.value : d.domain)}</b><div class="dom">${d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.domain)}</a>` : esc(d.domain)}</div></td>
       <td><b>${sc.score}</b></td>
       <td>${regs ? `<span title="${esc(regs)}">${cut(regs)}</span>` : '<span class="miss">уточнить</span>'}</td>
-      <td>${short(d.min_order)}</td><td>${short(d.price_info)}</td>
+      <td>${short(d.min_order)}</td><td>${tablePrice(it, short)}</td>
       <td>${(d.certificates || []).length ? esc(d.certificates.map(c => c.value).join(", ")) : '<span class="miss">уточнить</span>'}</td>
       <td>${short(d.delivery)}</td>
       <td>${contacts || '<span class="miss">уточнить</span>'}</td>
     </tr>`;
   }).join("");
-  return `<div class="tablewrap"><table><thead><tr><th>Поставщик</th><th>Оценка</th><th>Регион</th><th>Мин. заказ</th><th>Цены</th><th>Документы</th><th>Доставка</th><th>Контакты</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  return `<div class="tablewrap"><table><thead><tr><th>Поставщик</th><th>Оценка</th><th>Регион</th><th>Мин. заказ</th><th>Цены на запрос</th><th>Документы</th><th>Доставка</th><th>Контакты</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+function tablePrice(it, short) {
+  const qp = queryPricesOf(it);
+  if (qp === null) return short(it.data.price_info);
+  if (!qp.length) return `<span class="miss">нет на сайте, запросить КП</span>`;
+  return `<b>${esc(bestLabel(it))}</b>${qp.length > 1 ? `<div class="dom">позиций: ${qp.length}</div>` : ""}`;
 }
 
 /* ---------- выдача: сортировка, поиск, сравнение выбранных ---------- */
@@ -194,6 +257,10 @@ function visibleResults() {
   const byName = r => (r.data.name?.value || r.domain).toLowerCase();
   if (state.sort === "min") list = [...list].sort((a, b) => (a.data.min_order_kg ?? 1e12) - (b.data.min_order_kg ?? 1e12));
   if (state.sort === "name") list = [...list].sort((a, b) => byName(a).localeCompare(byName(b), "ru"));
+  if (state.sort === "price") {       // по самой низкой цене в преобладающей единице; без цены в конце
+    const unit = dominantUnit(), key = r => bestPrice(r, unit)?.base_price ?? 1e12;
+    list = [...list].sort((a, b) => key(a) - key(b));
+  }
   return list;
 }
 
@@ -348,6 +415,7 @@ async function renderShort() {
     return `<article class="card" data-domain="${esc(d.domain)}">
       <h3>${esc(d.name ? d.name.value : d.domain)} <span class="dom">${d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.domain)}</a>` : esc(d.domain)}</span></h3>
       <div class="dom">${contacts}</div>
+      ${(queryPricesOf(it) || []).length ? `<div class="price-line">Цены на «${esc(queryNameOf(it))}»: ${queryPricesOf(it).slice(0, 3).map(p => `${esc(p.name)} <b>${esc(priceText(p))}</b>`).join("; ")}</div>` : ""}
       <div class="row">
         <select data-act="status">${Object.entries(STATUS).map(([k, v]) => `<option value="${k}" ${it.status === k ? "selected" : ""}>${v}</option>`).join("")}</select>
         <button class="ghost" data-act="letter">Письмо</button>
@@ -365,7 +433,7 @@ async function openLetter(domain, ai = false) {
   state.letterDomain = domain;
   const known = state.results.find(r => r.domain === domain);
   const row = known || (await jget("/api/shortlist")).items.find(r => r.domain === domain);
-  const l = await jpost("/api/letter", {domain, category: state.ctx.category, region: state.ctx.region, missing: missingOf(row.data), ai});
+  const l = await jpost("/api/letter", {domain, category: state.ctx.category, region: state.ctx.region, missing: missingOf(row), ai});
   $("#l-to").value = l.to; $("#l-subj").value = l.subject; $("#l-body").value = l.body;
   $("#modal").classList.add("open"); updateMailto();
 }
@@ -611,7 +679,7 @@ $("#results").addEventListener("click", e => {
   if (b.dataset.act === "offers") { tab("offers"); openSupplierOffers(domain); }
   if (b.dataset.act === "refresh") {
     b.textContent = "обновляю…"; b.disabled = true;
-    jpost(`/api/supplier/${encodeURIComponent(domain)}/refresh`, {}).then(() => loadResults()).then(() => { render(); toast("Данные обновлены"); })
+    jpost(`/api/supplier/${encodeURIComponent(domain)}/refresh?search_id=${state.searchId}`, {}).then(() => loadResults()).then(() => { render(); toast("Данные обновлены"); })
       .catch(err => { toast(err.message); render(); });
   }
 });

@@ -69,7 +69,7 @@ def test_live_results_stream_in_and_duplicates_are_merged(monkeypatch):
     async def fake_find(queries, limit, client=None):
         return [{"domain": d, "url": f"https://{d}/"} for d in ("a.ru", "b.ru", "dup.ru")]
 
-    async def fake_analyse(domain, url, force=False):
+    async def fake_analyse(domain, url, force=False, query=""):
         if domain == "b.ru":
             await asyncio.sleep(0.05)      # к этому моменту a.ru уже должен быть в выдаче
             seen_during_run.append(len(db.get_results(sid)))
@@ -95,7 +95,7 @@ def test_one_failing_site_does_not_break_search(monkeypatch):
     async def fake_expand(c, r, client=None): return ["q"]
     async def fake_find(q, l, client=None): return [{"domain": "ok.ru", "url": "https://ok.ru/"}, {"domain": "bad.ru", "url": "https://bad.ru/"}]
 
-    async def fake_analyse(domain, url, force=False):
+    async def fake_analyse(domain, url, force=False, query=""):
         if domain == "bad.ru":
             raise RuntimeError("boom")
         s = sup(domain)
@@ -172,7 +172,7 @@ def test_refresh_keeps_status_and_note(client, tmp_path, monkeypatch):
     client.patch("/api/supplier/a.ru", json={"status": "quote", "note": "звонил", "shortlisted": True})
     monkeypatch.setenv("ANTHROPIC_API_KEY", "k"); monkeypatch.setenv("TAVILY_API_KEY", "k")
 
-    async def fake_analyse(domain, url, force=False):
+    async def fake_analyse(domain, url, force=False, query=""):
         assert force
         s = sup(domain, phones=[F("+7 (812) 999-99-99")])
         db.save_supplier(domain, s.model_dump(), "new")

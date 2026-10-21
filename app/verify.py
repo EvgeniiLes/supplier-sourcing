@@ -1,7 +1,8 @@
 """Проверки без LLM: каждое значение должно подтверждаться текстом страницы."""
 import re
 
-from .models import Fact, Supplier
+from .models import Fact, PriceItem, Supplier
+from .pricing import UNIT_ALIASES, norm_unit
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
 PHONE_RE = re.compile(r"(?:\+7|8)[\s\-(]*\d{3}[\s\-)]*\d{3}[\s\-]*\d{2}[\s\-]*\d{2}")
@@ -34,6 +35,158 @@ def normalize_phone(raw: str) -> str | None:
 
 def valid_email(raw: str) -> bool:
     return bool(EMAIL_RE.fullmatch(raw.strip()))
+
+
+def numbers_in(text: str) -> list[float]:
+    """Все числа из текста: и с разделителем тысяч ('1 850,50'), и по отдельности."""
+    out: list[float] = []
+    for m in re.finditer(r"\d+(?:[  ]\d{3})+(?:[.,]\d+)?|\d+(?:[.,]\d+)?", text):
+        raw = re.sub(r"[  ]", "", m.group(0)).replace(",", ".")
+        try:
+            out.append(float(raw))
+        except ValueError:
+            continue
+    for m in re.finditer(r"\d+(?:[.,]\d+)?", text):          # группы отдельно: '25 1850' не склеиваем
+        try:
+            out.append(float(m.group(0).replace(",", ".")))
+        except ValueError:
+            continue
+    return out
+
+
+def has_number(price: float, numbers: list[float]) -> bool:
+    return any(abs(price - n) < 0.006 for n in numbers)
+
+
+QUERY_STOP = {"для", "оптом", "опт", "купить", "цена", "цены", "заказать", "доставка", "от", "производитель", "поставщик"}
+
+
+def query_stems(query: str) -> set[str]:
+    """Основы слов запроса: «сыр моцарелла» -> {сыр, моцар}. Нужны, чтобы отсеять чужие товары."""
+    words = re.findall(r"[a-zа-я0-9]+", norm(query))
+    return {w[:5] for w in words if len(w) >= 3 and w not in QUERY_STOP}
+
+
+def relevant_to_query(name: str, quote: str, query: str) -> bool:
+    """Позиция относится к искомому товару: в названии есть основа хотя бы одного слова запроса."""
+    stems = query_stems(query)
+    if not stems:
+        return True
+    hay = norm(name)
+    return any(st in hay for st in stems)
+
+
+MAX_QUERY_PRICES = 8
+PRICE_RE = re.compile(r"\d+(?:[  ]\d{3})*(?:[.,]\d+)?")
+AMOUNT_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*(кг|гр|г|т|мл|л)(?![а-яa-z])")
+RANGE_RE = re.compile(r"\d+(?:[.,]\d+)?\s*[-–—]\s*\d+(?:[.,]\d+)?\s*(?:кг|гр|г|т|мл|л)(?![а-яa-z])")
+TO_BASE = {"кг": ("кг", 1.0), "г": ("кг", 0.001), "гр": ("кг", 0.001), "т": ("кг", 1000.0),
+           "л": ("л", 1.0), "мл": ("л", 0.001)}
+
+
+def _unit_alts(unit: str) -> str:
+    u = norm_unit(unit)
+    aliases = {u} | {k for k, v in UNIT_ALIASES.items() if v == u}
+    return "|".join(sorted((re.escape(a) for a in aliases), key=len, reverse=True))
+
+
+def unit_next_to_price(quote: str, price: float, unit: str) -> bool:
+    """Единица цены действительно написана рядом с ценой: «816,38 ₽/кг», «430 руб за шт», «за 1 кг: 816».
+    «Вес 1 кг … Цена от 793 ₽» единицей цены не считается (это вес товара, а не за что цена)."""
+    if not norm_unit(unit):
+        return False
+    alts = _unit_alts(unit)
+    for m in PRICE_RE.finditer(quote):
+        try:
+            if abs(float(re.sub(r"[  ]", "", m.group(0)).replace(",", ".")) - price) > 0.006:
+                continue
+        except ValueError:
+            continue
+        after = norm(quote[m.end(): m.end() + 22])
+        before = norm(quote[max(0, m.start() - 24): m.start()])
+        # между числом и единицей допустимы сноска («21*»), знак рубля и «руб.»
+        if re.match(rf"[\s*†‡]*(?:₽|руб\w*\.?|р\.?)?\s*(?:/|за\s*)\s*(?:1\s*)?(?:{alts})(?![а-яa-z])", after):
+            return True
+        if re.search(rf"за\s*(?:1\s*)?(?:{alts})(?![а-яa-z])\W*(?:цена\W*)?$", before):
+            return True
+    return False
+
+
+def page_declares_unit(page_norm: str, unit: str) -> bool:
+    """Единица цены объявлена в заголовке прайса или таблицы: «Цена за кг», «Цена, ₽/кг», «руб/кг».
+    Нужна для таблиц, где в строке только число. Если на странице такого нет, единице не верим."""
+    if not norm_unit(unit):
+        return False
+    alts = _unit_alts(unit)
+    return bool(re.search(rf"цен[а-я]*[^\n]{{0,25}}(?:/|за\s*)\s*(?:1\s*)?(?:{alts})(?![а-яa-z])", page_norm))
+
+
+# посуда и упаковка продаются поштучно: объём из названия («500 мл») это объём изделия, а не единица цены
+NOT_BY_WEIGHT = re.compile(r"контейнер|пакет|стакан|лоток|коробк|короб\b|крышк|тарелк|вилк|ложк|салфетк|плёнк|пленк|фольг|"
+                           r"ёмкост|емкост|посуд|трубочк|набор для|подставк|этикетк|скотч|перчатк|упаковка для|бумага")
+
+
+def single_amount(text: str) -> tuple[float, str] | None:
+    """Вес или объём из «25кг», «0.100 кг», «(1л)» -> (количество, 'кг'|'л'). Диапазон («5-6 кг») и несколько значений не берём."""
+    text = norm(text)
+    if not text or RANGE_RE.search(text):
+        return None
+    found = AMOUNT_RE.findall(text)
+    if len(found) != 1:
+        return None
+    base, k = TO_BASE[found[0][1]]
+    amount = float(found[0][0].replace(",", ".")) * k
+    return (amount, base) if amount > 0 else None
+
+
+def base_price_of(price: float, unit: str, pack: str, name: str) -> tuple[float | None, str, bool]:
+    """Цена за кг/л для сравнения: (значение, 'кг'|'л', рассчитано ли).
+    Считаем только если цена ЯВНО за штуку/упаковку и известен вес или объём; цену без единицы не трогаем:
+    нельзя знать, за что она (за кг или за мешок), и делить наугад значит выдумывать."""
+    u = norm_unit(unit)
+    if u in ("кг", "л"):
+        return price, u, False
+    if u in ("шт", "уп", "упак") and not NOT_BY_WEIGHT.search(norm(name)):
+        got = single_amount(pack) or single_amount(name)
+        if got:
+            return round(price / got[0], 2), got[1], True
+    return None, "", False
+
+
+def verify_price_items(items: list[dict], pages: dict[str, str], query: str) -> tuple[list[PriceItem], int]:
+    """Цены на искомый товар от модели -> только подтверждённые текстом и относящиеся к запросу.
+    Проверяется то, что проверяется точно: цитата, цена в цитате, единица рядом с ценой. «Относится ли товар к запросу»
+    решает модель (matches_query); основы слов запроса работают лишь если флага нет. Возвращает (принятые, отброшено)."""
+    idx = PageIndex(pages)
+    out: list[PriceItem] = []
+    seen: set[tuple[str, float]] = set()
+    rejected = 0
+    for it in items or []:
+        try:
+            name = str(it["name"]).strip()
+            price = float(it["price"])
+            quote = str(it.get("quote") or "")
+        except (KeyError, TypeError, ValueError):
+            rejected += 1
+            continue
+        url = idx.locate(quote, str(it.get("url") or "")) if quote else None
+        flag = it.get("matches_query")
+        on_topic = relevant_to_query(name, quote, query) if flag is None else bool(flag)
+        key = (norm(name), price)
+        if (not name or price <= 0 or url is None or not has_number(price, numbers_in(quote))
+                or not on_topic or key in seen):
+            rejected += 1
+            continue
+        seen.add(key)
+        unit = str(it.get("unit") or "").strip()
+        if unit and not (unit_next_to_price(quote, price, unit) or page_declares_unit(idx.norm.get(url, ""), unit)):
+            unit = ""                                  # единица выведена моделью, а в тексте её нет
+        unit = norm_unit(unit)                         # «₽/кг», «за шт», «руб/л» -> «кг», «шт», «л»
+        pack = str(it.get("pack") or "").strip()
+        base, base_unit, derived = base_price_of(price, unit, pack, name)
+        out.append(PriceItem(name=name, price=price, unit=unit, pack=pack, quote=quote.strip(), url=url,
+                             base_price=base, base_unit=base_unit, derived=derived))
+    return out[:MAX_QUERY_PRICES], rejected
 
 
 class PageIndex:

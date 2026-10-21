@@ -11,6 +11,20 @@ class Fact(BaseModel):
     url: str = ""
 
 
+class PriceItem(BaseModel):
+    """Цена на искомый товар, найденная на сайте или в прайсе. Цитата и цена проверены по тексту."""
+
+    name: str
+    price: float
+    unit: str = ""           # только если единица стоит рядом с ценой в тексте (₽/кг, за шт); иначе пусто
+    pack: str = ""
+    quote: str = ""
+    url: str = ""
+    base_price: float | None = None    # цена за кг или литр для сравнения поставщиков
+    base_unit: str = ""
+    derived: bool = False              # True: цена за кг/л рассчитана из цены за упаковку/штуку и фасовки
+
+
 class Supplier(BaseModel):
     domain: str
     url: str
@@ -25,7 +39,9 @@ class Supplier(BaseModel):
     inn: Fact | None = None
     min_order: Fact | None = None
     min_order_kg: float | None = None
-    price_info: Fact | None = None
+    price_info: Fact | None = None          # общие условия по ценам (есть ли прайс, цены по запросу, скидки)
+    query_prices: list[PriceItem] | None = None   # None: извлечение не знало запроса; []: искали, цен на товар нет
+    query_for: str = ""                     # для какого запроса извлечены query_prices
     certificates: list[Fact] = Field(default_factory=list)
     delivery: Fact | None = None
     wholesale: Fact | None = None

@@ -5,15 +5,34 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill
 from openpyxl.utils import get_column_letter
 
+from .pricing import norm_unit
+
 STATUS_RU = {"new": "новый", "contacted": "написал", "quote": "получил КП",
              "agreed": "договорились", "rejected": "отказ"}
 
 HEADERS = ["Название", "Сайт", "Оценка", "Статус", "Телефоны", "Email", "Адрес", "Регион работы",
-           "Мин. заказ", "Цены", "Документы", "Доставка", "Плюсы", "Минусы", "Источники", "Заметка"]
+           "Мин. заказ", "Цены на искомый товар", "Общие условия по ценам", "Документы", "Доставка",
+           "Плюсы", "Минусы", "Источники", "Заметка"]
 
 
 def _v(f) -> str:
     return f["value"] if f else ""
+
+
+def _prices(it: dict) -> str:
+    """Цены на искомый товар: из выдачи поиска, а для шорт-листа и старых данных — из карточки поставщика."""
+    prices = it.get("query_prices")
+    if prices is None:
+        prices = it["data"].get("query_prices")
+    if not prices:
+        return "не найдено на сайте: запросить КП" if prices is not None else "не указано"
+    def one(p: dict) -> str:
+        unit = norm_unit(p.get("unit"))              # в старых снимках единица могла быть записана как «₽/кг»
+        text = f"{p['name']}: {p['price']:g} ₽" + (f"/{unit}" if unit else "")
+        if p.get("base_price") is not None:
+            text += f" (≈{p['base_price']:g} ₽/{p['base_unit']}{', расчёт' if p.get('derived') else ''})"
+        return text
+    return "; ".join(one(p) for p in prices)
 
 
 def rows(items: list[dict]) -> list[list]:
@@ -30,7 +49,7 @@ def rows(items: list[dict]) -> list[list]:
             "; ".join(p["value"] for p in d.get("phones", [])),
             "; ".join(e["value"] for e in d.get("emails", [])),
             _v(d.get("address")), "; ".join(regions),
-            _v(d.get("min_order")) or "не указано", _v(d.get("price_info")) or "не указано",
+            _v(d.get("min_order")) or "не указано", _prices(it), _v(d.get("price_info")) or "не указано",
             "; ".join(c["value"] for c in d.get("certificates", [])) or "не указано",
             _v(d.get("delivery")) or "не указано",
             "; ".join(sc.get("pros", [])), "; ".join(sc.get("cons", [])),
