@@ -189,5 +189,16 @@ def index():
     return FileResponse(STATIC / "index.html")
 
 
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon():
+    """Браузеры просят /favicon.ico сами, даже если иконка объявлена в <link>."""
+    return FileResponse(STATIC / "favicon-32.png", media_type="image/png")
+
+
+@app.get("/apple-touch-icon.png", include_in_schema=False)
+def apple_touch_icon():
+    return FileResponse(STATIC / "apple-touch-icon.png", media_type="image/png")
+
+
 if Path(STATIC).exists():
     app.mount("/static", StaticFiles(directory=STATIC), name="static")

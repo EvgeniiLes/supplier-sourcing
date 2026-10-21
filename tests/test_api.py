@@ -24,6 +24,16 @@ def client(tmp_path, monkeypatch):
     return TestClient(app)
 
 
+def test_site_icons_are_served(client):
+    ico = client.get("/favicon.ico")
+    assert ico.status_code == 200 and ico.headers["content-type"] == "image/png" and ico.content[:4] == b"\x89PNG"
+    assert client.get("/apple-touch-icon.png").content[:4] == b"\x89PNG"
+    svg = client.get("/static/favicon.svg")
+    assert svg.status_code == 200 and b"<svg" in svg.content
+    page = client.get("/").text
+    assert 'rel="icon"' in page and "apple-touch-icon" in page
+
+
 def test_health_without_keys(client):
     h = client.get("/api/health").json()
     assert h["live_available"] is False
