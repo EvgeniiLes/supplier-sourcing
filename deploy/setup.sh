@@ -48,6 +48,7 @@ if [ ! -f .env ]; then
   echo ">>> .env создан без ключей: впишите ANTHROPIC_API_KEY и TAVILY_API_KEY (nano $APP_DIR/.env)"
 fi
 chmod 600 .env
+chown www-data:www-data .env   # приложение (www-data) тоже читает .env
 mkdir -p data
 chown -R www-data:www-data data
 

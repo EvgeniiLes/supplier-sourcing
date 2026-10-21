@@ -41,11 +41,11 @@ python3 -m venv .venv
 ```bash
 cd /opt/suppliers
 nano .env        # ANTHROPIC_API_KEY=..., TAVILY_API_KEY=..., LIVE_DAILY_LIMIT=10
-sudo chown root:root .env && sudo chmod 600 .env
+sudo chown www-data:www-data .env && sudo chmod 600 .env
 sudo mkdir -p data && sudo chown www-data:www-data data
 ```
 
-`.env` читает systemd (он запускается от root), сервис работает от `www-data` и сам файл не видит.
+Владелец `.env` — `www-data`: от него работает сервис, и приложение тоже читает файл.
 `LIVE_DAILY_LIMIT` ограничивает число живых поисков в сутки, чтобы публичная ссылка не сожгла ваши лимиты API.
 
 ## 4. systemd
