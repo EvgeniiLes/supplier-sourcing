@@ -70,7 +70,9 @@ python -m app.snapshot "сыр моцарелла" "Санкт-Петербур�
 .venv\Scripts\python -m pytest -q
 ```
 
-### Деплой (VPS, systemd + Caddy)
+### Деплой (VPS, systemd + nginx/Caddy)
+
+Пошагово и одним скриптом (nginx + certbot): [DEPLOY.md](DEPLOY.md), `deploy/setup.sh`. Пример для Caddy:
 
 `/etc/systemd/system/suppliers.service`:
 

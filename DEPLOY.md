@@ -1,6 +1,16 @@
 # Деплой на VPS: suppliersourcing.online
 
-Предполагается Ubuntu/Debian, на сервере уже стоят systemd и Caddy (как у VetCheck), Python 3.10+.
+Предполагается Ubuntu/Debian с systemd, nginx и certbot (как на нашем VPS рядом с VetCheck), Python 3.10+.
+
+## Быстрый путь
+
+После шага 1 (DNS) на сервере от root:
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/EvgeniiLes/supplier-sourcing/main/deploy/setup.sh)
+```
+
+Скрипт сам выполнит шаги 2, 4 и 5 ниже. Ключи (шаг 3) вписываются вручную в `/opt/suppliers/.env`, затем `systemctl restart suppliers`.
 
 ## 1. DNS (reg.ru)
 
@@ -66,22 +76,32 @@ sudo systemctl status suppliers
 
 Порт 8000 может быть занят VetCheck. Тогда выберите другой в `--port` и в Caddyfile.
 
-## 5. Caddy
+## 5. Веб-сервер
 
-Добавьте блок в `/etc/caddy/Caddyfile` (существующие блоки не трогайте):
+На нашем VPS стоит **nginx + certbot**, поэтому скрипт `deploy/setup.sh` настраивает их: создаёт отдельный
+`/etc/nginx/sites-available/suppliersourcing.online` (чужие конфиги не трогает) и выпускает сертификат
+командой `certbot --nginx`. Если вы настраиваете вручную:
 
-```
-suppliersourcing.online, www.suppliersourcing.online {
-    reverse_proxy 127.0.0.1:8000
+```nginx
+server {
+    listen 80;
+    server_name suppliersourcing.online www.suppliersourcing.online;
+    location / {
+        proxy_pass http://127.0.0.1:8010;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
 }
 ```
 
 ```bash
-sudo caddy validate --config /etc/caddy/Caddyfile
-sudo systemctl reload caddy
+sudo ln -s /etc/nginx/sites-available/suppliersourcing.online /etc/nginx/sites-enabled/
+sudo nginx -t && sudo systemctl reload nginx
+sudo certbot --nginx -d suppliersourcing.online -d www.suppliersourcing.online
 ```
 
-Caddy сам выпустит HTTPS-сертификат, когда DNS начнёт указывать на сервер. Порты 80 и 443 должны быть открыты.
+Если вместо nginx у вас Caddy, достаточно блока `suppliersourcing.online { reverse_proxy 127.0.0.1:8010 }`:
+сертификат он выпустит сам. Порты 80 и 443 должны быть открыты.
 
 ## 6. Проверка
 
