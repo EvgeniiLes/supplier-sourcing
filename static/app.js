@@ -127,6 +127,8 @@ function missingOf(it) {
   return m;
 }
 const field = (label, html) => `<div class="f"><dt>${label}</dt><dd>${html}</dd></div>`;
+/* раздел карточки: тёмный заголовок с яркой подписью и поля внутри */
+const panel = (title, fields) => fields.trim() ? `<section class="panel"><h4 class="ptitle">${title}</h4><dl>${fields}</dl></section>` : "";
 
 /* вердикты по региону поиска: возит ли и есть ли офис/склад в городе. Каждое «да»/«нет» подкреплено цитатой с сайта */
 function verdictLine(label, check, texts) {
@@ -213,21 +215,25 @@ function cardHtml(it) {
       </div>
       <label class="pick" title="Выбрать для сравнения"><input type="checkbox" data-act="select" ${sel ? "checked" : ""}><span>сравнить</span></label>
     </div>
-    <dl class="grid">
-      ${field("Что поставляют", fact(d.offering))}
-      ${field("Телефон", facts(d.phones))}
-      ${field("Email", facts(d.emails))}
-      ${field("Адрес", fact(d.address))}
-      ${regionVerdictsHtml(it)}
-      ${field("Регион работы", regionsHtml(d))}
-      ${field("Минимальный заказ", fact(d.min_order))}
-      ${field(`Цены на «${esc(queryNameOf(it))}»`, queryPricesHtml(it))}
-      ${queryPricesOf(it) !== null && d.price_info ? field("Общие условия по ценам", fact(d.price_info)) : ""}
-      ${field("Документы", facts(d.certificates))}
-      ${field("Доставка", fact(d.delivery))}
-      ${field("Опт / юрлица", fact(d.wholesale))}
-      ${d.inn ? field("ИНН", fact(d.inn)) : ""}
-    </dl>
+    <div class="panels">
+      ${panel("Товар и цены",
+        field("Что поставляют", fact(d.offering)) +
+        field(`Цены на «${esc(queryNameOf(it))}»`, queryPricesHtml(it)) +
+        (queryPricesOf(it) !== null && d.price_info ? field("Общие условия по ценам", fact(d.price_info)) : "") +
+        field("Минимальный заказ", fact(d.min_order)) +
+        field("Опт / юрлица", fact(d.wholesale)))}
+      ${panel("Регион и доставка",
+        regionVerdictsHtml(it) +
+        field("Регион работы", regionsHtml(d)) +
+        field("Доставка", fact(d.delivery)))}
+      ${panel("Контакты",
+        field("Телефон", facts(d.phones)) +
+        field("Email", facts(d.emails)) +
+        field("Адрес", fact(d.address)))}
+      ${panel("Документы и компания",
+        field("Документы и сертификаты", facts(d.certificates)) +
+        (d.inn ? field("ИНН", fact(d.inn)) : ""))}
+    </div>
     <details class="how"><summary>Как посчитана оценка</summary>${breakdownHtml(sc)}</details>
     <div class="actions">
       <button class="ghost ${inShort ? "on" : ""}" data-act="short">${inShort ? "★ В шорт-листе" : "☆ В шорт-лист"}</button>
@@ -317,9 +323,19 @@ function setProgress(done, total) {
   $("#progress-bar").style.width = total ? `${Math.round(done / total * 100)}%` : "0";
 }
 
+/* один выбор из четырёх по возрастанию строгости: все / без точно не возящих / подтверждено / офис в городе */
+function regionFilter() {
+  const v = document.querySelector('input[name="rf"]:checked')?.value || "not_no";
+  return v === "presence" ? {delivery: "any", presence: true} : {delivery: v, presence: false};
+}
+function setRegionFilter(filters) {
+  const v = filters.presence ? "presence" : (filters.delivery || "any");
+  const r = document.querySelector(`input[name="rf"][value="${v}"]`);
+  if (r) r.checked = true;
+}
 function currentFilters() {
   return {need_certs: $("#f-certs").checked, max_min_order_kg: $("#f-min").value ? Number($("#f-min").value) : null,
-          delivery: $("#f-deliv").value, presence: $("#f-presence").checked};
+          ...regionFilter()};
 }
 function pushRecent(category, region, demo) {
   const list = store.get("recent", []).filter(r => !(r.category === category && r.region === region));
@@ -400,8 +416,7 @@ async function openFromHash() {
   try {
     const r = await loadResults(), s = r.search;
     $("#category").value = s.category; $("#region").value = s.region;
-    $("#f-certs").checked = !!s.filters.need_certs; $("#f-deliv").value = s.filters.delivery || "any";
-    $("#f-presence").checked = !!s.filters.presence;
+    $("#f-certs").checked = !!s.filters.need_certs; setRegionFilter(s.filters);
     $("#f-min").value = s.filters.max_min_order_kg ?? ""; $("#demo").checked = s.mode !== "live" || !state.health.live_available;
     state.ctx = {category: s.category, region: s.region}; store.set("ctx", state.ctx);
     if (s.status === "running") { $("#go").disabled = true; state.poll = setInterval(poll, 1200); poll(); }
