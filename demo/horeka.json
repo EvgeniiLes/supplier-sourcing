@@ -1,0 +1,509 @@
+{
+ "topic": "хорека",
+ "region": "Екатеринбург",
+ "keywords": [
+  "хорека",
+  "horeca",
+  "хореку"
+ ],
+ "collected_at": "2026-10-22",
+ "suppliers": [
+  {
+   "domain": "nash-souz.ru",
+   "url": "https://nash-souz.ru/about",
+   "also_domains": [],
+   "name": {
+    "value": "ООО \"Наш Союз\"",
+    "quote": "ООО \"Наш Союз\"",
+    "url": "https://nash-souz.ru/contacts/"
+   },
+   "offering": {
+    "value": "Оптовые продукты питания: сырная, мясная гастрономия, молочная продукция, масложировая группа, от брендов Село зеленое, Брест-Литовск, Атяшево и других",
+    "quote": "Сырная и мясная гастрономия, молочная продукция и масложировая группа.",
+    "url": "https://nash-souz.ru/"
+   },
+   "address": {
+    "value": "Екатеринбург, пер. Никольский, 1, склад 33",
+    "quote": "г. Екатеринбург, пер. Никольский, 1, склад 33",
+    "url": "https://nash-souz.ru/"
+   },
+   "regions": [
+    {
+     "value": "Уральский регион (УРФО), в т.ч. ХМАО, ЯНАО",
+     "quote": "на территории УРФО (в т.ч. ХМАО, ЯНАО)",
+     "url": "https://nash-souz.ru/about"
+    }
+   ],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (343) 379-55-90",
+     "quote": "+7 (343) 379-55-90",
+     "url": "https://nash-souz.ru/"
+    },
+    {
+     "value": "+7 (343) 379-55-92",
+     "quote": "Телефон: +7 (343) 379-55-92",
+     "url": "https://nash-souz.ru/contacts/"
+    },
+    {
+     "value": "+7 (343) 379-55-93",
+     "quote": "Телефон: +7 (343) 379-55-93",
+     "url": "https://nash-souz.ru/contacts/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@nash-souz.su",
+     "quote": "Email: info@nash-souz.su",
+     "url": "https://nash-souz.ru/contacts/"
+    }
+   ],
+   "inn": null,
+   "min_order": {
+    "value": "Регулярными партиями на сумму от 2000 рублей (для HoReCa)",
+    "quote": "регулярными партиями на сумму от 2000 рублей",
+    "url": "https://nash-souz.ru/about"
+   },
+   "min_order_kg": null,
+   "price_info": null,
+   "query_prices": [],
+   "query_for": "хорека",
+   "certificates": [],
+   "delivery": {
+    "value": "Оперативная доставка собственным транспортом",
+    "quote": "Также предлагаем удобную оперативную доставку собственным транспортом.",
+    "url": "https://nash-souz.ru/"
+   },
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "yes",
+    "quote": "г. Екатеринбург, пер. Никольский, 1, склад 33",
+    "url": "https://nash-souz.ru/"
+   },
+   "wholesale": {
+    "value": "Крупный оптовый дистрибьютор, работает с оптом и мелким оптом",
+    "quote": "Мелкооптовые продажи",
+    "url": "https://nash-souz.ru/"
+   },
+   "sources": [
+    "https://nash-souz.ru/",
+    "https://nash-souz.ru/about",
+    "https://nash-souz.ru/contacts/",
+    "https://nash-souz.ru/about/",
+    "https://nash-souz.ru/usloviya-sotrudnichestva/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "orgs.biz",
+   "url": "https://akademiaedy.orgs.biz",
+   "also_domains": [],
+   "name": {
+    "value": "Академия питания",
+    "quote": "Академия питания предлагает оптовую продажу продуктов питания для ресторанов, кафе, баров и магазинов.",
+    "url": "https://akademiaedy.orgs.biz/"
+   },
+   "offering": {
+    "value": "Оптовая продажа продуктов питания: игра, морская экзотика, охлажденные морепродукты, рыба, мясо, замороженные овощи и фрукты, кондитерские и хлебобулочные изделия глубокой заморозки, ингредиенты для кондитерской промышленности",
+    "quote": "В нашем ассортименте вы найдете игру, морскую экзотику, охлажденные морепродукты, рыбу, мясо, замороженные овощи и фрукты, кондитерские и хлебобулочные изделия глубокой заморозки, а также ингредиенты для кондитерской промышленности.",
+    "url": "https://akademiaedy.orgs.biz/"
+   },
+   "address": {
+    "value": "г. Екатеринбург",
+    "quote": "Россия, г. Екатеринбург",
+    "url": "https://akademiaedy.orgs.biz/"
+   },
+   "regions": [],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (343) 389-25-25",
+     "quote": "+7 (343) 389-25-25",
+     "url": "https://akademiaedy.orgs.biz/"
+    }
+   ],
+   "emails": [],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": null,
+   "query_prices": [],
+   "query_for": "хорека",
+   "certificates": [],
+   "delivery": null,
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "wholesale": {
+    "value": "Оптовая продажа продуктов питания для ресторанов, кафе, баров и магазинов",
+    "quote": "Академия питания предлагает оптовую продажу продуктов питания для ресторанов, кафе, баров и магазинов.",
+    "url": "https://akademiaedy.orgs.biz/"
+   },
+   "sources": [
+    "https://akademiaedy.orgs.biz/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "prodservice.ru",
+   "url": "https://prodservice.ru/video/HoReCa",
+   "also_domains": [],
+   "name": {
+    "value": "ТД «Продсервис»",
+    "quote": "\"ТД Продсервис\" 620033, г.Екатеринбург, ул.Краснодарская, 11",
+    "url": "https://prodservice.ru/about/contact/"
+   },
+   "offering": {
+    "value": "Ингредиенты для хлебопекарной и кондитерской промышленности, шоколад, какао, майонезы, сливки и др.",
+    "quote": "Продсервис, ингредиенты для хлебопекарной и кондитерских промышленности",
+    "url": "https://prodservice.ru/"
+   },
+   "address": {
+    "value": "г. Екатеринбург, ул. Краснодарская, 11",
+    "quote": "г.Екатеринбург, ул. Краснодарская,11",
+    "url": "https://prodservice.ru/about/contact/"
+   },
+   "regions": [
+    {
+     "value": "Екатеринбург, Сургут, Астана, Курган, Москва, Симферополь, Петропавловск, Тюмень, Уфа, Челябинск",
+     "quote": "Региональные филиалы, представительства и склады Екатеринбург Сургут Астана Казахстан Курган Москва Крым Петропавловск Казахстан Тюмень Уфа Республика Башкортостан Челябинск",
+     "url": "https://prodservice.ru/"
+    }
+   ],
+   "nationwide": {
+    "value": "Интернет-магазин с доставкой в России и Казахстане",
+    "quote": "Собственный интернет магазин с быстрой и бережной доставкой в России и Казахстане",
+    "url": "https://prodservice.ru/about/"
+   },
+   "phones": [
+    {
+     "value": "+7 (800) 222-79-70",
+     "quote": "Телефон: 8-800-222-79-70 , 8(343)3690777",
+     "url": "https://prodservice.ru/about/contact/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@baking-academy.ru",
+     "quote": "info@baking-academy.ru",
+     "url": "https://prodservice.ru/partners/"
+    },
+    {
+     "value": "market@prostopetro.com",
+     "quote": "market@prostopetro.com",
+     "url": "https://prodservice.ru/partners/"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": null,
+   "query_prices": [],
+   "query_for": "хорека",
+   "certificates": [],
+   "delivery": {
+    "value": "Доставка собственным автотранспортом и ж/д вагонами; собственный интернет-магазин с доставкой в России и Казахстане",
+    "quote": "Собственный интернет магазин с быстрой и бережной доставкой в России и Казахстане",
+    "url": "https://prodservice.ru/about/"
+   },
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "yes",
+    "quote": "Екатеринбург",
+    "url": "https://prodservice.ru/about/contact/"
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "yes",
+    "quote": "г.Екатеринбург, ул. Краснодарская,11",
+    "url": "https://prodservice.ru/about/contact/"
+   },
+   "wholesale": {
+    "value": "Работа с юрлицами и под заказ: прямые договора поставки, отсрочка платежа, гибкая система скидок",
+    "quote": "Отсрочка ПЛАТЕЖА (экономия Ваших собственных СРЕДСТВ);",
+    "url": "https://prodservice.ru/about/"
+   },
+   "sources": [
+    "https://prodservice.ru/",
+    "https://prodservice.ru/video/HoReCa",
+    "https://prodservice.ru/about/contact/",
+    "https://prodservice.ru/about/",
+    "https://prodservice.ru/products/pasha-kulichi/formy-dlya-kulichej",
+    "https://prodservice.ru/partners/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "sell-service.ru",
+   "url": "https://66.horeca.sell-service.ru",
+   "also_domains": [],
+   "name": {
+    "value": "СЕЛЛ-Сервис Хорека",
+    "quote": "Компания «СЕЛЛ-Сервис» – ведущий региональный поставщик продукции и ингредиентов HoReCa в Сибирском федеральном округе со складами в Новосибирске и Омске.",
+    "url": "https://66.horeca.sell-service.ru/"
+   },
+   "offering": {
+    "value": "Продукция и ингредиенты для HoReCa: сиропы, топпинги, основы для напитков, пюре, ингредиенты для мороженого, одноразовая посуда, чай, замороженные десерты",
+    "quote": "Продукция и ингредиенты HoReCa купить в Екатеринбурге",
+    "url": "https://66.horeca.sell-service.ru/"
+   },
+   "address": {
+    "value": "Юридический адрес: Новосибирская область, г. Новосибирск, улица Писарева, д. 38",
+    "quote": "Юридический адрес компании: улица Писарева, д. 38, корп./ст. 4, кв./оф. 105, Новосибирская область, г. Новосибирск",
+    "url": "https://66.horeca.sell-service.ru/sposoby-oplaty/"
+   },
+   "regions": [
+    {
+     "value": "Сибирский федеральный округ; склады в Новосибирске и Омске",
+     "quote": "ведущий региональный поставщик продукции и ингредиентов HoReCa в Сибирском федеральном округе со складами в Новосибирске и Омске.",
+     "url": "https://66.horeca.sell-service.ru/"
+    }
+   ],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (383) 388-81-52",
+     "quote": "☎ +7 (383) 388-81-52",
+     "url": "https://66.horeca.sell-service.ru/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@sell-service.ru",
+     "quote": "info@sell-service.ru",
+     "url": "https://66.horeca.sell-service.ru/"
+    }
+   ],
+   "inn": {
+    "value": "5405465405",
+    "quote": "ИНН: 5405465405",
+    "url": "https://66.horeca.sell-service.ru/sposoby-oplaty/"
+   },
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": null,
+   "query_prices": [],
+   "query_for": "хорека",
+   "certificates": [],
+   "delivery": {
+    "value": "Доставка по Новосибирску 1000 руб., бесплатно при заказе от 10000 руб.; доставка в другие города транспортной компанией ООО «ПЭК», оплата по тарифам перевозчика",
+    "quote": "Доставка в другие города осуществляется транспортной компанией ООО «ПЭК».",
+    "url": "https://66.horeca.sell-service.ru/sposoby-dostavki/"
+   },
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "Доставка в другие города осуществляется транспортной компанией ООО «ПЭК».",
+    "url": "https://66.horeca.sell-service.ru/sposoby-dostavki/"
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "wholesale": {
+    "value": "Работа с юрлицами, возможна отсрочка платежа по договору",
+    "quote": "Для юридических лиц\n, при заключении договора, возможна работа с отсрочкой платежа.",
+    "url": "https://66.horeca.sell-service.ru/sposoby-dostavki/"
+   },
+   "sources": [
+    "https://66.horeca.sell-service.ru/",
+    "https://66.horeca.sell-service.ru/contacts/",
+    "https://66.horeca.sell-service.ru/sposoby-dostavki/",
+    "https://66.horeca.sell-service.ru/about/",
+    "https://66.horeca.sell-service.ru/sposoby-oplaty/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "tkdip.ru",
+   "url": "https://tkdip.ru",
+   "also_domains": [],
+   "name": {
+    "value": "ТК «ДИП»",
+    "quote": "Продукты питания, бытовая химия и промтовары оптом",
+    "url": "https://tkdip.ru/"
+   },
+   "offering": {
+    "value": "Продукты питания, бытовая химия и промтовары оптом",
+    "quote": "Продукты питания, бытовая химия и промтовары оптом",
+    "url": "https://tkdip.ru/"
+   },
+   "address": null,
+   "regions": [
+    {
+     "value": "Работа на территории УрФО",
+     "quote": "Работаем на территории УрФО, поставки в другие регионы по согласованию",
+     "url": "https://tkdip.ru/"
+    }
+   ],
+   "nationwide": {
+    "value": "Поставки в другие регионы по согласованию",
+    "quote": "поставки в другие регионы по согласованию",
+    "url": "https://tkdip.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (343) 379-00-39",
+     "quote": "ДИП (продукты питания):\n+7 (343) 379-00-39",
+     "url": "https://tkdip.ru/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "dip@tkdip.ru",
+     "quote": "dip@tkdip.ru",
+     "url": "https://tkdip.ru/"
+    }
+   ],
+   "inn": {
+    "value": "6662102157",
+    "quote": "ИНН 6662102157",
+    "url": "https://tkdip.ru/contacts/"
+   },
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": null,
+   "query_prices": [],
+   "query_for": "хорека",
+   "certificates": [],
+   "delivery": null,
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "wholesale": {
+    "value": "Оптовые продажи",
+    "quote": "Продукты питания, бытовая химия и промтовары оптом",
+    "url": "https://tkdip.ru/"
+   },
+   "sources": [
+    "https://tkdip.ru/",
+    "https://tkdip.ru/contacts/",
+    "https://tkdip.ru/catalog/product/shchetka_avto_standart/",
+    "https://tkdip.ru/catalog/product/shchetka_avto_lyuks_s_teleskopicheskoy_ruchkoy_1_sht/",
+    "https://tkdip.ru/about/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "tkrem.ru",
+   "url": "https://tkrem.ru/products",
+   "also_domains": [],
+   "name": {
+    "value": "Торговая компания РЭМ (ООО «Компания РэМ»)",
+    "quote": "Общество с ограниченной ответственностью «Компания РэМ»",
+    "url": "https://tkrem.ru/contacts/"
+   },
+   "offering": {
+    "value": "Продукты питания оптом: крупы, молочная продукция, консервация, напитки, чай и кофе, кондитерские изделия, шоколад, растительные масла и др.",
+    "quote": "Продукты питания оптом",
+    "url": "https://tkrem.ru/products"
+   },
+   "address": {
+    "value": "Екатеринбург, ул. Сибирский тракт 12, стр. 4А, оф. 202 (офис); склад: ул. Монтажников 24",
+    "quote": "Офис в Екатеринбурге\nСибирский тракт 12, стр. 4А, оф. 202",
+    "url": "https://tkrem.ru/contacts/"
+   },
+   "regions": [
+    {
+     "value": "Уральский федеральный округ",
+     "quote": "в пределах Уральского федерального округа",
+     "url": "https://tkrem.ru/products/benefit-5/"
+    }
+   ],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (343) 228-14-27",
+     "quote": "+7 (343) 228-14-27",
+     "url": "https://tkrem.ru/contacts/"
+    },
+    {
+     "value": "+7 (922) 111-00-44",
+     "quote": "+7 922 111 00 44",
+     "url": "https://tkrem.ru/contacts/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "sales@tkrem.ru",
+     "quote": "Электронный адрес\nsales@tkrem.ru",
+     "url": "https://tkrem.ru/contacts/"
+    },
+    {
+     "value": "suppliers@tkrem.ru",
+     "quote": "Электронный адрес\nsuppliers@tkrem.ru",
+     "url": "https://tkrem.ru/contacts/"
+    }
+   ],
+   "inn": {
+    "value": "6670070212",
+    "quote": "ИНН 6670070212",
+    "url": "https://tkrem.ru/contacts/"
+   },
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": null,
+   "query_prices": [],
+   "query_for": "хорека",
+   "certificates": [],
+   "delivery": {
+    "value": "Ежедневная доставка любых объемов на любые расстояния",
+    "quote": "Ежедневная доставка любых объемов на любые расстояния, включая весь комплекс дополнительных услуг.",
+    "url": "https://tkrem.ru/products"
+   },
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "wholesale": {
+    "value": "Продажа оптом, работа по прямым контрактам",
+    "quote": "Продукты питания оптом",
+    "url": "https://tkrem.ru/products"
+   },
+   "sources": [
+    "https://tkrem.ru/",
+    "https://tkrem.ru/products",
+    "https://tkrem.ru/contacts/",
+    "https://tkrem.ru/products/",
+    "https://tkrem.ru/suppliers/",
+    "https://tkrem.ru/products/benefit-5/"
+   ],
+   "rejected_facts": 0
+  }
+ ]
+}

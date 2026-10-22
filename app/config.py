@@ -23,10 +23,21 @@ class Settings:
     offer_daily_limit: int
     page_ttl_days: int
     excluded_tlds: frozenset
+    yandex_api_key: str = ""
+    yandex_folder_id: str = ""
+
+    @property
+    def yandex_enabled(self) -> bool:
+        return bool(self.yandex_api_key and self.yandex_folder_id)
+
+    @property
+    def sources(self) -> list[str]:
+        """Какие поисковые источники включены: порядок важен, первый приоритетнее при слиянии выдач."""
+        return (["yandex"] if self.yandex_enabled else []) + (["tavily"] if self.tavily_api_key else [])
 
     @property
     def live_available(self) -> bool:
-        return bool(self.anthropic_api_key and self.tavily_api_key)
+        return bool(self.anthropic_api_key and self.sources)
 
 
 def get_settings() -> Settings:
@@ -42,4 +53,7 @@ def get_settings() -> Settings:
         page_ttl_days=int(os.getenv("PAGE_TTL_DAYS", "7")),
         # сервис для российских закупок: сайты этих зон не показываем (они не доставляют в РФ); через запятую
         excluded_tlds=frozenset(t.strip().lower().lstrip(".") for t in os.getenv("EXCLUDED_TLDS", "ua").split(",") if t.strip()),
+        # Яндекс Поиск (Yandex Cloud, AI Studio): необязателен, но для российских сайтов выдача заметно лучше
+        yandex_api_key=os.getenv("YANDEX_SEARCH_API_KEY", ""),
+        yandex_folder_id=os.getenv("YANDEX_FOLDER_ID", ""),
     )

@@ -33,7 +33,8 @@ def tavily_client(results):
     return httpx.AsyncClient(transport=httpx.MockTransport(handler))
 
 
-def test_candidates_from_search_skip_foreign_zones_and_count_them():
+def test_candidates_from_search_skip_foreign_zones_and_count_them(monkeypatch):
+    monkeypatch.setenv("TAVILY_API_KEY", "k")
     results = [{"url": "https://sofia-tc.com.ua/ru/", "title": "UA"}, {"url": "https://milk-opt.ru/", "title": "RU"},
                {"url": "https://shop.kiev.ua/", "title": "UA2"}, {"url": "https://www.avito.ru/x", "title": "агрегатор"}]
 
@@ -73,7 +74,7 @@ def test_site_with_ukrainian_phone_is_rejected_before_the_model_is_called(monkey
 def test_live_search_reports_excluded_sites(monkeypatch):
     async def fake_expand(c, r, client=None): return ["q"]
 
-    async def fake_find(q, l, client=None):
+    async def fake_find(q, l, client=None, region=""):
         out = find_result([{"domain": "ok.ru", "url": "https://ok.ru/"}, {"domain": "ua-by-phone.ru", "url": "https://ua-by-phone.ru/"}])
         out.skipped_foreign = 2                                       # два .ua отсеяны ещё на этапе выдачи
         return out

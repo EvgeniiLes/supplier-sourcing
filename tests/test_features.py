@@ -66,7 +66,7 @@ def test_live_results_stream_in_and_duplicates_are_merged(monkeypatch):
     async def fake_expand(category, region, client=None):
         return ["q"]
 
-    async def fake_find(queries, limit, client=None):
+    async def fake_find(queries, limit, client=None, region=""):
         return [{"domain": d, "url": f"https://{d}/"} for d in ("a.ru", "b.ru", "dup.ru")]
 
     async def fake_analyse(domain, url, force=False, query="", region=""):
@@ -93,7 +93,7 @@ def test_live_results_stream_in_and_duplicates_are_merged(monkeypatch):
 
 def test_one_failing_site_does_not_break_search(monkeypatch):
     async def fake_expand(c, r, client=None): return ["q"]
-    async def fake_find(q, l, client=None): return [{"domain": "ok.ru", "url": "https://ok.ru/"}, {"domain": "bad.ru", "url": "https://bad.ru/"}]
+    async def fake_find(q, l, client=None, region=""): return [{"domain": "ok.ru", "url": "https://ok.ru/"}, {"domain": "bad.ru", "url": "https://bad.ru/"}]
 
     async def fake_analyse(domain, url, force=False, query="", region=""):
         if domain == "bad.ru":

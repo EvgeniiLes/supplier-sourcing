@@ -9,7 +9,9 @@ from .config import ROOT, get_settings
 from .extract import content_hash, extract_supplier
 from .fetch import fetch_site
 from .models import Filters, Supplier
-from .search import expand_queries, find_candidates
+from .search import build_queries, expand_queries, find_candidates
+
+SOURCE_RU = {"yandex": "Яндекс", "tavily": "Tavily"}
 from .verify import dedupe, foreign_signals
 
 DEMO_DIR = Path(os.getenv("DEMO_DIR", str(ROOT / "demo")))
@@ -58,12 +60,14 @@ async def run_live(search_id: int, category: str, region: str, filters: Filters)
     cfg = get_settings()
     try:
         db.update_search(search_id, progress="Расширяю запрос и ищу сайты")
-        queries = await expand_queries(category, region)
-        candidates = await find_candidates(queries, cfg.max_suppliers)
+        queries = build_queries(category, region, await expand_queries(category, region))
+        candidates = await find_candidates(queries, cfg.max_suppliers, region=region)
         if not candidates:
             raise RuntimeError("Поиск ничего не нашёл. Попробуйте другую формулировку товара")
+        used = ", ".join(SOURCE_RU.get(x, x) for x in getattr(candidates, "sources_used", []))
+        broken = "; ".join(f"{SOURCE_RU.get(k, k)}: {v[:120]}" for k, v in getattr(candidates, "source_errors", {}).items())
         db.update_search(search_id, total=len(candidates), done=0,
-                         progress=f"Найдено сайтов: {len(candidates)}. Читаю их")
+                         progress=f"Найдено сайтов: {len(candidates)}" + (f" ({used})" if used else "") + ". Читаю их")
 
         done = 0
         skipped_foreign = getattr(candidates, "skipped_foreign", 0)     # отсеяны по зоне домена (.ua)
@@ -97,6 +101,8 @@ async def run_live(search_id: int, category: str, region: str, filters: Filters)
             row = db.get_supplier_row(s.domain)
             db.save_supplier(s.domain, s.model_dump(), row["content_hash"] if row else "")
         note = f" (исключено сайтов не из РФ: {skipped_foreign})" if skipped_foreign else ""
+        if broken:                          # источник не ответил: поиск прошёл по остальным, но человеку надо знать
+            note += f". Источник недоступен, {broken}"
         db.update_search(search_id, status="done",
                          progress=f"Готово: найдено поставщиков — {len(unique)}{note}")
     except Exception as e:

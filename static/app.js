@@ -5,6 +5,28 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
 const STATUS = {new: "Новый", contacted: "Написал", quote: "Получил КП", agreed: "Договорились", rejected: "Отказ"};
 
+/* один набор линейных иконок (24×24, контур): вместо смеси символов ✓ ✗ + − ↗ */
+const ICONS = {
+  phone: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>',
+  mail: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
+  truck: '<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.7a1 1 0 0 0-.2-.6l-3.3-4.2a1 1 0 0 0-.8-.4H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>',
+  file: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/>',
+  pin: '<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>',
+  box: '<path d="m7.5 4.3 9 5.2"/><path d="M21 8v8a2 2 0 0 1-1 1.7l-7 4a2 2 0 0 1-2 0l-7-4A2 2 0 0 1 3 16V8a2 2 0 0 1 1-1.7l7-4a2 2 0 0 1 2 0l7 4A2 2 0 0 1 21 8z"/><path d="M3.3 7 12 12l8.7-5M12 22V12"/>',
+  tag: '<path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4z"/><circle cx="7.5" cy="7.5" r="1" fill="currentColor"/>',
+  building: '<path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/>',
+  check: '<path d="M20 6 9 17l-5-5"/>',
+  x: '<path d="M18 6 6 18M6 6l12 12"/>',
+  minus: '<path d="M5 12h14"/>',
+  shield: '<path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
+  globe: '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/>',
+  star: '<path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/>',
+  chevron: '<path d="m6 9 6 6 6-6"/>',
+  ext: '<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+  mailsend: '<path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/>',
+};
+const icon = (name, cls = "") => `<svg class="ic ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ""}</svg>`;
+
 const store = {   // localStorage может быть недоступен (приватный режим): страница должна работать и без него
   get(key, fallback) { try { const v = localStorage.getItem(key); return v === null ? fallback : JSON.parse(v); } catch { return fallback; } },
   set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* ничего */ } },
@@ -14,7 +36,7 @@ const state = {
   health: null, searchId: null, search: null, results: [], view: "cards", quotes: false, showHidden: false,
   selected: new Set(), compareOnly: false, sort: "score", find: "", weights: {}, poll: null,
   ctx: store.get("ctx", {category: "", region: ""}), letterDomain: null, tab: "search", lastSig: "",
-  bulk: {emails: [], marked: false}, offers: {detail: null},
+  bulk: {emails: [], marked: false}, offers: {detail: null}, open: new Set(), seen: new Set(),
 };
 
 /* ---------- сеть ---------- */
@@ -48,12 +70,22 @@ async function copyText(text, okMessage = "Скопировано") {
 }
 
 /* ---------- факты: значение + откуда взято ---------- */
+/* доказательства (цитата + страница) копятся при отрисовке; кнопка-щит в карточке показывает их во всплывающем окне */
+const EV = [];
+function evBtn(f) {
+  if (!f.url) return `<span class="src from-kp" title="Данные из загруженного КП">из КП</span>`;
+  EV.push({value: f.value || "", quote: f.quote || "", url: f.url});
+  return `<button type="button" class="ev" data-ev="${EV.length - 1}" aria-label="Подтверждено на сайте: показать цитату">${icon("shield")}</button>`;
+}
 function fact(f) {
   if (!f) return `<span class="miss">не указано — уточнить</span>`;
-  const src = f.url
-    ? `<a class="src" href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.quote)}">источник ↗</a>`
-    : `<span class="src from-kp" title="Данные из загруженного КП">из КП</span>`;
-  return `<span>${esc(f.value)}</span>${src}${f.quote ? `<div class="quote">«${esc(f.quote)}»</div>` : ""}`;
+  return `<span>${esc(f.value)}</span>${evBtn(f)}${f.quote ? `<div class="quote">«${esc(f.quote)}»</div>` : ""}`;
+}
+/* сколько полей карточки подтверждено цитатой со страницы */
+function evidenceCount(d) {
+  let n = 0;
+  for (const v of Object.values(d || {})) for (const f of (Array.isArray(v) ? v : [v])) if (f && typeof f === "object" && f.quote && f.url) n++;
+  return n;
 }
 const facts = list => (list && list.length) ? list.map(f => `<div>${fact(f)}</div>`).join("") : `<span class="miss">не указано — уточнить</span>`;
 function regionsHtml(d) {
@@ -102,16 +134,9 @@ function queryPricesHtml(it) {
   const rows = qp.slice(0, 4).map(p => `<div class="qp"><span>${esc(p.name)}</span> <b>${esc(priceParts(p).main)}</b>
     ${priceParts(p).note ? `<span class="dom">${esc(priceParts(p).note)}</span>` : ""}
     ${p.base_price != null && p.derived ? `<span class="dom" title="Рассчитано из цены и фасовки, не указано на сайте">≈ ${esc(basePriceText(p))}</span>` : ""}
-    <a class="src" href="${esc(p.url)}" target="_blank" rel="noopener" title="${esc(p.quote)}">источник ↗</a>
+    ${evBtn({value: p.name, quote: p.quote, url: p.url})}
     <div class="quote">«${esc(p.quote)}»</div></div>`).join("");
   return rows + (qp.length > 4 ? `<div class="dom">и ещё ${qp.length - 4}</div>` : "");
-}
-
-function priceBadge(it) {
-  const qp = queryPricesOf(it);
-  if (qp === null) return "";
-  if (!qp.length) return `<div class="price-badge none">цен на сайте нет: запросите КП</div>`;
-  return `<div class="price-badge">${esc(bestLabel(it))}${qp.length > 1 ? ` · позиций: ${qp.length}` : ""}</div>`;
 }
 
 function missingOf(it) {
@@ -126,23 +151,31 @@ function missingOf(it) {
   if (qp === null ? !d.price_info : !qp.length) m.push("прайс-лист / цены");
   return m;
 }
-const field = (label, html) => `<div class="f"><dt>${label}</dt><dd>${html}</dd></div>`;
+const field = (label, html, ic = "") => `<div class="f"><dt>${ic ? icon(ic) : ""}${label}</dt><dd>${html}</dd></div>`;
 /* раздел карточки: тёмный заголовок с яркой подписью и поля внутри */
-const panel = (title, fields) => fields.trim() ? `<section class="panel"><h4 class="ptitle">${title}</h4><dl>${fields}</dl></section>` : "";
+const panel = (title, fields, ic = "") => fields.trim() ? `<section class="panel"><h4 class="ptitle">${ic ? icon(ic) : ""}${title}</h4><dl>${fields}</dl></section>` : "";
+
+/* заголовок блока цен: «Цены на «сыр»» только для конкретного товара; для категории («хорека», «продукты») просто «Цены» */
+const CATEGORY_QUERY = /хорек|horeca|ресторан|кафе|общепит|продукт|поставщик|оптом|еда\b/i;
+function queryTitle(name) {
+  const n = String(name || "").trim();
+  return !n || n === "искомый товар" || CATEGORY_QUERY.test(n) || n.split(/\s+/).length > 4 ? "Цены" : `Цены на «${esc(n)}»`;
+}
 
 /* вердикты по региону поиска: возит ли и есть ли офис/склад в городе. Каждое «да»/«нет» подкреплено цитатой с сайта */
 function verdictLine(label, check, texts) {
   if (!check) return "";
   const v = check.verdict === "yes" || check.verdict === "no" ? check.verdict : "unknown";
-  const src = check.url ? `<a class="src" href="${esc(check.url)}" target="_blank" rel="noopener" title="${esc(check.quote)}">источник ↗</a>` : "";
+  const ic = v === "yes" ? icon("check", "vi") : v === "no" ? icon("x", "vi") : icon("minus", "vi");
+  const src = check.url ? evBtn({value: "", quote: check.quote, url: check.url}) : "";
   const quote = check.quote ? `<div class="quote">«${esc(check.quote)}»</div>` : "";
-  return `<div class="verdict ${v}"><b>${label}:</b> ${texts[v]} ${src}${quote}</div>`;
+  return `<div class="verdict ${v}">${ic}<span><b>${label}:</b> ${texts[v]}</span>${src}${quote}</div>`;
 }
 function regionVerdictsHtml(it) {
   const region = it.delivery_check?.region || it.presence_check?.region || "";
-  const del = verdictLine("Доставка", it.delivery_check, {yes: "✓ заявлена", no: "✗ не доставляет", unknown: "не указана, уточнить"});
-  const pres = verdictLine("Офис или склад", it.presence_check, {yes: "✓ есть в вашем городе", no: "—", unknown: "не указан"});
-  return del || pres ? field(`В вашем регионе «${esc(region)}»`, del + pres) : "";
+  const del = verdictLine("Доставка", it.delivery_check, {yes: "заявлена", no: "не доставляет", unknown: "не указана, уточнить"});
+  const pres = verdictLine("Офис или склад", it.presence_check, {yes: "есть в вашем городе", no: "—", unknown: "не указан"});
+  return del || pres ? field(`В вашем регионе «${esc(region)}»`, del + pres, "pin") : "";
 }
 
 /* ---------- веса критериев ---------- */
@@ -195,53 +228,112 @@ function freshness(it) {
   return d ? `<span class="dom">Данные от ${d}${refresh}</span>` : "";
 }
 
+/* оценка кольцом: цвет по уровню, при наведении или фокусе — из чего она сложилась */
+const RING_C = 2 * Math.PI * 27;
+function breakdownRows(sc) {
+  if (!sc.breakdown?.length) return "";
+  return `<table class="breakdown"><tbody>${sc.breakdown.map(b => {
+    const pct = b.max ? Math.round(b.points / b.max * 100) : 0;
+    return `<tr><td>${esc(b.label)}</td><td class="bar"><span style="width:${pct}%"></span></td><td class="num">${b.points}<span class="dom">/${b.max}</span></td></tr>`;
+  }).join("")}</tbody></table>`;
+}
+function ringHtml(sc, animate) {
+  const cls = sc.score >= 70 ? "hi" : sc.score >= 45 ? "mid" : "lo";
+  const off = (RING_C * (1 - Math.max(0, Math.min(100, sc.score)) / 100)).toFixed(1);
+  const full = RING_C.toFixed(1);
+  return `<div class="ringwrap ${cls}" tabindex="0" aria-label="Оценка ${sc.score} из 100">
+    <svg class="ring" viewBox="0 0 64 64" aria-hidden="true"><circle class="ring-track" cx="32" cy="32" r="27"/>
+      <circle class="ring-val ${animate ? "anim" : ""}" cx="32" cy="32" r="27" style="stroke-dasharray:${full};stroke-dashoffset:${off};--full:${full}"/></svg>
+    <span class="ring-num">${sc.score}</span>
+    <div class="ringpop" role="tooltip"><b>Оценка ${sc.score} из 100</b>${breakdownRows(sc)}</div></div>`;
+}
+
+/* плитки с главным: цена, минимальный заказ, доставка, контакт */
+const clip = (s, n = 46) => { s = String(s || ""); return s.length > n ? s.slice(0, n - 1) + "…" : s; };
+function keyFacts(it) {
+  const d = it.data, qp = queryPricesOf(it), dc = it.delivery_check, pc = it.presence_check;
+  const tile = (ic, label, text, st, full = text) => `<div class="kf kf-${st}"><div class="kf-l">${icon(ic)}${label}</div><div class="kf-v" title="${esc(full)}">${esc(text)}</div></div>`;
+  let price;
+  if (qp === null) price = d.price_info ? tile("tag", "Цена", clip(d.price_info.value), "ok", d.price_info.value) : tile("tag", "Цена", "нет на сайте, запросить КП", "gap");
+  else if (qp.length) price = tile("tag", "Цена", `${bestLabel(it)}${qp.length > 1 ? ` · ${qp.length} поз.` : ""}`, "ok");
+  else price = tile("tag", "Цена", "нет на сайте, запросить КП", "gap");
+  const minOrder = d.min_order ? tile("box", "Мин. заказ", clip(d.min_order.value), "ok", d.min_order.value) : tile("box", "Мин. заказ", "не указан", "gap");
+  let delivery;
+  if (dc?.verdict === "yes") delivery = tile("truck", "Доставка", "в ваш город подтверждена", "ok");
+  else if (dc?.verdict === "no") delivery = tile("truck", "Доставка", "в ваш город не возит", "bad");
+  else if (pc?.verdict === "yes") delivery = tile("building", "В вашем городе", "есть офис или склад", "ok");
+  else delivery = d.delivery ? tile("truck", "Доставка", clip(d.delivery.value), "ok", d.delivery.value) : tile("truck", "Доставка", "не указана", "gap");
+  const c = d.phones?.[0] || d.emails?.[0];
+  const contact = c ? tile(d.phones?.[0] ? "phone" : "mail", "Контакт", c.value, "ok") : tile("phone", "Контакт", "не найден", "gap");
+  return `<div class="keyfacts">${price}${minOrder}${delivery}${contact}</div>`;
+}
+
+/* плюсы и минусы: «не нашли данных» — нейтральный серый, красный только для реальных минусов; про цены уже сказано плиткой */
+const isPriceGap = c => /цен[^.]*нет|нет[^.]*цен/i.test(c);
+const isHardNo = c => /не доставляет|не совпадает|выше вашего/i.test(c);
+function whyHtml(sc, full) {
+  const pros = sc.pros, cons = sc.cons.filter(c => !isPriceGap(c));
+  const lim = full ? 99 : 2;
+  const row = (kind, t) => `<li class="w ${kind}" title="${esc(t)}">${icon(kind === "p" ? "check" : kind === "x" ? "x" : "minus")}<span>${esc(t)}</span></li>`;
+  const rows = pros.slice(0, lim).map(t => row("p", t)).concat(cons.slice(0, lim).map(t => row(isHardNo(t) ? "x" : "g", t)));
+  const rest = pros.length + cons.length - rows.length;
+  return rows.length ? `<ul class="why">${rows.join("")}</ul>${rest > 0 ? `<div class="dom more-n">и ещё ${rest} в «Подробнее»</div>` : ""}` : "";
+}
+
 function cardHtml(it) {
   const d = it.data, sc = it.score;
-  const cls = sc.score >= 70 ? "hi" : sc.score >= 45 ? "mid" : "lo";
   const name = d.name ? esc(d.name.value) : esc(d.domain);
-  const why = (sc.pros.length ? `<div class="p">+ ${sc.pros.map(esc).join(" · ")}</div>` : "") +
-              (sc.cons.length ? `<div class="c">− ${sc.cons.map(esc).join(" · ")}</div>` : "");
   const inShort = it.shortlisted, sel = state.selected.has(d.domain);
+  const open = state.open.has(d.domain) || state.quotes;
+  const animate = !state.seen.has(d.domain); state.seen.add(d.domain);
   const link = d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.domain)}</a>` : `<span>${esc(d.domain)}</span>`;
-  return `<article class="card ${sc.passes ? "" : "dim"}" data-domain="${esc(d.domain)}">
-    <div class="card-head">
-      <div class="score ${cls}" title="Оценка по правилам, 0–100">${sc.score}</div>
-      <div style="flex:1;min-width:0">
-        <h3>${name}</h3>
-        <div class="dom">${link}${d.also_domains?.length ? " · также: " + esc(d.also_domains.join(", ")) : ""}</div>
-        ${priceBadge(it)}
-        <div class="why">${why}</div>
-        ${sc.passes ? "" : `<div class="fail">Не подходит по фильтрам: ${esc(sc.fail_reasons.join("; "))}</div>`}
-      </div>
-      <label class="pick" title="Выбрать для сравнения"><input type="checkbox" data-act="select" ${sel ? "checked" : ""}><span>сравнить</span></label>
-    </div>
+  const ev = evidenceCount(d);
+  const body = open ? `<div class="card-body">
+    ${whyHtml(sc, true) ? `<h4 class="sub">Почему такая оценка</h4>${whyHtml(sc, true)}` : ""}
     <div class="panels">
       ${panel("Товар и цены",
-        field("Что поставляют", fact(d.offering)) +
-        field(`Цены на «${esc(queryNameOf(it))}»`, queryPricesHtml(it)) +
+        field("Что поставляют", fact(d.offering), "box") +
+        field(queryTitle(queryNameOf(it)), queryPricesHtml(it), "tag") +
         (queryPricesOf(it) !== null && d.price_info ? field("Общие условия по ценам", fact(d.price_info)) : "") +
         field("Минимальный заказ", fact(d.min_order)) +
-        field("Опт / юрлица", fact(d.wholesale)))}
+        field("Опт / юрлица", fact(d.wholesale)), "box")}
       ${panel("Регион и доставка",
         regionVerdictsHtml(it) +
-        field("Регион работы", regionsHtml(d)) +
-        field("Доставка", fact(d.delivery)))}
+        field("Регион работы", regionsHtml(d), "pin") +
+        field("Доставка", fact(d.delivery), "truck"), "truck")}
       ${panel("Контакты",
-        field("Телефон", facts(d.phones)) +
-        field("Email", facts(d.emails)) +
-        field("Адрес", fact(d.address)))}
+        field("Телефон", facts(d.phones), "phone") +
+        field("Email", facts(d.emails), "mail") +
+        field("Адрес", fact(d.address), "pin"), "phone")}
       ${panel("Документы и компания",
-        field("Документы и сертификаты", facts(d.certificates)) +
-        (d.inn ? field("ИНН", fact(d.inn)) : ""))}
+        field("Документы и сертификаты", facts(d.certificates), "file") +
+        (d.inn ? field("ИНН", fact(d.inn)) : ""), "file")}
     </div>
     <details class="how"><summary>Как посчитана оценка</summary>${breakdownHtml(sc)}</details>
     <div class="actions">
-      <button class="ghost ${inShort ? "on" : ""}" data-act="short">${inShort ? "★ В шорт-листе" : "☆ В шорт-лист"}</button>
-      <button class="ghost" data-act="letter">Письмо с запросом КП</button>
-      <button class="ghost" data-act="offers">КП${it.offers_count ? ` (${it.offers_count})` : ": загрузить"}</button>
+      <button class="ghost" data-act="letter">${icon("mailsend")}Письмо с запросом КП</button>
+      <button class="ghost" data-act="offers">${icon("file")}КП${it.offers_count ? ` (${it.offers_count})` : ": загрузить"}</button>
       ${freshness(it)}
       <span class="dom">${d.rejected_facts ? `Отброшено непроверенных данных: ${d.rejected_facts}` : ""}</span>
+    </div></div>` : "";
+  return `<article class="card ${sc.passes ? "" : "dim"} ${open ? "open" : ""}" data-domain="${esc(d.domain)}">
+    <div class="head2">
+      ${ringHtml(sc, animate)}
+      <div class="head-main">
+        <h3>${name}</h3>
+        <div class="dom">${link}${d.also_domains?.length ? " · также: " + esc(d.also_domains.join(", ")) : ""}</div>
+        ${ev ? `<div class="verified">${icon("shield")}${ev} ${plural(ev, "поле подтверждено", "поля подтверждены", "полей подтверждено")} цитатами со страниц</div>` : ""}
+      </div>
+      <div class="head-tools">
+        <button class="star ${inShort ? "on" : ""}" data-act="short" aria-pressed="${inShort}" title="${inShort ? "Убрать из шорт-листа" : "В шорт-лист"}">${icon("star")}</button>
+        <label class="pick" title="Выбрать для сравнения"><input type="checkbox" data-act="select" ${sel ? "checked" : ""}><span>сравнить</span></label>
+      </div>
     </div>
+    ${sc.passes ? "" : `<div class="fail">Не подходит по фильтрам: ${esc(sc.fail_reasons.join("; "))}</div>`}
+    ${keyFacts(it)}
+    ${open ? "" : whyHtml(sc, false)}
+    <button class="more-btn" data-act="toggle" aria-expanded="${open}">${open ? "Свернуть" : "Подробнее"}${icon("chevron")}</button>
+    ${body}
   </article>`;
 }
 
@@ -313,6 +405,7 @@ function render() {
     box.innerHTML = running ? "" : `<div class="empty">${all.length ? "Ничего не найдено среди результатов. Измените поиск или фильтры." : "Нет подходящих поставщиков. Ослабьте фильтры или измените запрос."}</div>`;
     return;
   }
+  EV.length = 0;
   box.innerHTML = (state.view === "table" || state.compareOnly) ? tableHtml(shown) : `<div class="cards">${shown.map(cardHtml).join("")}</div>`;
 }
 
@@ -323,15 +416,15 @@ function setProgress(done, total) {
   $("#progress-bar").style.width = total ? `${Math.round(done / total * 100)}%` : "0";
 }
 
-/* один выбор из четырёх по возрастанию строгости: все / без точно не возящих / подтверждено / офис в городе */
+/* один выбор из трёх по возрастанию строгости: убрать точно не возящих / доставка подтверждена / представитель в городе */
 function regionFilter() {
   const v = document.querySelector('input[name="rf"]:checked')?.value || "not_no";
   return v === "presence" ? {delivery: "any", presence: true} : {delivery: v, presence: false};
 }
 function setRegionFilter(filters) {
-  const v = filters.presence ? "presence" : (filters.delivery || "any");
-  const r = document.querySelector(`input[name="rf"][value="${v}"]`);
-  if (r) r.checked = true;
+  const v = filters.presence ? "presence" : (filters.delivery || "not_no");
+  const r = document.querySelector(`input[name="rf"][value="${v}"]`) || document.querySelector('input[name="rf"][value="not_no"]');
+  r.checked = true;                                         // старые поиски с «Все» открываются как «Убрать тех, кто точно не возит»
 }
 function currentFilters() {
   return {need_certs: $("#f-certs").checked, max_min_order_kg: $("#f-min").value ? Number($("#f-min").value) : null,
@@ -362,6 +455,7 @@ async function startSearch(e) {
   const body = {category: $("#category").value.trim(), region: $("#region").value.trim(), demo: $("#demo").checked, filters: currentFilters()};
   state.ctx = {category: body.category, region: body.region}; store.set("ctx", state.ctx);
   state.selected.clear(); state.compareOnly = false; state.results = []; state.search = null; state.lastSig = "";
+  state.open.clear(); state.seen.clear();
   $("#go").disabled = true; $("#toolbar").hidden = true; $("#results").innerHTML = ""; $("#weights-panel").hidden = true;
   setProgress(0, 0); setStatus("Запускаю поиск…");
   try {
@@ -448,7 +542,7 @@ async function renderShort() {
     return `<article class="card" data-domain="${esc(d.domain)}">
       <h3>${esc(d.name ? d.name.value : d.domain)} <span class="dom">${d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.domain)}</a>` : esc(d.domain)}</span></h3>
       <div class="dom">${contacts}</div>
-      ${(queryPricesOf(it) || []).length ? `<div class="price-line">Цены на «${esc(queryNameOf(it))}»: ${queryPricesOf(it).slice(0, 3).map(p => `${esc(p.name)} <b>${esc(priceText(p))}</b>`).join("; ")}</div>` : ""}
+      ${(queryPricesOf(it) || []).length ? `<div class="price-line">${queryTitle(queryNameOf(it))}:${queryPricesOf(it).slice(0, 3).map(p => `${esc(p.name)} <b>${esc(priceText(p))}</b>`).join("; ")}</div>` : ""}
       <div class="row">
         <select data-act="status">${Object.entries(STATUS).map(([k, v]) => `<option value="${k}" ${it.status === k ? "selected" : ""}>${v}</option>`).join("")}</select>
         <button class="ghost" data-act="letter">Письмо</button>
@@ -704,9 +798,49 @@ $("#compare-bar").addEventListener("click", e => {
   if (b.dataset.bar === "clear") { state.selected.clear(); state.compareOnly = false; }
   render();
 });
+/* свернуть/развернуть карточку: подменяем только её, список не прыгает */
+function toggleCard(domain) {
+  if (state.open.has(domain)) state.open.delete(domain); else state.open.add(domain);
+  const it = state.results.find(r => r.domain === domain), el = document.querySelector(`.card[data-domain="${CSS.escape(domain)}"]`);
+  if (it && el) el.outerHTML = cardHtml(it);
+}
+
+/* всплывающая проверка: цитата со страницы, на которой нашли значение */
+const evPop = document.createElement("div");
+evPop.className = "evpop"; evPop.hidden = true; evPop.setAttribute("role", "tooltip");
+document.body.appendChild(evPop);
+let evTimer;
+function evPopHtml(e) {
+  let host = e.url; try { host = new URL(e.url).hostname.replace(/^www\./, ""); } catch { /* оставляем как есть */ }
+  const q = esc(e.quote), v = e.value ? esc(e.value) : "", i = v ? q.toLowerCase().indexOf(v.toLowerCase()) : -1;
+  const marked = i >= 0 ? `${q.slice(0, i)}<mark>${q.slice(i, i + v.length)}</mark>${q.slice(i + v.length)}` : q;
+  return `<div class="evh">${icon("shield")}Подтверждено на сайте</div>
+    <div class="evd">${icon("globe")}${esc(host)}</div>
+    ${e.quote ? `<blockquote>«${marked}»</blockquote>` : ""}
+    <a href="${esc(e.url)}" target="_blank" rel="noopener">Открыть страницу${icon("ext")}</a>`;
+}
+function showEv(btn) {
+  clearTimeout(evTimer);
+  const e = EV[Number(btn.dataset.ev)]; if (!e) return;
+  evPop.innerHTML = evPopHtml(e); evPop.hidden = false; evPop.dataset.for = btn.dataset.ev;
+  const w = Math.min(360, innerWidth - 24); evPop.style.width = w + "px";
+  const r = btn.getBoundingClientRect(), h = evPop.offsetHeight;
+  evPop.style.left = Math.max(12, Math.min(r.left + r.width / 2 - w / 2, innerWidth - w - 12)) + "px";
+  evPop.style.top = (r.bottom + 10 + h > innerHeight && r.top > h + 20 ? r.top - h - 10 : r.bottom + 10) + "px";
+}
+const hideEv = (delay = 250) => { clearTimeout(evTimer); evTimer = setTimeout(() => { evPop.hidden = true; }, delay); };
+document.addEventListener("mouseover", e => { const b = e.target.closest?.(".ev"); if (b) showEv(b); else if (e.target.closest?.(".evpop")) clearTimeout(evTimer); });
+document.addEventListener("mouseout", e => { if (e.target.closest?.(".ev, .evpop")) hideEv(); });
+document.addEventListener("focusin", e => { const b = e.target.closest?.(".ev"); if (b) showEv(b); });
+document.addEventListener("focusout", e => { if (e.target.closest?.(".ev")) hideEv(); });
+document.addEventListener("click", e => { const b = e.target.closest?.(".ev"); if (b) { showEv(b); return; } if (!e.target.closest?.(".evpop")) hideEv(0); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") hideEv(0); });
+window.addEventListener("scroll", () => hideEv(0), {passive: true});
+
 $("#results").addEventListener("click", e => {
   const b = e.target.closest("[data-act]"); if (!b) return;
   const domain = b.closest("[data-domain]").dataset.domain;
+  if (b.dataset.act === "toggle") { toggleCard(domain); return; }
   if (b.dataset.act === "short") toggleShort(domain);
   if (b.dataset.act === "letter") openLetter(domain).catch(err => toast(err.message));
   if (b.dataset.act === "offers") { tab("offers"); openSupplierOffers(domain); }
@@ -815,8 +949,11 @@ window.addEventListener("hashchange", openFromHash);
     $("#offer-note").textContent = "Распознавание своих файлов недоступно без ключей API. Пример работает.";
     $("#offer-send").disabled = true; $("#pick-file").disabled = true;
   } else {
-    $("#mode-note").textContent = `Живых поисков сегодня осталось: ${h.live_left_today}`;
+    const names = {yandex: "Яндекс", tavily: "Tavily"};
+    $("#mode-note").textContent = `Источники поиска: ${(h.sources || []).map(s => names[s] || s).join(" + ") || "нет"}. ` +
+      `Живых поисков сегодня осталось: ${h.live_left_today}`;
     $("#l-ai").hidden = false;
+    demo.checked = !(h.live_left_today > 0);     // живой поиск по умолчанию; демо только если дневной лимит исчерпан
   }
   $("#topics").innerHTML = h.demo_topics.map(t => `<button type="button" class="chip" data-topic="${esc(t.topic)}" data-region="${esc(t.region)}">${esc(t.topic)}</button>`).join(" ");
   $("#topics").onclick = e => { const c = e.target.closest(".chip"); if (!c) return; $("#category").value = c.dataset.topic; $("#region").value = c.dataset.region; };

@@ -62,7 +62,7 @@ def _check_live_budget() -> None:
 def health():
     s = get_settings()
     topics = [{"topic": x["topic"], "region": x.get("region", "")} for x in pipeline.load_snapshots()]
-    return {"live_available": s.live_available, "demo_topics": topics,
+    return {"live_available": s.live_available, "demo_topics": topics, "sources": s.sources,
             "live_left_today": max(0, s.live_daily_limit - db.count_live_today()),
             "criteria": [{"key": k, "label": label, "default": w} for k, label, w in CRITERIA]}
 
@@ -82,7 +82,7 @@ async def start_search(body: SearchIn):
         pipeline.run_demo(sid, category, region, body.filters)
         return {"search_id": sid}
     if not s.live_available:
-        raise HTTPException(503, "Живой поиск не настроен: нет ключей API. Включите демо-режим.")
+        raise HTTPException(503, "Живой поиск не настроен: нет ключей API (Claude и Tavily или Яндекс). Включите демо-режим.")
     if db.count_live_today() >= s.live_daily_limit:
         raise HTTPException(429, "Дневной лимит живых поисков исчерпан. Попробуйте демо-режим.")
     sid = db.create_search(category, region, body.filters.model_dump(), "live")

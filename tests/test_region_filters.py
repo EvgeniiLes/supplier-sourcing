@@ -188,7 +188,7 @@ def test_verdict_stored_with_supplier_is_used_only_for_the_same_region():
 def test_live_search_stores_region_verdicts_per_search(monkeypatch):
     async def fake_expand(c, r, client=None): return ["q"]
 
-    async def fake_find(q, l, client=None): return [{"domain": "dairy.ru", "url": URL}]
+    async def fake_find(q, l, client=None, region=""): return [{"domain": "dairy.ru", "url": URL}]
 
     seen = {}
 

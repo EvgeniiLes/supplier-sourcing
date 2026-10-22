@@ -225,7 +225,7 @@ def test_analyse_site_reextracts_for_new_query_and_reuses_for_same(monkeypatch):
 
 def test_prices_are_stored_per_search(monkeypatch):
     async def fake_expand(c, r, client=None): return ["q"]
-    async def fake_find(q, l, client=None): return [{"domain": "dairy.ru", "url": URL}]
+    async def fake_find(q, l, client=None, region=""): return [{"domain": "dairy.ru", "url": URL}]
 
     async def fake_analyse(domain, url, force=False, query="", region=""):
         prices = [{"name": f"{query} 1 л", "price": 100.0, "unit": "л", "quote": "x", "url": URL}] if query == "сливки" else []
