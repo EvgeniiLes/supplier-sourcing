@@ -37,6 +37,23 @@ def valid_email(raw: str) -> bool:
     return bool(EMAIL_RE.fullmatch(raw.strip()))
 
 
+# +380 / 00380 с любой записью; без плюса только полный номер (380 + 9 цифр), чтобы артикулы не принимались за телефон
+FOREIGN_PHONE_RE = re.compile(r"(?<!\d)(?:\+|00)380[\s\-(]*\d{2}[\s\-)]*\d{3}"
+                              r"|(?<!\d)380[\s\-(]*\d{2}[\s\-)]*\d{3}[\s\-]*\d{2}[\s\-]*\d{2}(?!\d)")
+HRYVNIA_RE = re.compile(r"₴|(?<![а-яa-z])грн\b|\bUAH\b", re.I)
+
+
+def foreign_signals(pages: dict[str, str]) -> str | None:
+    """Признаки того, что сайт украинский и в РФ не доставляет: телефон +380 или цены в гривнах.
+    Слабые признаки (слово «Украина» в тексте) не берём: российские сайты пишут «поставки из Украины»."""
+    text = "\n".join(pages.values())
+    if FOREIGN_PHONE_RE.search(text):
+        return "телефоны +380 (Украина)"
+    if len(HRYVNIA_RE.findall(text)) >= 2:
+        return "цены в гривнах"
+    return None
+
+
 def numbers_in(text: str) -> list[float]:
     """Все числа из текста: и с разделителем тысяч ('1 850,50'), и по отдельности."""
     out: list[float] = []

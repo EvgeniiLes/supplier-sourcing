@@ -119,6 +119,7 @@ body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-ri
   .filters{flex-direction:column;align-items:flex-start;gap:14px}
   .filters input[type=number]{width:90px}
   .filters label,.modebar label{display:flex;align-items:center;min-height:32px}
+  .filters label:has(select){flex-direction:column;align-items:stretch;width:100%;gap:6px}
   .chip{padding:8px 14px;font-size:14px}
   .toolbar{gap:8px}
   .toolbar button.ghost,.toolbar a.ghost{padding:10px 14px;min-height:40px;display:inline-flex;align-items:center}
@@ -171,6 +172,11 @@ button.ghost.changed{border-color:var(--ink);font-weight:500}
 .qp{margin-bottom:6px}
 .qp b{white-space:nowrap}
 .price-line{margin:6px 0;font-size:14px}
+.verdict{margin-bottom:4px;font-size:14px}
+.verdict.yes b{color:var(--good)}
+.verdict.no b{color:var(--bad)}
+.verdict.unknown{color:var(--muted)}
+.verdict.unknown b{color:var(--ink);font-weight:500}
 label.pick{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);cursor:pointer;margin:0;flex:none}
 details.how{margin:6px 0 14px;font-size:14px}
 .how summary{cursor:pointer;color:var(--link)}

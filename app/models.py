@@ -1,6 +1,15 @@
 from __future__ import annotations
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
+
+
+class DeliveryCheck(BaseModel):
+    """Возит ли поставщик в регион пользователя: вердикт по тексту сайта с цитатой-доказательством."""
+
+    region: str = ""
+    verdict: str = "unknown"     # yes: доставка/работа в регион прямо заявлена; no: прямо сказано, что нет; unknown: не указано
+    quote: str = ""
+    url: str = ""
 
 
 class Fact(BaseModel):
@@ -44,6 +53,8 @@ class Supplier(BaseModel):
     query_for: str = ""                     # для какого запроса извлечены query_prices
     certificates: list[Fact] = Field(default_factory=list)
     delivery: Fact | None = None
+    delivery_check: DeliveryCheck | None = None    # None: регион пользователя извлечению не передавали
+    presence_check: DeliveryCheck | None = None    # есть ли офис, склад или точка в городе пользователя (yes/unknown)
     wholesale: Fact | None = None
     sources: list[str] = Field(default_factory=list)
     rejected_facts: int = 0
@@ -58,7 +69,18 @@ class Supplier(BaseModel):
 class Filters(BaseModel):
     need_certs: bool = False
     max_min_order_kg: float | None = None
-    delivery_to_region: bool = False
+    # доставка в регион пользователя: any — не фильтровать; not_no — скрыть тех, кто точно не доставляет;
+    # yes — оставить только с подтверждённой доставкой
+    delivery: str = "any"
+    presence: bool = False                # только с офисом, складом или точкой в городе пользователя
+    delivery_to_region: bool = False      # прежний флажок: в старых сохранённых поисках
+
+    @model_validator(mode="before")
+    @classmethod
+    def _legacy_delivery(cls, data):
+        if isinstance(data, dict) and "delivery" not in data:
+            data = {**data, "delivery": "not_no" if data.get("delivery_to_region") else "any"}
+        return data
 
 
 class ScoreResult(BaseModel):

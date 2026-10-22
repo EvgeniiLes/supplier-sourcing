@@ -12,7 +12,16 @@ STATUS_RU = {"new": "новый", "contacted": "написал", "quote": "по�
 
 HEADERS = ["Название", "Сайт", "Оценка", "Статус", "Телефоны", "Email", "Адрес", "Регион работы",
            "Мин. заказ", "Цены на искомый товар", "Общие условия по ценам", "Документы", "Доставка",
-           "Плюсы", "Минусы", "Источники", "Заметка"]
+           "Доставка в ваш регион", "Офис/склад в вашем городе", "Плюсы", "Минусы", "Источники", "Заметка"]
+
+VERDICT_RU = {"yes": "да", "no": "нет", "unknown": "не указано, уточнить"}
+
+
+def _verdict(check: dict | None, quote: bool = True) -> str:
+    if not check:
+        return "не проверялось"
+    text = VERDICT_RU.get(check.get("verdict"), "не указано, уточнить")
+    return f"{text}: «{check['quote']}»" if quote and check.get("quote") else text
 
 
 def _v(f) -> str:
@@ -52,6 +61,7 @@ def rows(items: list[dict]) -> list[list]:
             _v(d.get("min_order")) or "не указано", _prices(it), _v(d.get("price_info")) or "не указано",
             "; ".join(c["value"] for c in d.get("certificates", [])) or "не указано",
             _v(d.get("delivery")) or "не указано",
+            _verdict(it.get("delivery_check")), _verdict(it.get("presence_check")),
             "; ".join(sc.get("pros", [])), "; ".join(sc.get("cons", [])),
             "\n".join(d.get("sources", [])[:5]), it.get("note", ""),
         ])

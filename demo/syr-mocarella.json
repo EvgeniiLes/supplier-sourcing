@@ -5,101 +5,8 @@
   "моцарелла",
   "сыр"
  ],
- "collected_at": "2026-10-21",
+ "collected_at": "2026-10-22",
  "suppliers": [
-  {
-   "domain": "alligator.market",
-   "url": "https://spb.alligator.market/ru/products/molochnaya-produkciya/syr/syr-mocarella-125-g-9482",
-   "also_domains": [],
-   "name": {
-    "value": "Итальянская лавка от Стефано",
-    "quote": "«Итальянская лавка от Стефано» — Итальянские продукты оптом",
-    "url": "https://spb.alligator.market/ru/products/molochnaya-produkciya/syr/syr-mocarella-125-g-9482"
-   },
-   "offering": {
-    "value": "Сыр Моцарелла 125 г, итальянские продукты",
-    "quote": "Сыр Моцарелла 125 г",
-    "url": "https://spb.alligator.market/ru/products/molochnaya-produkciya/syr/syr-mocarella-125-g-9482"
-   },
-   "address": {
-    "value": "Россия, Москва, Угрешская улица, 2с15",
-    "quote": "Россия, Москва, Угрешская улица, 2с15",
-    "url": "https://spb.alligator.market/ru/products/molochnaya-produkciya/syr/syr-mocarella-125-g-9482"
-   },
-   "regions": [
-    {
-     "value": "Москва, Московская область (указаны как зона доставки поставщика)",
-     "quote": "Московская область, Москва",
-     "url": "https://spb.alligator.market/ru/products/molochnaya-produkciya/syr/syr-mocarella-125-g-9482"
-    }
-   ],
-   "nationwide": null,
-   "phones": [],
-   "emails": [
-    {
-     "value": "support@alligator.market",
-     "quote": "support@alligator.market",
-     "url": "https://spb.alligator.market/"
-    }
-   ],
-   "inn": {
-    "value": "7707463616",
-    "quote": "ИНН\n7707463616",
-    "url": "https://spb.alligator.market/"
-   },
-   "min_order": null,
-   "min_order_kg": null,
-   "price_info": {
-    "value": "Оптовые уровни: 115 ₽/шт при заказе до 500 шт., 100 ₽/шт при заказе от 500 шт.",
-    "quote": "При заказе от 500 шт.",
-    "url": "https://spb.alligator.market/ru/products/molochnaya-produkciya/syr/syr-mocarella-125-g-9482"
-   },
-   "query_prices": [
-    {
-     "name": "Сыр Моцарелла 125 г",
-     "price": 115.0,
-     "unit": "₽/шт",
-     "pack": "125 г",
-     "quote": "115\n₽\n/ шт.\nПри заказе до 500 шт.",
-     "url": "https://spb.alligator.market/ru/products/molochnaya-produkciya/syr/syr-mocarella-125-g-9482",
-     "base_price": 920.0,
-     "base_unit": "кг",
-     "derived": true
-    },
-    {
-     "name": "Сыр Моцарелла 125 г (при заказе от 500 шт.)",
-     "price": 100.0,
-     "unit": "₽/шт",
-     "pack": "125 г",
-     "quote": "100\n₽\n/ шт.\nПри заказе от 500 шт.",
-     "url": "https://spb.alligator.market/ru/products/molochnaya-produkciya/syr/syr-mocarella-125-g-9482",
-     "base_price": 800.0,
-     "base_unit": "кг",
-     "derived": true
-    }
-   ],
-   "query_for": "сыр моцарелла",
-   "certificates": [],
-   "delivery": {
-    "value": "Поставщик осуществляет доставку в Москву и Московскую область (проверка по городу на странице)",
-    "quote": "Поставщик осуществляет доставку",
-    "url": "https://spb.alligator.market/ru/products/molochnaya-produkciya/syr/syr-mocarella-125-g-9482"
-   },
-   "wholesale": {
-    "value": "Продажа оптом (заявлено в заголовке карточки товара)",
-    "quote": "Сыр Моцарелла 125 г купить оптом по цене от 100 руб.",
-    "url": "https://spb.alligator.market/ru/products/molochnaya-produkciya/syr/syr-mocarella-125-g-9482"
-   },
-   "sources": [
-    "https://spb.alligator.market/",
-    "https://spb.alligator.market/ru/products/molochnaya-produkciya/syr/syr-mocarella-125-g-9482",
-    "https://spb.alligator.market/ru/contacts",
-    "https://spb.alligator.market/ru/purchase-requests/bakaleya/Sahar/saxar-ts-1-53",
-    "https://spb.alligator.market/ru/purchase-requests/bakaleya/rastitelnye-masla/trebuetsya-frityurnoe-maslo-sunny-gold-5l-optom-51",
-    "https://spb.alligator.market/ru/purchase-requests/bakaleya/krupy/trebuetsya-bakaleinaya-gruppa-50"
-   ],
-   "rejected_facts": 0
-  },
   {
    "domain": "arosa.ru",
    "url": "https://arosa.ru/catalog/italyanskaya-kukhnya/syr-/syr-motsarella-40-42-46-50-",
@@ -110,44 +17,49 @@
     "url": "https://arosa.ru/contacts/"
    },
    "offering": {
-    "value": "Оптовая продажа и доставка продуктов питания в рестораны и кафе; в каталоге есть сыр Моцарелла (40% / 42% / 46% / 50%)",
+    "value": "Оптовая продажа и доставка продуктов питания в рестораны и кафе, в том числе сыры (моцарелла)",
     "quote": "АРОСА - оптовая продажа и доставка продуктов питания в рестораны и кафе",
     "url": "https://arosa.ru/"
    },
    "address": {
-    "value": "Центральный офис: Москва, Большая Спасская ул., 20, стр. 3",
-    "quote": "129090, Москва, Большая Спасская ул., 20, стр. 3",
+    "value": "Санкт-Петербург, БЦ Арсенал, ул. Лифляндская, д.6 лит.М (центральный офис)",
+    "quote": "СПБ, 190020, БЦ Арсенал, ул Лифляндская, д.6 лит.М",
     "url": "https://arosa.ru/contacts/"
    },
    "regions": [
     {
-     "value": "150 городов России",
-     "quote": "Обеспечиваем поставки в 150 городов России",
+     "value": "Все субъекты РФ и СНГ",
+     "quote": "Все субъекты РФ и СНГ",
      "url": "https://arosa.ru/"
     },
     {
-     "value": "Армения, Беларусь, Казахстан, Киргизия и Грузия",
-     "quote": "Работаем с Арменией, Беларусью, Казахстаном, Киргизией и Грузией",
-     "url": "https://arosa.ru/"
+     "value": "Санкт-Петербург (офис и склад)",
+     "quote": "194362, г. Санкт-Петербург, поселок Парголово вн. тер. г., Осиновая Роща тер., Горское ш., д.6, лит. А",
+     "url": "https://arosa.ru/contacts/"
     }
    ],
    "nationwide": {
-    "value": "Обеспечивают поставки в 150 городов России",
-    "quote": "Обеспечиваем поставки в 150 городов России",
+    "value": "Все субъекты РФ и СНГ",
+    "quote": "Все субъекты РФ и СНГ",
     "url": "https://arosa.ru/"
    },
    "phones": [
     {
+     "value": "+7 (812) 609-00-19",
+     "quote": "+7 812 609-00-19",
+     "url": "https://arosa.ru/contacts/"
+    },
+    {
      "value": "+7 (495) 933-20-23",
      "quote": "+7 495 933-20-23",
-     "url": "https://arosa.ru/contacts/"
+     "url": "https://arosa.ru/"
     }
    ],
    "emails": [
     {
      "value": "info@arosa.ru",
      "quote": "info@arosa.ru",
-     "url": "https://arosa.ru/contacts/"
+     "url": "https://arosa.ru/catalog/italyanskaya-kukhnya/syr-/syr-motsarella-40-42-46-50-"
     }
    ],
    "inn": {
@@ -161,10 +73,26 @@
    "query_prices": [],
    "query_for": "сыр моцарелла",
    "certificates": [],
-   "delivery": null,
+   "delivery": {
+    "value": "Доставка продуктов в рестораны и кафе; собственный автопарк мультитемпературных автомобилей",
+    "quote": "Более 100 мультитемпературных автомобилей доставки",
+    "url": "https://arosa.ru/"
+   },
+   "delivery_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "yes",
+    "quote": "Обеспечиваем поставки в 150 городов России",
+    "url": "https://arosa.ru/"
+   },
+   "presence_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "yes",
+    "quote": "СПБ, 190020, БЦ Арсенал, ул Лифляндская, д.6 лит.М",
+    "url": "https://arosa.ru/contacts/"
+   },
    "wholesale": {
-    "value": "Оптовая продажа продуктов питания в рестораны и кафе",
-    "quote": "АРОСА - оптовая продажа и доставка продуктов питания в рестораны и кафе",
+    "value": "Оптовая продажа продуктов питания",
+    "quote": "оптовая продажа и доставка продуктов питания в рестораны и кафе",
     "url": "https://arosa.ru/"
    },
    "sources": [
@@ -178,193 +106,87 @@
    "rejected_facts": 0
   },
   {
-   "domain": "biomilk.ru",
-   "url": "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella",
+   "domain": "eastfood.spb.ru",
+   "url": "https://eastfood.spb.ru/product/syr-mocarella-premium-50-blok-2-kg",
    "also_domains": [],
    "name": {
-    "value": "ТК Качество (biomilk.ru)",
-    "quote": "Дистрибьютор продуктов питания – более 1700 товаров с доставкой по Москве",
-    "url": "https://biomilk.ru/"
+    "value": "EastFood (ИстФуд)",
+    "quote": "Поставщик продуктов питания для HoReCa ресторанов и кафе в Санкт-Петербурге",
+    "url": "https://eastfood.spb.ru/"
    },
    "offering": {
-    "value": "Молочная продукция, сыры, мясная гастрономия, напитки, консервация, бакалея, кондитерские изделия, соусы",
-    "quote": "Дистрибьютор продуктов питания – более 1700 товаров с доставкой по Москве",
-    "url": "https://biomilk.ru/"
+    "value": "Поставщик продуктов питания для HoReCa ресторанов и кафе, оптовый каталог (рыба, морепродукты, специи, молочные продукты и др.)",
+    "quote": "Поставщик продуктов питания для HoReCa ресторанов и кафе в Санкт-Петербурге",
+    "url": "https://eastfood.spb.ru/"
    },
    "address": {
-    "value": "Московская область, г. о. Щёлково, с. Трубино, д. 77А, корп. 2",
-    "quote": "Московская область, г. о. Щёлково, с. Трубино, д. 77А, корп. 2",
-    "url": "https://biomilk.ru/kontakty/"
+    "value": "г. Санкт-Петербург, ул. Мебельная, д. 2, лит. К, пом. 600",
+    "quote": "г. Санкт-Петербург, ул. Мебельная, д. 2, лит. К, пом. 600",
+    "url": "https://eastfood.spb.ru/"
    },
    "regions": [
     {
-     "value": "Москва и Московская область",
-     "quote": "Моцарелла заказать с доставкой в Москве и Московской области",
-     "url": "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella"
+     "value": "Санкт-Петербург, Сосновый Бор, Выборг, Тверь, Челябинск, Великий Новгород (выбор города)",
+     "quote": "Выбор города Санкт-Петербург Сосновый бор Выборг Тверь Челябинск Великий Новгород",
+     "url": "https://eastfood.spb.ru/"
     }
    ],
    "nationwide": null,
    "phones": [
     {
-     "value": "+7 (495) 660-39-80",
-     "quote": "+7 (495) 660-39-80",
-     "url": "https://biomilk.ru/kontakty/"
+     "value": "+7 (812) 975-05-06",
+     "quote": "+7 (812) 975-05-06",
+     "url": "https://eastfood.spb.ru/"
+    },
+    {
+     "value": "+7 (800) 505-89-85",
+     "quote": "+7 (800) 505-89-85",
+     "url": "https://eastfood.spb.ru/"
     }
    ],
    "emails": [
     {
-     "value": "zakaz@biomilk.ru",
-     "quote": "zakaz@biomilk.ru",
-     "url": "https://biomilk.ru/"
-    },
-    {
-     "value": "info@biomilk.ru",
-     "quote": "info@biomilk.ru",
-     "url": "https://biomilk.ru/kontakty/"
+     "value": "info@eastfood.spb.ru",
+     "quote": "info@eastfood.spb.ru",
+     "url": "https://eastfood.spb.ru/"
     }
    ],
    "inn": {
-    "value": "505200078085",
-    "quote": "ИНН 505200078085",
-    "url": "https://biomilk.ru/politika-ispolzovanie-fajlov-cookie/"
+    "value": "7804458403",
+    "quote": "ИНН 7804458403",
+    "url": "https://eastfood.spb.ru/contact-us/"
    },
-   "min_order": {
-    "value": "Минимальная сумма поставки 5000р",
-    "quote": "Минимальная сумма поставки:\n5000р",
-    "url": "https://biomilk.ru/dostavka-i-oplata/"
-   },
-   "min_order_kg": null,
-   "price_info": {
-    "value": "Цены на сайте указаны в каталоге; оптовые условия индивидуальные",
-    "quote": "Формируем для каждого клиента индивидуальные условия сотрудничества.",
-    "url": "https://biomilk.ru/dostavka-i-oplata/"
-   },
-   "query_prices": [
-    {
-     "name": "Сыр моцарелла пицца Кукинг Cooking 40%, весовой в брусе",
-     "price": 634.55,
-     "unit": "₽/кг",
-     "pack": "2,6 кг",
-     "quote": "634.55 ₽/ кг",
-     "url": "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella",
-     "base_price": 634.55,
-     "base_unit": "кг",
-     "derived": false
-    },
-    {
-     "name": "Сыр Моцарелла Пицца Bonfesto полутвердый 40% 1 кг батон",
-     "price": 678.6,
-     "unit": "за шт",
-     "pack": "1 кг",
-     "quote": "678.6 ₽/ шт",
-     "url": "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella",
-     "base_price": 678.6,
-     "base_unit": "кг",
-     "derived": true
-    },
-    {
-     "name": "Сыр Моцарелла «Eletto» брус 45% 1 кг",
-     "price": 828.95,
-     "unit": "за шт",
-     "pack": "1 кг",
-     "quote": "828.95 ₽/ шт",
-     "url": "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella",
-     "base_price": 828.95,
-     "base_unit": "кг",
-     "derived": true
-    }
-   ],
-   "query_for": "сыр моцарелла",
-   "certificates": [],
-   "delivery": {
-    "value": "Доставка по Москве и области, за 1 день; дни доставки — вторник, четверг, суббота; бесплатная доставка от 5000р",
-    "quote": "Бесплатная доставка\nот 5000р",
-    "url": "https://biomilk.ru/dostavka-i-oplata/"
-   },
-   "wholesale": {
-    "value": "Оптовые поставки, работа с юрлицами",
-    "quote": "В каталоге ТК “Качество” можете заказать моцареллу оптом напрямую от ОАО «\"Молочный завод \"Гиагинский\"», ООО «Сенненские сыры»",
-    "url": "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella"
-   },
-   "sources": [
-    "https://biomilk.ru/",
-    "https://biomilk.ru/catalog/syry/myagkie-syiryi/moczarella",
-    "https://biomilk.ru/kontakty/",
-    "https://biomilk.ru/dostavka-i-oplata/",
-    "https://biomilk.ru/about/",
-    "https://biomilk.ru/politika-ispolzovanie-fajlov-cookie/"
-   ],
-   "rejected_facts": 0
-  },
-  {
-   "domain": "efspb.ru",
-   "url": "https://efspb.ru/catalog/molochnye-produkty/syry/syry-myagkie/motsarella",
-   "also_domains": [],
-   "name": {
-    "value": "EuroFoods (ЕвроФудс)",
-    "quote": "Контакты EuroFoods (ЕвроФудс) в Санкт-Петербурге",
-    "url": "https://efspb.ru/contacts/"
-   },
-   "offering": null,
-   "address": {
-    "value": "г. Санкт-Петербург, Рябовское шоссе, д.120, лит. Б",
-    "quote": "195043, г. Санкт-Петербург, Рябовское шоссе, д.120, лит. Б",
-    "url": "https://efspb.ru/contacts/"
-   },
-   "regions": [
-    {
-     "value": "Санкт-Петербург и Северо-Запад",
-     "quote": "Доставка продуктов в рестораны и кафе в СПб и Северо-Запада",
-     "url": "https://efspb.ru/service/"
-    }
-   ],
-   "nationwide": null,
-   "phones": [
-    {
-     "value": "+7 (812) 321-61-31",
-     "quote": "Департамент продаж +7(812) 321-61-31",
-     "url": "https://efspb.ru/contacts/"
-    }
-   ],
-   "emails": [
-    {
-     "value": "zakaz@efspb.ru",
-     "quote": "Департамент продаж +7(812) 321-61-31 zakaz@efspb.ru",
-     "url": "https://efspb.ru/contacts/"
-    },
-    {
-     "value": "zakupka@efspb.ru",
-     "quote": "Департамент закупок +7(812) 321-61-31 zakupka@efspb.ru",
-     "url": "https://efspb.ru/contacts/"
-    }
-   ],
-   "inn": null,
    "min_order": null,
    "min_order_kg": null,
-   "price_info": {
-    "value": "Фиксация цен на 1 месяц; открытого прайса с ценами на сыры на сайте нет, полный каталог с ценами доступен в Личном кабинете",
-    "quote": "Фиксированная цена на 1 мес",
-    "url": "https://efspb.ru/"
-   },
+   "price_info": null,
    "query_prices": [],
    "query_for": "сыр моцарелла",
    "certificates": [],
-   "delivery": {
-    "value": "Бесплатная доставка по Санкт-Петербургу в пределах КАД при заказе от 10000 рублей; за чертой города сумму минимальной поставки согласовывают с менеджером",
-    "quote": "Мы осуществляем бесплатную доставку по Санкт-Петербургу в пределах КАД — при заказе от 10000 рублей.",
-    "url": "https://efspb.ru/service/"
+   "delivery": null,
+   "delivery_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "yes",
+    "quote": "г. Санкт-Петербург, ул. Мебельная, д. 2, лит. К, пом. 600",
+    "url": "https://eastfood.spb.ru/"
    },
    "wholesale": {
-    "value": "Работают с ресторанами, кафе и поставщиками (B2B)",
-    "quote": "Поставщикам и производителям",
-    "url": "https://efspb.ru/vendors/"
+    "value": "Оптовые цены и доставка для ресторанов и кафе, доставка для юридических лиц",
+    "quote": "Запрос расчета Оптовой цены",
+    "url": "https://eastfood.spb.ru/"
    },
    "sources": [
-    "https://efspb.ru/",
-    "https://efspb.ru/contacts/",
-    "https://efspb.ru/service/",
-    "https://efspb.ru/vendors/",
-    "https://efspb.ru/about/news/"
+    "https://eastfood.spb.ru/",
+    "https://eastfood.spb.ru/product/syr-mocarella-premium-50-blok-2-kg",
+    "https://eastfood.spb.ru/contact-us/",
+    "https://eastfood.spb.ru/dostavka-dlya-yuridicheskih-lic/",
+    "https://eastfood.spb.ru/dostavka-dlya-fizicheskih-lic/",
+    "https://eastfood.spb.ru/category/ryba-melkim-optom/"
    ],
    "rejected_facts": 1
   },
@@ -374,23 +196,23 @@
    "also_domains": [],
    "name": {
     "value": "ПТК Экор (ООО «ПТК ЭКОР»)",
-    "quote": "ООО «ПТК ЭКОР»",
+    "quote": "Контакты группы компаний Экор",
     "url": "https://ekorfish.com/contacts/"
    },
    "offering": {
-    "value": "Продукты питания оптом: рыба, морепродукты, мясо, овощи, бакалея, молочная продукция, в т.ч. сыр моцарелла",
-    "quote": "Более 3 500 позиций: рыба, морепродукты, мясо, овощи, бакалея — у одного поставщика.",
-    "url": "https://ekorfish.com/catalog/maslo-i-molochnaya-produktsiya/syr-motsarella"
+    "value": "Оптовые поставки продуктов питания: рыба, морепродукты, мясо, овощи, бакалея, молочная продукция",
+    "quote": "ПТК Экор и ПТК Экор-Фиш — оптовые поставщики продуктов питания для ресторанов, сетей и производств.",
+    "url": "https://ekorfish.com/contacts/"
    },
    "address": {
-    "value": "Москва, Открытое шоссе, 13, стр. 1 (оптовая база); также Санкт-Петербург и Краснодар",
-    "quote": "г. Москва, Открытое шоссе, 13, стр. 1",
+    "value": "Санкт-Петербург: оптовая база, проспект Непокорённых, 63 корп. 42; офис, ул. Аккуратова, 13",
+    "quote": "Офис г. Санкт-Петербург г. Санкт-Петербург, ул. Аккуратова 13",
     "url": "https://ekorfish.com/contacts/"
    },
    "regions": [
     {
-     "value": "Москва и область, Санкт-Петербург и область, Краснодар и край, а также Венев, Владимир, Калуга, Ростов-на-Дону, Рязань, Ставрополь, Тверь, Тула, Ярославль",
-     "quote": "Доставка по Краснодару и краю",
+     "value": "Санкт-Петербург и область",
+     "quote": "Доставка по Санкт-Петербургу и области",
      "url": "https://ekorfish.com/delivery/"
     }
    ],
@@ -402,8 +224,8 @@
      "url": "https://ekorfish.com/contacts/"
     },
     {
-     "value": "+7 (495) 637-82-28",
-     "quote": "в московский офис +7 (495) 637-82-28",
+     "value": "+7 (812) 509-52-67",
+     "quote": "г. Санкт-Петербург, ул. Аккуратова 13 +7 (812) 509-52-67",
      "url": "https://ekorfish.com/contacts/"
     }
    ],
@@ -420,51 +242,40 @@
     "url": "https://ekorfish.com/contacts/"
    },
    "min_order": {
-    "value": "Самовывоз от 3 000 руб.",
-    "quote": "Самовывоз — от 3 000 руб., доставка — от 5 000 руб.",
+    "value": "Самовывоз от 3 000 руб., доставка от 5 000 руб.",
+    "quote": "— Самовывоз — от 3 000 руб., доставка — от 5 000 руб.",
     "url": "https://ekorfish.com/catalog/maslo-i-molochnaya-produktsiya/syr-motsarella"
    },
    "min_order_kg": null,
    "price_info": {
-    "value": "Цены зависят от суммы заказа (от 3 000 ₽, от 10 000 ₽, от 25 000 ₽, от 70 000 ₽); на сайте указаны актуальные цены",
-    "quote": "На сайте указаны актуальные цены, фотографии и сроки годности.",
+    "value": "Оптовые цены снижаются по мере роста суммы заказа (от 3 000, от 10 000, от 25 000, от 70 000 ₽); прайс по запросу",
+    "quote": "Цена от суммы заказа:",
     "url": "https://ekorfish.com/catalog/maslo-i-molochnaya-produktsiya/syr-motsarella"
    },
-   "query_prices": [
-    {
-     "name": "Сыр Моцарелла для пиццы 40% СТО (5-6кг) Сыры Кубани",
-     "price": 816.38,
-     "unit": "₽/кг",
-     "pack": "2.5 кг",
-     "quote": "от 3 000 ₽ 816,38 ₽/кг 816,38 ₽",
-     "url": "https://ekorfish.com/catalog/maslo-i-molochnaya-produktsiya/syr-motsarella",
-     "base_price": 816.38,
-     "base_unit": "кг",
-     "derived": false
-    },
-    {
-     "name": "Сыр Моцарелла \"CLASSIK\" 40% синий 2кг Палермо",
-     "price": 769.54,
-     "unit": "₽/кг",
-     "pack": "2 кг",
-     "quote": "от 3 000 ₽ 769,54 ₽/кг 769,54 ₽",
-     "url": "https://ekorfish.com/catalog/maslo-i-molochnaya-produktsiya/syr-motsarella",
-     "base_price": 769.54,
-     "base_unit": "кг",
-     "derived": false
-    }
-   ],
+   "query_prices": [],
    "query_for": "сыр моцарелла",
    "certificates": [],
    "delivery": {
-    "value": "Бесплатная доставка от 5 000 ₽ по Москве, СПб и Краснодару; доставка в день заказа при оформлении до 11:00",
-    "quote": "Бесплатная доставка при заказе на сумму от 5 000 р. по Москве, СПБ, Краснодару",
-    "url": "https://ekorfish.com/"
+    "value": "Доставка по Санкт-Петербургу и области; бесплатная доставка от 5 000 ₽; доставка в день заказа при оформлении до 11:00",
+    "quote": "Доставка по Москве, СПб и Краснодару: в день заказа при оформлении до 11:00 в будни, иначе на следующий день.",
+    "url": "https://ekorfish.com/catalog/maslo-i-molochnaya-produktsiya/syr-motsarella"
+   },
+   "delivery_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "yes",
+    "quote": "Доставка по Санкт-Петербургу и области",
+    "url": "https://ekorfish.com/delivery/"
+   },
+   "presence_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "yes",
+    "quote": "Офис г. Санкт-Петербург г. Санкт-Петербург, ул. Аккуратова 13",
+    "url": "https://ekorfish.com/contacts/"
    },
    "wholesale": {
-    "value": "Работа с оптом, поставки для ресторанов, сетей и производств",
-    "quote": "оптовые поставщики продуктов питания для ресторанов, сетей и производств",
-    "url": "https://ekorfish.com/contacts/"
+    "value": "Оптовые поставки, работа с HoReCa, отсрочка платежа",
+    "quote": "Отсрочка платежа с первой поставки для сегмента HoReCa.",
+    "url": "https://ekorfish.com/catalog/maslo-i-molochnaya-produktsiya/syr-motsarella"
    },
    "sources": [
     "https://ekorfish.com/",
@@ -474,7 +285,7 @@
     "https://ekorfish.com/catalog/svezhemorozhenaya-ryba/",
     "https://ekorfish.com/catalog/okhlazhdennaya-ryba/"
    ],
-   "rejected_facts": 1
+   "rejected_facts": 2
   },
   {
    "domain": "ews.ru",
@@ -486,31 +297,31 @@
     "url": "https://www.ews.ru/"
    },
    "offering": {
-    "value": "Продукты питания для HoReCa, в том числе сыр моцарелла для пиццы",
+    "value": "Оптовая доставка продуктов питания для HoReCa, в том числе сыр моцарелла для пиццы",
     "quote": "Уже 29 лет компания «Восток-Запад» занимается доставкой продуктов в лучшие российские заведения сегмента HoReCa.",
     "url": "https://www.ews.ru/"
    },
    "address": {
-    "value": "Москва (офис); офисы также в Краснодаре, Санкт-Петербурге, Новосибирске, Екатеринбурге",
-    "quote": "Москва",
+    "value": "Офисы в Москве, Краснодаре, Санкт-Петербурге, Новосибирске, Екатеринбурге",
+    "quote": "Офисы и складские комплексы",
     "url": "https://www.ews.ru/contacts"
    },
    "regions": [
     {
-     "value": "600+ городов регулярной доставки",
+     "value": "Более 600 городов регулярной доставки",
      "quote": "600\n+\nгородов регулярной доставки",
      "url": "https://www.ews.ru/"
     }
    ],
    "nationwide": {
-    "value": "Доставка в любой город РФ (уточнять условия)",
-    "quote": "В любой город* РФ",
-    "url": "https://www.ews.ru/"
+    "value": "Доставка по всей России",
+    "quote": "Доставляем продукты питания по всей России со строгим соблюдением температурных режимов.",
+    "url": "https://www.ews.ru/usloviya-dostavki"
    },
    "phones": [
     {
-     "value": "+7 (495) 223-04-31",
-     "quote": "Москва\n+7 (495) 223 04 31",
+     "value": "+7 (812) 244-01-11",
+     "quote": "Санкт-Петербург\n+7 (812) 244 01 11",
      "url": "https://www.ews.ru/contacts"
     },
     {
@@ -522,7 +333,7 @@
    "emails": [
     {
      "value": "liniyadoveriya@ews.ru",
-     "quote": "liniyadoveriya@ews.ru",
+     "quote": "Email: liniyadoveriya@ews.ru",
      "url": "https://www.ews.ru/contacts"
     }
    ],
@@ -534,7 +345,7 @@
    },
    "min_order_kg": null,
    "price_info": {
-    "value": "Цены на сайте скрыты: «Узнать цену в ЛК» (индивидуальные цены в личном кабинете)",
+    "value": "Цены на сыр моцарелла скрыты: «Узнать цену в ЛК», то есть цены доступны только в личном кабинете",
     "quote": "Узнать цену в ЛК",
     "url": "https://www.ews.ru/catalog/T0102-Moczarella-dlya-piczcy"
    },
@@ -545,25 +356,27 @@
      "value": "Меркурий, ЕГАИС, Честный ЗНАК, ЭДО, ФГИС Зерно",
      "quote": "Автоматическая отчетность ✓ Меркурий ✓ ЕГАИС ✓ Честный ЗНАК ✓ ЭДО ✓ ФГИС Зерно",
      "url": "https://www.ews.ru/"
-    },
-    {
-     "value": "Международный стандарт IFS (пищевая безопасность)",
-     "quote": "соответствующие международному стандарту International Food Standard (IFS)",
-     "url": "https://www.ews.ru/guarantee"
-    },
-    {
-     "value": "Международная сертификация FSSC 22000",
-     "quote": "международная сертификация FSSC 22000",
-     "url": "https://www.ews.ru/logistics"
     }
    ],
    "delivery": {
-    "value": "Доставка по всей России со строгим соблюдением температурных режимов; выбор даты доставки при оформлении заказа",
+    "value": "Доставка по всей России в мультитемпературных автомобилях по согласованному графику",
     "quote": "Доставляем продукты питания по всей России со строгим соблюдением температурных режимов.",
     "url": "https://www.ews.ru/usloviya-dostavki"
    },
+   "delivery_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "yes",
+    "quote": "Доставляем продукты питания по всей России со строгим соблюдением температурных режимов.",
+    "url": "https://www.ews.ru/usloviya-dostavki"
+   },
+   "presence_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
    "wholesale": {
-    "value": "Оптовый поставщик для HoReCa-заведений",
+    "value": "Оптовый поставщик для HoReCa, работа с юрлицами",
     "quote": "Восток-Запад – оптовый поставщик продуктов питания",
     "url": "https://www.ews.ru/"
    },
@@ -575,7 +388,104 @@
     "https://www.ews.ru/guarantee",
     "https://www.ews.ru/usloviya-dostavki"
    ],
-   "rejected_facts": 1
+   "rejected_facts": 0
+  },
+  {
+   "domain": "gostpp.ru",
+   "url": "https://spb.gostpp.ru/katalog/syry/mocarella",
+   "also_domains": [],
+   "name": {
+    "value": "ИП Ховренок (gostpp.ru)",
+    "quote": "«ИП Ховренок»",
+    "url": "https://spb.gostpp.ru/kontakty.html"
+   },
+   "offering": {
+    "value": "Белорусская колбаса, полуфабрикаты и бакалея оптом, в том числе сыры моцарелла",
+    "quote": "Белорусская колбаса, полуфабрикаты и бакалея оптом - купить по низкой цене в Санкт-Петербурге",
+    "url": "https://spb.gostpp.ru/"
+   },
+   "address": null,
+   "regions": [
+    {
+     "value": "Санкт-Петербург и все области и города России",
+     "quote": "Доставка осуществляется силами транспортных компаний по всем областям и городам России, в том числе в Санкт-Петербурге.",
+     "url": "https://spb.gostpp.ru/dostavka.html"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка по всем областям и городам России",
+    "quote": "Доставка осуществляется силами транспортных компаний по всем областям и городам России",
+    "url": "https://spb.gostpp.ru/dostavka.html"
+   },
+   "phones": [
+    {
+     "value": "+7 (800) 707-94-42",
+     "quote": "Прием заявок тел:\n8 (800) 707-94-42",
+     "url": "https://spb.gostpp.ru/kontakty.html"
+    }
+   ],
+   "emails": [
+    {
+     "value": "spb@gostpp.ru",
+     "quote": "E-mail:\nspb@gostpp.ru",
+     "url": "https://spb.gostpp.ru/kontakty.html"
+    },
+    {
+     "value": "director@gostpp.ru",
+     "quote": "E-mail:\ndirector@gostpp.ru",
+     "url": "https://spb.gostpp.ru/kontakty.html"
+    }
+   ],
+   "inn": {
+    "value": "710511011093",
+    "quote": "ИНН: 710511011093",
+    "url": "https://spb.gostpp.ru/kontakty.html"
+   },
+   "min_order": {
+    "value": "Минимальный заказ 250 кг",
+    "quote": "Минимальный заказ составляет 250 кг.",
+    "url": "https://spb.gostpp.ru/dostavka.html"
+   },
+   "min_order_kg": 250.0,
+   "price_info": {
+    "value": "Цены на позиции обновляются, доступна кнопка «Уточнить»; цены на моцареллу не указаны",
+    "quote": "Цена обновляется",
+    "url": "https://spb.gostpp.ru/katalog/syry/mocarella"
+   },
+   "query_prices": [],
+   "query_for": "сыр моцарелла",
+   "certificates": [],
+   "delivery": {
+    "value": "Доставка транспортными компаниями по всем областям и городам России, в том числе в Санкт-Петербурге; до транспортной компании — изотермический транспорт бесплатно",
+    "quote": "Доставка осуществляется силами транспортных компаний по всем областям и городам России, в том числе в Санкт-Петербурге.",
+    "url": "https://spb.gostpp.ru/dostavka.html"
+   },
+   "delivery_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "yes",
+    "quote": "Доставка осуществляется силами транспортных компаний по всем областям и городам России, в том числе в Санкт-Петербурге.",
+    "url": "https://spb.gostpp.ru/dostavka.html"
+   },
+   "presence_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "unknown",
+    "quote": "г. Санкт-Петербург обслуживается через филиал г. Тула Одоевское шоссе 130, склад №7",
+    "url": "https://spb.gostpp.ru/kontakty.html"
+   },
+   "wholesale": {
+    "value": "Работа с юрлицами и оптом",
+    "quote": "Белорусская колбаса, полуфабрикаты и бакалея оптом",
+    "url": "https://spb.gostpp.ru/"
+   },
+   "sources": [
+    "https://spb.gostpp.ru/",
+    "https://spb.gostpp.ru/katalog/syry/mocarella",
+    "https://spb.gostpp.ru/kontakty.html",
+    "https://spb.gostpp.ru/dostavka.html",
+    "https://spb.gostpp.ru/articles/myasnye-polufabrikaty-dlya-horeca.html",
+    "https://spb.gostpp.ru/opt/"
+   ],
+   "rejected_facts": 0
   },
   {
    "domain": "gurman-llc.ru",
@@ -583,28 +493,28 @@
    "also_domains": [],
    "name": {
     "value": "ТД «Гурман» (ООО ТД \"ГУРМАН\")",
-    "quote": "Торговый дом \"Гурман\" — надёжный поставщик",
+    "quote": "Торговый дом «Гурман» поставляет продукты для Хорека по всей России.",
     "url": "https://gurman-llc.ru/"
    },
    "offering": {
-    "value": "Продукты для HoReCa: молочные продукты, сыры, мясо, бакалея, заморозка, масла и др. (более 1500 наименований)",
-    "quote": "Свыше 1 500 товаров",
-    "url": "https://gurman-llc.ru/"
+    "value": "Продукты для ресторанов, кафе и других объектов HoReCa: мясо, молочная продукция, сыры, бакалея, заморозка, консервация, соусы и т.д.",
+    "quote": "В нашем ассортименте есть все от замороженных морепродуктов, мяса, гастрономии до растительного и сливочного масла, молока, сыров, бакалеи и приправ",
+    "url": "https://gurman-llc.ru/partners/"
    },
    "address": {
-    "value": "Московская область, Люберецкий район, пос. Томилино",
+    "value": "Московская область, Люберецкий район, пос. Томилино, 23 км Новорязанского шоссе, строение 27/2",
     "quote": "140172, Московская область, Люберецкий район, пос. Томилино 23 км. Новорязанского шоссе, строение 27/2 (инв.№ 2562), лит.2Е",
     "url": "https://gurman-llc.ru/contacts/"
    },
    "regions": [
     {
-     "value": "Все регионы России",
-     "quote": "Быстрая обработка — отгрузка через день после заказа, доставка во все регионы",
+     "value": "Доставка по всей России (включая другие города и регионы)",
+     "quote": "Торговый дом «Гурман» поставляет продукты для Хорека по всей России.",
      "url": "https://gurman-llc.ru/"
     }
    ],
    "nationwide": {
-    "value": "Доставка продуктов для Хорека по всей России",
+    "value": "Поставки для Хорека по всей России",
     "quote": "Торговый дом «Гурман» поставляет продукты для Хорека по всей России.",
     "url": "https://gurman-llc.ru/"
    },
@@ -630,29 +540,33 @@
    "inn": null,
    "min_order": null,
    "min_order_kg": null,
-   "price_info": null,
-   "query_prices": [
-    {
-     "name": "Сыр мягкий Моцарелла Ностра тертый кубик замороженный (1 кг)",
-     "price": 550.0,
-     "unit": "₽/шт",
-     "pack": "1 кг",
-     "quote": "Сыр мягкий Моцарелла Ностра тертый кубик замороженный (1 кг) Цена 550,00 ₽/шт",
-     "url": "https://gurman-llc.ru/",
-     "base_price": 550.0,
-     "base_unit": "кг",
-     "derived": true
-    }
-   ],
+   "price_info": {
+    "value": "Опубликованы розничные цены в каталоге; оптовый прайс-лист - по заявке с почтой",
+    "quote": "Заполните форму и получите оптовый прайс-лист с ценами на почту",
+    "url": "https://gurman-llc.ru/"
+   },
+   "query_prices": [],
    "query_for": "сыр моцарелла",
    "certificates": [],
    "delivery": {
-    "value": "По Москве в пределах МКАД бесплатно от 20 000 руб.; за МКАД (до 15 км) бесплатно от 30 000 руб.; самовывоз бесплатно",
-    "quote": "в пределах МКАД Бесплатно , если сумма заказа от 20 000 рублей",
+    "value": "Бесплатная доставка по Москве в пределах МКАД от 20 000 рублей; за МКАД до 15 км от 30 000 рублей; самовывоз бесплатно",
+    "quote": "Бесплатно\n, если сумма заказа от 20 000 рублей",
     "url": "https://gurman-llc.ru/payment/"
    },
+   "delivery_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
    "wholesale": {
-    "value": "Продажа продуктов для ресторанов и кафе оптом",
+    "value": "Работа с юрлицами и оптом: поставки для ресторанов и кафе оптом",
     "quote": "Продукты для ресторанов и кафе оптом от поставщика ТД «Гурман»",
     "url": "https://gurman-llc.ru/"
    },
@@ -663,228 +577,393 @@
     "https://gurman-llc.ru/o_kompanii/about/",
     "https://gurman-llc.ru/partners/"
    ],
-   "rejected_facts": 0
+   "rejected_facts": 1
   },
   {
-   "domain": "mozaretti.ru",
-   "url": "https://mozaretti.ru",
+   "domain": "interfoodgroup.ru",
+   "url": "https://interfoodgroup.ru/catalog-syr-mozarella",
    "also_domains": [],
    "name": {
-    "value": "Mozaretti",
-    "quote": "Mozaretti ® (Моцаретти) - российский бренд полутвердых и мягких сыров по итальянским технологиям.",
-    "url": "https://mozaretti.ru/"
+    "value": "ООО «ИнтерФудГруп» (InterFoodGroup)",
+    "quote": "ООО «ИнтерФудГруп» — надежный поставщик продуктов питания для B2B и HoReCa.",
+    "url": "https://interfoodgroup.ru/"
    },
    "offering": {
-    "value": "Сыры Моцарелла для пиццы (Mozzarella for pizza) в профессиональном сегменте HoReCa: сыр 45% жира, молокосодержащий продукт и белково-жировой продукт",
-    "quote": "Компания Mozaretti ® представляет ассортимент сыров и профессиональных продуктов сегмента HoReCa - линеку сыров Моцарелла для пиццы.",
-    "url": "https://mozaretti.ru/"
+    "value": "Продукты питания оптом для B2B и HoReCa, в том числе сыры",
+    "quote": "Продукты питания оптом для бизнеса, ресторанов, кафе, доставка по России, HoReCa, B2B",
+    "url": "https://interfoodgroup.ru/"
    },
    "address": {
-    "value": "Калужская область, Бабынинский район, пос. Бабынино, ул. Моторная д.10",
-    "quote": "Адрес: Калужская область, Бабынинский район, пос. Бабынино, ул. Моторная д.10",
-    "url": "https://mozaretti.ru/kontakty/"
+    "value": "Москва, 5-й Донской пр-д, 19",
+    "quote": "Москва, 5-й Донской пр-д, 19",
+    "url": "https://interfoodgroup.ru/contact"
    },
-   "regions": [],
+   "regions": [
+    {
+     "value": "Вся Россия, от Калининграда до Владивостока",
+     "quote": "Поставляем продукты от Калининграда до Владивостока.",
+     "url": "https://interfoodgroup.ru/about"
+    }
+   ],
    "nationwide": {
-    "value": "Доставка во все регионы",
-    "quote": "Доставка во все регионы",
-    "url": "https://mozaretti.ru/"
+    "value": "Доставка по всей России",
+    "quote": "по всей России",
+    "url": "https://interfoodgroup.ru/"
    },
    "phones": [
     {
-     "value": "+7 (800) 511-01-77",
-     "quote": "Телефон:\n+7 (800) 511-01-77",
-     "url": "https://mozaretti.ru/kontakty/"
+     "value": "+7 (495) 141-07-77",
+     "quote": "8 (495) 141-07-77",
+     "url": "https://interfoodgroup.ru/contact"
     }
    ],
    "emails": [
     {
-     "value": "office@mozaretti.ru",
-     "quote": "E-mail:\noffice@mozaretti.ru",
-     "url": "https://mozaretti.ru/kontakty/"
+     "value": "sales@interfoodgroup.ru",
+     "quote": "sales@interfoodgroup.ru",
+     "url": "https://interfoodgroup.ru/contact"
     }
    ],
-   "inn": null,
+   "inn": {
+    "value": "7728395861",
+    "quote": "ИНН 7728395861",
+    "url": "https://interfoodgroup.ru/contact"
+   },
+   "min_order": {
+    "value": "От 10 коробок или от 50.000 рублей",
+    "quote": "Минимальный заказ продукции от 10 коробок или от 50.000 рублей!",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Прайс-лист по запросу через форму на сайте",
+    "quote": "Оставьте ваши данные, и наши менеджеры отправят вам полный прайс-лист продукции",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "query_prices": [],
+   "query_for": "сыр моцарелла",
+   "certificates": [],
+   "delivery": {
+    "value": "Оперативная логистика, доставка по России",
+    "quote": "Поставляем от Калинграда до Владивостока",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "delivery_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "yes",
+    "quote": "Поставляем продукты от Калининграда до Владивостока.",
+    "url": "https://interfoodgroup.ru/about"
+   },
+   "presence_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "wholesale": {
+    "value": "Оптовые поставки для бизнеса, HoReCa",
+    "quote": "Продукты питания оптом для бизнеса, ресторанов, кафе, доставка по России, HoReCa, B2B",
+    "url": "https://interfoodgroup.ru/"
+   },
+   "sources": [
+    "https://interfoodgroup.ru/",
+    "https://interfoodgroup.ru/catalog-syr-mozarella",
+    "https://interfoodgroup.ru/contact",
+    "https://interfoodgroup.ru/about",
+    "https://interfoodgroup.ru/suppliers"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "marr.ru",
+   "url": "https://marr.ru/catalog/assortiment-dlya-pitstsy/syry-dlya-pitstsy",
+   "also_domains": [],
+   "name": {
+    "value": "МАРР РУССИЯ",
+    "quote": "МАРР РУССИЯ - федеральный дистрибьютор продуктов питания и производитель мясных полуфабрикатов для рынка foodservice.",
+    "url": "https://marr.ru/"
+   },
+   "offering": {
+    "value": "Федеральный дистрибьютор продуктов питания и производитель мясных полуфабрикатов для foodservice/HoReCa; сыры, в т.ч. моцарелла для пиццы",
+    "quote": "МАРР РУССИЯ - федеральный дистрибьютор продуктов питания и производитель мясных полуфабрикатов для рынка foodservice.",
+    "url": "https://marr.ru/"
+   },
+   "address": {
+    "value": "Главный офис: 143006 г. Одинцово, ул. Восточная, д. 5",
+    "quote": "Главный офис: 143006 г. Одинцово, ул. Восточная, д. 5",
+    "url": "https://marr.ru/contacts"
+   },
+   "regions": [
+    {
+     "value": "Санкт-Петербург (филиал в Шушарах)",
+     "quote": "Санкт-Петербург (филиал)",
+     "url": "https://marr.ru/contacts"
+    }
+   ],
+   "nationwide": {
+    "value": "Федеральный дистрибьютор, 9 представительств по России",
+    "quote": "федеральный дистрибьютор продуктов питания и производитель мясных полуфабрикатов для рынка foodservice.",
+    "url": "https://marr.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 663-83-21",
+     "quote": "Тел:\n+7 (495) 663-83-21",
+     "url": "https://marr.ru/contacts"
+    },
+    {
+     "value": "+7 (812) 456-57-58",
+     "quote": "Тел:\n+7 (812) 456-57-58",
+     "url": "https://marr.ru/contacts"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@marr.ru",
+     "quote": "Email:\ninfo@marr.ru",
+     "url": "https://marr.ru/contacts"
+    },
+    {
+     "value": "spb@marr.ru",
+     "quote": "Email:\nspb@marr.ru",
+     "url": "https://marr.ru/contacts"
+    }
+   ],
+   "inn": {
+    "value": "7729409940",
+    "quote": "ИНН\n7729409940",
+    "url": "https://marr.ru/contacts"
+   },
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Цены доступны после регистрации на сайте; каталог с актуальными ценами и скидками согласуется с менеджером",
+    "quote": "Зарегистрировавшись на сайте, вы сможете увидеть каталог с актуальными ценами и скидками, согласованными с вашим менеджером.",
+    "url": "https://marr.ru/about/faq"
+   },
+   "query_prices": [],
+   "query_for": "сыр моцарелла",
+   "certificates": [
+    {
+     "value": "ISO 14001, FSSC 22000, GMP",
+     "quote": "ООО «МАРР РУССИЯ» сертифицирована по международным стандартам и схемам: ISO 14001, FSSC 22000, GMP.",
+     "url": "https://marr.ru/about"
+    }
+   ],
+   "delivery": null,
+   "delivery_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "yes",
+    "quote": "Санкт-Петербург (филиал)\n196624 Санкт-Петербург, поселок Шушары, Московское шоссе, д. 179, корпус 3, строение 1",
+    "url": "https://marr.ru/contacts"
+   },
+   "wholesale": {
+    "value": "Продукты питания оптом",
+    "quote": "Продукты питания оптом",
+    "url": "https://marr.ru/contacts"
+   },
+   "sources": [
+    "https://marr.ru/",
+    "https://marr.ru/catalog/assortiment-dlya-pitstsy/syry-dlya-pitstsy",
+    "https://marr.ru/contacts",
+    "https://marr.ru/about",
+    "https://marr.ru/suppliers",
+    "https://marr.ru/about/faq"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "napolke.ru",
+   "url": "https://napolke.ru/catalog/horeca/sir_dlya_horeca",
+   "also_domains": [],
+   "name": {
+    "value": "На_полке",
+    "quote": "Сервис для бизнеса,\nкоторый помогает закупать\nоптом",
+    "url": "https://napolke.ru/"
+   },
+   "offering": {
+    "value": "Оптовый маркетплейс продуктов питания от производителей и поставщиков",
+    "quote": "Продукты питания оптом в На_полке: оптовый маркетплейс с товарами от производителей и поставщиков",
+    "url": "https://napolke.ru/"
+   },
+   "address": {
+    "value": "Москва, ул. Крылатская, д. 17, к. 2",
+    "quote": "г. Москва, 121614, г. Москва, вн.тер. г. муниципальный округ Крылатское, ул. Крылатская, д. 17, к. 2, 2026 ООО «На_полке».",
+    "url": "https://napolke.ru/contacts"
+   },
+   "regions": [
+    {
+     "value": "Санкт-Петербург и Ленинградская область",
+     "quote": "Санкт-Петербург и Ленинградская область",
+     "url": "https://napolke.ru/contacts"
+    }
+   ],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (925) 751-25-11",
+     "quote": "+7 925 751-25-11",
+     "url": "https://napolke.ru/contacts"
+    }
+   ],
+   "emails": [
+    {
+     "value": "zakaz@napolke.ru",
+     "quote": "zakaz@napolke.ru",
+     "url": "https://napolke.ru/contacts"
+    }
+   ],
+   "inn": {
+    "value": "9704160889",
+    "quote": "ИНН: 9704160889",
+    "url": "https://napolke.ru/"
+   },
    "min_order": null,
    "min_order_kg": null,
    "price_info": null,
    "query_prices": [],
    "query_for": "сыр моцарелла",
    "certificates": [],
-   "delivery": {
-    "value": "Доставка во все регионы",
-    "quote": "Доставка во все регионы",
-    "url": "https://mozaretti.ru/"
+   "delivery": null,
+   "delivery_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
    },
    "wholesale": {
-    "value": "Оптовая продажа сыра Моцарелла для пиццы от производителя",
-    "quote": "Оптовая продажа сыра Моцарелла для пиццы от производителя - Mozaretti",
-    "url": "https://mozaretti.ru/"
+    "value": "Оптовая торговля для бизнеса",
+    "quote": "Сервис для бизнеса,\nкоторый помогает закупать\nоптом",
+    "url": "https://napolke.ru/"
    },
    "sources": [
-    "https://mozaretti.ru/",
-    "https://mozaretti.ru/kontakty/",
-    "https://mozaretti.ru/o-kompanii/"
+    "https://napolke.ru/",
+    "https://napolke.ru/catalog/horeca/sir_dlya_horeca",
+    "https://napolke.ru/contacts",
+    "https://napolke.ru/suppliers?freeDelivery=true",
+    "https://napolke.ru/catalog/hit",
+    "https://napolke.ru/help?questionId=f2971ec6-f5e3-42d1-af37-8ec0cde09257&sectionId=204fff8a-cdc3-4898-8cdd-f4b68af32f2c"
    ],
-   "rejected_facts": 0
+   "rejected_facts": 1
   },
   {
-   "domain": "tiberry.ru",
-   "url": "https://tiberry.ru/mocarella-optom",
+   "domain": "sirvmasle.ru",
+   "url": "https://sirvmasle.ru/catalog/na-zakaz/syr_motsarella_dlya_pitstsy_40_",
    "also_domains": [],
    "name": {
-    "value": "Фабрика «Тиберри» (ООО «ТИБЕРРИ ПЛЮС»)",
-    "quote": "Производитель “Тиберри” – это фабрика продуктов для здорового питания",
-    "url": "https://tiberry.ru/"
+    "value": "Как сыр в масле!",
+    "quote": "Как сыр в масле! Розничная и оптовая продажа продуктов питания.",
+    "url": "https://sirvmasle.ru/"
    },
    "offering": {
-    "value": "Производитель продуктов для здорового питания, в т.ч. моцарелла (классическая в рассоле, для пиццы, Боккончини, в форме косички, в форме шара), буррата, страчателла",
-    "quote": "Моцарелла оптом от производителя “Тиберри”: вкус Италии для вашего бизнеса",
-    "url": "https://tiberry.ru/mocarella-optom"
+    "value": "Оптовая и розничная продажа продуктов питания (сыры, колбасы, молочные продукты и др.)",
+    "quote": "оптовая и розничная продажа продуктов питания",
+    "url": "https://sirvmasle.ru/"
    },
    "address": {
-    "value": "Адрес производства: Кировская область, г. Киров, ул. Народная, д. 28; адрес офиса: г. Киров, Преображенская, 34",
-    "quote": "Адрес производства:",
-    "url": "https://tiberry.ru/contacts/"
+    "value": "г. Гатчина, ул. Коли Подрядчикова, д.7 (Офис)",
+    "quote": "г. Гатчина, ул. Коли Подрядчикова, д.7 (Офис)",
+    "url": "https://sirvmasle.ru/"
    },
    "regions": [
     {
-     "value": "Любой регион России",
-     "quote": "Оперативную доставку в любой регион России",
-     "url": "https://tiberry.ru/mocarella-optom"
-    }
-   ],
-   "nationwide": {
-    "value": "Оперативная доставка в любой регион России",
-    "quote": "Оперативную доставку в любой регион России",
-    "url": "https://tiberry.ru/mocarella-optom"
-   },
-   "phones": [],
-   "emails": [
-    {
-     "value": "sales@tiberry.ru",
-     "quote": "E-mail:\nsales@tiberry.ru",
-     "url": "https://tiberry.ru/contacts/"
-    }
-   ],
-   "inn": {
-    "value": "4345524517",
-    "quote": "ИНН 4345524517",
-    "url": "https://tiberry.ru/"
-   },
-   "min_order": null,
-   "min_order_kg": null,
-   "price_info": {
-    "value": "Гибкая система скидок в зависимости от объема закупки; открытого прайса с ценами на сайте нет, для получения прайса нужно заполнить заявку",
-    "quote": "Гибкую систему скидок в зависимости от объема закупки",
-    "url": "https://tiberry.ru/mocarella-optom"
-   },
-   "query_prices": [],
-   "query_for": "сыр моцарелла",
-   "certificates": [
-    {
-     "value": "Соблюдение санитарных норм и требований ХАССП; лабораторные исследования готовой продукции",
-     "quote": "Соблюдение всех санитарных норм и требований ХАССП",
-     "url": "https://tiberry.ru/mocarella-optom"
-    }
-   ],
-   "delivery": {
-    "value": "Доставка из г. Киров через СДЭК или Почту России; возможен самовывоз из офиса в г. Киров",
-    "quote": "Доставка осуществляется из г.Киров Кировской области через СДЭК или Почту России.",
-    "url": "https://tiberry.ru/dostavka-i-oplata/"
-   },
-   "wholesale": {
-    "value": "Работа оптом, заявлен оптовый ассортимент моцареллы",
-    "quote": "Давайте подробнее рассмотрим линейку нашей продукции, доступной для оптовых закупок:",
-    "url": "https://tiberry.ru/mocarella-optom"
-   },
-   "sources": [
-    "https://tiberry.ru/",
-    "https://tiberry.ru/mocarella-optom",
-    "https://tiberry.ru/contacts/",
-    "https://tiberry.ru/dostavka-i-oplata/",
-    "https://tiberry.ru/chocolate-optom/",
-    "https://tiberry.ru/konditerskiye-izdeliya-optom/"
-   ],
-   "rejected_facts": 0
-  },
-  {
-   "domain": "upiterhall.ru",
-   "url": "https://upiterhall.ru/molochnaya-produkciya/syr/syr-moczarella",
-   "also_domains": [],
-   "name": {
-    "value": "ООО «ТК ЮПИТЕР ХОЛЛ»",
-    "quote": "ООО «ТК ЮПИТЕР ХОЛЛ»",
-    "url": "https://upiterhall.ru/kontakty"
-   },
-   "offering": null,
-   "address": {
-    "value": "Санкт-Петербург, Уманский пер. 68 к1",
-    "quote": "195248, Санкт-Петербург, Уманский пер. 68 к1",
-    "url": "https://upiterhall.ru/kontakty"
-   },
-   "regions": [
-    {
-     "value": "Санкт-Петербург и Ленинградская область — доставка на следующий день",
-     "quote": "по СПБ и ЛО на следующий день.",
-     "url": "https://upiterhall.ru/dostavka"
-    }
-   ],
-   "nationwide": {
-    "value": "Доставка во все регионы",
-    "quote": "Доставка\nво все регионы",
-    "url": "https://upiterhall.ru/dostavka"
-   },
-   "phones": [
-    {
-     "value": "+7 (812) 611-02-61",
-     "quote": "+7 (812) 611-02-61",
-     "url": "https://upiterhall.ru/kontakty"
+     "value": "Гатчина, Гатчинский район и Санкт-Петербург",
+     "quote": "Удобная и быстрая доставка по Гатчине, Гатчинскому району и Санкт-Петербургу",
+     "url": "https://sirvmasle.ru/help/delivery"
     },
     {
-     "value": "+7 (931) 399-78-47",
-     "quote": "+7 931 399-78-47",
-     "url": "https://upiterhall.ru/kontakty"
+     "value": "Ленинградская область (оптовая доставка)",
+     "quote": "Доставим в Санкт-Петербург и Ленинградскую область.",
+     "url": "https://sirvmasle.ru/opt.php"
+    }
+   ],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (958) 580-59-77",
+     "quote": "+7 958 580 59 77",
+     "url": "https://sirvmasle.ru/contacts/"
+    },
+    {
+     "value": "+7 (931) 009-26-36",
+     "quote": "+7 931 009 26 36",
+     "url": "https://sirvmasle.ru/contacts/"
     }
    ],
    "emails": [
     {
-     "value": "info@upiterhall.ru",
-     "quote": "E-mail: info@upiterhall.ru",
-     "url": "https://upiterhall.ru/kontakty"
+     "value": "info@sirvmasle.ru",
+     "quote": "Email: info@sirvmasle.ru",
+     "url": "https://sirvmasle.ru/contacts/"
+    },
+    {
+     "value": "opt@sirvmasle.ru",
+     "quote": "Email: opt@sirvmasle.ru",
+     "url": "https://sirvmasle.ru/contacts/"
     }
    ],
    "inn": null,
    "min_order": null,
    "min_order_kg": null,
-   "price_info": {
-    "value": "Открытый прайс-лист опубликован (PDF); цены на сайте носят информационный характер и не являются публичной офертой",
-    "quote": "Информация о товарах и ценах, представленная на сайте, носит исключительно информационный характер и не является публичной офертой",
-    "url": "https://upiterhall.ru/kontakty"
-   },
-   "query_prices": [],
+   "price_info": null,
+   "query_prices": [
+    {
+     "name": "Сыр Моцарелла для пиццы 40% Ичалковский СК",
+     "price": 799.0,
+     "unit": "кг",
+     "pack": "0,8 кг (средний вес упаковки)",
+     "quote": "799.00 ₽/\nкг",
+     "url": "https://sirvmasle.ru/catalog/na-zakaz/syr_motsarella_dlya_pitstsy_40_",
+     "base_price": 799.0,
+     "base_unit": "кг",
+     "derived": false
+    }
+   ],
    "query_for": "сыр моцарелла",
    "certificates": [],
    "delivery": {
-    "value": "Доставка включена в стоимость при минимальной сумме заказа; по СПБ и ЛО на следующий день, в другие регионы — по согласованию",
-    "quote": "Включена в стоимость при минимальной сумме заказа",
-    "url": "https://upiterhall.ru/dostavka"
+    "value": "Доставка по Гатчине и Гатчинскому району бесплатно при заказе от суммы; доставка в Санкт-Петербург по договоренности с менеджером, преимущественно по четвергам",
+    "quote": "Доставка в\nСанкт-Петербург\nосуществляется по договоренности с менеджером (преимущественно по четвергам).",
+    "url": "https://sirvmasle.ru/help/delivery"
+   },
+   "delivery_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "yes",
+    "quote": "Доставка в\nСанкт-Петербург\nосуществляется по договоренности с менеджером (преимущественно по четвергам).",
+    "url": "https://sirvmasle.ru/help/delivery"
+   },
+   "presence_check": {
+    "region": "Санкт-Петербург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
    },
    "wholesale": {
-    "value": "Оптовая продажа продуктов питания",
-    "quote": "Оптовая продажа продуктов питания оптом в Спб",
-    "url": "https://upiterhall.ru/"
+    "value": "Оптовые продажи; контакты коммерческого директора и директора по закупкам для оптовых клиентов",
+    "quote": "Контакты для оптовых покупателей компании \"Как сыр в масле!\"",
+    "url": "https://sirvmasle.ru/opt.php"
    },
    "sources": [
-    "https://upiterhall.ru/",
-    "https://upiterhall.ru/molochnaya-produkciya/syr/syr-moczarella",
-    "https://upiterhall.ru/kontakty",
-    "https://upiterhall.ru/dostavka",
-    "https://upiterhall.ru/prajs-list",
-    "https://upiterhall.ru/informacziya-dlya-postavshhikov",
-    "https://upiterhall.ru/wp-content/uploads/2026/01/prajs.pdf"
+    "https://sirvmasle.ru/",
+    "https://sirvmasle.ru/catalog/na-zakaz/syr_motsarella_dlya_pitstsy_40_",
+    "https://sirvmasle.ru/contacts/",
+    "https://sirvmasle.ru/help/delivery",
+    "https://sirvmasle.ru/help/delivery/",
+    "https://sirvmasle.ru/opt.php"
    ],
-   "rejected_facts": 3
+   "rejected_facts": 0
   }
  ]
 }

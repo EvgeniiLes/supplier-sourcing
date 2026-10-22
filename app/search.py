@@ -48,6 +48,17 @@ def is_blacklisted(url: str) -> bool:
     return not d or d in BLACKLIST
 
 
+def is_foreign_domain(url_or_domain: str) -> bool:
+    """Домен в зоне, которую мы не показываем (по умолчанию .ua): такие сайты не доставляют в РФ."""
+    host = (urlparse(url_or_domain if "//" in url_or_domain else "//" + url_or_domain).hostname or "").lower()
+    return host.rsplit(".", 1)[-1] in get_settings().excluded_tlds
+
+
+class CandidateList(list):
+    """Список кандидатов и сколько сайтов отсеяно как зарубежные: для честной строки статуса."""
+    skipped_foreign = 0
+
+
 def fallback_queries(category: str, region: str) -> list[str]:
     return [
         f"{category} оптом поставщик {region}",
@@ -108,6 +119,7 @@ async def find_candidates(queries: list[str], limit: int, client: httpx.AsyncCli
     batches = await asyncio.gather(*(tavily_search(q, client=client) for q in queries),
                                    return_exceptions=True)
     seen: dict[str, dict] = {}
+    foreign: set[str] = set()
     ok = [b for b in batches if not isinstance(b, Exception)]
     if not ok:
         raise RuntimeError("Поисковый API не ответил: проверьте TAVILY_API_KEY и лимиты")
@@ -121,6 +133,11 @@ async def find_candidates(queries: list[str], limit: int, client: httpx.AsyncCli
             if is_blacklisted(url):
                 continue
             d = domain_of(url)
+            if is_foreign_domain(url):
+                foreign.add(d)
+                continue
             if d not in seen:
                 seen[d] = {"domain": d, "url": url, "title": item.get("title", "")}
-    return list(seen.values())[:limit]
+    out = CandidateList(list(seen.values())[:limit])
+    out.skipped_foreign = len(foreign)
+    return out

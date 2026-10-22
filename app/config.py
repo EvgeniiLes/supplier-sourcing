@@ -22,6 +22,7 @@ class Settings:
     live_daily_limit: int
     offer_daily_limit: int
     page_ttl_days: int
+    excluded_tlds: frozenset
 
     @property
     def live_available(self) -> bool:
@@ -39,4 +40,6 @@ def get_settings() -> Settings:
         live_daily_limit=int(os.getenv("LIVE_DAILY_LIMIT", "20")),
         offer_daily_limit=int(os.getenv("OFFER_DAILY_LIMIT", "10")),
         page_ttl_days=int(os.getenv("PAGE_TTL_DAYS", "7")),
+        # сервис для российских закупок: сайты этих зон не показываем (они не доставляют в РФ); через запятую
+        excluded_tlds=frozenset(t.strip().lower().lstrip(".") for t in os.getenv("EXCLUDED_TLDS", "ua").split(",") if t.strip()),
     )

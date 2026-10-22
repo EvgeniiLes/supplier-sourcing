@@ -10,32 +10,44 @@ from .extract import content_hash, extract_supplier
 from .fetch import fetch_site
 from .models import Filters, Supplier
 from .search import expand_queries, find_candidates
-from .verify import dedupe
+from .verify import dedupe, foreign_signals
 
 DEMO_DIR = Path(os.getenv("DEMO_DIR", str(ROOT / "demo")))
 CONCURRENCY = 4
 
 
+class ForeignSite(RuntimeError):
+    """Сайт не из РФ (по телефону или валюте): в российские закупки не берём."""
+
+
 def extra_for(sup: Supplier) -> dict:
-    """Данные поставщика, которые относятся к конкретному поиску: цены на искомый товар.
-    Пусто, если извлечение не знало запроса (старые данные): тогда интерфейс покажет общие сведения."""
-    if sup.query_prices is None:
-        return {}
-    return {"query": sup.query_for, "query_prices": [p.model_dump() for p in sup.query_prices]}
+    """Данные поставщика, которые относятся к конкретному поиску: цены на искомый товар и вердикт
+    по доставке в регион поиска. Пусто, если извлечение не знало запроса и региона (старые данные)."""
+    extra: dict = {}
+    if sup.query_prices is not None:
+        extra.update({"query": sup.query_for, "query_prices": [p.model_dump() for p in sup.query_prices]})
+    if sup.delivery_check is not None:
+        extra["delivery"] = sup.delivery_check.model_dump()
+    if sup.presence_check is not None:
+        extra["presence"] = sup.presence_check.model_dump()
+    return extra
 
 
-async def analyse_site(domain: str, url: str, force: bool = False, query: str = "") -> Supplier | None:
+async def analyse_site(domain: str, url: str, force: bool = False, query: str = "", region: str = "") -> Supplier | None:
     """Скачать сайт, извлечь и проверить данные, сохранить поставщика.
     force=True игнорирует кэш страниц и сохранённый хэш (перепроверка).
-    query — искомый товар: по нему извлекаются цены; входит в ключ кэша."""
+    query и region — искомый товар и регион пользователя: от них зависят цены и вердикт по доставке; входят в ключ кэша."""
     pages = await fetch_site(url, ttl=0 if force else None)
     if not pages:
         return None
-    h = content_hash(pages, query)
+    reason = foreign_signals(pages)
+    if reason:                       # до обращения к модели: на зарубежный сайт токены не тратим
+        raise ForeignSite(f"Сайт не из РФ ({reason}), в российские закупки не берём")
+    h = content_hash(pages, query, region)
     row = db.get_supplier_row(domain)
     if row and row["content_hash"] == h and not force:
-        return Supplier(**row["data"])  # страницы и запрос те же: LLM не зовём
-    sup = await extract_supplier(domain, url, pages, query=query)
+        return Supplier(**row["data"])  # страницы, запрос и регион те же: LLM не зовём
+    sup = await extract_supplier(domain, url, pages, query=query, region=region)
     if sup:
         db.save_supplier(domain, sup.model_dump(), h)
     return sup
@@ -54,17 +66,20 @@ async def run_live(search_id: int, category: str, region: str, filters: Filters)
                          progress=f"Найдено сайтов: {len(candidates)}. Читаю их")
 
         done = 0
+        skipped_foreign = getattr(candidates, "skipped_foreign", 0)     # отсеяны по зоне домена (.ua)
         sem = asyncio.Semaphore(CONCURRENCY)
         found: list[Supplier] = []
 
         async def work(c: dict):
-            nonlocal done
+            nonlocal done, skipped_foreign
             async with sem:
                 try:
-                    sup = await analyse_site(c["domain"], c["url"], query=category)
+                    sup = await analyse_site(c["domain"], c["url"], query=category, region=region)
                     if sup:
                         found.append(sup)
                         db.save_result(search_id, sup.domain, extra_for(sup))
+                except ForeignSite:
+                    skipped_foreign += 1             # по телефону или валюте сайта
                 except Exception:
                     pass  # один сайт не должен ронять весь поиск
                 finally:
@@ -81,8 +96,9 @@ async def run_live(search_id: int, category: str, region: str, filters: Filters)
         for s in unique:                      # после склейки сохраняем итоговый вид
             row = db.get_supplier_row(s.domain)
             db.save_supplier(s.domain, s.model_dump(), row["content_hash"] if row else "")
+        note = f" (исключено сайтов не из РФ: {skipped_foreign})" if skipped_foreign else ""
         db.update_search(search_id, status="done",
-                         progress=f"Готово: найдено поставщиков — {len(unique)}")
+                         progress=f"Готово: найдено поставщиков — {len(unique)}{note}")
     except Exception as e:
         db.update_search(search_id, status="error", error=str(e) or e.__class__.__name__)
 
@@ -94,7 +110,8 @@ async def refresh_supplier(domain: str, search_id: int | None = None) -> Supplie
     if not row:
         raise LookupError("Поставщик не найден")
     search = db.get_search(search_id) if search_id else None
-    sup = await analyse_site(domain, row["data"]["url"], force=True, query=search["category"] if search else "")
+    sup = await analyse_site(domain, row["data"]["url"], force=True, query=search["category"] if search else "",
+                             region=search["region"] if search else "")
     if sup is None:
         raise RuntimeError("Сайт не открылся или больше не похож на сайт поставщика")
     if search:

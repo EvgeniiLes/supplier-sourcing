@@ -4,31 +4,169 @@
  "keywords": [
   "мука"
  ],
- "collected_at": "2026-10-21",
+ "collected_at": "2026-10-22",
  "suppliers": [
+  {
+   "domain": "agroserver.ru",
+   "url": "https://agroserver.ru/muka-pshenichnaya/p1-city-925.htm",
+   "also_domains": [],
+   "name": {
+    "value": "Сергей Иванович (Мука пшеничная ГОСТ оптом, absolutural.ru)",
+    "quote": "Сергей Иванович",
+    "url": "https://agroserver.ru/b/muka-pshenichnaya-gost-optom-vysshego-sorta-otlichnogo-kachestva-s-1646053.htm"
+   },
+   "offering": {
+    "value": "Мука пшеничная высшего, первого, второго сорта оптом (ГОСТ)",
+    "quote": "Реализуем продовольственную Муку пшеничную Высшего, первого, второго сорта оптом От 18р\\кг.",
+    "url": "https://agroserver.ru/b/muka-pshenichnaya-gost-optom-vysshego-sorta-otlichnogo-kachestva-s-1646053.htm"
+   },
+   "address": {
+    "value": "Екатеринбург, Свердловская обл.",
+    "quote": "доставка в Екатеринбург , Свердловская обл. , Россия",
+    "url": "https://agroserver.ru/b/muka-pshenichnaya-gost-optom-vysshego-sorta-otlichnogo-kachestva-s-1646053.htm"
+   },
+   "regions": [],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (992) 427-40-38",
+     "quote": "+7 (992) 427-40-38",
+     "url": "https://agroserver.ru/muka-pshenichnaya/p1-city-925.htm"
+    }
+   ],
+   "emails": [
+    {
+     "value": "kargotest@mail.ru",
+     "quote": "kargotest@mail.ru",
+     "url": "https://agroserver.ru/uslugi-sertifikatsii/"
+    },
+    {
+     "value": "agrostar2010@mail.ru",
+     "quote": "agrostar2010@mail.ru",
+     "url": "https://agroserver.ru/b/muka-pshenichnaya-gost-optom-vysshego-sorta-otlichnogo-kachestva-s-1646053.htm"
+    }
+   ],
+   "inn": {
+    "value": "222307638469",
+    "quote": "ИНН: 222307638469",
+    "url": "https://agroserver.ru/portal/agreement/"
+   },
+   "min_order": {
+    "value": "Отгрузка от 10 т",
+    "quote": "Отгрузка от 10т.",
+    "url": "https://agroserver.ru/b/muka-pshenichnaya-gost-optom-vysshego-sorta-otlichnogo-kachestva-s-1646053.htm"
+   },
+   "min_order_kg": 10000.0,
+   "price_info": null,
+   "query_prices": [
+    {
+     "name": "Мука пшеничная ГОСТ оптом высшего сорта отличного качества с высокой клейковиной",
+     "price": 21.0,
+     "unit": "кг",
+     "pack": "",
+     "quote": "от 21.00 руб / кг",
+     "url": "https://agroserver.ru/muka-pshenichnaya/p1-city-925.htm",
+     "base_price": 21.0,
+     "base_unit": "кг",
+     "derived": false
+    },
+    {
+     "name": "Мука пшеничная высший сорт (Мука В/С, ИП Агиевич)",
+     "price": 19.0,
+     "unit": "кг",
+     "pack": "мешки 50, 25, 10 и 5 кг",
+     "quote": "Мука высший сорт\n19.00 руб / кг",
+     "url": "https://agroserver.ru/muka-pshenichnaya/p1-city-925.htm",
+     "base_price": 19.0,
+     "base_unit": "кг",
+     "derived": false
+    },
+    {
+     "name": "Мука пшеничная высшего сорта",
+     "price": 28.0,
+     "unit": "кг",
+     "pack": "",
+     "quote": "Мука пшеничная высший сорт\n28.00 руб / кг",
+     "url": "https://agroserver.ru/muka-pshenichnaya/p1-city-925.htm",
+     "base_price": 28.0,
+     "base_unit": "кг",
+     "derived": false
+    },
+    {
+     "name": "Мука пшеничная Высший сорт ГОСТ",
+     "price": 23.0,
+     "unit": "кг",
+     "pack": "",
+     "quote": "от 23.00 руб / кг",
+     "url": "https://agroserver.ru/muka-pshenichnaya/p1-city-925.htm",
+     "base_price": 23.0,
+     "base_unit": "кг",
+     "derived": false
+    }
+   ],
+   "query_for": "мука пшеничная",
+   "certificates": [],
+   "delivery": {
+    "value": "Доставка по всему миру или самовывоз; отгрузка от 10 т",
+    "quote": "Доставка по всему миру\\Самовывоз. Отгрузка от 10т.",
+    "url": "https://agroserver.ru/b/muka-pshenichnaya-gost-optom-vysshego-sorta-otlichnogo-kachestva-s-1646053.htm"
+   },
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "wholesale": {
+    "value": "Оптовые продажи",
+    "quote": "Реализуем продовольственную Муку пшеничную Высшего, первого, второго сорта оптом",
+    "url": "https://agroserver.ru/b/muka-pshenichnaya-gost-optom-vysshego-sorta-otlichnogo-kachestva-s-1646053.htm"
+   },
+   "sources": [
+    "https://agroserver.ru/",
+    "https://agroserver.ru/muka-pshenichnaya/p1-city-925.htm",
+    "https://agroserver.ru/uslugi-sertifikatsii/",
+    "https://agroserver.ru/knigi/",
+    "https://agroserver.ru/portal/agreement/",
+    "https://agroserver.ru/b/muka-pshenichnaya-gost-optom-vysshego-sorta-otlichnogo-kachestva-s-1646053.htm"
+   ],
+   "rejected_facts": 1
+  },
   {
    "domain": "belyaevskaya.ru",
    "url": "https://belyaevskaya.ru/catalog/muka",
    "also_domains": [],
    "name": {
-    "value": "ООО «Новокузнецкий мелькомбинат» (торговая марка «Беляевская»)",
+    "value": "Беляевская мукомольная продукция (ООО «Новокузнецкий мелькомбинат»)",
     "quote": "Общество с ограниченной ответственностью «Новокузнецкий мелькомбинат», 654029, Кемеровская область-Кузбасс, г. Новокузнецк, ул.Вокзальная, 58",
     "url": "https://belyaevskaya.ru/contacts/"
    },
    "offering": {
     "value": "Мука пшеничная хлебопекарная, ржаная, специализированная, крупы, отруби, кормосмесь",
-    "quote": "Мука пшеничная хлебопекарная",
-    "url": "https://belyaevskaya.ru/catalog/muka"
+    "quote": "Мука под торговой маркой «Беляевская» выпускается современным мукомольным предприятием на высокотехнологичном оборудовании.",
+    "url": "https://belyaevskaya.ru/"
    },
    "address": {
-    "value": "Новокузнецк, ул. Вокзальная, 58 (Кемеровская область-Кузбасс)",
+    "value": "Кемеровская область, г. Новокузнецк, ул. Вокзальная, 58",
     "quote": "654029, Кемеровская область-Кузбасс, Новокузнецк, ул. Вокзальная, 58",
     "url": "https://belyaevskaya.ru/"
    },
-   "regions": [],
+   "regions": [
+    {
+     "value": "Вся территория РФ и экспорт",
+     "quote": "Мы работаем по всей территории РФ, имеем большой опыт работы на экспорт продукции.",
+     "url": "https://belyaevskaya.ru/"
+    }
+   ],
    "nationwide": {
-    "value": "Работа по всей территории РФ",
-    "quote": "Мы работаем по всей территории РФ",
+    "value": "Работают по всей территории РФ",
+    "quote": "Мы работаем по всей территории РФ, имеем большой опыт работы на экспорт продукции.",
     "url": "https://belyaevskaya.ru/"
    },
    "phones": [
@@ -61,18 +199,34 @@
     "quote": "минимальный объем заказа по одной позиции – 1 тонна. Размер всей покупки должен составлять не менее 20 тонн.",
     "url": "https://belyaevskaya.ru/catalog/muka"
    },
-   "min_order_kg": 1000.0,
-   "price_info": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Цены по запросу: кнопка «Запросить КП»; индивидуальные условия сотрудничества",
+    "quote": "Возможны индивидуальные условия сотрудничества — свяжитесь с нами!",
+    "url": "https://belyaevskaya.ru/payment-delivery/"
+   },
    "query_prices": [],
    "query_for": "мука пшеничная",
    "certificates": [],
    "delivery": {
-    "value": "Доставка железнодорожным и автомобильным транспортом, возможна морем; самовывоз с предприятий",
+    "value": "Доставка железнодорожным и автомобильным транспортом в любую точку мира; возможен самовывоз с предприятий",
     "quote": "Доставка осуществляется железнодорожным и автомобильным транспортом в любую точку мира.",
     "url": "https://belyaevskaya.ru/payment-delivery/"
    },
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "yes",
+    "quote": "Мы работаем по всей территории РФ, имеем большой опыт работы на экспорт продукции.",
+    "url": "https://belyaevskaya.ru/"
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
    "wholesale": {
-    "value": "Работа с юридическими лицами, оптом",
+    "value": "Работа с юридическими лицами, оптовые поставки",
     "quote": "Мы сотрудничаем в рамках договора и работаем с юридическими лицами.",
     "url": "https://belyaevskaya.ru/payment-delivery/"
    },
@@ -86,6 +240,94 @@
    "rejected_facts": 1
   },
   {
+   "domain": "ekorfish.com",
+   "url": "https://ekorfish.com/catalog/bakaleya-i-spetsii/muka",
+   "also_domains": [],
+   "name": {
+    "value": "ПТК Экор (ООО «ПТК ЭКОР»)",
+    "quote": "ПТК Экор и ПТК Экор-Фиш — оптовые поставщики продуктов питания для ресторанов, сетей и производств.",
+    "url": "https://ekorfish.com/contacts/"
+   },
+   "offering": null,
+   "address": {
+    "value": "Офисы и склады в Москве, Санкт-Петербурге и Краснодаре; производство в Балашихе (МО). Екатеринбурга в тексте нет",
+    "quote": "Офисы и оптовые базы работают в Москве, Санкт-Петербурге и Краснодаре, собственное производство — в Балашихе, Московская область.",
+    "url": "https://ekorfish.com/contacts/"
+   },
+   "regions": [
+    {
+     "value": "Москва, Санкт-Петербург, Краснодар и ряд других городов (Венев, Владимир, Калуга, Ростов-на-Дону, Рязань, Ставрополь, Тверь, Тула, Ярославль)",
+     "quote": "Другие направления:",
+     "url": "https://ekorfish.com/delivery/"
+    }
+   ],
+   "nationwide": null,
+   "phones": [
+    {
+     "value": "+7 (800) 505-01-82",
+     "quote": "Позвоните по единому номеру 8 (800) 505-01-82",
+     "url": "https://ekorfish.com/contacts/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "info@ekorfish.ru",
+     "quote": "напишите на info@ekorfish.ru",
+     "url": "https://ekorfish.com/contacts/"
+    }
+   ],
+   "inn": {
+    "value": "7718741865",
+    "quote": "ИНН\n7718741865",
+    "url": "https://ekorfish.com/contacts/"
+   },
+   "min_order": {
+    "value": "Самовывоз при заказе от 3 000 ₽",
+    "quote": "самовывоз доступен при заказе от 3 000 ₽ со складов в Москве",
+    "url": "https://ekorfish.com/contacts/"
+   },
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Цены зависят от суммы заказа: при заказе от 3 000 ₽ и далее со скидками от 10 000, 25 000, 70 000 ₽",
+    "quote": "Цена от суммы заказа:",
+    "url": "https://ekorfish.com/catalog/bakaleya-i-spetsii/muka"
+   },
+   "query_prices": [],
+   "query_for": "мука пшеничная",
+   "certificates": [],
+   "delivery": {
+    "value": "Доставка по Москве, Санкт-Петербургу и Краснодару в день заказа или на следующий день; бесплатная от 5 000 ₽ по Москве, СПБ, Краснодару",
+    "quote": "Бесплатная доставка при заказе на сумму от 5 000 р. по Москве, СПБ, Краснодару",
+    "url": "https://ekorfish.com/"
+   },
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "no",
+    "quote": "Доставки нет — заказ можно забрать самовывозом со склада.",
+    "url": "https://ekorfish.com/delivery/"
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "wholesale": {
+    "value": "Оптовые поставки для ресторанов, сетей, производств; отсрочка платежа для HoReCa",
+    "quote": "Для HoReCa - отсрочка платежа!",
+    "url": "https://ekorfish.com/"
+   },
+   "sources": [
+    "https://ekorfish.com/",
+    "https://ekorfish.com/catalog/bakaleya-i-spetsii/muka",
+    "https://ekorfish.com/contacts/",
+    "https://ekorfish.com/delivery/",
+    "https://ekorfish.com/catalog/svezhemorozhenaya-ryba/",
+    "https://ekorfish.com/catalog/okhlazhdennaya-ryba/"
+   ],
+   "rejected_facts": 4
+  },
+  {
    "domain": "fud-import.ru",
    "url": "https://fud-import.ru/flour",
    "also_domains": [],
@@ -95,13 +337,13 @@
     "url": "https://fud-import.ru/flour"
    },
    "offering": {
-    "value": "Пшеничная мука ТМ «Белес» и ТМ «Мартин», импорт из Казахстана; также макароны, крупы, рис",
-    "quote": "Поставляем муку оптом от ведущих Казахстанских производителей: ТМ Мартин и ТМ Белес.",
+    "value": "Мука пшеничная из Казахстана под брендами ТМ «Белес» и ТМ «Мартин», также макароны, крупы, рис",
+    "quote": "Мы поставляем высококачественную пшеничную муку под брендами ТМ «Белес» и ТМ «Мартин» с полным пакетом сопроводительных документов.",
     "url": "https://fud-import.ru/flour"
    },
    "address": {
-    "value": "Юридический адрес: 443028, Самарская область, город Самара, поселок Мехзавод, 5-й кв-л, д. 5, офис 58",
-    "quote": "Юридический адрес;443028, Самарская область, город Самара, поселок Мехзавод, 5-й кв-л, д. 5, офис 58",
+    "value": "Юридический адрес: Самарская область, Самара, п. Мехзавод; офис в Самаре, ул. Молодежная, д. 6",
+    "quote": "Офис: Самара, ул.Молодежная, д.6, офис 3",
     "url": "https://fud-import.ru/contacts"
    },
    "regions": [
@@ -119,7 +361,7 @@
    "phones": [
     {
      "value": "+7 (927) 261-53-81",
-     "quote": "Телефон: +7 927 261-53-81",
+     "quote": "+7 927 261-53-81",
      "url": "https://fud-import.ru/contacts"
     },
     {
@@ -147,32 +389,39 @@
    },
    "min_order_kg": 10000.0,
    "price_info": {
-    "value": "Оптовый прайс по запросу через форму",
-    "quote": "Получить оптовый прайс",
-    "url": "https://fud-import.ru/"
+    "value": "Оптовый прайс по запросу, через форму заявки",
+    "quote": "Запросить оптовый прайс",
+    "url": "https://fud-import.ru/flour"
    },
    "query_prices": [],
    "query_for": "мука пшеничная",
    "certificates": [
     {
-     "value": "Сертификаты на пшеничную муку ТМ «Белес» и ТМ «Мартин»",
+     "value": "Сертификаты на пшеничную муку ТМ «Белес» и ТМ «Мартин»; декларации соответствия на муку",
      "quote": "Сертификаты на пшеничную муку от ТМ «Белес» и ТМ «Мартин».",
      "url": "https://fud-import.ru/flour"
-    },
-    {
-     "value": "Декларации соответствия на муку Мартин и Белес",
-     "quote": "Дeкларация соответствия Белес мука",
-     "url": "https://fud-import.ru/documents"
     }
    ],
    "delivery": {
-    "value": "Доставка по России в среднем 2–5 дней в зависимости от региона; доставка «до двери»",
+    "value": "Доставка по России, в среднем 2–5 дней в зависимости от региона",
     "quote": "доставка по России занимает в среднем 2–5 дней в зависимости от региона.",
     "url": "https://fud-import.ru/flour"
    },
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "yes",
+    "quote": "Логистика по всей России",
+    "url": "https://fud-import.ru/contacts"
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
    "wholesale": {
-    "value": "Работа оптом, для дистрибьюторов, торговых сетей, HoReCa",
-    "quote": "Мука крупным оптом из Казахстана",
+    "value": "Оптовые поставки, работа с дистрибьюторами, сетями и HoReCa",
+    "quote": "Поддержка крупных сетей и оптовиков - стабильные объёмы, чёткое соблюдение сроков и условий сотрудничества",
     "url": "https://fud-import.ru/flour"
    },
    "sources": [
@@ -185,174 +434,6 @@
    "rejected_facts": 0
   },
   {
-   "domain": "ingredientpro.ru",
-   "url": "https://ingredientpro.ru/catalog/cat-3/muka-157",
-   "also_domains": [],
-   "name": {
-    "value": "ООО «Сладкий город» / ООО «Ингредиенты успеха» (группа компаний «Сладкий Город»)",
-    "quote": "Группа компаний «Сладкий Город» имеет огромный опыт работы с предприятиями хлебобулочной и кондитерской отрасли",
-    "url": "https://ingredientpro.ru/catalog/cat-3/muka-157"
-   },
-   "offering": {
-    "value": "Мука пшеничная и ржаная, в т.ч. мука пшеничная высший сорт и 1 сорт (фасовка 50 кг, 2 кг)",
-    "quote": "Мука пшеничная 1 сорт 50 кг",
-    "url": "https://ingredientpro.ru/catalog/cat-3/muka-157"
-   },
-   "address": {
-    "value": "410080, г. Саратов, Сокурский тракт б/н Литер Б офис № 14",
-    "quote": "Юр.адрес: 410080, г. Саратов, Сокурский тракт б/н Литер Б офис № 14",
-    "url": "https://ingredientpro.ru/kontakty"
-   },
-   "regions": [
-    {
-     "value": "Саратов (главный офис); филиалы в Пенза, Самара, Волгоград",
-     "quote": "Пенза Адрес: 440015 г. Пенза, Литвинова поляна 29",
-     "url": "https://ingredientpro.ru/kontakty"
-    }
-   ],
-   "nationwide": {
-    "value": "Клиенты по всей территории РФ, от Находки до Калининграда",
-    "quote": "Наши клиенты производители пищевых производств и оптовые компании по всей территории РФ, от Находки до Калининграда",
-    "url": "https://ingredientpro.ru/company"
-   },
-   "phones": [
-    {
-     "value": "+7 (800) 700-84-05",
-     "quote": "8 800-700-8405 (звонок по России бесплатный)",
-     "url": "https://ingredientpro.ru/kontakty"
-    },
-    {
-     "value": "+7 (845) 275-42-58",
-     "quote": "8 (8452) 75-42-58, 8 (8452) 75-42-59, 8 (905) 329-59-57",
-     "url": "https://ingredientpro.ru/kontakty"
-    }
-   ],
-   "emails": [
-    {
-     "value": "ved@ratio-group.ru",
-     "quote": "ved@ratio-group.ru",
-     "url": "https://ingredientpro.ru/kontakty"
-    }
-   ],
-   "inn": null,
-   "min_order": null,
-   "min_order_kg": null,
-   "price_info": {
-    "value": "Цены на муку по запросу: для получения прайс-листа нужно заполнить форму запроса цены",
-    "quote": "Для уточнения актуальных цен на данную продукцию заполните форму, после чего мы отправим Вам прайс-лист на указанный e-mail адрес.",
-    "url": "https://ingredientpro.ru/catalog/cat-3/muka-157"
-   },
-   "query_prices": [],
-   "query_for": "мука пшеничная",
-   "certificates": [],
-   "delivery": null,
-   "wholesale": {
-    "value": "Работа с предприятиями и оптовыми компаниями; продажа муки оптом",
-    "quote": "Купить муку оптом | От производителя низкие цены",
-    "url": "https://ingredientpro.ru/catalog/cat-3/muka-157"
-   },
-   "sources": [
-    "https://ingredientpro.ru/",
-    "https://ingredientpro.ru/catalog/cat-3/muka-157",
-    "https://ingredientpro.ru/kontakty",
-    "https://ingredientpro.ru/company",
-    "https://ingredientpro.ru/partners",
-    "https://ingredientpro.ru/price-list"
-   ],
-   "rejected_facts": 0
-  },
-  {
-   "domain": "kardail.ru",
-   "url": "https://kardail.ru/about",
-   "also_domains": [],
-   "name": {
-    "value": "ООО ТД «Кардаильский мукомольный завод» (Кардаильский мукомольный завод)",
-    "quote": "ООО ТД «Кардаильский мукомольный завод»",
-    "url": "https://kardail.ru/contacts/"
-   },
-   "offering": {
-    "value": "Мука пшеничная (хлебопекарная, высшего и первого сорта, общего назначения, тип М 55-23, М 75-23), мука ржаная, отруби",
-    "quote": "Мука пшеничная хлебопекарная",
-    "url": "https://kardail.ru/"
-   },
-   "address": {
-    "value": "Воронежская обл., Поворинский район, с. Пески, ул. 2-я Советская, 1",
-    "quote": "РФ, Воронежская область, Поворинский район, с. Пески, ул. 2-я Советская, 1",
-    "url": "https://kardail.ru/"
-   },
-   "regions": [
-    {
-     "value": "Саратовская, Пензенская, Нижегородская, Ивановская, Тверская, Архангельская, Кировская, Тюменская области, Карелия, Москва, Санкт-Петербург",
-     "quote": "Отгрузки осуществляются в Саратовскую, Пензенскую, Нижегородскую, Ивановскую, Тверскую, Архангельскую, Кировскую, Тюменскую области, республику Карелия, г. Москва, г. Санкт- Петербург.",
-     "url": "https://kardail.ru/about/"
-    }
-   ],
-   "nationwide": {
-    "value": "Доставка в любые регионы РФ",
-    "quote": "Доставим в любые регионы Российской Федерации.",
-    "url": "https://kardail.ru/dostavka-i-oplata/"
-   },
-   "phones": [
-    {
-     "value": "+7 (495) 787-54-66",
-     "quote": "+7 (495) 787-54-66 - Секретарь, приёмная директора.",
-     "url": "https://kardail.ru/contacts/"
-    },
-    {
-     "value": "+7 (495) 787-54-70",
-     "quote": "+7 (495) 787-54-70 - Коммерческая служба (отдел закупок и реализации).",
-     "url": "https://kardail.ru/contacts/"
-    }
-   ],
-   "emails": [
-    {
-     "value": "info@kardail.ru",
-     "quote": "info@kardail.ru",
-     "url": "https://kardail.ru/"
-    }
-   ],
-   "inn": {
-    "value": "3623007578",
-    "quote": "ИНН: 3623007578",
-    "url": "https://kardail.ru/"
-   },
-   "min_order": null,
-   "min_order_kg": null,
-   "price_info": {
-    "value": "Открытого прайса с ценами в тексте страниц нет; на сайте есть разделы «Узнать цены» и «Получить прайс-лист» с формами заявки, а также «Прайс-лист» в меню",
-    "quote": "Узнать цены",
-    "url": "https://kardail.ru/"
-   },
-   "query_prices": [],
-   "query_for": "мука пшеничная",
-   "certificates": [
-    {
-     "value": "Качество продукции подтверждено соответствующими сертификатами; раздел «Сертификаты» (декларации о соответствии)",
-     "quote": "Качество продукции подтверждено соответствующими сертификатами.",
-     "url": "https://kardail.ru/"
-    }
-   ],
-   "delivery": {
-    "value": "Доставка в любые регионы Российской Федерации; стоимость зависит от веса, объёма и расстояния, уточняется по телефону",
-    "quote": "Доставим в любые регионы Российской Федерации.",
-    "url": "https://kardail.ru/dostavka-i-oplata/"
-   },
-   "wholesale": {
-    "value": "Оптовые закупки муки; заключение официального договора",
-    "quote": "Заключение договора",
-    "url": "https://kardail.ru/dostavka-i-oplata/"
-   },
-   "sources": [
-    "https://kardail.ru/",
-    "https://kardail.ru/about",
-    "https://kardail.ru/contacts/",
-    "https://kardail.ru/dostavka-i-oplata/",
-    "https://kardail.ru/about/",
-    "https://kardail.ru/sertifikaty/"
-   ],
-   "rejected_facts": 1
-  },
-  {
    "domain": "lavakon.com",
    "url": "https://lavakon.com/catalog/muka",
    "also_domains": [],
@@ -362,12 +443,12 @@
     "url": "https://lavakon.com/"
    },
    "offering": {
-    "value": "Сырьё и ингредиенты для хлебопекарного и кондитерского производства, в т.ч. мука пшеничная (высший сорт, М 55-23, высокобелковая)",
-    "quote": "Мука пшеничная оптом – классические сорта (М 55-23, высший сорт), а также высокобелковая мука для хлеба с большим объёмом и улучшенной структурой.",
+    "value": "Ингредиенты для хлебопекарного и кондитерского производства, мука пшеничная и др.",
+    "quote": "Мука пшеничная оптом – классические сорта (М 55-23, высший сорт)",
     "url": "https://lavakon.com/catalog/muka"
    },
    "address": {
-    "value": "Московская область, г. Фрязино, ул. Ленина 22; склад: МО, г. Лобня, Лейтенанта Бойко, 91",
+    "value": "г. Фрязино, ул. Ленина 22 (Московская область)",
     "quote": "Московская область, г. Фрязино, ул. Ленина 22",
     "url": "https://lavakon.com/contacts/"
    },
@@ -383,19 +464,19 @@
    "emails": [
     {
      "value": "info@lavakon.com",
-     "quote": "Почта",
+     "quote": "Почта\ninfo@lavakon.com",
      "url": "https://lavakon.com/contacts/"
     }
    ],
    "inn": null,
    "min_order": {
-    "value": "Минимальная партия заказа – от одной упаковки",
+    "value": "Минимальная партия — от одной упаковки",
     "quote": "Минимальная партия заказа – от одной упаковки",
     "url": "https://lavakon.com/delivery/"
    },
    "min_order_kg": null,
    "price_info": {
-    "value": "Цена на муку оптом уточняется по запросу; условия оплаты обсуждаются индивидуально",
+    "value": "Цена на муку оптом уточняется по запросу, зависит от объёма, доставки и специфики производства",
     "quote": "Цена на муку оптом всегда уточняется по запросу – она зависит от объёма закупки, условий доставки и специфики вашего производства.",
     "url": "https://lavakon.com/catalog/muka"
    },
@@ -409,12 +490,24 @@
     }
    ],
    "delivery": {
-    "value": "Доставка любой удобной транспортной компанией; самовывоз в Лобне",
+    "value": "Доставка любой удобной для вас транспортной компанией; самовывоз в Лобне",
     "quote": "Доставка - любой удобной для вас транспортной компанией.",
     "url": "https://lavakon.com/delivery/"
    },
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "Доставка - любой удобной для вас транспортной компанией.",
+    "url": "https://lavakon.com/delivery/"
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
    "wholesale": {
-    "value": "Продажа муки оптом, мешки от 25 до 50 кг",
+    "value": "Работа с пекарнями, кондитерскими цехами и производствами; мука оптом в мешках от 25 до 50 кг",
     "quote": "Компания «Лавакон» поставляет муку оптом в мешках от 25 до 50 кг.",
     "url": "https://lavakon.com/catalog/muka"
    },
@@ -429,6 +522,119 @@
    "rejected_facts": 0
   },
   {
+   "domain": "makfa.ru",
+   "url": "https://www.makfa.ru/catalog/horeca/vysshij-sort",
+   "also_domains": [],
+   "name": {
+    "value": "АО «МАКФА»",
+    "quote": "«МАКФА» — лидер рынка макаронных изделий и муки в России, крупный производитель круп и зерновых хлопьев.",
+    "url": "https://www.makfa.ru/about/"
+   },
+   "offering": {
+    "value": "Макаронные изделия, крупы и зерновые хлопья, мука и готовые смеси для выпечки",
+    "quote": "Продукция бренда охватывает несколько направлений бакалейного рынка: макаронную продукцию, крупы и зерновые хлопья, муку и готовые смеси для выпечки.",
+    "url": "https://www.makfa.ru/about/"
+   },
+   "address": {
+    "value": "Юридический адрес: г. Москва, переулок Вспольный, д. 5, стр. 1; коммерческая служба: 454091, г. Челябинск, поселок Мелькомбинат № 2, участок 1",
+    "quote": "454091, г. Челябинск, поселок",
+    "url": "https://www.makfa.ru/contacts/"
+   },
+   "regions": [],
+   "nationwide": {
+    "value": "Поставка в каждый регион России",
+    "quote": "«МАКФА» поставляет свою продукцию в каждый регион России",
+    "url": "https://www.makfa.ru/about/"
+   },
+   "phones": [
+    {
+     "value": "+7 (351) 255-98-93",
+     "quote": "+ 7 (351) 255-98-93 (секретарь)",
+     "url": "https://www.makfa.ru/contacts/"
+    },
+    {
+     "value": "+7 (800) 500-08-04",
+     "quote": "88005000804",
+     "url": "https://www.makfa.ru/contacts/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "larionova@makfa.ru",
+     "quote": "larionova@makfa.ru",
+     "url": "https://www.makfa.ru/"
+    },
+    {
+     "value": "hotline@makfa.ru",
+     "quote": "hotline@makfa.ru",
+     "url": "https://www.makfa.ru/contacts/"
+    },
+    {
+     "value": "secretar@makfa.ru",
+     "quote": "secretar@makfa.ru",
+     "url": "https://www.makfa.ru/contacts/"
+    }
+   ],
+   "inn": {
+    "value": "7438015885",
+    "quote": "ИНН 7438015885",
+    "url": "https://www.makfa.ru/"
+   },
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": null,
+   "query_prices": [],
+   "query_for": "мука пшеничная",
+   "certificates": [
+    {
+     "value": "Сертификаты и декларации соответствия на муку и мучные смеси (архив 7Z)",
+     "quote": "Мука и мучные смеси",
+     "url": "https://www.makfa.ru/partners/"
+    },
+    {
+     "value": "Сертификат халяль",
+     "quote": "Сертификат халяль",
+     "url": "https://www.makfa.ru/partners/"
+    },
+    {
+     "value": "Сертификат кошерности",
+     "quote": "Сертификат кошерности",
+     "url": "https://www.makfa.ru/partners/"
+    },
+    {
+     "value": "Система менеджмента безопасности пищевых продуктов сертифицирована согласно FSSC 22000",
+     "quote": "Система менеджмента безопасности пищевых продуктов сертифицирована согласно требованиям Food Safety System Certification 22000.",
+     "url": "https://www.makfa.ru/about/"
+    }
+   ],
+   "delivery": null,
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "yes",
+    "quote": "«МАКФА» поставляет свою продукцию в каждый регион России",
+    "url": "https://www.makfa.ru/about/"
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "wholesale": {
+    "value": "Работа с юрлицами: требования к контрагентам, коммерческая служба, отдел по работе с торговыми сетями",
+    "quote": "Отдел по работе с торговыми сетями",
+    "url": "https://www.makfa.ru/contacts/"
+   },
+   "sources": [
+    "https://www.makfa.ru/",
+    "https://www.makfa.ru/contacts/",
+    "https://www.makfa.ru/about/",
+    "https://www.makfa.ru/tasty/risovye-moti-v-domashnikh-usloviyakh/",
+    "https://www.makfa.ru/partners/"
+   ],
+   "rejected_facts": 1
+  },
+  {
    "domain": "marr.ru",
    "url": "https://marr.ru/catalog/bakaleya-napitki/muka",
    "also_domains": [],
@@ -438,43 +644,32 @@
     "url": "https://marr.ru/"
    },
    "offering": {
-    "value": "Федеральный дистрибьютор продуктов питания для HoReCa, включая муку и другие бакалейные товары; собственное производство мясных полуфабрикатов",
+    "value": "Федеральный дистрибьютор продуктов питания и производитель мясных полуфабрикатов для foodservice, в т.ч. бакалея и мука",
     "quote": "МАРР РУССИЯ - федеральный дистрибьютор продуктов питания и производитель мясных полуфабрикатов для рынка foodservice.",
     "url": "https://marr.ru/"
    },
    "address": {
-    "value": "Главный офис: г. Одинцово, ул. Восточная, д. 5",
-    "quote": "Главный офис: 143006 г. Одинцово, ул. Восточная, д. 5",
+    "value": "Филиал в Екатеринбурге: 620050 г. Екатеринбург, ул. Монтажников, д. 18/3",
+    "quote": "Екатеринбург (филиал)\n620050 г. Екатеринбург, ул. Монтажников, д. 18/3",
     "url": "https://marr.ru/contacts"
    },
-   "regions": [
-    {
-     "value": "Москва, Санкт-Петербург, Екатеринбург, Ростов-на-Дону, Сочи, Самара, Новосибирск, Красноярск, Воронеж, Алматы",
-     "quote": "9 представительств по России",
-     "url": "https://marr.ru/"
-    }
-   ],
+   "regions": [],
    "nationwide": {
-    "value": "Федеральный дистрибьютор, филиалы в регионах России",
-    "quote": "МАРР РУССИЯ - федеральный дистрибьютор продуктов питания и производитель мясных полуфабрикатов для рынка foodservice.",
+    "value": "Федеральный дистрибьютор, 9 представительств по России",
+    "quote": "9 представительств по России",
     "url": "https://marr.ru/"
    },
    "phones": [
     {
-     "value": "+7 (495) 663-83-21",
-     "quote": "Телефон: +74956638321",
-     "url": "https://marr.ru/contacts"
-    },
-    {
-     "value": "+7 (495) 785-39-44",
-     "quote": "Телефон: +74957853944",
+     "value": "+7 (343) 270-91-91",
+     "quote": "Екатеринбург (филиал)\n620050 г. Екатеринбург, ул. Монтажников, д. 18/3\nТел:\n+7 (343) 270-91-91",
      "url": "https://marr.ru/contacts"
     }
    ],
    "emails": [
     {
-     "value": "info@marr.ru",
-     "quote": "Email: info@marr.ru",
+     "value": "ekt@marr.ru",
+     "quote": "Email: ekt@marr.ru",
      "url": "https://marr.ru/contacts"
     }
    ],
@@ -486,7 +681,7 @@
    "min_order": null,
    "min_order_kg": null,
    "price_info": {
-    "value": "Цены по запросу: на карточках товара написано «Узнать цену»; видимость актуальных цен и скидок требует регистрации",
+    "value": "Цены по запросу; после регистрации доступен каталог с ценами, согласованными с менеджером",
     "quote": "Зарегистрировавшись на сайте, вы сможете увидеть каталог с актуальными ценами и скидками, согласованными с вашим менеджером.",
     "url": "https://marr.ru/about/faq"
    },
@@ -494,8 +689,20 @@
    "query_for": "мука пшеничная",
    "certificates": [],
    "delivery": null,
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "yes",
+    "quote": "Екатеринбург (филиал)\n620050 г. Екатеринбург, ул. Монтажников, д. 18/3",
+    "url": "https://marr.ru/contacts"
+   },
    "wholesale": {
-    "value": "Продажа оптом для ресторанов, кафе, баров",
+    "value": "Работа с юрлицами и оптом: продукты питания оптом для ресторанов, кафе, баров",
     "quote": "Мука - купить оптом муку для ресторанов, кафе, баров",
     "url": "https://marr.ru/catalog/bakaleya-napitki/muka"
    },
@@ -507,7 +714,7 @@
     "https://marr.ru/suppliers",
     "https://marr.ru/about/faq"
    ],
-   "rejected_facts": 1
+   "rejected_facts": 0
   },
   {
    "domain": "partnermk.ru",
@@ -519,18 +726,24 @@
     "url": "https://partnermk.ru/"
    },
    "offering": {
-    "value": "Пищевые и кормовые ингредиенты, в т.ч. мука (Протелон 22 — высокобелковая мука, улучшитель муки и теста)",
-    "quote": "Высокобелковая мука Протелон 22",
+    "value": "Пищевые и кормовые ингредиенты, в т.ч. муки и улучшители муки (например, Протелон 22 — высокобелковая пшеничная мука)",
+    "quote": "Протелон 22 — это высокобелковая пшеничная мука, стабилизирующая качество муки со слабой клейковиной",
     "url": "https://partnermk.ru/type-muka"
    },
    "address": {
-    "value": "Калужская область, г. Малоярославец, пер. Калинина, 11; офис продаж в Москве",
+    "value": "Калужская область, г. Малоярославец, пер. Калинина, д. 11 (офис-производство); Москва, ул. Вавилова, д. 2/1, офис 330",
     "quote": "249096, Калужская область, Малоярославец, пер. Калинина, д. 11",
     "url": "https://partnermk.ru/kontakty/"
    },
-   "regions": [],
+   "regions": [
+    {
+     "value": "Доставка по России и СНГ",
+     "quote": "Закажите муку оптом с доставкой по России и СНГ от производителя Партнер-М",
+     "url": "https://partnermk.ru/type-muka"
+    }
+   ],
    "nationwide": {
-    "value": "Работа по всей территории России и СНГ",
+    "value": "Работа по всей территории России",
     "quote": "Мы работаем по всей территории России и успешно ведем экспортную деятельностью более 10 лет.",
     "url": "https://partnermk.ru/kontakty/"
    },
@@ -538,24 +751,24 @@
     {
      "value": "+7 (499) 270-01-65",
      "quote": "+7 (499) 270-01-65",
-     "url": "https://partnermk.ru/kontakty/"
+     "url": "https://partnermk.ru/"
     },
     {
      "value": "+7 (484) 313-13-82",
      "quote": "+7 (48431) 3-13-82",
-     "url": "https://partnermk.ru/kontakty/"
+     "url": "https://partnermk.ru/"
     }
    ],
    "emails": [
     {
-     "value": "moscow.office@partnermk.ru",
-     "quote": "moscow.office@partnermk.ru",
-     "url": "https://partnermk.ru/kontakty/"
-    },
-    {
      "value": "mal.office@partnermk.ru",
      "quote": "mal.office@partnermk.ru",
-     "url": "https://partnermk.ru/kontakty/"
+     "url": "https://partnermk.ru/"
+    },
+    {
+     "value": "moscow.office@partnermk.ru",
+     "quote": "moscow.office@partnermk.ru",
+     "url": "https://partnermk.ru/"
     }
    ],
    "inn": null,
@@ -566,17 +779,35 @@
    },
    "min_order_kg": 300.0,
    "price_info": {
-    "value": "Цена по запросу; стоимость зависит от величины партии и согласуется с клиентами",
+    "value": "Цены по запросу; партия от 300 кг для Протелон 22",
     "quote": "Товар в наличии, цена по запросу",
     "url": "https://partnermk.ru/type-muka"
    },
    "query_prices": [],
    "query_for": "мука пшеничная",
-   "certificates": [],
+   "certificates": [
+    {
+     "value": "ISO 22000, Халяль, Кошер, «Сделано в России»",
+     "quote": "ISO 22000",
+     "url": "https://partnermk.ru/about/"
+    }
+   ],
    "delivery": {
     "value": "Бесплатная доставка оплаченной партии до терминала транспортной компании; самовывоз со складов",
     "quote": "Мы бесплатно доставим оплаченную партию пищевых ингредиентов до терминала транспортной компании.",
     "url": "https://partnermk.ru/usloviya-sotrudnichestva/"
+   },
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "yes",
+    "quote": "Мы работаем по всей территории России и успешно ведем экспортную деятельностью более 10 лет.",
+    "url": "https://partnermk.ru/kontakty/"
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
    },
    "wholesale": {
     "value": "Оптовые поставки, работа с юрлицами по безналичному расчету",
@@ -594,181 +825,6 @@
    "rejected_facts": 0
   },
   {
-   "domain": "ramkhp.ru",
-   "url": "https://ramkhp.ru/shop/flour",
-   "also_domains": [],
-   "name": {
-    "value": "АО «Раменский комбинат хлебопродуктов»",
-    "quote": "АО «Раменский комбинат хлебопродуктов» предлагает купить муку оптом и в розницу по ценам от производителя.",
-    "url": "https://ramkhp.ru/shop/flour"
-   },
-   "offering": {
-    "value": "Пшеничная мука хлебопекарная (высший сорт, экстра, цельнозерновая, для пиццы), мука общего назначения, комбикорма",
-    "quote": "Мука пшеничная хлебопекарная высший сорт – 50кг",
-    "url": "https://ramkhp.ru/shop/flour"
-   },
-   "address": {
-    "value": "140152, Московская область, г. Раменское, посёлок Дружба",
-    "quote": "140152, Московская область, г. Раменское, посёлок Дружба",
-    "url": "https://ramkhp.ru/kontakty/"
-   },
-   "regions": [
-    {
-     "value": "Быстрая доставка муки в городах: Москва, Санкт-Петербург, Самара, Казань, Калуга, Нижний Новгород, Рязань, Тверь, Тула, Уфа, Ярославль",
-     "quote": "Услуга быстрой доставки муки доступна в городах: Москва, Санкт-Петербург, Самара, Казань, Калуга, Нижний Новгород, Рязань, Тверь, Тула, Уфа, Ярославль.",
-     "url": "https://ramkhp.ru/shop/flour"
-    }
-   ],
-   "nationwide": {
-    "value": "Доставка муки во все регионы России",
-    "quote": "Осуществляем доставку муки во все регионы России.",
-    "url": "https://ramkhp.ru/shop/flour"
-   },
-   "phones": [
-    {
-     "value": "+7 (495) 223-18-14",
-     "quote": "+7 495 223 18 14",
-     "url": "https://ramkhp.ru/kontakty/"
-    },
-    {
-     "value": "+7 (495) 775-18-14",
-     "quote": "+7 495 775 18 14",
-     "url": "https://ramkhp.ru/kontakty/"
-    }
-   ],
-   "emails": [
-    {
-     "value": "post@ramkhp.ru",
-     "quote": "post@ramkhp.ru",
-     "url": "https://ramkhp.ru/kontakty/"
-    },
-    {
-     "value": "muka@ramkhp.ru",
-     "quote": "muka@ramkhp.ru",
-     "url": "https://ramkhp.ru/kontakty/"
-    }
-   ],
-   "inn": null,
-   "min_order": null,
-   "min_order_kg": null,
-   "price_info": {
-    "value": "Скидки на продукцию от объёма и при самовывозе",
-    "quote": "Скидки на продукцию от объёма и при самовывозе;",
-    "url": "https://ramkhp.ru/shop/flour"
-   },
-   "query_prices": [
-    {
-     "name": "Мука пшеничная хлебопекарная высший сорт - мешок 25 кг",
-     "price": 808.0,
-     "unit": "",
-     "pack": "25 кг",
-     "quote": "Мука пшеничная хлебопекарная высший сорт - мешок 25 кг 808,00 ₽",
-     "url": "https://ramkhp.ru/shop/flour",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука пшеничная хлебопекарная высший сорт т/м \"Печенов\" - 20 кг",
-     "price": 760.0,
-     "unit": "",
-     "pack": "20 кг",
-     "quote": "Мука пшеничная хлебопекарная высший сорт т/м \"Печенов\" - 20 кг 760,00 ₽",
-     "url": "https://ramkhp.ru/shop/flour",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука пшеничная хлебопекарная высший сорт т/м «Печенов» для пиццы - 10 кг",
-     "price": 420.0,
-     "unit": "",
-     "pack": "10 кг",
-     "quote": "Мука пшеничная хлебопекарная высший сорт т/м «Печенов» для пиццы - 10 кг 420,00 ₽",
-     "url": "https://ramkhp.ru/shop/flour",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука пшеничная хлебопекарная высший сорт т/м «Печенов» для пиццы - мешок 20 кг",
-     "price": 820.0,
-     "unit": "",
-     "pack": "20 кг",
-     "quote": "Мука пшеничная хлебопекарная высший сорт т/м «Печенов» для пиццы - мешок 20 кг 820,00 ₽",
-     "url": "https://ramkhp.ru/shop/flour",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука пшеничная хлебопекарная второй сорт – 50кг",
-     "price": 1230.0,
-     "unit": "",
-     "pack": "50 кг",
-     "quote": "Мука пшеничная хлебопекарная второй сорт – 50кг 1230,00 ₽",
-     "url": "https://ramkhp.ru/shop/flour",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука пшеничная хлебопекарная высший сорт т/м «Печенов» для пиццы - 2кг",
-     "price": 84.0,
-     "unit": "",
-     "pack": "2 кг",
-     "quote": "Мука пшеничная хлебопекарная высший сорт т/м «Печенов» для пиццы - 2кг 84,00 ₽",
-     "url": "https://ramkhp.ru/shop/flour",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука пшеничная общего назначения тип М55-23 – 50кг",
-     "price": 1500.0,
-     "unit": "",
-     "pack": "50 кг",
-     "quote": "Мука пшеничная общего назначения тип М55-23 – 50кг 1500,00 ₽",
-     "url": "https://ramkhp.ru/shop/flour",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука пшеничная хлебопекарная экстра сорт т/м «Печенов» - 2кг",
-     "price": 88.0,
-     "unit": "",
-     "pack": "2 кг",
-     "quote": "Мука пшеничная хлебопекарная экстра сорт т/м «Печенов» - 2кг 88,00 ₽",
-     "url": "https://ramkhp.ru/shop/flour",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    }
-   ],
-   "query_for": "мука пшеничная",
-   "certificates": [],
-   "delivery": {
-    "value": "Стоимость рассчитывается индивидуально исходя из тарифа за 1 км; доставка от 1 дня по Москве, МO и соседним регионам",
-    "quote": "Стоимость доставки зависит от расстояния и рассчитывается индивидуально исходя из тарифа за 1 км.",
-    "url": "https://ramkhp.ru/shop/flour"
-   },
-   "wholesale": {
-    "value": "Оптовая продажа муки, поставки муковозами",
-    "quote": "Оптовым покупателям возможна поставка муковозами.",
-    "url": "https://ramkhp.ru/shop/flour"
-   },
-   "sources": [
-    "https://ramkhp.ru/",
-    "https://ramkhp.ru/shop/flour",
-    "https://ramkhp.ru/kontakty/",
-    "https://ramkhp.ru/services/dostavka/",
-    "https://ramkhp.ru/stat-distributorom/",
-    "https://ramkhp.ru/press-center/otkorm-svinej-myasnoj-i-bekonnyj-vidy-normy-kormleniya/"
-   ],
-   "rejected_facts": 0
-  },
-  {
    "domain": "super-muka.ru",
    "url": "https://super-muka.ru",
    "also_domains": [],
@@ -778,24 +834,14 @@
     "url": "https://super-muka.ru/"
    },
    "offering": {
-    "value": "Профессиональная мука для пекарен и ресторанов, в т.ч. мука пшеничная цельнозерновая, мука для багетов, сдобных изделий, пиццы",
+    "value": "Профессиональная мука для пекарен и ресторанов, в т.ч. мука для классической пиццы, багетов, сдобных изделий, пшеничная цельнозерновая",
     "quote": "Мука пшеничная цельнозерновая",
     "url": "https://super-muka.ru/"
    },
-   "address": {
-    "value": "Лаборатория и производство; адрес главного офиса на страницах не указан",
-    "quote": "В нашей лаборатории – одной из самых оснащённых лабораторий в России",
-    "url": "https://super-muka.ru/about/lab/"
-   },
-   "regions": [
-    {
-     "value": "Представители-дистрибьюторы по регионам России и СНГ (более 80 регионов)",
-     "quote": "более 80 регионов России и страны СНГ",
-     "url": "https://super-muka.ru/contacts/"
-    }
-   ],
+   "address": null,
+   "regions": [],
    "nationwide": {
-    "value": "Продукция представлена практически в каждом регионе России",
+    "value": "Продукция представлена практически в каждом регионе России через дистрибьюторов",
     "quote": "На текущий момент наша продукция представлена практически в каждом регионе России",
     "url": "https://super-muka.ru/contacts/"
    },
@@ -807,8 +853,8 @@
     },
     {
      "value": "+7 (910) 700-30-30",
-     "quote": "+7 910 700 30 30",
-     "url": "https://super-muka.ru/"
+     "quote": "+7 910 700 30 30 (доступен What’sApp)",
+     "url": "https://super-muka.ru/about/"
     }
    ],
    "emails": [
@@ -824,21 +870,22 @@
    "price_info": null,
    "query_prices": [],
    "query_for": "мука пшеничная",
-   "certificates": [
-    {
-     "value": "Производство продукции только из зерна, выращенного на территории РФ",
-     "quote": "Производство продукции только из зерна, выращенного на территории РФ",
-     "url": "https://super-muka.ru/about/mission/"
-    },
-    {
-     "value": "Качественное сырье без ГМО",
-     "quote": "Качественное сырье без ГМО",
-     "url": "https://super-muka.ru/about/mission/"
-    }
-   ],
+   "certificates": [],
    "delivery": null,
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
    "wholesale": {
-    "value": "Оптовые продажи пекарням и ресторанам",
+    "value": "Оптовые продажи профессиональной муки для пекарен и ресторанов",
     "quote": "Профессиональная мука для пекарен, ресторанов оптом по доступным ценам",
     "url": "https://super-muka.ru/"
    },
@@ -856,24 +903,24 @@
    "url": "https://torgmuka.ru",
    "also_domains": [],
    "name": {
-    "value": "ТоргМука (ООО «ТоргМука»)",
+    "value": "ООО \"ТоргМука\"",
     "quote": "© 2025 ООО \"ТоргМука\". Все права защищены.",
     "url": "https://torgmuka.ru/"
    },
    "offering": {
-    "value": "Оптовые поставки муки пшеничной всех сортов и ржаной для пекарен, кондитерских и других производств",
+    "value": "Пшеничная мука всех сортов и ржаная мука оптом",
     "quote": "Пшеничная мука всех сортов и ржаная мука — от премиальных до экономичных вариантов.",
     "url": "https://torgmuka.ru/"
    },
    "address": {
-    "value": "Собственный склад в Екатеринбурге; большой склад в Березовском",
+    "value": "Собственный склад в Екатеринбурге; склад в Березовском",
     "quote": "Собственный склад в Екатеринбурге.",
     "url": "https://torgmuka.ru/"
    },
    "regions": [
     {
      "value": "Екатеринбург и область",
-     "quote": "по городу и области",
+     "quote": "Быстрая доставка по городу и области",
      "url": "https://torgmuka.ru/"
     }
    ],
@@ -894,116 +941,45 @@
    ],
    "inn": null,
    "min_order": {
-    "value": "Прямые поставки от производителей партиями от 20 тонн",
+    "value": "Прямые поставки партиями от 20 тонн",
     "quote": "Для крупных заказов — прямые поставки от производителей партиями от 20 тонн.",
     "url": "https://torgmuka.ru/"
    },
-   "min_order_kg": 20000.0,
+   "min_order_kg": null,
    "price_info": {
-    "value": "Открытый прайс на сайте; цены без учета доставки, актуальные условия — по запросу КП; с НДС; постоянным клиентам отсрочка платежа, цены фиксируются на период договора",
+    "value": "Цены для мелкого опта в Екатеринбурге и области; указаны без учета доставки, актуальные цены по запросу КП; с НДС",
     "quote": "Цены указаны без учета доставки. Для получения актуальной информации о ценах и условиях поставок, пожалуйста,",
     "url": "https://torgmuka.ru/prajs/"
    },
-   "query_prices": [
+   "query_prices": [],
+   "query_for": "мука пшеничная",
+   "certificates": [
     {
-     "name": "Мука ТМ Птица-мельница (Пермский мукомольный завод), высший сорт",
-     "price": 28.8,
-     "unit": "",
-     "pack": "50 кг",
-     "quote": "Пермский мукомольный завод ТМ Птица-мельница высший сорт 50 кг 28.80",
-     "url": "https://torgmuka.ru/prajs/",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука ТМ Птица-мельница (Пермский мукомольный завод), первый сорт",
-     "price": 28.1,
-     "unit": "",
-     "pack": "50 кг",
-     "quote": "Пермский мукомольный завод ТМ Птица-мельница первый сорт 50 кг 28.10",
-     "url": "https://torgmuka.ru/prajs/",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука ТМ Добродея (Омская макаронная фабрика), высший сорт",
-     "price": 55.5,
-     "unit": "",
-     "pack": "50 кг",
-     "quote": "Омская макаронная фабрика ТМ Добродея высший сорт 50 кг 55.50",
-     "url": "https://torgmuka.ru/prajs/",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука ТМ Добродея (Омская макаронная фабрика), первый сорт",
-     "price": 31.0,
-     "unit": "",
-     "pack": "50 кг",
-     "quote": "Омская макаронная фабрика ТМ Добродея первый сорт 50 кг 31.00",
-     "url": "https://torgmuka.ru/prajs/",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука ТМ Добродея (Омская макаронная фабрика), второй сорт",
-     "price": 20.0,
-     "unit": "",
-     "pack": "50 кг",
-     "quote": "Омская макаронная фабрика ТМ Добродея второй сорт 50 кг 20,00",
-     "url": "https://torgmuka.ru/prajs/",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука ТМ Манитоба (Омская макаронная фабрика), высший сорт",
-     "price": 54.5,
-     "unit": "",
-     "pack": "25 кг",
-     "quote": "Омская макаронная фабрика ТМ Манитоба высший сорт 25 кг 54,50",
-     "url": "https://torgmuka.ru/prajs/",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука ТМ Римачината (Омская макаронная фабрика), высший сорт",
-     "price": 75.2,
-     "unit": "",
-     "pack": "5 кг",
-     "quote": "Омская макаронная фабрика ТМ Римачината высший сорт 5 кг 75,20",
-     "url": "https://torgmuka.ru/prajs/",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    },
-    {
-     "name": "Мука ТМ Белый Терем (АО Мельница, Омск), высший сорт",
-     "price": 28.5,
-     "unit": "",
-     "pack": "50 кг",
-     "quote": "АО Мельница Омск ТМ Белый Терем высший сорт 50 кг 28,50",
-     "url": "https://torgmuka.ru/prajs/",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
+     "value": "Сертификация продукции, соответствие ГОСТам",
+     "quote": "Вся продукция сертифицирована и соответствует ГОСТам.",
+     "url": "https://torgmuka.ru/"
     }
    ],
-   "query_for": "мука пшеничная",
-   "certificates": [],
    "delivery": {
     "value": "Доставка 6 дней в неделю, включая услуги грузчиков; по городу и области",
     "quote": "Доставка 6 дней в неделю, включая услуги грузчиков.",
     "url": "https://torgmuka.ru/"
    },
+   "delivery_check": {
+    "region": "Екатеринбург",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Екатеринбург",
+    "verdict": "yes",
+    "quote": "Собственный склад в Екатеринбурге.",
+    "url": "https://torgmuka.ru/"
+   },
    "wholesale": {
-    "value": "Оптовые поставки для пекарен, кондитерских и производств",
-    "quote": "Поставки муки оптом для пекарен и кондитерских",
+    "value": "Оптовые поставки для пекарен, кондитерских и производств; партиями от 20 тонн — прямые поставки",
+    "quote": "Для крупных заказов — прямые поставки от производителей партиями от 20 тонн.",
     "url": "https://torgmuka.ru/"
    },
    "sources": [
@@ -1011,7 +987,7 @@
     "https://torgmuka.ru/vizitka/",
     "https://torgmuka.ru/prajs/"
    ],
-   "rejected_facts": 0
+   "rejected_facts": 3215
   }
  ]
 }

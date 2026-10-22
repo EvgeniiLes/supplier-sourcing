@@ -30,8 +30,12 @@ def scored_results(search_id: int, weights: dict | None = None) -> list[dict]:
         qp = extra.get("query_prices")
         r["query_prices"] = qp
         r["query_prices_for"] = extra.get("query", "")
+        r["delivery_check"] = extra.get("delivery")            # вердикт «возит ли в регион» именно этого поиска
+        r["presence_check"] = extra.get("presence")            # вердикт «есть ли офис/склад в городе»
         r["score"] = score_supplier(Supplier(**r["data"]), search["region"], filters, weights,
-                                    has_query_prices=None if qp is None else bool(qp)).model_dump()
+                                    has_query_prices=None if qp is None else bool(qp),
+                                    delivery_check=r["delivery_check"],
+                                    presence_check=r["presence_check"]).model_dump()
         r["offers_count"] = counts.get(r["domain"], 0)
     rows.sort(key=lambda x: (not x["score"]["passes"], -x["score"]["score"]))
     return rows

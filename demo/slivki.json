@@ -5,315 +5,301 @@
   "сливки",
   "сливок"
  ],
- "collected_at": "2026-10-21",
+ "collected_at": "2026-10-22",
  "suppliers": [
   {
-   "domain": "biomilk.ru",
-   "url": "https://biomilk.ru/catalog/moloko-i-molochnyie-produktyi/slivki",
+   "domain": "dvemorkovki.ru",
+   "url": "https://dvemorkovki.ru/catalog/ingredients/slivki_syr_maslo/5224",
    "also_domains": [],
    "name": {
-    "value": "ТК Качество (biomilk.ru)",
-    "quote": "Дистрибьютор продуктов питания – более 1700 товаров с доставкой по Москве",
-    "url": "https://biomilk.ru/"
+    "value": "Две Морковки (Магазин со Вкусом Andy Chef / Энди Шеф)",
+    "quote": "Интернет-магазин для профессиональных кондитеров \"Две Морковки\"",
+    "url": "https://dvemorkovki.ru/"
    },
    "offering": {
-    "value": "Молочная и немолочная продукция: сливки, молоко, сыры, мясная гастрономия, кондитерские изделия и др.",
-    "quote": "Также в нашем каталоге есть немолочная продукция: мясная, кондитерская,",
-    "url": "https://biomilk.ru/about/"
+    "value": "Интернет-магазин для кондитеров: ингредиенты, инвентарь, формы, упаковка и др.",
+    "quote": "Интернет-магазин для профессиональных кондитеров в Москве",
+    "url": "https://dvemorkovki.ru/"
    },
    "address": {
-    "value": "Московская область, г. о. Щёлково, с. Трубино, д. 77А, корп. 2",
-    "quote": "Московская область, г. о. Щёлково, с. Трубино, д. 77А, корп. 2",
-    "url": "https://biomilk.ru/kontakty/"
+    "value": "г. Москва, Варшавское шоссе, д. 132А, к. 1, этаж 1; г. Москва, ул. Сущевский вал, д. 5, стр. 9, ТЦ «Савеловский»",
+    "quote": "117519, г. Москва Варшавское шоссе 132А к 1, этаж 1",
+    "url": "https://dvemorkovki.ru/"
+   },
+   "regions": [],
+   "nationwide": {
+    "value": "Отправки в более чем 50 стран мира; курьерская доставка по России через курьерские службы",
+    "quote": "За 7 лет работы отправили более 4000 тысяч заказов в более чем 50 разных стран мира",
+    "url": "https://dvemorkovki.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 142-07-77",
+     "quote": "+7 (495) 142-07-77",
+     "url": "https://dvemorkovki.ru/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "zakaz@dvemorkovki.ru",
+     "quote": "Написать на почту zakaz@dvemorkovki.ru",
+     "url": "https://dvemorkovki.ru/"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": null,
+   "query_prices": [],
+   "query_for": "сливки",
+   "certificates": [],
+   "delivery": {
+    "value": "Самовывоз бесплатно; курьер Logsis в Москве от 429 руб.; экспресс-доставка 599 руб. в пределах МКАД",
+    "quote": "Курьер Logsis Москва – от 429 руб. (бесплатно для заказов стоимостью от 7000 руб.), срок доставки – 1 день",
+    "url": "https://dvemorkovki.ru/help/delivery/"
+   },
+   "delivery_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "Москва в пределах МКАД – 599 руб. в течение дня, +99 руб. при выборе определенного интервала.",
+    "url": "https://dvemorkovki.ru/help/delivery/"
+   },
+   "presence_check": {
+    "region": "Москва",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "wholesale": {
+    "value": "Раздел для юридических лиц и поставщиков; обслуживание HoReCa",
+    "quote": "Удобный поставщик для HoReCa и кондитеров",
+    "url": "https://dvemorkovki.ru/"
+   },
+   "sources": [
+    "https://dvemorkovki.ru/",
+    "https://dvemorkovki.ru/catalog/ingredients/slivki_syr_maslo/5224",
+    "https://dvemorkovki.ru/contacts/",
+    "https://dvemorkovki.ru/help/",
+    "https://dvemorkovki.ru/help/delivery/",
+    "https://dvemorkovki.ru/company/"
+   ],
+   "rejected_facts": 1
+  },
+  {
+   "domain": "ekorfish.com",
+   "url": "https://ekorfish.com/restoranam/kofeynyam",
+   "also_domains": [],
+   "name": {
+    "value": "ПТК Экор (ООО «ПТК ЭКОР»)",
+    "quote": "Группа компаний Экор работает в трёх городах.",
+    "url": "https://ekorfish.com/contacts/"
+   },
+   "offering": {
+    "value": "Оптовые поставки продуктов питания: рыба, морепродукты, мясо и птица, молочная продукция, бакалея, масла, соусы и др.",
+    "quote": "Более 3500 наименований продуктов питания оптом",
+    "url": "https://ekorfish.com/"
+   },
+   "address": {
+    "value": "Москва: Открытое шоссе, 13, стр. 1 (оптовая база); ул. 2-я Кабельная, 2с5 (центральный офис)",
+    "quote": "Оптовая база, г. Москва г. Москва, Открытое шоссе, 13, стр. 1",
+    "url": "https://ekorfish.com/contacts/"
    },
    "regions": [
     {
-     "value": "Москва и Московская область",
-     "quote": "Доставка сливок по Москве, Московской области и городам.",
-     "url": "https://biomilk.ru/catalog/moloko-i-molochnyie-produktyi/slivki"
+     "value": "Москва, Санкт-Петербург, Краснодар и ряд других городов",
+     "quote": "Доставка по Москве и области",
+     "url": "https://ekorfish.com/delivery/"
     }
    ],
    "nationwide": null,
    "phones": [
     {
-     "value": "+7 (495) 660-39-80",
-     "quote": "+7 (495) 660-39-80",
-     "url": "https://biomilk.ru/"
+     "value": "+7 (800) 505-01-82",
+     "quote": "Позвоните по единому номеру 8 (800) 505-01-82 или в московский офис +7 (495) 637-82-28",
+     "url": "https://ekorfish.com/contacts/"
+    },
+    {
+     "value": "+7 (495) 637-82-28",
+     "quote": "Оптовая база, г. Москва г. Москва, Открытое шоссе, 13, стр. 1 +7 (495) 637-82-28",
+     "url": "https://ekorfish.com/contacts/"
     }
    ],
    "emails": [
     {
-     "value": "zakaz@biomilk.ru",
-     "quote": "zakaz@biomilk.ru",
-     "url": "https://biomilk.ru/"
-    },
-    {
-     "value": "info@biomilk.ru",
-     "quote": "Почта:\ninfo@biomilk.ru",
-     "url": "https://biomilk.ru/kontakty/"
+     "value": "info@ekorfish.ru",
+     "quote": "напишите на info@ekorfish.ru",
+     "url": "https://ekorfish.com/contacts/"
     }
    ],
    "inn": {
-    "value": "505200078085",
-    "quote": "ИНН 505200078085",
-    "url": "https://biomilk.ru/politika-ispolzovanie-fajlov-cookie/"
+    "value": "7718741865",
+    "quote": "ИНН\n7718741865",
+    "url": "https://ekorfish.com/contacts/"
    },
    "min_order": {
-    "value": "Минимальная сумма поставки 5000р",
-    "quote": "Минимальная сумма поставки:\n5000р",
-    "url": "https://biomilk.ru/dostavka-i-oplata/"
+    "value": "Самовывоз от 3 000 ₽",
+    "quote": "Самовывоз — от 3 000 ₽.",
+    "url": "https://ekorfish.com/restoranam/kofeynyam"
    },
    "min_order_kg": null,
    "price_info": {
-    "value": "Открытый каталог с ценами на сайте; оплата безналично, наличными при получении, отсрочка для постоянных клиентов",
-    "quote": "Безналично",
-    "url": "https://biomilk.ru/dostavka-i-oplata/"
+    "value": "Цены зависят от суммы заказа: есть оптовые уровни от 3 000 ₽, 10 000 ₽, 25 000 ₽, 70 000 ₽",
+    "quote": "Цена от суммы заказа:",
+    "url": "https://ekorfish.com/restoranam/kofeynyam"
+   },
+   "query_prices": [],
+   "query_for": "сливки",
+   "certificates": [
+    {
+     "value": "Ветеринарные документы «Меркурий» на рыбу, мясо и птицу",
+     "quote": "Ветеринарные документы «Меркурий» на рыбу, мясо и птицу.",
+     "url": "https://ekorfish.com/restoranam/kofeynyam"
+    }
+   ],
+   "delivery": {
+    "value": "Доставка в день заказа по Москве при заказе до 11:00; бесплатная доставка от 5 000 ₽ по Москве, СПБ, Краснодару",
+    "quote": "Закажите до 11-00, доставим в день заказа по Москве",
+    "url": "https://ekorfish.com/"
+   },
+   "delivery_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "Собственный транспорт по Москве, Санкт-Петербургу и Краснодару. При заказе до 11:00 — в день заказа.",
+    "url": "https://ekorfish.com/restoranam/kofeynyam"
+   },
+   "presence_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "Оптовая база, г. Москва г. Москва, Открытое шоссе, 13, стр. 1",
+    "url": "https://ekorfish.com/contacts/"
+   },
+   "wholesale": {
+    "value": "Оптовые поставки для ресторанов, сетей, производств",
+    "quote": "ПТК Экор и ПТК Экор-Фиш — оптовые поставщики продуктов питания для ресторанов, сетей и производств.",
+    "url": "https://ekorfish.com/contacts/"
+   },
+   "sources": [
+    "https://ekorfish.com/",
+    "https://ekorfish.com/restoranam/kofeynyam",
+    "https://ekorfish.com/contacts/",
+    "https://ekorfish.com/delivery/",
+    "https://ekorfish.com/catalog/svezhemorozhenaya-ryba/",
+    "https://ekorfish.com/catalog/okhlazhdennaya-ryba/"
+   ],
+   "rejected_facts": 0
+  },
+  {
+   "domain": "gurman-llc.ru",
+   "url": "https://gurman-llc.ru/catalog/slivki/filter/product_type-is-zhirnost_33/apply",
+   "also_domains": [],
+   "name": {
+    "value": "ТД «Гурман» (ООО ТД \"ГУРМАН\")",
+    "quote": "Торговый дом «Гурман» поставляет продукты для Хорека по всей России.",
+    "url": "https://gurman-llc.ru/"
+   },
+   "offering": {
+    "value": "Продукты для ресторанов, кафе и HoReCa: молочные продукты, сыры, масла, заморозка, бакалея и др.",
+    "quote": "Продукты для ресторанов и кафе оптом от поставщика ТД «Гурман»",
+    "url": "https://gurman-llc.ru/"
+   },
+   "address": {
+    "value": "Московская область, Люберецкий район, пос. Томилино, 23 км Новорязанского шоссе, строение 27/2",
+    "quote": "140172, Московская область, Люберецкий район, пос. Томилино 23 км. Новорязанского шоссе, строение 27/2 (инв.№ 2562), лит.2Е",
+    "url": "https://gurman-llc.ru/contacts/"
+   },
+   "regions": [
+    {
+     "value": "Доставка по всей России и работа с клиентами из других городов и регионов",
+     "quote": "Торговый дом «Гурман» доставляет продукты по Москве бесплатно при покупке от 15 000 рублей, работает с клиентами из других городов и регионов.",
+     "url": "https://gurman-llc.ru/o_kompanii/about/"
+    }
+   ],
+   "nationwide": {
+    "value": "Доставка продуктов для Хорека по всей России",
+    "quote": "Торговый дом «Гурман» поставляет продукты для Хорека по всей России.",
+    "url": "https://gurman-llc.ru/"
+   },
+   "phones": [
+    {
+     "value": "+7 (495) 133-00-60",
+     "quote": "+7 (495) 133-00-60",
+     "url": "https://gurman-llc.ru/contacts/"
+    },
+    {
+     "value": "+7 (495) 640-24-94",
+     "quote": "+7 (495) 640-24-94",
+     "url": "https://gurman-llc.ru/contacts/"
+    }
+   ],
+   "emails": [
+    {
+     "value": "office@gurman-llc.ru",
+     "quote": "Email: office@gurman-llc.ru",
+     "url": "https://gurman-llc.ru/contacts/"
+    }
+   ],
+   "inn": null,
+   "min_order": null,
+   "min_order_kg": null,
+   "price_info": {
+    "value": "Оптовый прайс-лист с ценами отправляется на почту после заполнения формы",
+    "quote": "Заполните форму и получите оптовый прайс-лист с ценами на почту",
+    "url": "https://gurman-llc.ru/"
    },
    "query_prices": [
     {
-     "name": "Сливки 20% Минская марка 200 г",
-     "price": 82.97,
-     "unit": "₽/ шт",
-     "pack": "200 г",
-     "quote": "82.97 ₽/ шт\nСливки 20% Минская марка 200 г",
-     "url": "https://biomilk.ru/catalog/moloko-i-molochnyie-produktyi/slivki",
-     "base_price": 414.85,
-     "base_unit": "кг",
-     "derived": true
+     "name": "Сливки Петмол 33% (1л)",
+     "price": 430.0,
+     "unit": "",
+     "pack": "1 л",
+     "quote": "Сливки Петмол 33% (1л)\nЦена\n430,00 ₽/шт",
+     "url": "https://gurman-llc.ru/",
+     "base_price": null,
+     "base_unit": "",
+     "derived": false
     },
     {
-     "name": "Сливки ультрапастеризованные Резной Палисад 10% 500 г, упаковка ТБА",
-     "price": 123.26,
-     "unit": "₽/ шт",
-     "pack": "500 г",
-     "quote": "123.26 ₽/ шт\nСливки ультрапастеризованные Резной Палисад 10% 500 г, упаковка ТБА",
-     "url": "https://biomilk.ru/catalog/moloko-i-molochnyie-produktyi/slivki",
-     "base_price": 246.52,
-     "base_unit": "кг",
-     "derived": true
-    },
-    {
-     "name": "Сливки «Вологжанка» 18% 250 г",
-     "price": 102.14,
-     "unit": "₽/ шт",
-     "pack": "250 г",
-     "quote": "102.14 ₽/ шт\nСливки «Вологжанка» 18% 250 г",
-     "url": "https://biomilk.ru/catalog/moloko-i-molochnyie-produktyi/slivki",
-     "base_price": 408.56,
-     "base_unit": "кг",
-     "derived": true
-    },
-    {
-     "name": "Сливки стерилизованные 10% 200 г",
-     "price": 52.38,
-     "unit": "₽/ шт",
-     "pack": "200 г",
-     "quote": "52.38 ₽/ шт\nСливки стерилизованные 10% 200 г",
-     "url": "https://biomilk.ru/catalog/moloko-i-molochnyie-produktyi/slivki",
-     "base_price": 261.9,
-     "base_unit": "кг",
-     "derived": true
+     "name": "Сливки Свежее Завтра 22% (1л)",
+     "price": 290.0,
+     "unit": "",
+     "pack": "1 л",
+     "quote": "Сливки Свежее Завтра 22% (1л)\nЦена\n290,00 ₽/шт",
+     "url": "https://gurman-llc.ru/",
+     "base_price": null,
+     "base_unit": "",
+     "derived": false
     }
    ],
    "query_for": "сливки",
    "certificates": [],
    "delivery": {
-    "value": "Доставка во вторник, четверг, субботу; бесплатная доставка от 5000р; доставка за 1 день по Москве и области",
-    "quote": "Бесплатная доставка\nот 5000р",
-    "url": "https://biomilk.ru/dostavka-i-oplata/"
+    "value": "По Москве в пределах МКАД бесплатно от 20 000 руб.; за МКАД (до 15 км) бесплатно от 30 000 руб.; самовывоз бесплатно",
+    "quote": "в пределах МКАД\nБесплатно\n, если сумма заказа от 20 000 рублей",
+    "url": "https://gurman-llc.ru/payment/"
+   },
+   "delivery_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "Торговый дом «Гурман» поставляет продукты для Хорека по всей России.",
+    "url": "https://gurman-llc.ru/"
+   },
+   "presence_check": {
+    "region": "Москва",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
    },
    "wholesale": {
-    "value": "Работа с юрлицами и оптом: сливки заказать оптом с доставкой в Москве и Московской области",
-    "quote": "Сливки заказать оптом с доставкой в Москве и Московской области",
-    "url": "https://biomilk.ru/catalog/moloko-i-molochnyie-produktyi/slivki"
+    "value": "Оптовые продажи для ресторанов, кафе и других объектов HoReCa",
+    "quote": "Продукты для ресторанов и кафе оптом от поставщика ТД «Гурман»",
+    "url": "https://gurman-llc.ru/"
    },
    "sources": [
-    "https://biomilk.ru/",
-    "https://biomilk.ru/catalog/moloko-i-molochnyie-produktyi/slivki",
-    "https://biomilk.ru/kontakty/",
-    "https://biomilk.ru/dostavka-i-oplata/",
-    "https://biomilk.ru/about/",
-    "https://biomilk.ru/politika-ispolzovanie-fajlov-cookie/"
-   ],
-   "rejected_facts": 0
-  },
-  {
-   "domain": "ews.ru",
-   "url": "https://www.ews.ru/catalog/T0202-Slivki",
-   "also_domains": [],
-   "name": {
-    "value": "Восток-Запад",
-    "quote": "Восток-Запад – оптовый поставщик продуктов питания",
-    "url": "https://www.ews.ru/"
-   },
-   "offering": {
-    "value": "Продукты питания для HoReCa, в т.ч. молочная группа (сливки)",
-    "quote": "Уже 29 лет компания «Восток-Запад» занимается доставкой продуктов в лучшие российские заведения сегмента HoReCa.",
-    "url": "https://www.ews.ru/"
-   },
-   "address": {
-    "value": "Москва",
-    "quote": "Москва",
-    "url": "https://www.ews.ru/"
-   },
-   "regions": [
-    {
-     "value": "В любой город РФ (уточняйте условия)",
-     "quote": "В любой город* РФ",
-     "url": "https://www.ews.ru/"
-    }
-   ],
-   "nationwide": {
-    "value": "Доставка во все регионы страны",
-    "quote": "возим на собственном автотранспорте во все регионы страны",
-    "url": "https://www.ews.ru/"
-   },
-   "phones": [
-    {
-     "value": "+7 (800) 700-35-80",
-     "quote": "Колл-центр\n+7 800 700 35 80",
-     "url": "https://www.ews.ru/contacts"
-    },
-    {
-     "value": "+7 (495) 223-04-31",
-     "quote": "Москва\n+7 (495) 223 04 31",
-     "url": "https://www.ews.ru/contacts"
-    }
-   ],
-   "emails": [
-    {
-     "value": "liniyadoveriya@ews.ru",
-     "quote": "liniyadoveriya@ews.ru",
-     "url": "https://www.ews.ru/contacts"
-    }
-   ],
-   "inn": null,
-   "min_order": {
-    "value": "От 10000 в зависимости от зоны доставки",
-    "quote": "От 10000 в зависимости от зоны доставки",
-    "url": "https://www.ews.ru/usloviya-dostavki"
-   },
-   "min_order_kg": null,
-   "price_info": {
-    "value": "Цены по сливкам не опубликованы, их можно узнать в личном кабинете",
-    "quote": "Узнать цену в ЛК",
-    "url": "https://www.ews.ru/catalog/T0202-Slivki"
-   },
-   "query_prices": [],
-   "query_for": "сливки",
-   "certificates": [
-    {
-     "value": "Меркурий, ЕГАИС, Честный ЗНАК, ЭДО, ФГИС Зерно",
-     "quote": "Автоматическая отчетность ✓ Меркурий ✓ ЕГАИС ✓ Честный ЗНАК ✓ ЭДО ✓ ФГИС Зерно",
-     "url": "https://www.ews.ru/"
-    },
-    {
-     "value": "Международная сертификация FSSC 22000",
-     "quote": "международная сертификация FSSC 22000",
-     "url": "https://www.ews.ru/logistics"
-    }
-   ],
-   "delivery": {
-    "value": "Доставка по всей России со строгим соблюдением температурных режимов; по графику, выбор даты при оформлении заказа",
-    "quote": "Доставляем продукты питания по всей России со строгим соблюдением температурных режимов.",
-    "url": "https://www.ews.ru/usloviya-dostavki"
-   },
-   "wholesale": {
-    "value": "Оптовый поставщик, работа с заведениями (HoReCa)",
-    "quote": "Сливки купить оптом от поставщика HoReCa Восток-Запад",
-    "url": "https://www.ews.ru/catalog/T0202-Slivki"
-   },
-   "sources": [
-    "https://www.ews.ru/",
-    "https://www.ews.ru/catalog/T0202-Slivki",
-    "https://www.ews.ru/contacts",
-    "https://www.ews.ru/logistics",
-    "https://www.ews.ru/guarantee",
-    "https://www.ews.ru/usloviya-dostavki"
-   ],
-   "rejected_facts": 2
-  },
-  {
-   "domain": "foodstore.pro",
-   "url": "https://foodstore.pro/cream",
-   "also_domains": [],
-   "name": {
-    "value": "FoodStore",
-    "quote": "Поставщик FoodStore",
-    "url": "https://foodstore.pro/"
-   },
-   "offering": {
-    "value": "Сливки бренда Петмол оптом, также молочная продукция: сыры, сливочное масло, растительное молоко, спреды",
-    "quote": "Компания «FoodStore» реализует сливки бренда Петмол оптом для предприятий общественного питания, розничных магазинов и пищевых производств.",
-    "url": "https://foodstore.pro/cream"
-   },
-   "address": {
-    "value": "Москва, ул. Электродная, 11, стр. 11",
-    "quote": "Адрес: Москва, ул. Электродная, 11, стр. 11",
-    "url": "https://foodstore.pro/contacts"
-   },
-   "regions": [
-    {
-     "value": "Москва, Московская область и регионы России",
-     "quote": "Мы доставляем заказы по Москве, Московской области и в регионы России через транспортные компании.",
-     "url": "https://foodstore.pro/company"
-    }
-   ],
-   "nationwide": {
-    "value": "Доставка по России",
-    "quote": "Молочная продукция оптом с доставкой по России",
-    "url": "https://foodstore.pro/"
-   },
-   "phones": [
-    {
-     "value": "+7 (965) 445-26-45",
-     "quote": "+7 (965) 445-26-45",
-     "url": "https://foodstore.pro/contacts"
-    }
-   ],
-   "emails": [
-    {
-     "value": "office@foodstore.pro",
-     "quote": "Email: office@foodstore.pro",
-     "url": "https://foodstore.pro/contacts"
-    }
-   ],
-   "inn": null,
-   "min_order": {
-    "value": "Минимальный заказ от 150 000 ₽",
-    "quote": "Заказ минимально от 150 000 ₽",
-    "url": "https://foodstore.pro/"
-   },
-   "min_order_kg": null,
-   "price_info": {
-    "value": "Актуальный прайс-лист предоставляется по запросу, через форму на сайте",
-    "quote": "По запросу предоставляется актуальный прайс-лист и коммерческое предложение.",
-    "url": "https://foodstore.pro/cream"
-   },
-   "query_prices": [],
-   "query_for": "сливки",
-   "certificates": [
-    {
-     "value": "Сертификаты соответствия, декларации, ветеринарные свидетельства и результаты лабораторных исследований на каждую партию",
-     "quote": "на каждую партию предоставляем полный пакет документов: сертификаты соответствия, декларации, ветеринарные свидетельства и результаты лабораторных исследований.",
-     "url": "https://foodstore.pro/"
-    }
-   ],
-   "delivery": {
-    "value": "Доставка транспортными компаниями; по Москве и регионам России с соблюдением температурного режима",
-    "quote": "«FoodStore» обеспечивает доставку по Москве и другим регионам России с соблюдением температурного режима.",
-    "url": "https://foodstore.pro/cream"
-   },
-   "wholesale": {
-    "value": "Оптовые поставки для предприятий общественного питания, розничных магазинов и пищевых производств",
-    "quote": "реализует сливки бренда Петмол оптом для предприятий общественного питания, розничных магазинов и пищевых производств",
-    "url": "https://foodstore.pro/cream"
-   },
-   "sources": [
-    "https://foodstore.pro/",
-    "https://foodstore.pro/cream",
-    "https://foodstore.pro/contacts",
-    "https://foodstore.pro/company"
+    "https://gurman-llc.ru/",
+    "https://gurman-llc.ru/contacts/",
+    "https://gurman-llc.ru/payment/",
+    "https://gurman-llc.ru/o_kompanii/about/",
+    "https://gurman-llc.ru/partners/"
    ],
    "rejected_facts": 0
   },
@@ -322,54 +308,44 @@
    "url": "https://interfoodgroup.ru/pasterizovannye-slivki-opt",
    "also_domains": [],
    "name": {
-    "value": "InterFoodGroup (ООО «ИнтерФудГруп»)",
+    "value": "ООО «ИнтерФудГруп» (InterFoodGroup)",
     "quote": "ООО «ИнтерФудГруп» — надежный поставщик продуктов питания для B2B и HoReCa.",
     "url": "https://interfoodgroup.ru/"
    },
    "offering": {
     "value": "Продукты питания оптом для B2B и HoReCa, в том числе пастеризованные сливки различной жирности",
-    "quote": "В наличии сливки различной жирности в удобной упаковке объёмом от 500 миллилитров.",
+    "quote": "Компания предлагает пастеризованные сливки опт — свежие и качественные молочные продукты с доставкой по Москве и всей России.",
     "url": "https://interfoodgroup.ru/pasterizovannye-slivki-opt"
    },
    "address": {
     "value": "Москва, 5-й Донской пр-д, 19",
-    "quote": "Москва, 5-й Донской пр-д, 19",
+    "quote": "Главный офис: sales@interfoodgroup.ru Москва, 5-й Донской пр-д, 19",
     "url": "https://interfoodgroup.ru/contact"
    },
    "regions": [
     {
-     "value": "От Калининграда до Владивостока",
-     "quote": "Поставляем продукты от Калининграда до Владивостока.",
-     "url": "https://interfoodgroup.ru/"
-    },
-    {
-     "value": "Ростов-на-Дону (филиал)",
-     "quote": "IFG Ростов-на-Дону",
-     "url": "https://interfoodgroup.ru/"
-    },
-    {
-     "value": "Краснодар (филиал)",
-     "quote": "IFG Краснодар",
-     "url": "https://interfoodgroup.ru/"
+     "value": "Москва и вся Россия",
+     "quote": "с доставкой по Москве и всей России",
+     "url": "https://interfoodgroup.ru/pasterizovannye-slivki-opt"
     }
    ],
    "nationwide": {
     "value": "Доставка по всей России",
-    "quote": "Поставляем от Калинграда до Владивостока",
+    "quote": "по всей России",
     "url": "https://interfoodgroup.ru/"
    },
    "phones": [
     {
      "value": "+7 (495) 141-07-77",
      "quote": "8 (495) 141-07-77",
-     "url": "https://interfoodgroup.ru/contact"
+     "url": "https://interfoodgroup.ru/"
     }
    ],
    "emails": [
     {
      "value": "sales@interfoodgroup.ru",
      "quote": "sales@interfoodgroup.ru",
-     "url": "https://interfoodgroup.ru/contact"
+     "url": "https://interfoodgroup.ru/"
     }
    ],
    "inn": {
@@ -378,32 +354,38 @@
     "url": "https://interfoodgroup.ru/contact"
    },
    "min_order": {
-    "value": "Минимальный заказ продукции от 10 коробок или от 50.000 рублей",
+    "value": "От 10 коробок или от 50.000 рублей",
     "quote": "Внимание! Минимальный заказ продукции от 10 коробок или от 50.000 рублей!",
     "url": "https://interfoodgroup.ru/"
    },
    "min_order_kg": null,
    "price_info": {
-    "value": "Открытых цен на сайте не видно; прайс-лист можно запросить через форму",
+    "value": "Цены по запросу: прайс-лист предоставляется после заполнения формы; стабильная оптовая цена",
     "quote": "Оставьте ваши данные, и наши менеджеры отправят вам полный прайс-лист продукции",
     "url": "https://interfoodgroup.ru/"
    },
    "query_prices": [],
    "query_for": "сливки",
-   "certificates": [
-    {
-     "value": "Соответствие требованиям ГОСТ и санитарным нормам (заявлено для сливок)",
-     "quote": "соответствующие требованиям ГОСТ и санитарным нормам.",
-     "url": "https://interfoodgroup.ru/pasterizovannye-slivki-opt"
-    }
-   ],
+   "certificates": [],
    "delivery": {
-    "value": "Доставка по Москве и всей России",
+    "value": "Доставка по Москве и всей России; оформление через предзаказ с подтверждением менеджером",
     "quote": "Компания предлагает пастеризованные сливки опт — свежие и качественные молочные продукты с доставкой по Москве и всей России.",
     "url": "https://interfoodgroup.ru/pasterizovannye-slivki-opt"
    },
+   "delivery_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "с доставкой по Москве и всей России",
+    "url": "https://interfoodgroup.ru/pasterizovannye-slivki-opt"
+   },
+   "presence_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "Главный офис: sales@interfoodgroup.ru Москва, 5-й Донской пр-д, 19",
+    "url": "https://interfoodgroup.ru/contact"
+   },
    "wholesale": {
-    "value": "Оптовые поставки для бизнеса, ресторанов и кафе",
+    "value": "Оптовые поставки для бизнеса (B2B, HoReCa)",
     "quote": "Продукты питания оптом для бизнеса, ресторанов, кафе, доставка по России, HoReCa, B2B",
     "url": "https://interfoodgroup.ru/"
    },
@@ -426,9 +408,9 @@
     "url": "https://marr.ru/"
    },
    "offering": {
-    "value": "Федеральный дистрибьютор продуктов питания и производитель мясных полуфабрикатов для HoReCa; в каталоге есть сливки (растительные и ультрапастеризованные, 10–33%)",
-    "quote": "Сливки - купить оптом для ресторанов, кафе, баров",
-    "url": "https://marr.ru/catalog/molochnye-produkty-yayca/slivki"
+    "value": "Федеральный дистрибьютор продуктов питания для HoReCa, в т.ч. молочные продукты и сливки; собственное производство мясных полуфабрикатов",
+    "quote": "МАРР РУССИЯ - федеральный дистрибьютор продуктов питания и производитель мясных полуфабрикатов для рынка foodservice.",
+    "url": "https://marr.ru/"
    },
    "address": {
     "value": "Главный офис: 143006 г. Одинцово, ул. Восточная, д. 5",
@@ -437,58 +419,13 @@
    },
    "regions": [
     {
-     "value": "Москва",
+     "value": "Москва (в списке городов присутствия)",
      "quote": "Москва",
-     "url": "https://marr.ru/contacts"
-    },
-    {
-     "value": "Санкт-Петербург",
-     "quote": "Санкт-Петербург (филиал)",
-     "url": "https://marr.ru/contacts"
-    },
-    {
-     "value": "Екатеринбург",
-     "quote": "Екатеринбург (филиал)",
-     "url": "https://marr.ru/contacts"
-    },
-    {
-     "value": "Ростов-на-Дону",
-     "quote": "Ростов-на-Дону (филиал)",
-     "url": "https://marr.ru/contacts"
-    },
-    {
-     "value": "Сочи",
-     "quote": "Офис\n354340 Краснодарский край, г. Сочи, ул. Ромашек, д. 42.",
-     "url": "https://marr.ru/contacts"
-    },
-    {
-     "value": "Самара",
-     "quote": "Самара (филиал)",
-     "url": "https://marr.ru/contacts"
-    },
-    {
-     "value": "Новосибирск",
-     "quote": "Новосибирск (филиал)",
-     "url": "https://marr.ru/contacts"
-    },
-    {
-     "value": "Красноярск",
-     "quote": "Красноярск (филиал)",
-     "url": "https://marr.ru/contacts"
-    },
-    {
-     "value": "Воронеж",
-     "quote": "Воронеж (филиал)",
-     "url": "https://marr.ru/contacts"
-    },
-    {
-     "value": "Алматы",
-     "quote": "Алматы (филиал)",
      "url": "https://marr.ru/contacts"
     }
    ],
    "nationwide": {
-    "value": "Федеральный дистрибьютор, филиалы в 9 городах России и Алматы",
+    "value": "Федеральный дистрибьютор, 9 представительств по России",
     "quote": "9 представительств по России",
     "url": "https://marr.ru/"
    },
@@ -507,7 +444,7 @@
    "emails": [
     {
      "value": "info@marr.ru",
-     "quote": "Email:\ninfo@marr.ru",
+     "quote": "Email: info@marr.ru",
      "url": "https://marr.ru/contacts"
     }
    ],
@@ -519,7 +456,7 @@
    "min_order": null,
    "min_order_kg": null,
    "price_info": {
-    "value": "Цены по товарам на сайте не указаны («Узнать цену»); на главной сайт пишет, что каталог с актуальными ценами и скидками доступен после регистрации",
+    "value": "Цены на сайте скрыты: кнопка «Узнать цену», после регистрации видны актуальные цены и скидки, согласованные с менеджером",
     "quote": "Зарегистрировавшись на сайте, вы сможете увидеть каталог с актуальными ценами и скидками, согласованными с вашим менеджером.",
     "url": "https://marr.ru/about/faq"
    },
@@ -532,10 +469,18 @@
      "url": "https://marr.ru/about"
     }
    ],
-   "delivery": {
-    "value": "Логистика полного цикла, мультитемпературное хранение и рефрижераторный автопарк (условия доставки в тексте не указаны)",
-    "quote": "Мы осуществляем логистические услуги полного цикла.",
-    "url": "https://marr.ru/about"
+   "delivery": null,
+   "delivery_check": {
+    "region": "Москва",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
+   "presence_check": {
+    "region": "Москва",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
    },
    "wholesale": {
     "value": "Продажа оптом для ресторанов, кафе, баров",
@@ -550,7 +495,7 @@
     "https://marr.ru/suppliers",
     "https://marr.ru/about/faq"
    ],
-   "rejected_facts": 1
+   "rejected_facts": 0
   },
   {
    "domain": "mos-milk.ru",
@@ -558,26 +503,20 @@
    "also_domains": [],
    "name": {
     "value": "ООО «Мос-Милк»",
-    "quote": "официальный поставщик «Мос-Милк»",
-    "url": "https://mos-milk.ru/"
+    "quote": "ООО “Мос-Милк” 2020 г.",
+    "url": "https://mos-milk.ru/contacts"
    },
    "offering": {
-    "value": "Оптовые поставки молочной продукции и продуктов питания, в том числе сливки",
+    "value": "Оптовые поставки молочной продукции и продуктов питания, в т.ч. сливки",
     "quote": "Поставки молочной продукции оптом - официальный поставщик «Мос-Милк»",
     "url": "https://mos-milk.ru/"
    },
    "address": {
-    "value": "Юр. адрес: 141280, М.О. г. Ивантеевка, ул. Заводская, д. 12 пом. 024; офис в г. Мытищи",
-    "quote": "141280, М.О. г. Ивантеевка, ул. Заводская, д. 12 пом. 024",
+    "value": "Офис: г. Мытищи, бизнес-центр «Формат»; юр. адрес: М.О. г. Ивантеевка",
+    "quote": "бизнес-центр \"Формат\", г. Мытищи, Олимпиский проспект 29, стр 2, офис 3В",
     "url": "https://mos-milk.ru/contacts"
    },
-   "regions": [
-    {
-     "value": "Москва и Московская область",
-     "quote": "Осуществляем доставку по Москве и Московской области.",
-     "url": "https://mos-milk.ru/delivery-payment"
-    }
-   ],
+   "regions": [],
    "nationwide": {
     "value": "Доставка по России услугами транспортных компаний клиента",
     "quote": "Доставка по России - услугами транспортных компаний клиента.",
@@ -603,27 +542,39 @@
     "url": "https://mos-milk.ru/"
    },
    "min_order": {
-    "value": "Сумма минимальной партии при доставке — 40 000 руб., при самовывозе — 30 000 руб.",
+    "value": "Минимальная сумма партии при доставке — 40 000 руб., при самовывозе — 30 000 руб.",
     "quote": "при доставке - 40 000 руб.",
     "url": "https://mos-milk.ru/delivery-payment"
    },
    "min_order_kg": null,
    "price_info": {
-    "value": "Работа по безналичной оплате с юрлицами при 100% предоплате; опубликованных цен на сливки в тексте страниц нет",
-    "quote": "по форме безналичной оплаты и при 100% предоплате",
-    "url": "https://mos-milk.ru/delivery-payment"
+    "value": "Специальные ценовые предложения при отгрузках от 1 паллета/1 фуры (раздел «Опт в паллетах»)",
+    "quote": "В данном разделе представлены специальные ценовые предложения при отгрузках от 1 паллета/1 фуры.",
+    "url": "https://mos-milk.ru/catalog/pallety"
    },
    "query_prices": [],
    "query_for": "сливки",
    "certificates": [],
    "delivery": {
-    "value": "Доставка собственным транспортом по Москве и Московской области; по России — транспортными компаниями клиента; также самовывоз",
+    "value": "Доставка своим транспортом по Москве и Московской области; по России — транспортными компаниями клиента; также возможен самовывоз",
     "quote": "Осуществляем доставку по Москве и Московской области. Доставка по России - услугами транспортных компаний клиента.",
     "url": "https://mos-milk.ru/delivery-payment"
    },
+   "delivery_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "Осуществляем доставку по Москве и Московской области.",
+    "url": "https://mos-milk.ru/delivery-payment"
+   },
+   "presence_check": {
+    "region": "Москва",
+    "verdict": "unknown",
+    "quote": "",
+    "url": ""
+   },
    "wholesale": {
-    "value": "Оптовые продажи, работа с юридическими лицами",
-    "quote": "Мы работаем с юридическими лицами в рамках закона и соответствующего документооборота",
+    "value": "Работа с юрлицами, безналичная оплата, при 100% предоплате",
+    "quote": "Мы работаем с юридическими лицами в рамках закона и соответствующего документооборота, по форме безналичной оплаты и при 100% предоплате.",
     "url": "https://mos-milk.ru/delivery-payment"
    },
    "sources": [
@@ -646,31 +597,31 @@
     "url": "https://opttorg-horeca.ru/"
    },
    "offering": {
-    "value": "Продукты питания оптом для HoReCa: бакалея, молочная продукция, мясо, замороженные товары, в т.ч. сливки",
+    "value": "Продукты питания оптом для HoReCa: бакалея, молочная продукция, мясо, замороженные товары, включая сливки",
     "quote": "Мы предлагаем широкий ассортимент бакалеи, молочной продукции, мяса и замороженных товаров с доставкой по Москве, Московской области и всей России.",
     "url": "https://opttorg-horeca.ru/"
    },
    "address": {
-    "value": "г. Москва, п. Сосенское, 22-й км. Калужского шоссе, ОПРЦ «Фуд Сити»; юридический адрес: г. Москва, ш. Энтузиастов, дом 34",
+    "value": "Фактический адрес: г. Москва, п. Сосенское, 22-й км. Калужского шоссе, здание № 10, ОПРЦ «Фуд Сити»",
     "quote": "Фактический адрес:",
     "url": "https://opttorg-horeca.ru/kontakty.html"
    },
    "regions": [
     {
      "value": "Москва и Московская область",
-     "quote": "Мы осуществляем доставку\nпо г. Москве и Московской области.",
+     "quote": "Мы осуществляем доставку по г. Москве и Московской области.",
      "url": "https://opttorg-horeca.ru/dostavka.html"
     }
    ],
    "nationwide": {
-    "value": "Доставка по всей России (заявлено на главной)",
+    "value": "Заявлена доставка по всей России",
     "quote": "с доставкой по Москве, Московской области и всей России.",
     "url": "https://opttorg-horeca.ru/"
    },
    "phones": [
     {
      "value": "+7 (903) 235-51-41",
-     "quote": "Телефон:\n+7 (903) 235 51 41",
+     "quote": "+7 (903) 235 51 41",
      "url": "https://opttorg-horeca.ru/kontakty.html"
     },
     {
@@ -682,7 +633,7 @@
    "emails": [
     {
      "value": "info@opt.ru.net",
-     "quote": "Заказы, заключение договоров, запрос коммерческого предложения, рекламации по товару:\ninfo@opt.ru.net",
+     "quote": "info@opt.ru.net",
      "url": "https://opttorg-horeca.ru/kontakty.html"
     }
    ],
@@ -694,7 +645,7 @@
    "min_order": null,
    "min_order_kg": null,
    "price_info": {
-    "value": "Цены по запросу; для юрлиц бесплатная доставка при заказе от 70 000 руб по Москве",
+    "value": "Цены на товары по запросу (\"Цена по запросу\")",
     "quote": "Цена по запросу",
     "url": "https://opttorg-horeca.ru/"
    },
@@ -702,12 +653,24 @@
    "query_for": "сливки",
    "certificates": [],
    "delivery": {
-    "value": "Доставка по Москве и Московской области; от 70 000 руб по Москве в пределах МКАД, от 90 000 руб по Московской области; самовывоз от любой суммы",
-    "quote": "от 70 000 руб\nдоставка по Москве в пределах МКАД;\nот 90 000 руб",
+    "value": "Доставка по Москве и области; от 70 000 руб по Москве в пределах МКАД, от 90 000 руб по Московской области; самовывоз от любой суммы",
+    "quote": "от 70 000 руб",
     "url": "https://opttorg-horeca.ru/dostavka.html"
    },
+   "delivery_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "Мы осуществляем доставку по г. Москве и Московской области.",
+    "url": "https://opttorg-horeca.ru/dostavka.html"
+   },
+   "presence_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "142770, г. Москва, п. Сосенское, 22-й км. Калужского шоссе, здание № 10, ОПРЦ «Фуд Сити»",
+    "url": "https://opttorg-horeca.ru/kontakty.html"
+   },
    "wholesale": {
-    "value": "Оптовые поставки для юридических лиц",
+    "value": "Работа только с юридическими лицами, оптовые поставки",
     "quote": "Работаем только с юридическими лицами.",
     "url": "https://opttorg-horeca.ru/"
    },
@@ -720,57 +683,154 @@
    "rejected_facts": 0
   },
   {
-   "domain": "sofia-tc.com.ua",
-   "url": "https://sofia-tc.com.ua/ru/product-category/molochnaia-produktsyia/slyvky",
+   "domain": "swlife.ru",
+   "url": "https://swlife.ru/molochnaya-gastronomiya/moloko-i-molochnaya-produkciya/slivki",
    "also_domains": [],
-   "name": {
-    "value": "СОФИЯ ТОРГ КОМПАНИ",
-    "quote": "СОФИЯ ТОРГ КОМПАНИ",
-    "url": "https://sofia-tc.com.ua/ru/"
-   },
+   "name": null,
    "offering": {
-    "value": "Сливки и другая молочная продукция, продукты питания для HoReCa",
-    "quote": "Сливки оптом для HoReCa - Поставщик Сливки",
-    "url": "https://sofia-tc.com.ua/ru/product-category/molochnaia-produktsyia/slyvky"
+    "value": "Дистрибуция продуктов питания для HoReCa, включая молочную гастрономию (молоко, сливки, сыр)",
+    "quote": "молочная гастрономия (молоко, сливки, сыр)",
+    "url": "https://swlife.ru/delivery"
    },
-   "address": null,
+   "address": {
+    "value": "Центральный офис: Нижний Новгород, ул. Героя Попова, д. 43 В; офис в Москве: Москва, Пречистенская набережная, д. 17-19",
+    "quote": "Москва, Пречистенская набережная, д. 17-19, 119034",
+    "url": "https://swlife.ru/contact"
+   },
    "regions": [
     {
-     "value": "Регулярная доставка по Украине в обласных центрах, включая Харьков, Днепр, Львов, Одесса, Киев и др.",
-     "quote": "Регулярная доставка заказов клиентов рынка HoReCa по Украине осуществляется в следующих областных центрах",
-     "url": "https://sofia-tc.com.ua/ru/"
+     "value": "Москва и Московская область",
+     "quote": "Москва: Москва, Московская область",
+     "url": "https://swlife.ru/regions"
+    },
+    {
+     "value": "Более 28 регионов России",
+     "quote": "осуществляется более чем в 28 регионах России 6 дней в неделю",
+     "url": "https://swlife.ru/"
     }
    ],
    "nationwide": null,
-   "phones": [],
-   "emails": [
+   "phones": [
     {
-     "value": "logistsofia@gmail.com",
-     "quote": "logistsofia@gmail.com",
-     "url": "https://sofia-tc.com.ua/"
+     "value": "+7 (800) 200-58-58",
+     "quote": "8 (800) 200-58-58",
+     "url": "https://swlife.ru/contact"
+    },
+    {
+     "value": "+7 (831) 215-25-25",
+     "quote": "8-831-215-25-25",
+     "url": "https://swlife.ru/contact"
     }
    ],
-   "inn": null,
-   "min_order": null,
+   "emails": [
+    {
+     "value": "office_manager_msk@swlife.ru",
+     "quote": "office_manager_msk@swlife.ru",
+     "url": "https://swlife.ru/contact"
+    }
+   ],
+   "inn": {
+    "value": "5258068806",
+    "quote": "ИНН\n5258068806",
+    "url": "https://swlife.ru/contact"
+   },
+   "min_order": {
+    "value": "Минимальная сумма заказа в день посещения торговым представителем — 10 000 рублей",
+    "quote": "Минимальная сумма заказа в день посещения торговым представителем - 10 000 рублей.",
+    "url": "https://swlife.ru/delivery"
+   },
    "min_order_kg": null,
    "price_info": null,
-   "query_prices": [],
+   "query_prices": [
+    {
+     "name": "Сливки Smart Chef Ультрапастеризованные ГОСТ 33% 1л",
+     "price": 379.9,
+     "unit": "шт",
+     "pack": "1 л",
+     "quote": "Сливки Smart Chef Ультрапастеризованные ГОСТ 33% 1л Акция до 31.10 379.90 ₽/шт",
+     "url": "https://swlife.ru/molochnaya-gastronomiya/moloko-i-molochnaya-produkciya/slivki",
+     "base_price": 379.9,
+     "base_unit": "л",
+     "derived": true
+    },
+    {
+     "name": "Сливки Smart Chef Ультрапастеризованные ГОСТ 22% 1л",
+     "price": 335.0,
+     "unit": "шт",
+     "pack": "1 л",
+     "quote": "Сливки Smart Chef Ультрапастеризованные ГОСТ 22% 1л 335.00 ₽/шт",
+     "url": "https://swlife.ru/molochnaya-gastronomiya/moloko-i-molochnaya-produkciya/slivki",
+     "base_price": 335.0,
+     "base_unit": "л",
+     "derived": true
+    },
+    {
+     "name": "Сливки Петмол для Взбивания Стерилизованные 33% 1л",
+     "price": 503.57,
+     "unit": "шт",
+     "pack": "1 л",
+     "quote": "Сливки Петмол для Взбивания Стерилизованные 33% 1л 503.57 ₽/шт",
+     "url": "https://swlife.ru/molochnaya-gastronomiya/moloko-i-molochnaya-produkciya/slivki",
+     "base_price": 503.57,
+     "base_unit": "л",
+     "derived": true
+    },
+    {
+     "name": "Сливки Эlakto Ультрапастеризованные 10% 1л",
+     "price": 190.0,
+     "unit": "шт",
+     "pack": "1 л",
+     "quote": "Сливки Эlakto Ультрапастеризованные 10% 1л 190.00 ₽/шт",
+     "url": "https://swlife.ru/molochnaya-gastronomiya/moloko-i-molochnaya-produkciya/slivki",
+     "base_price": 190.0,
+     "base_unit": "л",
+     "derived": true
+    },
+    {
+     "name": "Сливки Молочная Речка Стерилизованные 22% 1л",
+     "price": 343.91,
+     "unit": "",
+     "pack": "1 л",
+     "quote": "Сливки Молочная Речка Стерилизованные 22% 1л 343.91 ₽",
+     "url": "https://swlife.ru/molochnaya-gastronomiya/moloko-i-molochnaya-produkciya/slivki",
+     "base_price": null,
+     "base_unit": "",
+     "derived": false
+    }
+   ],
    "query_for": "сливки",
    "certificates": [],
-   "delivery": null,
+   "delivery": {
+    "value": "Доставка фирменным автотранспортом на следующий день после оформления заказа; 6 дней в неделю",
+    "quote": "Доставка производится по маршруту, заранее согласованному с персональным менеджером, на следующий день после оформления заказа.",
+    "url": "https://swlife.ru/"
+   },
+   "delivery_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "Москва: Москва, Московская область",
+    "url": "https://swlife.ru/regions"
+   },
+   "presence_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "Москва, Пречистенская набережная, д. 17-19, 119034",
+    "url": "https://swlife.ru/contact"
+   },
    "wholesale": {
-    "value": "Оптовые поставки для HoReCa",
-    "quote": "Качественные сливки с доставкой для предприятий HoReCa",
-    "url": "https://sofia-tc.com.ua/ru/product-category/molochnaia-produktsyia/slyvky"
+    "value": "Оптовые поставки для ресторанов, кафе, баров",
+    "quote": "Купить оптом для ресторанов, кафе, баров",
+    "url": "https://swlife.ru/molochnaya-gastronomiya/moloko-i-molochnaya-produkciya/slivki"
    },
    "sources": [
-    "https://sofia-tc.com.ua/",
-    "https://sofia-tc.com.ua/ru/product-category/molochnaia-produktsyia/slyvky",
-    "https://sofia-tc.com.ua/statystyka-tsen/",
-    "https://sofia-tc.com.ua/ru/",
-    "https://sofia-tc.com.ua/ru/statistika-cen/"
+    "https://swlife.ru/",
+    "https://swlife.ru/molochnaya-gastronomiya/moloko-i-molochnaya-produkciya/slivki",
+    "https://swlife.ru/contact",
+    "https://swlife.ru/delivery",
+    "https://swlife.ru/regions",
+    "https://swlife.ru/partners"
    ],
-   "rejected_facts": 3
+   "rejected_facts": 1
   },
   {
    "domain": "vosttorg.ru",
@@ -778,17 +838,17 @@
    "also_domains": [],
    "name": {
     "value": "ООО «ВОСТОРГ» (Восторг)",
-    "quote": "© 2018-2026 ООО «ВОСТОРГ»",
-    "url": "https://vosttorg.ru/"
-   },
-   "offering": {
-    "value": "Оптовые поставки продуктов питания для HoReCa и бизнеса: замороженные ягоды, фрукты и овощи, сливочное масло и спреды, сыры, молочная продукция, бакалея",
     "quote": "Компания «Восторг» — оптовый поставщик продуктов питания для ресторанов, кафе, пекарен, кондитерских, пищевых производств, предприятий HoReCa и оптовых компаний.",
     "url": "https://vosttorg.ru/"
    },
+   "offering": {
+    "value": "Оптовые продукты для HoReCa: замороженные ягоды, фрукты и овощи, сливочное масло и спреды, сыры, молочная продукция, бакалея",
+    "quote": "Основные направления ассортимента:",
+    "url": "https://vosttorg.ru/"
+   },
    "address": {
-    "value": "Москва, Коровинское шоссе, 35с4 (склад); юридический адрес: 129090, г. Москва, Каланчевская ул, д. 32, помещ. 5/2п",
-    "quote": "Склад (Москва): г. Москва, Коровинское шоссе, 35с4",
+    "value": "Москва, Коровинское шоссе, 35с4 (склад)",
+    "quote": "Склад (Москва):\nг. Москва, Коровинское шоссе, 35с4",
     "url": "https://vosttorg.ru/kontakty-vostorg/"
    },
    "regions": [
@@ -796,29 +856,20 @@
      "value": "Москва и Московская область",
      "quote": "Работаем с предприятиями HoReCa, производствами и оптовыми компаниями, обеспечивая стабильные поставки продукции по Москве и Московской области.",
      "url": "https://vosttorg.ru/"
-    },
-    {
-     "value": "Регионы через транспортные компании",
-     "quote": "В регионы отправляем заказы через транспортные компании.",
-     "url": "https://vosttorg.ru/"
     }
    ],
-   "nationwide": {
-    "value": "Отправка в регионы через транспортные компании",
-    "quote": "Отправка в регионы через ТК",
-    "url": "https://vosttorg.ru/poluchit-optovyy-prays/"
-   },
+   "nationwide": null,
    "phones": [
     {
      "value": "+7 (499) 499-66-88",
-     "quote": "Телефон: +7 (499) 499-66-88",
+     "quote": "Телефон:\n+7 (499) 499-66-88",
      "url": "https://vosttorg.ru/kontakty-vostorg/"
     }
    ],
    "emails": [
     {
      "value": "zakaz@osttorg.ru",
-     "quote": "Почта для заказов и предложений: zakaz@osttorg.ru",
+     "quote": "Почта для заказов и предложений:\nzakaz@osttorg.ru",
      "url": "https://vosttorg.ru/kontakty-vostorg/"
     }
    ],
@@ -828,46 +879,46 @@
     "url": "https://vosttorg.ru/kontakty-vostorg/"
    },
    "min_order": {
-    "value": "Минимальная сумма заказа 10 000 ₽ (для доставки в регионы через транспортные компании)",
+    "value": "Минимальная сумма заказа - 10 000 ₽",
     "quote": "Минимальная сумма заказа - 10 000 ₽",
     "url": "https://vosttorg.ru/dostavka/"
    },
    "min_order_kg": null,
    "price_info": {
-    "value": "Открытый оптовый прайс доступен по заявке через форму «Получить оптовый прайс»",
-    "quote": "Актуальные цены и специальные условия для оптовых покупателей и компаний HoReCa",
+    "value": "Оптовый прайс предоставляется по заявке; персональные условия и отсрочка платежа для постоянных партнёров",
+    "quote": "Персональные условия, скидки и отсрочка платежа для постоянных партнеров",
     "url": "https://vosttorg.ru/poluchit-optovyy-prays/"
    },
-   "query_prices": [
-    {
-     "name": "Сливки 33% Amanda 1 л Иран",
-     "price": 430.0,
-     "unit": "",
-     "pack": "1 л",
-     "quote": "Сливки 33% Amanda 1 л Иран Нет в наличии ‍430‍ ₽ за 1 шт.",
-     "url": "https://vosttorg.ru/moloko-slivki",
-     "base_price": null,
-     "base_unit": "",
-     "derived": false
-    }
-   ],
+   "query_prices": [],
    "query_for": "сливки",
    "certificates": [
     {
-     "value": "Документы для юридических лиц, Меркурий и Честный знак",
+     "value": "Документы для юрлиц, Меркурий и Честный знак",
      "quote": "документы для юридических лиц, Меркурий и Честный знак;",
      "url": "https://vosttorg.ru/"
     }
    ],
    "delivery": {
-    "value": "Доставка по Москве и МО от 10 000 ₽; зоны: внутри МКАД 700 ₽ (бесплатно от 15 000 ₽), до 60 км от МКАД 3 000 ₽ (бесплатно от 50 000 ₽); самовывоз со склада бесплатно; регионы через транспортные компании",
+    "value": "Доставка по Москве и МО; доставка возможна при сумме заказа от 10 000 ₽; зоны 1–5 с платой от 700 до 3 000 ₽; для регионов отправка через транспортные компании",
     "quote": "Доставка возможна при сумме заказа от 10 000 ₽.",
     "url": "https://vosttorg.ru/dostavka/"
    },
+   "delivery_check": {
+    "region": "Москва",
+    "verdict": "unknown",
+    "quote": "Для регионов организуем отправку заказов через транспортные компании.",
+    "url": "https://vosttorg.ru/dostavka/"
+   },
+   "presence_check": {
+    "region": "Москва",
+    "verdict": "yes",
+    "quote": "Склад (Москва):\nг. Москва, Коровинское шоссе, 35с4",
+    "url": "https://vosttorg.ru/kontakty-vostorg/"
+   },
    "wholesale": {
-    "value": "Оптовые поставки для ресторанов, кафе, производств и оптовых компаний",
-    "quote": "Оптовые поставки продуктов для HoReCa и производств",
-    "url": "https://vosttorg.ru/poluchit-optovyy-prays/"
+    "value": "Оптовые поставки для HoReCa, производств и оптовых компаний; работа с юрлицами",
+    "quote": "Компания «Восторг» — оптовый поставщик продуктов питания для ресторанов, кафе, пекарен, кондитерских, пищевых производств, предприятий HoReCa и оптовых компаний.",
+    "url": "https://vosttorg.ru/"
    },
    "sources": [
     "https://vosttorg.ru/",
@@ -877,7 +928,7 @@
     "https://vosttorg.ru/poluchit-optovyy-prays/",
     "https://vosttorg.ru/o-kompanii-vostorg/"
    ],
-   "rejected_facts": 0
+   "rejected_facts": 1
   }
  ]
 }

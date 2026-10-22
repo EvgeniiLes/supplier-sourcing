@@ -118,7 +118,8 @@ function missingOf(it) {
   const d = it.data ?? it;
   const qp = it.data ? queryPricesOf(it) : null;
   const m = [];
-  if (!d.regions?.length && !d.nationwide && !d.address) m.push("работаете ли вы с нашим регионом");
+  const knownHere = it.data && (it.delivery_check?.verdict === "yes" || it.presence_check?.verdict === "yes");
+  if (!knownHere && !d.regions?.length && !d.nationwide && !d.address) m.push("работаете ли вы с нашим регионом");
   if (!d.min_order) m.push("минимальный объём заказа");
   if (!d.certificates?.length) m.push("сертификаты/декларации на продукцию");
   if (!d.delivery) m.push("условия и стоимость доставки");
@@ -126,6 +127,21 @@ function missingOf(it) {
   return m;
 }
 const field = (label, html) => `<div class="f"><dt>${label}</dt><dd>${html}</dd></div>`;
+
+/* вердикты по региону поиска: возит ли и есть ли офис/склад в городе. Каждое «да»/«нет» подкреплено цитатой с сайта */
+function verdictLine(label, check, texts) {
+  if (!check) return "";
+  const v = check.verdict === "yes" || check.verdict === "no" ? check.verdict : "unknown";
+  const src = check.url ? `<a class="src" href="${esc(check.url)}" target="_blank" rel="noopener" title="${esc(check.quote)}">источник ↗</a>` : "";
+  const quote = check.quote ? `<div class="quote">«${esc(check.quote)}»</div>` : "";
+  return `<div class="verdict ${v}"><b>${label}:</b> ${texts[v]} ${src}${quote}</div>`;
+}
+function regionVerdictsHtml(it) {
+  const region = it.delivery_check?.region || it.presence_check?.region || "";
+  const del = verdictLine("Доставка", it.delivery_check, {yes: "✓ заявлена", no: "✗ не доставляет", unknown: "не указана, уточнить"});
+  const pres = verdictLine("Офис или склад", it.presence_check, {yes: "✓ есть в вашем городе", no: "—", unknown: "не указан"});
+  return del || pres ? field(`В вашем регионе «${esc(region)}»`, del + pres) : "";
+}
 
 /* ---------- веса критериев ---------- */
 function defaultWeights() { return Object.fromEntries((state.health?.criteria || []).map(c => [c.key, c.default])); }
@@ -202,6 +218,7 @@ function cardHtml(it) {
       ${field("Телефон", facts(d.phones))}
       ${field("Email", facts(d.emails))}
       ${field("Адрес", fact(d.address))}
+      ${regionVerdictsHtml(it)}
       ${field("Регион работы", regionsHtml(d))}
       ${field("Минимальный заказ", fact(d.min_order))}
       ${field(`Цены на «${esc(queryNameOf(it))}»`, queryPricesHtml(it))}
@@ -302,7 +319,7 @@ function setProgress(done, total) {
 
 function currentFilters() {
   return {need_certs: $("#f-certs").checked, max_min_order_kg: $("#f-min").value ? Number($("#f-min").value) : null,
-          delivery_to_region: $("#f-deliv").checked};
+          delivery: $("#f-deliv").value, presence: $("#f-presence").checked};
 }
 function pushRecent(category, region, demo) {
   const list = store.get("recent", []).filter(r => !(r.category === category && r.region === region));
@@ -383,7 +400,8 @@ async function openFromHash() {
   try {
     const r = await loadResults(), s = r.search;
     $("#category").value = s.category; $("#region").value = s.region;
-    $("#f-certs").checked = !!s.filters.need_certs; $("#f-deliv").checked = !!s.filters.delivery_to_region;
+    $("#f-certs").checked = !!s.filters.need_certs; $("#f-deliv").value = s.filters.delivery || "any";
+    $("#f-presence").checked = !!s.filters.presence;
     $("#f-min").value = s.filters.max_min_order_kg ?? ""; $("#demo").checked = s.mode !== "live" || !state.health.live_available;
     state.ctx = {category: s.category, region: s.region}; store.set("ctx", state.ctx);
     if (s.status === "running") { $("#go").disabled = true; state.poll = setInterval(poll, 1200); poll(); }

@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/static/style.css?v=7">
+<link rel="stylesheet" href="/static/style.css?v=9">
 </head>
 <body>
 <div class="hero"><div class="wrap">
@@ -39,7 +39,13 @@
     <div class="filters">
       <label style="margin:0"><input type="checkbox" id="f-certs">Только с документами и сертификатами</label>
       <label style="margin:0">Минималка не больше <input type="number" id="f-min" min="0" inputmode="decimal" placeholder="кг"> кг</label>
-      <label style="margin:0"><input type="checkbox" id="f-deliv">Только с доставкой в мой регион</label>
+      <label style="margin:0">Доставка в мой регион
+        <select id="f-deliv">
+          <option value="not_no" selected>скрыть тех, кто точно не доставляет</option>
+          <option value="yes">только с подтверждённой доставкой или офисом в городе</option>
+          <option value="any">показать всех</option>
+        </select></label>
+      <label style="margin:0"><input type="checkbox" id="f-presence">Только с офисом или складом в моём городе</label>
     </div>
     <div class="modebar">
       <label style="margin:0"><input type="checkbox" id="demo" checked>Демо-режим (готовые результаты)</label>
@@ -143,6 +149,6 @@
   </div>
 </div></div>
 
-<script src="/static/app.js?v=11"></script>
+<script src="/static/app.js?v=12"></script>
 </body>
 </html>

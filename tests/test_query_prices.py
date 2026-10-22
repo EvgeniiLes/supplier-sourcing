@@ -211,7 +211,7 @@ def test_analyse_site_reextracts_for_new_query_and_reuses_for_same(monkeypatch):
     async def fake_fetch(url, client=None, ttl=None):
         return {URL: PAGE}
 
-    async def fake_extract(domain, url, pages, client=None, query=""):
+    async def fake_extract(domain, url, pages, client=None, query="", region=""):
         calls.append(query)
         return Supplier(domain=domain, url=url, query_prices=[], query_for=query)
 
@@ -227,7 +227,7 @@ def test_prices_are_stored_per_search(monkeypatch):
     async def fake_expand(c, r, client=None): return ["q"]
     async def fake_find(q, l, client=None): return [{"domain": "dairy.ru", "url": URL}]
 
-    async def fake_analyse(domain, url, force=False, query=""):
+    async def fake_analyse(domain, url, force=False, query="", region=""):
         prices = [{"name": f"{query} 1 л", "price": 100.0, "unit": "л", "quote": "x", "url": URL}] if query == "сливки" else []
         s = Supplier(domain=domain, url=url, query_prices=[__import__("app.models", fromlist=["PriceItem"]).PriceItem(**p) for p in prices],
                      query_for=query)
@@ -313,7 +313,7 @@ def test_refresh_updates_prices_of_that_search(client, tmp_path, monkeypatch):
     monkeypatch.setenv("ANTHROPIC_API_KEY", "k"); monkeypatch.setenv("TAVILY_API_KEY", "k")
     seen = {}
 
-    async def fake_analyse(domain, url, force=False, query=""):
+    async def fake_analyse(domain, url, force=False, query="", region=""):
         seen["query"] = query
         from app.models import PriceItem
         s = Supplier(domain=domain, url=url, query_for=query,
