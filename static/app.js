@@ -595,10 +595,13 @@ async function openLetter(domain, ai = false) {
   $("#modal").classList.add("open"); updateMailto();
 }
 /* Gmail в браузере: окно нового письма с заполненными полями (для тех, у кого нет почтовой программы) */
+/* Mail.ru в браузере: тот же адрес, которым почта регистрируется обработчиком ссылок mailto: */
+const mailruLink = mailto => "https://e.mail.ru/compose/?mailto=" + encodeURIComponent(mailto);
 const gmailLink = p => "https://mail.google.com/mail/?view=cm&fs=1" + Object.entries(p).map(([k, v]) => `&${k}=${encodeURIComponent(v)}`).join("");
 function updateMailto() {
   $("#l-mail").href = `mailto:${encodeURIComponent($("#l-to").value)}?subject=${encodeURIComponent($("#l-subj").value)}&body=${encodeURIComponent($("#l-body").value)}`;
   $("#l-gmail").href = gmailLink({to: $("#l-to").value, su: $("#l-subj").value, body: $("#l-body").value});
+  $("#l-mailru").href = mailruLink($("#l-mail").getAttribute("href"));
 }
 
 async function openBulk() {
@@ -611,6 +614,7 @@ async function openBulk() {
 function updateBulkMail() {
   $("#b-mail").href = `mailto:?bcc=${encodeURIComponent(state.bulk.emails.join(","))}&subject=${encodeURIComponent($("#b-subj").value)}&body=${encodeURIComponent($("#b-body").value)}`;
   $("#b-gmail").href = gmailLink({bcc: state.bulk.emails.join(","), su: $("#b-subj").value, body: $("#b-body").value});
+  $("#b-mailru").href = mailruLink($("#b-mail").getAttribute("href"));
 }
 async function markBulkOnce() {
   if (state.bulk.marked || !$("#b-mark").checked) return;
@@ -925,6 +929,7 @@ $("#b-copy-mails").onclick = async () => { await copyText(state.bulk.emails.join
 $("#b-copy-text").onclick = async () => { await copyText($("#b-subj").value + "\n\n" + $("#b-body").value, "Письмо скопировано"); markBulkOnce(); };
 $("#b-mail").addEventListener("click", markBulkOnce);
 $("#b-gmail").addEventListener("click", markBulkOnce);
+$("#b-mailru").addEventListener("click", markBulkOnce);
 
 ["l-to", "l-subj", "l-body"].forEach(id => $("#" + id).addEventListener("input", updateMailto));
 $("#l-copy").onclick = async () => { await copyText($("#l-subj").value + "\n\n" + $("#l-body").value); };
