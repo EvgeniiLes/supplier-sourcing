@@ -34,6 +34,26 @@ class PriceItem(BaseModel):
     derived: bool = False              # True: цена за кг/л рассчитана из цены за упаковку/штуку и фасовки
 
 
+class ReviewPoint(BaseModel):
+    """Одна мысль из отзывов: что хвалят или на что жалуются. Цитата проверена по тексту страницы."""
+
+    text: str
+    quote: str = ""
+    url: str = ""
+
+
+class ReviewSummary(BaseModel):
+    """Резюме отзывов о компании на открытых сайтах. found=False: отзывов не нашли (ничего не придумываем)."""
+
+    found: bool = False
+    summary: str = ""                       # 2–3 предложения от ИИ, только по прочитанным отзывам
+    positives: list[ReviewPoint] = Field(default_factory=list)
+    negatives: list[ReviewPoint] = Field(default_factory=list)
+    rating: Fact | None = None              # рейтинг, как он написан на странице («4,2 из 5»), с цитатой
+    pages: list[str] = Field(default_factory=list)      # какие страницы читали
+    checked_at: str = ""
+
+
 class Supplier(BaseModel):
     domain: str
     url: str
@@ -58,6 +78,7 @@ class Supplier(BaseModel):
     wholesale: Fact | None = None
     sources: list[str] = Field(default_factory=list)
     rejected_facts: int = 0
+    reviews: ReviewSummary | None = None    # None: отзывы не проверяли
 
     def fact_count(self) -> int:
         single = [self.name, self.offering, self.address, self.nationwide, self.inn,
@@ -69,6 +90,7 @@ class Supplier(BaseModel):
 class Filters(BaseModel):
     need_certs: bool = False
     max_min_order_kg: float | None = None
+    max_min_order_rub: float | None = None
     # доставка в регион пользователя: any — не фильтровать; not_no — скрыть тех, кто точно не доставляет;
     # yes — оставить только с подтверждённой доставкой
     delivery: str = "any"

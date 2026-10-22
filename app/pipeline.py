@@ -8,7 +8,8 @@ from . import db
 from .config import ROOT, get_settings
 from .extract import content_hash, extract_supplier
 from .fetch import fetch_site
-from .models import Filters, Supplier
+from .models import Filters, ReviewSummary, Supplier
+from .reviews import attach_reviews
 from .search import build_queries, expand_queries, find_candidates
 
 SOURCE_RU = {"yandex": "Яндекс", "tavily": "Tavily"}
@@ -51,8 +52,17 @@ async def analyse_site(domain: str, url: str, force: bool = False, query: str = 
         return Supplier(**row["data"])  # страницы, запрос и регион те же: LLM не зовём
     sup = await extract_supplier(domain, url, pages, query=query, region=region)
     if sup:
+        if row and row["data"].get("reviews") and not sup.reviews:
+            sup.reviews = ReviewSummary(**row["data"]["reviews"])     # отзывы от смены текста сайта не зависят
         db.save_supplier(domain, sup.model_dump(), h)
     return sup
+
+
+async def add_reviews(sup: Supplier, region: str, force: bool = False) -> None:
+    """Отзывы о компании (открытые сайты + резюме ИИ). Свежие не перечитываем; сбой отзывов карточку не ломает."""
+    if await attach_reviews(sup, region, force=force):
+        row = db.get_supplier_row(sup.domain)
+        db.save_supplier(sup.domain, sup.model_dump(), row["content_hash"] if row else "")
 
 
 async def run_live(search_id: int, category: str, region: str, filters: Filters) -> None:
@@ -81,7 +91,8 @@ async def run_live(search_id: int, category: str, region: str, filters: Filters)
                     sup = await analyse_site(c["domain"], c["url"], query=category, region=region)
                     if sup:
                         found.append(sup)
-                        db.save_result(search_id, sup.domain, extra_for(sup))
+                        db.save_result(search_id, sup.domain, extra_for(sup))     # карточка уже видна, отзывы дочитаем следом
+                        await add_reviews(sup, region)
                 except ForeignSite:
                     skipped_foreign += 1             # по телефону или валюте сайта
                 except Exception:
@@ -120,6 +131,7 @@ async def refresh_supplier(domain: str, search_id: int | None = None) -> Supplie
                              region=search["region"] if search else "")
     if sup is None:
         raise RuntimeError("Сайт не открылся или больше не похож на сайт поставщика")
+    await add_reviews(sup, search["region"] if search else "", force=True)
     if search:
         db.update_result_extra(search_id, domain, extra_for(sup))
     return sup

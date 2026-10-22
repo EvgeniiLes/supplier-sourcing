@@ -24,6 +24,7 @@ const ICONS = {
   chevron: '<path d="m6 9 6 6 6-6"/>',
   ext: '<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
   mailsend: '<path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/>',
+  chat: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
 };
 const icon = (name, cls = "") => `<svg class="ic ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ""}</svg>`;
 
@@ -280,6 +281,27 @@ function whyHtml(sc, full) {
   return rows.length ? `<ul class="why">${rows.join("")}</ul>${rest > 0 ? `<div class="dom more-n">и ещё ${rest} в «Подробнее»</div>` : ""}` : "";
 }
 
+/* отзывы: короткое резюме ИИ по открытым страницам, каждый пункт с цитатой (щит) */
+function reviewLine(r) {
+  if (!r?.found) return "";
+  return `<div class="rev-line">${icon("chat")}${r.rating ? `<b class="rev-r">★ ${esc(r.rating.value)}</b>` : ""}<span>${esc(clip(r.summary, 170))}</span></div>`;
+}
+function reviewsPanel(r) {
+  const head = `<h4 class="ptitle">${icon("chat")}Отзывы клиентов</h4>`;
+  const note = text => `<section class="panel panel-wide">${head}<p class="rev-note">${text}</p></section>`;
+  if (!r) return note("Отзывы пока не проверяли. Кнопка «обновить» внизу карточки запустит поиск.");
+  if (!r.found) return note("Отзывов об этой компании в открытых источниках не нашли. Отзывы Яндекс Карт мы не читаем: у них нет открытого API.");
+  const list = (items, kind) => items.length ? `<ul class="why">${items.map(p => `<li class="w ${kind}">${icon(kind === "p" ? "check" : "minus")}<span>${esc(p.text)}${evBtn({value: "", quote: p.quote, url: p.url})}</span></li>`).join("")}</ul>` : "";
+  const host = u => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } };
+  return `<section class="panel panel-wide">${head}<div class="rev">
+    ${r.rating ? `<div class="rev-rating"><b>★ ${esc(r.rating.value)}</b>${evBtn(r.rating)}<span class="dom">рейтинг, как указан на странице</span></div>` : ""}
+    <p class="rev-sum">${esc(r.summary)}</p>
+    ${r.positives.length ? `<div class="rev-h">Хвалят</div>${list(r.positives, "p")}` : ""}
+    ${r.negatives.length ? `<div class="rev-h">Жалуются</div>${list(r.negatives, "g")}` : ""}
+    <p class="dom rev-src">Резюме составил ИИ по открытым отзывам, каждый пункт подтверждён цитатой. Источники: ${r.pages.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join(", ")}${r.checked_at ? ` · проверено ${fmtDate(r.checked_at)}` : ""}</p>
+  </div></section>`;
+}
+
 function cardHtml(it) {
   const d = it.data, sc = it.score;
   const name = d.name ? esc(d.name.value) : esc(d.domain);
@@ -308,6 +330,7 @@ function cardHtml(it) {
       ${panel("Документы и компания",
         field("Документы и сертификаты", facts(d.certificates), "file") +
         (d.inn ? field("ИНН", fact(d.inn)) : ""), "file")}
+      ${reviewsPanel(d.reviews)}
     </div>
     <details class="how"><summary>Как посчитана оценка</summary>${breakdownHtml(sc)}</details>
     <div class="actions">
@@ -331,6 +354,7 @@ function cardHtml(it) {
     </div>
     ${sc.passes ? "" : `<div class="fail">Не подходит по фильтрам: ${esc(sc.fail_reasons.join("; "))}</div>`}
     ${keyFacts(it)}
+    ${reviewLine(d.reviews)}
     ${open ? "" : whyHtml(sc, false)}
     <button class="more-btn" data-act="toggle" aria-expanded="${open}">${open ? "Свернуть" : "Подробнее"}${icon("chevron")}</button>
     ${body}
@@ -416,19 +440,25 @@ function setProgress(done, total) {
   $("#progress-bar").style.width = total ? `${Math.round(done / total * 100)}%` : "0";
 }
 
-/* один выбор из трёх по возрастанию строгости: убрать точно не возящих / доставка подтверждена / представитель в городе */
+/* три условия, можно любые вместе: убрать точно не возящих / доставка подтверждена / представитель в городе.
+   «Доставка подтверждена» строже, чем «убрать не возящих», поэтому при обоих действует она */
+const rfBox = v => document.querySelector(`input[name="rf"][value="${v}"]`);
 function regionFilter() {
-  const v = document.querySelector('input[name="rf"]:checked')?.value || "not_no";
-  return v === "presence" ? {delivery: "any", presence: true} : {delivery: v, presence: false};
+  const on = v => rfBox(v).checked;
+  return {delivery: on("yes") ? "yes" : on("not_no") ? "not_no" : "any", presence: on("presence")};
 }
 function setRegionFilter(filters) {
-  const v = filters.presence ? "presence" : (filters.delivery || "not_no");
-  const r = document.querySelector(`input[name="rf"][value="${v}"]`) || document.querySelector('input[name="rf"][value="not_no"]');
-  r.checked = true;                                         // старые поиски с «Все» открываются как «Убрать тех, кто точно не возит»
+  rfBox("yes").checked = filters.delivery === "yes";
+  rfBox("not_no").checked = filters.delivery === "not_no";
+  rfBox("presence").checked = !!filters.presence;
 }
+document.querySelector(".region-filter").addEventListener("change", e => {
+  if (e.target.value === "yes" && e.target.checked) rfBox("not_no").checked = false;       // уже включено в «доставка в ваш город»
+  if (e.target.value === "not_no" && e.target.checked) rfBox("yes").checked = false;
+});
 function currentFilters() {
   return {need_certs: $("#f-certs").checked, max_min_order_kg: $("#f-min").value ? Number($("#f-min").value) : null,
-          ...regionFilter()};
+          max_min_order_rub: $("#f-min-rub").value ? Number($("#f-min-rub").value) : null, ...regionFilter()};
 }
 function pushRecent(category, region, demo) {
   const list = store.get("recent", []).filter(r => !(r.category === category && r.region === region));
@@ -511,7 +541,7 @@ async function openFromHash() {
     const r = await loadResults(), s = r.search;
     $("#category").value = s.category; $("#region").value = s.region;
     $("#f-certs").checked = !!s.filters.need_certs; setRegionFilter(s.filters);
-    $("#f-min").value = s.filters.max_min_order_kg ?? ""; $("#demo").checked = s.mode !== "live" || !state.health.live_available;
+    $("#f-min").value = s.filters.max_min_order_kg ?? ""; $("#f-min-rub").value = s.filters.max_min_order_rub ?? ""; $("#demo").checked = s.mode !== "live" || !state.health.live_available;
     state.ctx = {category: s.category, region: s.region}; store.set("ctx", state.ctx);
     if (s.status === "running") { $("#go").disabled = true; state.poll = setInterval(poll, 1200); poll(); }
     else if (s.status === "error") setStatus(s.error, true);

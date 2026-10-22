@@ -1,5 +1,5 @@
 from app.models import Fact, Filters, Supplier
-from app.score import region_matches, score_supplier
+from app.score import min_order_rub, region_matches, score_supplier
 
 
 def F(v):
@@ -47,6 +47,38 @@ def test_filters_exclude():
     s = full()
     assert not score_supplier(s, "Санкт-Петербург", Filters(max_min_order_kg=10)).passes
     assert score_supplier(s, "Санкт-Петербург", Filters(max_min_order_kg=50)).passes
+
+
+def test_min_order_in_rubles_is_read_from_the_text():
+    def rub(text):
+        s = full()
+        s.min_order, s.min_order_kg = F(text), None
+        return min_order_rub(s)
+    assert rub("Регулярными партиями на сумму от 2000 рублей (для HoReCa)") == 2000
+    assert rub("минимальный заказ от 15 000 руб.") == 15000
+    assert rub("Мин. сумма заказа 15 000 ₽") == 15000
+    assert rub("от 5 тыс. руб") == 5000 and rub("от 3 т.р.") == 3000
+    assert rub("от ₽ 7 500") == 7500
+    assert rub("от 20 кг") is None and rub("по договорённости") is None      # килограммы и слова рублями не считаем
+    s = full()
+    s.min_order = Fact(value="Минимальный заказ", quote="Минимальная сумма заказа 4500 руб", url="https://x.ru")
+    assert min_order_rub(s) == 4500                                          # если в значении суммы нет, ищем в цитате
+
+
+def test_min_order_filter_in_rubles_and_kg():
+    def s_with(text, kg=None):
+        s = full()
+        s.min_order, s.min_order_kg = F(text), kg
+        return s
+    ok = score_supplier(s_with("от 3000 руб"), "Санкт-Петербург", Filters(max_min_order_rub=5000))
+    assert ok.passes and "в вашем лимите" in " ".join(ok.pros)
+    over = score_supplier(s_with("от 8000 руб"), "Санкт-Петербург", Filters(max_min_order_rub=5000))
+    assert not over.passes and any("выше вашего лимита" in c for c in over.cons)
+    # лимит в рублях, а минималка в килограммах: сравнить нельзя, не отсеиваем
+    assert score_supplier(s_with("от 20 кг", 20), "Санкт-Петербург", Filters(max_min_order_rub=1000)).passes
+    # оба лимита: достаточно превысить любой из сравнимых
+    assert not score_supplier(s_with("от 20 кг или 9000 руб", 20), "Санкт-Петербург", Filters(max_min_order_kg=50, max_min_order_rub=5000)).passes
+    assert score_supplier(s_with("от 20 кг или 3000 руб", 20), "Санкт-Петербург", Filters(max_min_order_kg=50, max_min_order_rub=5000)).passes
 
 
 def test_other_region_without_nationwide_fails_delivery_filter():

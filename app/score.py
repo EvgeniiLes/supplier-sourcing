@@ -23,6 +23,29 @@ def region_matches(user_region: str, supplier_text: str) -> bool:
     return bool(a) and bool(a & region_stems(supplier_text))
 
 
+_NUM = r"(\d{1,3}(?:[\s ]\d{3})+|\d+)(?:[.,](\d+))?"
+_RUB_AFTER = re.compile(_NUM + r"\s*(тыс\.?|т\.?\s?р\.?|к)?\s*(?:руб|₽|р\b)", re.I)
+_RUB_BEFORE = re.compile(r"₽\s*" + _NUM)
+
+
+def min_order_rub(s: Supplier) -> float | None:
+    """Минимальная сумма заказа в рублях из текста минималки (значение или цитата с сайта). Не угадываем:
+    если суммы в рублях в тексте нет, вернём None."""
+    if not s.min_order:
+        return None
+    for text in (s.min_order.value, s.min_order.quote):
+        text = re.sub(r"\bт\.\s?р\b\.?", "тыс. руб", text or "", flags=re.I)         # «3 т.р.» = «3 тыс. руб»
+        for m in (_RUB_AFTER.search(text), _RUB_BEFORE.search(text)):
+            if not m:
+                continue
+            n = float(re.sub(r"[\s ]", "", m.group(1)) + ("." + m.group(2) if m.group(2) else ""))
+            if m.re is _RUB_AFTER and m.group(3) and n < 1000:
+                n *= 1000                                   # «5 тыс. руб», «5 т.р.»
+            if n > 0:
+                return n
+    return None
+
+
 def brief(text: str, limit: int = 60) -> str:
     """Короткая версия значения для строки с причинами оценки; полный текст остаётся в карточке."""
     text = " ".join(text.split())
@@ -136,8 +159,15 @@ def score_supplier(s: Supplier, region: str, f: Filters, weights: dict | None = 
 
     # минимальный заказ
     if s.min_order:
+        # сравниваем в тех единицах, в которых лимит задан и минималка известна (рубли, килограммы)
+        rub = min_order_rub(s)
+        checks = []
         if f.max_min_order_kg is not None and s.min_order_kg is not None:
-            if s.min_order_kg <= f.max_min_order_kg:
+            checks.append(s.min_order_kg <= f.max_min_order_kg)
+        if f.max_min_order_rub is not None and rub is not None:
+            checks.append(rub <= f.max_min_order_rub)
+        if checks:
+            if all(checks):
                 frac["min_order"], note["min_order"] = 1.0, "в вашем лимите"
                 pros.append(f"минималка {brief(s.min_order.value)} — в вашем лимите")
             else:

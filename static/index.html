@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/static/style.css?v=15">
+<link rel="stylesheet" href="/static/style.css?v=17">
 </head>
 <body>
 <div class="hero"><div class="wrap">
@@ -35,16 +35,17 @@
   <div class="topics-row"><span class="topics-label">Примеры:</span> <span id="topics"></span></div>
   <div class="topics-row" id="recent-row" hidden><span class="topics-label">Недавние:</span> <span id="recent"></span></div>
   <fieldset class="region-filter">
-    <legend>Поставщики в моём регионе <span class="rf-hint">(нужен город или регион в запросе)</span></legend>
-    <label class="pill"><input type="radio" name="rf" value="not_no" checked><span>Убрать тех, кто точно не возит</span></label>
-    <label class="pill"><input type="radio" name="rf" value="yes"><span>Доставка в ваш город</span></label>
-    <label class="pill"><input type="radio" name="rf" value="presence"><span>Представитель в городе</span></label>
+    <legend>Поставщики в моём регионе <span class="rf-hint">(можно выбрать несколько; нужен город или регион в запросе)</span></legend>
+    <label class="pill"><input type="checkbox" name="rf" value="not_no" checked><span>Убрать тех, кто точно не возит</span></label>
+    <label class="pill"><input type="checkbox" name="rf" value="yes"><span>Доставка в ваш город</span></label>
+    <label class="pill"><input type="checkbox" name="rf" value="presence"><span>Представитель в городе</span></label>
   </fieldset>
   <details class="more" id="more">
     <summary>Ещё фильтры и режим поиска</summary>
     <div class="filters">
       <label style="margin:0"><input type="checkbox" id="f-certs">Только с документами и сертификатами</label>
-      <label style="margin:0">Минималка не больше <input type="number" id="f-min" min="0" inputmode="decimal" placeholder="кг"> кг</label>
+      <label style="margin:0">Минималка не больше <input type="number" id="f-min-rub" min="0" inputmode="decimal" placeholder="₽"> ₽</label>
+      <label style="margin:0">или <input type="number" id="f-min" min="0" inputmode="decimal" placeholder="кг"> кг</label>
     </div>
     <div class="modebar">
       <label style="margin:0"><input type="checkbox" id="demo">Демо-режим (готовые результаты, без поиска в интернете)</label>
@@ -148,6 +149,6 @@
   </div>
 </div></div>
 
-<script src="/static/app.js?v=17"></script>
+<script src="/static/app.js?v=20"></script>
 </body>
 </html>
