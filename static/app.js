@@ -594,8 +594,11 @@ async function openLetter(domain, ai = false) {
   $("#l-to").value = l.to; $("#l-subj").value = l.subject; $("#l-body").value = l.body;
   $("#modal").classList.add("open"); updateMailto();
 }
+/* Gmail в браузере: окно нового письма с заполненными полями (для тех, у кого нет почтовой программы) */
+const gmailLink = p => "https://mail.google.com/mail/?view=cm&fs=1" + Object.entries(p).map(([k, v]) => `&${k}=${encodeURIComponent(v)}`).join("");
 function updateMailto() {
   $("#l-mail").href = `mailto:${encodeURIComponent($("#l-to").value)}?subject=${encodeURIComponent($("#l-subj").value)}&body=${encodeURIComponent($("#l-body").value)}`;
+  $("#l-gmail").href = gmailLink({to: $("#l-to").value, su: $("#l-subj").value, body: $("#l-body").value});
 }
 
 async function openBulk() {
@@ -607,6 +610,7 @@ async function openBulk() {
 }
 function updateBulkMail() {
   $("#b-mail").href = `mailto:?bcc=${encodeURIComponent(state.bulk.emails.join(","))}&subject=${encodeURIComponent($("#b-subj").value)}&body=${encodeURIComponent($("#b-body").value)}`;
+  $("#b-gmail").href = gmailLink({bcc: state.bulk.emails.join(","), su: $("#b-subj").value, body: $("#b-body").value});
 }
 async function markBulkOnce() {
   if (state.bulk.marked || !$("#b-mark").checked) return;
@@ -920,6 +924,7 @@ $("#bulk-modal").addEventListener("click", e => { if (e.target.id === "bulk-moda
 $("#b-copy-mails").onclick = async () => { await copyText(state.bulk.emails.join(", "), `Адресов скопировано: ${state.bulk.emails.length}`); markBulkOnce(); };
 $("#b-copy-text").onclick = async () => { await copyText($("#b-subj").value + "\n\n" + $("#b-body").value, "Письмо скопировано"); markBulkOnce(); };
 $("#b-mail").addEventListener("click", markBulkOnce);
+$("#b-gmail").addEventListener("click", markBulkOnce);
 
 ["l-to", "l-subj", "l-body"].forEach(id => $("#" + id).addEventListener("input", updateMailto));
 $("#l-copy").onclick = async () => { await copyText($("#l-subj").value + "\n\n" + $("#l-body").value); };
