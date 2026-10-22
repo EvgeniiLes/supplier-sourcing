@@ -18,7 +18,7 @@ BLACKLIST = {
     "avito.ru", "ozon.ru", "wildberries.ru", "market.yandex.ru", "yandex.ru", "ya.ru",
     "2gis.ru", "zoon.ru", "yell.ru", "flamp.ru", "tiu.ru", "pulscen.ru", "satom.ru",
     "b2b-center.ru", "alibaba.com", "aliexpress.com", "1688.com", "made-in-china.com",
-    "hh.ru", "wikipedia.org", "youtube.com", "vk.com", "ok.ru", "t.me", "dzen.ru",
+    "hh.ru", "wikipedia.org", "youtube.com", "vk.com", "vk.ru", "ok.ru", "t.me", "dzen.ru",
     "instagram.com", "facebook.com", "rutube.ru", "otzovik.com", "irecommend.ru",
     "rusprofile.ru", "list-org.com", "sbis.ru", "checko.ru", "e-katalog.ru", "prom.ua",
     "vsegda-pomogut.ru", "supl.biz", "cataloxy.ru", "orgpage.ru", "all-biz.info",

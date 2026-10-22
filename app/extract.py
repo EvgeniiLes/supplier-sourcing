@@ -30,8 +30,11 @@ TOOL = {
             "is_supplier": {"type": "boolean", "description": (
                 "true только если сайт принадлежит производителю, оптовику или дистрибьютору ПРОДУКТОВ ПИТАНИЯ, "
                 "ингредиентов, напитков, упаковки или одноразовой посуды, который продаёт бизнесу. "
-                "false: розничный магазин, СМИ, блог, каталог, справочник, а также продавцы оборудования, мебели, "
-                "кухонной техники и услуг (даже если сайт про HoReCa).")},
+                "false: чисто розничный магазин, СМИ, блог, каталог, справочник, а также продавцы оборудования, мебели, "
+                "кухонной техники и услуг (даже если сайт про HoReCa). "
+                "Интернет-магазин, который при этом сам называет себя оптовым поставщиком или явно работает с бизнесом "
+                "(раздел «оптовые поставки», опт для HoReCa, кафе и ресторанов, оптовый прайс, работа с юрлицами), "
+                "считай поставщиком: true.")},
             "name": _nullable("Название компании"),
             "offering": _nullable("Что поставляют, коротко"),
             "address": _nullable("Адрес или город расположения"),
@@ -138,7 +141,11 @@ def build_prompt(pages: dict[str, str], html_budget: int = 24_000, pdf_budget: i
 
 
 # Версия правил извлечения. Поднимайте при смене схемы, промпта или проверок: иначе кэш отдаст результат старых правил.
-EXTRACT_VERSION = 7
+EXTRACT_VERSION = 8
+
+# сайт сам пишет про опт или HoReCa: повод перепроверить ответ «не поставщик»
+WHOLESALE_SELF = re.compile(r"оптов\w*\s+(?:поставщик|поставк|продаж|прайс|клиент|покупател|цен)|опт\s+(?:для|и\s+розниц)|"
+                            r"для\s+(?:horeca|хорека|кафе|ресторан)|\bhoreca\b|\bхорека\b", re.I)
 
 
 def content_hash(pages: dict[str, str], query: str = "", region: str = "") -> str:
@@ -228,18 +235,31 @@ async def extract_supplier(domain: str, url: str, pages: dict[str, str], client=
     head = (f"Пользователь ищет: «{query.strip()}».\n" if query.strip() else "") + \
            (f"Регион пользователя: «{region.strip()}».\n" if region.strip() else "")
     head = head + "\n" if head else ""
-    msg = await client.messages.create(
-        model=s.model_extract,
-        max_tokens=4000,
-        system=SYSTEM,
-        tools=[TOOL],
-        tool_choice={"type": "tool", "name": "save_supplier"},
-        messages=[{"role": "user", "content": head + build_prompt(pages)}],
-    )
-    block = next((b for b in msg.content if b.type == "tool_use"), None)
-    if block is None:
+    prompt = head + build_prompt(pages)
+
+    async def ask() -> dict | None:
+        msg = await client.messages.create(
+            model=s.model_extract,
+            max_tokens=4000,
+            system=SYSTEM,
+            tools=[TOOL],
+            tool_choice={"type": "tool", "name": "save_supplier"},
+            messages=[{"role": "user", "content": prompt}],
+        )
+        block = next((b for b in msg.content if b.type == "tool_use"), None)
+        return dict(block.input) if block is not None else None
+
+    data = await ask()
+    if data is None:
         return None
-    data = dict(block.input)
+    if not data.get("is_supplier") and WHOLESALE_SELF.search(" ".join(pages.values())):
+        # модель на пограничных сайтах (магазин, который сам называет себя оптовым поставщиком) отвечает по-разному
+        # от запуска к запуску; раз на сайте прямо написано про опт, переспрашиваем (до двух раз), а не теряем поставщика
+        for _ in range(2):
+            again = await ask()
+            if again is not None and again.get("is_supplier"):
+                data = again
+                break
     supplier = parse_tool_input(domain, url, data)
     if supplier is None:
         return None
