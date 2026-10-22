@@ -492,7 +492,15 @@ async function startSearch(e) {
     const {search_id} = await jpost("/api/search", body);
     state.searchId = search_id; pushRecent(body.category, body.region, body.demo); updateHash();
     state.poll = setInterval(poll, 1200); poll();
-  } catch (err) { setStatus(err.message, true); $("#go").disabled = false; }
+  } catch (err) {
+    $("#go").disabled = false;
+    if (!body.demo && /лимит/i.test(err.message)) {       // живой поиск на сегодня исчерпан: показываем готовые результаты, а не ошибку
+      $("#demo").checked = true; $("#demo-label").hidden = false;
+      $("#mode-note").textContent = "Дневной лимит живых поисков исчерпан: показываем готовые результаты по заранее собранным темам.";
+      return startSearch();
+    }
+    setStatus(err.message, true);
+  }
 }
 
 async function loadResults() {
@@ -541,7 +549,8 @@ async function openFromHash() {
     const r = await loadResults(), s = r.search;
     $("#category").value = s.category; $("#region").value = s.region;
     $("#f-certs").checked = !!s.filters.need_certs; setRegionFilter(s.filters);
-    $("#f-min").value = s.filters.max_min_order_kg ?? ""; $("#f-min-rub").value = s.filters.max_min_order_rub ?? ""; $("#demo").checked = s.mode !== "live" || !state.health.live_available;
+    $("#f-min").value = s.filters.max_min_order_kg ?? ""; $("#f-min-rub").value = s.filters.max_min_order_rub ?? "";
+    if (!$("#demo-label").hidden) $("#demo").checked = s.mode !== "live" || !state.health.live_available;   // переключатель виден только когда живого поиска нет
     state.ctx = {category: s.category, region: s.region}; store.set("ctx", state.ctx);
     if (s.status === "running") { $("#go").disabled = true; state.poll = setInterval(poll, 1200); poll(); }
     else if (s.status === "error") setStatus(s.error, true);
@@ -899,7 +908,7 @@ $("#recent").addEventListener("click", e => {
   const c = e.target.closest("[data-recent]"); if (!c) return;
   const r = store.get("recent", [])[Number(c.dataset.recent)];
   $("#category").value = r.category; $("#region").value = r.region;
-  if (state.health.live_available) $("#demo").checked = r.demo;
+  if (state.health.live_available && !$("#demo-label").hidden) $("#demo").checked = r.demo;
   $("#form").requestSubmit();
 });
 $("#short-list").addEventListener("click", async e => {
@@ -984,7 +993,7 @@ window.addEventListener("hashchange", openFromHash);
   state.weights = store.get("weights", {});
   const demo = $("#demo");
   if (!h.live_available) {
-    demo.checked = true; demo.disabled = true;
+    demo.checked = true; demo.disabled = true; $("#demo-label").hidden = false;
     $("#mode-note").textContent = "Живой поиск отключён: на сервере не заданы ключи API.";
     $("#offer-note").textContent = "Распознавание своих файлов недоступно без ключей API. Пример работает.";
     $("#offer-send").disabled = true; $("#pick-file").disabled = true;
@@ -993,7 +1002,10 @@ window.addEventListener("hashchange", openFromHash);
     $("#mode-note").textContent = `Источники поиска: ${(h.sources || []).map(s => names[s] || s).join(" + ") || "нет"}. ` +
       `Живых поисков сегодня осталось: ${h.live_left_today}`;
     $("#l-ai").hidden = false;
-    demo.checked = !(h.live_left_today > 0);     // живой поиск по умолчанию; демо только если дневной лимит исчерпан
+    const liveOk = h.live_left_today > 0;
+    demo.checked = !liveOk;                      // живой поиск всегда; готовые результаты только если дневной лимит исчерпан
+    $("#demo-label").hidden = liveOk;            // и переключатель виден только тогда
+    if (!liveOk) $("#mode-note").textContent = "Дневной лимит живых поисков исчерпан: показываем готовые результаты по заранее собранным темам.";
   }
   $("#topics").innerHTML = h.demo_topics.map(t => `<button type="button" class="chip" data-topic="${esc(t.topic)}" data-region="${esc(t.region)}">${esc(t.topic)}</button>`).join(" ");
   $("#topics").onclick = e => { const c = e.target.closest(".chip"); if (!c) return; $("#category").value = c.dataset.topic; $("#region").value = c.dataset.region; };
